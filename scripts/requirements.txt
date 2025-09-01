@@ -1,5 +1,5 @@
-transformers
-scikit-learn
-torch
+# transformers
+# scikit-learn
+# torch
 ics
 icalendar
