@@ -1,0 +1,578 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: PeakNetFP: Peak-based Neural Audio Fingerprinting Robust to Extreme Time Stretching</title>
+    
+<meta name="citation_title" content="PeakNetFP: Peak-based Neural Audio Fingerprinting Robust to Extreme Time Stretching" />
+
+<meta name="citation_author" content="Guillem Cortès-Sebastià" />
+
+<meta name="citation_author" content="Benjamin Martin" />
+
+<meta name="citation_author" content="Emilio Molina" />
+
+<meta name="citation_author" content="Xavier Serra" />
+
+<meta name="citation_author" content="Romain Hennequin" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="This work introduces PeakNetFP, the first neural audio fingerprinting (AFP) system designed specifically around spectral peaks. This novel system is designed to leverage the sparse spectral coordinates typically computed by traditional peak-based AFP methods. PeakNetFP performs hierarchical point feature extraction techniques similar to the computer vision model PointNet++, and is trained using contrastive learning like in the state-of-the-art deep learning AFP, NeuralFP. This combination allows PeakNetFP to outperform conventional AFP systems and achieves comparable performance to NeuralFP when handling challenging time-stretched audio data. In extensive evaluation, PeakNetFP maintains a Top-1 hit rate of over 90% for stretching factors ranging from 50% to 200%. Moreover, PeakNetFP offers significant efficiency advantages: compared to NeuralFP, it has 100 times fewer parameters and uses 11 times smaller input data. These features make PeakNetFP a lightweight and efficient solution for AFP tasks where time stretching is involved. Overall, this system represents a promising direction for future AFP technologies, as it successfully merges the lightweight nature of peak-based AFP with the adaptability and pattern recognition capabilities of neural network-based approaches, paving the way for more scalable and efficient solutions in the field.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Indexing and querying" />
+
+<meta name="citation_keywords" content="Fingerprinting" />
+
+<meta name="citation_keywords" content="Similarity metrics" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Reproducibility" />
+
+<meta name="citation_keywords" content="Pattern matching and detection" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-11: PeakNetFP: Peak-based Neural Audio Fingerprinting Robust to Extreme Time Stretching
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Guillem Cortès-Sebastià" class="text-muted"
+        >Guillem Cortès-Sebastià</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Benjamin Martin" class="text-muted"
+        >Benjamin Martin</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emilio Molina" class="text-muted"
+        >Emilio Molina</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xavier Serra" class="text-muted"
+        >Xavier Serra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Romain Hennequin" class="text-muted"
+        >Romain Hennequin</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Indexing and querying"
+        class="text-secondary text-decoration-none"
+        >Indexing and querying</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Fingerprinting"
+        class="text-secondary text-decoration-none"
+        >Fingerprinting</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Similarity metrics"
+        class="text-secondary text-decoration-none"
+        >Similarity metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Reproducibility"
+        class="text-secondary text-decoration-none"
+        >Reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Pattern matching and detection"
+        class="text-secondary text-decoration-none"
+        >Pattern matching and detection</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>This work introduces PeakNetFP, the first neural audio fingerprinting (AFP) system designed specifically around spectral peaks. This novel system is designed to leverage the sparse spectral coordinates typically computed by traditional peak-based AFP methods. PeakNetFP performs hierarchical point feature extraction techniques similar to the computer vision model PointNet++, and is trained using contrastive learning like in the state-of-the-art deep learning AFP, NeuralFP. This combination allows PeakNetFP to outperform conventional AFP systems and achieves comparable performance to NeuralFP when handling challenging time-stretched audio data. In extensive evaluation, PeakNetFP maintains a Top-1 hit rate of over 90% for stretching factors ranging from 50% to 200%. Moreover, PeakNetFP offers significant efficiency advantages: compared to NeuralFP, it has 100 times fewer parameters and uses 11 times smaller input data. These features make PeakNetFP a lightweight and efficient solution for AFP tasks where time stretching is involved. Overall, this system represents a promising direction for future AFP technologies, as it successfully merges the lightweight nature of peak-based AFP with the adaptability and pattern recognition capabilities of neural network-based approaches, paving the way for more scalable and efficient solutions in the field.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1kvgIZSeYEPs0dh3hMlrdH2ojrA-VQjGw/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The idea of point cloud processing can be used for other applications in music and audio processing</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Audio fingerprinting method using only the spectral peaks and PointNet++, leading to efficient deployment</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Contribution:
+- The paper proposes to use PointNet++ for the Audio Fingerprinting (AFP) task
+- This leads to a reduction in model size and input data size
+- Results are on par with the NeuralFP system.</p>
+<p>Limitations:
+- The experimental evaluation is very limited. 
+- The pointNet++ algorithm, as used for AFP, is not described. 
+ - What is the feature vector at every peak? (Line 347 talks about feature aggregation)
+ - Is the magnitude of the peak considered?
+ - Is the displacement (distance + direction) between peaks considered for deriving the aggregated features? What is the mathematical formula used?</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All reviewers unanimously agree to accept this paper.
+The authors could do minor edits to include the reviewer suggestions in the final version of the paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>General comments:</p>
+<ul>
+<li>This is a well-written paper, with a practical contribution and solid references. I wish the description of the model will come with better/more explanations and clearer/larger plots. The evaluation could also be a bit improved, to better showcase the performance of the proposed model. See the details comments below.</li>
+</ul>
+<p>Detailed comments:</p>
+<p>1.
+- Reference [18] does not seem to be about audio fingerprinting but codec identification. Perhaps you meant to cite the following patent from this company? R. Coover and Z. Rafii, “Methods and Apparatus to Fingerprint an Audio Signal via Normalization,” 16/453,654, Mar. 2020.</p>
+<ol>
+<li></li>
+<li>
+<p>Figure 1 is too small.</p>
+</li>
+<li>
+<p>When you say "raw local maxima," do you mean that you also use the amplitude of the peaks? And how do you define a local maxima? Do you use a specific window size or maximum peak distance(s)? How do you deal with silences or segments with sparse energy? I would have liked to see some information about the spectrogram itself.</p>
+</li>
+<li>
+<p>I would also make Figures 2 and 3 bigger (including the fonts). It would really help the reader to understand the system.</p>
+</li>
+<li>
+<p>I am unclear what SA and MSG are in Figures 2 and 3. What kind of features gets into the MLP then? Section 3.2 is a very important section as it is meant to explain the core of the algorithm. I would (try to) make it clearer. I didn't fully understand the steps, how the features would look like at every step, and what is actually being learned.</p>
+</li>
+<li>
+<p>"NT-Xent"</p>
+</li>
+<li>
+<p>What is a "faiss" index?</p>
+</li>
+<li>
+<p>Could you write a bit more about the dataset, the type of audio in it? Does it come with noise too?</p>
+</li>
+<li></li>
+<li>
+<p>It would make things easier for the reader if Table 1 had more information in the caption. What are j and A, B, C, for example?</p>
+</li>
+<li>
+<p>Why not (also) use the more classic TP/FP/FN, and/or recall and precision as the metrics?</p>
+</li>
+<li>
+<p>The fonts in Figure 4 are too small; I cannot really see the values in the plot.</p>
+</li>
+<li>
+<p>Some of the results showed in section 4.2 could be turned into (perhaps more convincing) tables (or perhaps you were too short on space).</p>
+</li>
+</ol>
+<p>6.
+- Please, fix your bibliography:
+- Be consistent in the way you list every entry
+- Avoid repetition (some entries have the name of the conference and the location listed twice)
+- Use capital letters when needed (e.g., proper nouns and acronyms)</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors of this paper present a novel approach to neural audio fingerprinting, combining the neural self-supervised approach such as in NeuralFP with peak-based algorithms. With substantially less parameters, their proposed model performs comparably well with an implementation of NeuralFP.</p>
+<p>The paper is very well written and follows a clear and logical structure. The motivation is outlined well and a good overview is given over related previous works. Section 3.2 "Hierarchical peak set feature extraction", being a crucial part of this work could be presented in a little more detail as PointNet++ will be less familiar to the MIR community. </p>
+<p>Some minor notes on the paper:</p>
+<p>Line 100 ff: "This method is commonly used by DJs to synchronize the tempo of different songs within a mix or to create remixes that are either slowed down or sped up [20]". -&gt; Yes, while traditionally DJs apply pitch-shifting which incorporates both time and freqeuncy changes of the signal. In fact, it would have been interesting to see the apporach for manipulation in both of these domains. To the best of my knowledge, time stretching and pitch shifting are often used by video creators to circumvent licensing costs for music they use in their productions. This could be added to the motivation (there might be internet sources at least).</p>
+<p>Line 389: The "candidate pruning" could be described in a little more detail. Also, this term does not appear in the referenced NeuralFP paper - I suggest you are referring to what they denote as "Sequence search"?</p>
+<p>Line 400: "and it comes" -&gt; "that comes"</p>
+<p>Line 405: It is unclear to me where the 278 seconds average length come from. </p>
+<p>Line 408: "in" -&gt; "as in" ?</p>
+<p>Line 433: What motivates the somehow uncommon batch size of 240?</p>
+<p>Line 502: With "query size", do you refer to the segments' size in seconds? It would be favorable if you would stick to a clear unified terminology here (you usually use "query length").</p>
+<p>I strongly suggest that this paper will be accepted for ISMIR 2025. I believe that this paper would also deserve a nomination for a best paper award. As noted at point 18:</p>
+<p>This paper is very well written and clearly outlines the motivation. With neural audio fingerprinting, the authors tackle an important topic in MIR, which on top of artist discovery can aid digital rights management and fair artist compensation. In the era of generative music AI, such fingerprinting systems become even more crucial. The authors present a smart, signal processing based feature engineering approach for a more efficient implementation that can help save resources which is a further important factor for the paper to be outstanding. 
+To me, the combination of these points reasonably justify the nomination for a best paper award.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Dear authors, thank you for your paper. It is clearly written, focused, and well-executed around a central idea.</p>
+<p>The motivation is strong: the paper addresses a real-world gap by combining sparse peak-based input with neural representations. This hybrid strategy is well-motivated for low-resource or privacy-constrained environments. Your framing of the practical trade-offs (e.g., computation on client devices, data volume, dense vs. sparse representations) is excellent and grounds the paper in relevant applications.</p>
+<p>The technical implementation is clearly explained, and the evaluation is thorough. The comparison with QuadFP and NeuralFP is carefully done, and results are clearly presented. I appreciated the validation of your own QuadFP implementation and the transparency around dataset differences.</p>
+<p>There are a few areas for improvement:
+* While the paper focuses on robustness to time stretching, omitting pitch shifting is a limitation. Since pitch and tempo changes often co-occur in real-world transformations, I encourage you to include this in future work (which you mention at the end).
+* The “11× smaller input data” claim in the abstract and conclusion is interesting, but the exact basis or formula behind this figure is not explained. Please consider clarifying how it’s computed.
+* The categorization of related work into “local descriptor-based” approaches could benefit from a clearer definition and concrete examples.
+* The use of “faiss” should be capitalized to “Faiss”.</p>
+<p>One of the strongest aspects of the paper is that you commit to sharing both code and dataset. This makes it easier to reproduce your results and build on top of the work, and I expect it will encourage follow-up research from both your team and others.</p>
+<p>While this is not a “revolutionary” paper in terms of algorithmic novelty, it is a solid contribution with strong execution and real practical relevance. I strongly support its acceptance.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,560 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: MusGO: A Community-Driven Framework for Assessing Openness in Music-Generative AI</title>
+    
+<meta name="citation_title" content="MusGO: A Community-Driven Framework for Assessing Openness in Music-Generative AI" />
+
+<meta name="citation_author" content="Roser Batlle-Roca" />
+
+<meta name="citation_author" content="Laura Ibáñez-Martínez" />
+
+<meta name="citation_author" content="Xavier Serra" />
+
+<meta name="citation_author" content="Emilia Gómez" />
+
+<meta name="citation_author" content="Martín Rocamora" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Since 2023, generative AI has rapidly advanced in the music domain. Despite significant technological advancements, music-generative models raise critical ethical challenges, including a lack of transparency and accountability, along with risks such as the replication of artists’ works, which highlights the importance of fostering openness. With upcoming regulations such as the EU AI Act encouraging open models, many generative models are being released labelled as ‘open’. However, the definition of an open model remains widely debated. In this article, we adapt a recently proposed evidence-based framework for assessing openness in LLMs to the music domain. Using feedback from a survey of 110 participants from the Music Information Retrieval (MIR) community, we refine the framework into MusGO (Music-Generative Open AI), which comprises 13 openness categories: 8 essential and 5 desirable. We evaluate 16 state-of-the-art generative models and provide an openness leaderboard that is fully open to public scrutiny and community contributions. Through this work, we aim to clarify the concept of openness in music-generative AI and promote its transparent and responsible development.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Philosophical and ethical discussions" />
+
+<meta name="citation_keywords" content="Qualitative evaluations" />
+
+<meta name="citation_keywords" content="Reproducibility" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="User-centered evaluation" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_keywords" content="Human-centered MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-14: MusGO: A Community-Driven Framework for Assessing Openness in Music-Generative AI
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Roser Batlle-Roca" class="text-muted"
+        >Roser Batlle-Roca</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Laura Ibáñez-Martínez" class="text-muted"
+        >Laura Ibáñez-Martínez</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xavier Serra" class="text-muted"
+        >Xavier Serra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emilia Gómez" class="text-muted"
+        >Emilia Gómez</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Martín Rocamora" class="text-muted"
+        >Martín Rocamora</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Philosophical and ethical discussions"
+        class="text-secondary text-decoration-none"
+        >Philosophical and ethical discussions</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Qualitative evaluations"
+        class="text-secondary text-decoration-none"
+        >Qualitative evaluations</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Reproducibility"
+        class="text-secondary text-decoration-none"
+        >Reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=User-centered evaluation"
+        class="text-secondary text-decoration-none"
+        >User-centered evaluation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-centered MIR"
+        class="text-secondary text-decoration-none"
+        >Human-centered MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Since 2023, generative AI has rapidly advanced in the music domain. Despite significant technological advancements, music-generative models raise critical ethical challenges, including a lack of transparency and accountability, along with risks such as the replication of artists’ works, which highlights the importance of fostering openness. With upcoming regulations such as the EU AI Act encouraging open models, many generative models are being released labelled as ‘open’. However, the definition of an open model remains widely debated. In this article, we adapt a recently proposed evidence-based framework for assessing openness in LLMs to the music domain. Using feedback from a survey of 110 participants from the Music Information Retrieval (MIR) community, we refine the framework into MusGO (Music-Generative Open AI), which comprises 13 openness categories: 8 essential and 5 desirable. We evaluate 16 state-of-the-art generative models and provide an openness leaderboard that is fully open to public scrutiny and community contributions. Through this work, we aim to clarify the concept of openness in music-generative AI and promote its transparent and responsible development.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1rYw9aqEN-1h3nMTj-V6fkpqxn14mVfAH/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Strongly Disagree (Well-explored topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The ideas in the paper are mostly familiar already; the value comes in pulling them together in one place and allowing easy to understand comparisons between different models.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Openness of AI music generation research can be assessed in a tabular form and a numerical score according to the presence or absence of several key features.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper presents a space of 13 dimensions (8 rated "essential" and 5 "nice to have") for assessing the openness of a music-AI system. Essential dimensions are rated on a 3-point scale while nice-to-have dimensions are binary. From this, a numerical openness score can be generated and comparison tables can be plotted to show how different models compare in terms of openness.</p>
+<p>The idea itself is simple and elegant, and I appreciate the way the tabular approach in particular can make it easy to glance across several models to understand their conformance with different aspects of open science. I am less convinced about whether a sum total openness score is all that meaningful, or even whether openness is a universal property at all: it seems like the better question might be "open for what, by whom?" For example, the presence or absence of training data might be important or not depending on is trying to use the model.</p>
+<p>The paper discusses a survey of 110 members of the ISMIR community which helped shape the presented framework. This level of input is nice, though I have some doubts about the depth of that engagement. As far as I can tell, the authors proposed a similar framework to begin with, and the feedback was used to make minor adjustments to it and to separate dimensions into whether or not they were essential. It would have been more interesting to give respondents more space to discuss what exactly they look for in replicating or building on existing work, which might have flagged up other categories the authors did not think of.</p>
+<p>Overall, then, the paper might not be hugely groundbreaking, but it presents an important idea in a digestible way and could gain significant and beneficial traction in the community for that reason.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers have a spread of opinions about this paper, from strong accept (R3) to weak reject (R2). The largest concern of the reviewers is whether this framework represents a novel contribution compared to the existing body of work in evaluating the openness of AI tools more generally. R2 points out that most or all of the categories in MusGO are domain-agnostic. What is domain-specific about this work, and how can readers be sure that a more general framework is appropriate for this domain? R3 similarly asks for a "discussion of the changes that were needed to the original framework to adapt to the music domain". The authors could improve the paper by clarifying how the framework was arrived at and giving some examples of how it can be applied.</p>
+<p>A secondary concern, articulated in detail by R1, has to do with whether it makes sense to quantify "openness" to begin with, or whether it might be more useful to treat it qualitatively. I share this concern and would invite the authors to address it more thoroughly, perhaps as part of explaining the beneficial applications of the framework. R1 also identifies some issues in the quantitative analysis that should be corrected.</p>
+<p>The paper nonetheless addresses an important issue and, novelty concerns notwithstanding, the reviewers generally find the work satisfactory and potentially beneficial. My meta-review therefore leans slightly toward acceptance with an encouragement for the authors to thoroughly address the comments raised by the reviewers around novelty, applications and analytical methodology.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper identifies a lack of clarity in the labeling of music-generative AI tools as 'open' and proposes an evaluative framework for determining the types and degrees of openness present in a music-creating AI system.</p>
+<p>I think this paper does a fairly good job of explaining both why openness is so hard to define generally and why it is difficult to achieve in the specific use case of music creation. I think it would benefit from either an explicit summary/restatement of the OSAID or a brief taxonomy or chart of the main parameters of openness given in existing frameworks; the paper (in 2.1) notes the challenge of defining openness without quite giving a clear vision of what the current consensus is (even if it is a contested consensus). I feel like I don't really understand the term's boundaries until I get to the results section, which is late.</p>
+<p>One conceptual framing I might push the authors on is to suggest that the evaluation of openness may fundamentally need to be <em>qualitative</em> in nature. The temptation to quantitatively rate categories of openness and adjudge numerically that one system is 'more open' than another is extreme, and indeed the paper eventually concludes that it must give a rank-score evaluative framework. I think the paper's qualitative orientation (methodologically, it is a survey) aligns with a view of openness as holistic and multifaceted rather than something that can ultimately be reduced to a weighted score; perhaps we should rely more on our faculty of judgment than on the end calculation.</p>
+<p>The methodology in 3.2.1 notes that the participants were asked to rate relevance on a five-point Likert scale, and Table 1 reports both the mean and median scores for these ratings. Reporting of the median is appropriate, but reporting of the mean is not, since the participants are giving ordinal-level data and thus the mean is an inappropriate measure of central tendency. This should be removed for the paper to be scientifically correct statistically. There's also no need to take the median reporting out to two decimal places.</p>
+<p>The evaluation carried out in 4.2 is described as using 'a structured and iterative methodology', which appears to follow a type of consensus model, which I'm fine with, but there should be reference to precedent in the form of cited authorities for the research method chosen here.</p>
+<p>The use of the phrase 'openness diversity' in 5.1 strikes me as rather euphemistic. I'd use the phrase 'openness variation' instead.</p>
+<p>I wonder if 5.2 needs a rethink/rewrite. This subsection goes 'beyond openness' to address other large-scale ethical quandaries relating to AI, and since the first paragraph of the paper's introduction frames the work as being motivated by substantial ethical concerns, it makes perfect sense to discuss them robustly. However, I think it would make more sense for this section to discuss how knowledge about openness (and thus the MusGO openness evaluation tool) can aid researchers in evaluating the moral rectitude of, and perhaps even arguing for changes in the governance of, AI systems. The discussion of the clash between openness and IP requirements is good (though brief), but most of the discussion in this section is about ethical problems rather than about how looking for openness can help mitigate those problems. Some of the problems probably can't even be helped by evaluating openness – for instance, the discussion of harmful or inappropriate uses explicitly notes that openness has limited ability to impact the issue. The subsequent discussions of Western bias and economic fallout set them up as if they are parallel issues to openness, but it seems to me that one of the primary benefits of examining openness is that this could make clearer for users and researchers what kinds of bias or what kinds of downstream fiscal impacts these tools might have. They are thus intertwined issues, rather than parallel ones.</p>
+<p>A minor style quibble – I find the phrase 'nice-to-have' a little gratingly informal, as if these elements were desserts or luxury goods. 'Desirable' or 'preferable' would capture the meaning just as well, or even reframing 'essential' and 'nice-to-have' as 'primary' and 'secondary' factors.</p>
+<p>Another minor pet peeve – MusGO doesn't map very neatly as an abbreviation of “Music-Generative Open AI”; I wish in general that institutions and research groups chose their initialisms and reductions less for cuteness or catchiness and more to accurately represent the full given name.</p>
+<p>The abstract has a few awkward turns of phrase and could use a light copyedit; there are other places in the paper where the language is a bit difficult to parse, and a once-over for grammar and sentence structure would be nice.</p>
+<p>While I see quite a few areas that need some adjustment, they are all relatively simple fixes that I think can be taken care of in the review period.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths: The idea of having a centralised resource to conveniently lookup various music generation models and how open they are is useful for researchers. It will make it easier to compare with existing models and work with open sourced models.</p>
+<p>Weaknesses: My main criticisms are with respect to the novelty and practical applications of this tool.</p>
+<p>Novelty: As the paper references, there are already tools that provide information about model details. For example, Model cards (Mitchell et al.) has License, training data, paper reference, model information etc. which overlaps significantly with the categories provided by MusGo. </p>
+<p>It is unclear what is domain specific about any of the categories in MusGo. All the 13 categories in Figure 1 seem domain agnostic to me. There is a small discussion about training data being treated differently for music in line 426-428, but I was not able to notice any other domain specific considerations. </p>
+<p>Practical applications: It is unclear how MusGo would be used in practice because Section 4.2 outlined how classifying models required an iterative effort with multiple people. How would a new model be categorised? Can anybody fill in details? Is there an official review process? If so, who selects the review committee?</p>
+<p>Minor comments:
+- Table 1: Insufficient details about what the different criteria are. What are data sheets? What is package?
+- line 359: Incorrectly referencing Table 1
+- line 368: Not sure how this formula was created</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I enjoyed reading this paper, both due to its contributions and its writing. The topic is highly relevant and timely, seeing as music GenAI has become prevalent only in recent years, and regulations are still being created. I believe the paper will spark interesting discussions at ISMIR and beyond, possibly even on a regulatory level. Therefore, I suggest to accept this paper.</p>
+<p>Strengths
+While the openness evaluation framework is not new, as the authors mention, it is very important to validate and adapt its evaluation criteria in specific domains. The authors do both by collecting MIR researchers’ input on the existing framework, and adapting the framework and guidelines to the music domain. Then, they also demonstrate how the framework can be used on 16 music GenAI models, and have set up a leaderboard.</p>
+<p>The leaderboard as included in the paper and on the website, is clearly formatted, and it is well-argued which categories are included and in what way.</p>
+<p>The writing and structure of this paper are also very good. </p>
+<p>While I will list my suggestions for improvement below, I believe the paper as is is already quite strong.</p>
+<p>Weaknesses
+It would be interesting to see more of the qualitative insights, on which categories there were most comments, and how many participants added comments. For reproducibility, it would be good to share the exact phrasing of the questions. It would also strengthen the paper to show more details on the model categorization discussion in Section 4.2, such as which were the categories and/or models that sparked most discussion, how often discussion was needed, and how such discussions were resolved.</p>
+<p>While a repo is shared for which it is stated that it will allow for public scrutiny and contributions, it is not yet clear what that process would look like in practice, even though this is one of the main added values of this work.</p>
+<p>I miss a discussion of the changes that were needed to the original framework to adapt to the music domain. Even though there are some changes mentioned in section 3, there could be a more in-depth reflection.</p>
+<p>Some sentences (e.g., line 414-417) in the discussion imply that the final framework and leaderboard were validated beyond the authors, even though that is not the case.</p>
+<p>It would be useful to more clearly refer to the supplementary material and/or the website containing the more detailed descriptions of all categories and ratings. Now, from the paper alone, it does not always become clear what would warrant a closed/partial/open judgement for each category.</p>
+<p>The work mentions transparency as one of its main goals, but does not define this concept in the context of this work. It would be good to add such a definition.</p>
+<p>Quite some of the arXiv-references are incomplete, e.g., missing publication year or ID.</p>
+<p>While this work contains a user study, no information on ethical approval is given.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,620 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Video-Guided Text-to-Music Generation Using Public Domain Movie Collections</title>
+    
+<meta name="citation_title" content="Video-Guided Text-to-Music Generation Using Public Domain Movie Collections" />
+
+<meta name="citation_author" content="Haven Kim" />
+
+<meta name="citation_author" content="Zachary Novack" />
+
+<meta name="citation_author" content="Weihan Xu" />
+
+<meta name="citation_author" content="Julian McAuley" />
+
+<meta name="citation_author" content="Hao-Wen Dong" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Despite recent advancements in music generation systems, their application in film production remains limited, as they struggle to capture the nuances of real-world filmmaking, where filmmakers consider multiple factors—such as visual content, dialogue, and emotional tone—when selecting or composing music for a scene. This limitation primarily stems from the absence of comprehensive datasets that integrate these elements. To address this gap, we introduce Open Screen Soundtrack Library (OSSL), a dataset consisting of movie clips from public domain films, totaling approximately 36.5 hours, paired with high-quality soundtracks and human-annotated mood information. To demonstrate the effectiveness of our dataset in improving the performance of pre-trained models on film music generation tasks, we introduce a new video adapter that enhances an autoregressive transformer-based text-to-music model by adding video-based conditioning. Our experimental results demonstrate that our proposed approach effectively enhances MusicGen-Medium in terms of both objective measures of distributional and paired fidelity, and subjective compatibility in mood and genre. To facilitate reproducibility and foster future work, we publicly release the dataset, code, and demo.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Multimodality" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Music videos, multimodal music systems" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P5-03: Video-Guided Text-to-Music Generation Using Public Domain Movie Collections
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Haven Kim" class="text-muted"
+        >Haven Kim</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Zachary Novack" class="text-muted"
+        >Zachary Novack</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Weihan Xu" class="text-muted"
+        >Weihan Xu</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Julian McAuley" class="text-muted"
+        >Julian McAuley</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Hao-Wen Dong" class="text-muted"
+        >Hao-Wen Dong</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Multimodality"
+        class="text-secondary text-decoration-none"
+        >Multimodality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music videos, multimodal music systems"
+        class="text-secondary text-decoration-none"
+        >Music videos, multimodal music systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Despite recent advancements in music generation systems, their application in film production remains limited, as they struggle to capture the nuances of real-world filmmaking, where filmmakers consider multiple factors—such as visual content, dialogue, and emotional tone—when selecting or composing music for a scene. This limitation primarily stems from the absence of comprehensive datasets that integrate these elements. To address this gap, we introduce Open Screen Soundtrack Library (OSSL), a dataset consisting of movie clips from public domain films, totaling approximately 36.5 hours, paired with high-quality soundtracks and human-annotated mood information. To demonstrate the effectiveness of our dataset in improving the performance of pre-trained models on film music generation tasks, we introduce a new video adapter that enhances an autoregressive transformer-based text-to-music model by adding video-based conditioning. Our experimental results demonstrate that our proposed approach effectively enhances MusicGen-Medium in terms of both objective measures of distributional and paired fidelity, and subjective compatibility in mood and genre. To facilitate reproducibility and foster future work, we publicly release the dataset, code, and demo.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1vTy0QG2GkLoiqbVQapJfVd1R1SrngQB1/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>I didn't carefully check this</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<p>I didn't check the experimental details carefully, but I didn't see anything obviously incorrect.</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>There are some potential reusable insights about being able to train a video-to-music system on public domain movies and still generalize to commercial movies; or about using video as an additional/alternative conditioning for generation over text. However both of these potential insights are not fully developed/convincing based on the evidence in the paper.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>A open source dataset of movies &amp; their aligned soundtracks is released, and a model is trained to generate soundtracks using the video as input.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Strengths:
+* The paper addresses an important and challenging problem: generating music for video.
+* The creation and release of the OSSL dataset is a significant contribution. The authors have made a commendable effort towards reproducibility by promising to release the dataset, code, and evaluation sets. 
+* The paper is well-written and easy to follow.</p>
+<p>Areas for Improvement:
+* Misleading Title: The title suggests that the paper's focus is on a music generation system for films, but the paper focuses mainly on the dataset, plus a proof-of-concept model with limited experiments. Clarifying the emphasis in the title or abstract would improve alignment with the content.
+* Lack of Clear Research Questions: The paper would benefit from explicitly stating its research questions for both the dataset and the model. Currently, the narrative reads somewhat like: “we made a dataset, and we trained a model on it,” without clearly articulated motivations or hypotheses. For the dataset: while its open-source nature is valuable, the authors could strengthen its contribution by identifying specific gaps it fills compared to existing datasets. For the model: what specific aspects of video-guided music generation are being explored? One possible direction mentioned—but not emphasized—is how well models trained on public domain data generalize to commercial data. Another could be the comparative benefits of video-guided over text-based soundtrack generation, which would benefit from a deeper literature-based argument and more thorough results analysis.
+* Dataset Details:
+ - A more thorough comparison of OSSL to other existing film music datasets would improve the paper, including a discussion of dataset sizes and type/quality of the content.
+ - The characteristics of the public domain dataset could be discussed in more detail, explicitly addressing the release year and quality of the films, and how they compare to the commercial dataset. (I mention this because I assume most public domain movies that you can find on YouTube are quite old? If that's the case, it would be interesting to discuss these particularities.)
+ - How good is the time-alignment between the soundtrack clips and the movie's audio? Also, are there ever subtle differences between the soundtrack audio and the music in the movie's audio?
+* Model Details and Evaluation:
+ - The related work section on audio-domain music generation contains inaccuracies (e.g. that diffusion-based generation focuses on generating spectral representations - this is not the case for most systems). The section could simply just focus on introducing MusicGen and conditioned music generation, which is probably enough for this paper.
+ - The authors could discuss the strengths and weaknesses of other multimodal generation approaches in the related work, particularly in comparison to their proposed approach.
+ - It's unclear if or how script information is used in the model, given the claim in the introduction that video frames alone are insufficient to capture mood, and that scripts often have mood annotations.
+ - The paper lacks a comparison to existing video-to-music generation systems, making it difficult to assess the effectiveness of the proposed model. The baselines used are kind of apples-and-oranges comparisons, as the baseline does not use video information. A more direct comparison to other video-to-music models would be more compelling.
+ - The connection between the dataset and the proposed adapter architecture needs better motivation (i.e. why are these two sections part of the same paper?). It is not clear why this architecture is particularly suited for this dataset. Said differently - if the paper was only about the model and was based on a different video + soundtrack dataset, would anything be different about the approach / experiments? 
+ - The human evaluation has a small number of participants &amp; examples, which limits the significance of these results.<br />
+ - The evaluation results are somewhat mixed in terms of trends, making it difficult to draw clear conclusions about the model or the dataset.
+* Minor Points:
+ - The citation for pyAudioAnalysis is missing. 
+ - There appears to be a typo in Table 2 ("green checkmark on m base") for "OSSL-finetuned" -- should that be a red X instead?<br />
+ - The method used for mapping soundtrack clips to movie clips could be improved by using more robust fingerprinting techniques besides the one that was tested.
+ - As a general motivation for video-guided generation, one compelling reason that is not discussed in the paper is that text-based prompts cannot as easily capture important temporal musical elements (e.g. a musical surprise the moment the monster jumps out)</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Paper Summary:
+This paper introduces the Open Screen Sound Library (OSSL), a new dataset of movie clips from public domain films paired with soundtracks and mood annotations. The authors also propose a model which extends the MusicGen text-to-music generation model with a video adapter to incorporate video input. The model is evaluated on the evaluation data from OSSL, which includes both public domain and commercial film datasets.</p>
+<p>There's a consensus among the reviewers that the OSSL dataset is a valuable contribution, addressing a gap in ethically sourced, well-annotated film-video-music data. All reviewers acknowledge the paper's readability and commitment to open-sourcing the dataset and code. However, I see several significant limitations, particularly concerning the model's evaluation and the paper's overall focus. The paper could be improved by addressing the following concerns:</p>
+<ul>
+<li>
+<p>Lack of Clear Research Questions and Focus: The paper lacks explicitly stated research questions, particularly for the model. As I noted, the narrative feels like "we made a dataset, and we trained a model on it," without a clear hypothesis or motivation for the model's specific architecture or why it's particularly suited for this dataset. Reviewer 1 also suggests that the model work could be split into a separate follow-up paper, reinforcing the idea that the model's inclusion feels somewhat tacked on rather than central to a well-defined research inquiry.</p>
+</li>
+<li>
+<p>Insufficient Model Evaluation and Comparisons: A critical weakness is the absence of a robust comparison to existing video-to-music generation systems. The baselines used are text-to-music models, making it difficult to assess the actual benefit of the video adapter. This concern was raised by myself and Reviewer 2, who explicitly requested comparisons to models like VidMuse or V2Meow. Without such comparisons, the effectiveness of the proposed model, especially its video-guided aspects, remains unconvincing.</p>
+</li>
+<li>
+<p>Limited Significance of Model Results: As observed by myself and Reviewer 1, the subjective performance of the model appears to be quite poor. Reviewer 1's statement that "the system doesn't work" and that they had "a difficult time perceiving any meaningful differences between the base MusicGen models vs. the text finetune vs. the image adapter" is a strong indicator of the model's current limitations. The mixed trends in the evaluation results, as I noted, also make it hard to draw clear conclusions. While the human evaluation size is acknowledged as small by the authors, this further compounds the issue of drawing significant conclusions from the model's performance.</p>
+</li>
+<li>
+<p>Discrepancy Between Title and Content: The title, "Video-guided Text-to-Music Generation for Films," suggests a primary focus on the generation system. However, as noted in my review, the paper's emphasis leans heavily towards the dataset. This discrepancy, while minor in isolation, contributes to the overall impression that the model component is not as fully developed or justified as it should be for a paper with such a title.</p>
+</li>
+<li>
+<p>Unclear Connection Between Dataset and Model: The motivation for connecting the OSSL dataset with this specific adapter architecture is not clearly articulated. It's not evident why this architecture is uniquely suited for the OSSL or what specific insights about video-guided generation are gained by training on this particular dataset. This raises questions about the synergy between the two main contributions.</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>First, my subjective impression of the demo in the supplementary material was that the system doesn't work. Compared to the excellent ground truth trailers and their soundtracking, all systems were awful. Particularly, I have a difficult time perceiving any meaningful differences between the base MusicGen models vs. the text finetune vs. the image adapter.</p>
+<p>I thus wonder if it wouldn't be better to rework the paper to exclusively focus on the dataset and its creation, and leave any downstream predictive model for an isolated follow-up publication instead that builds on top of OSSL.</p>
+<p>However, the paper is well-written and flows great so I don't think this is a needed change but perhaps a thought for future projects.</p>
+<p>Strengths:</p>
+<ul>
+<li>
+<p>Introduces a valuable new dataset (OSSL) with mood annotations for film music generation.</p>
+</li>
+<li>
+<p>Interesting to see concrete attempts of extending MusicGen with a video adapter for multimodal conditioning</p>
+</li>
+<li>
+<p>Comprehensive evaluation using both objective and subjective metrics is appreciated</p>
+</li>
+<li>
+<p>Ethical and reproducible approach, using public domain data and committing to open release</p>
+</li>
+<li>
+<p>Well-considered prompt design using mood and LLM-generated captions</p>
+</li>
+</ul>
+<p>Weaknesses:</p>
+<ul>
+<li>
+<p>Small human evaluation limits subjective result (fairly acknowledged in conclusion)</p>
+</li>
+<li>
+<p>Model innovation is modest (not necessarily bad however), with primarily an integration of existing systems. Again, might be best to split out all model work into a follow-up paper.</p>
+</li>
+<li>
+<p>Reliance on public domain data may limit stylistic diversity and realism but it's a fair limitation ofc.!</p>
+</li>
+<li>
+<p>Some implementation details (e.g. training times, costs) could be added</p>
+</li>
+<li>
+<p>Prompt effects are not ablated or isolated for clearer impact analysis</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths:
+* The OSSL fills a key gap in MIR by providing ethically sourced, well-annotated film-video-music data at scale, with mood labels.
+* The introduction of a lightweight video adapter into an autoregressive text-to-music model (MusicGen) seems efficient.
+* The paper is very readable, all major steps are well explained, and there is a strong commitment to open-sourcing the dataset, models, and evaluation metrics.</p>
+<p>Suggestions for Improvement:
+* The subjective evaluation only involved 15 participants, which is understandable given resource constraints, but future work could aim for larger user studies to strengthen conclusions. In future work, consider expanding subjective evaluations (e.g., 30–50 participants) to strengthen the confidence in user study results, particularly given the variability in human judgments for mood and genre.
+* It was good that the authors provided examples along with the paper. However for some of the examples the background sound was higher in volume compared to the dialogues. That might affect the subjective evaluations. 
+* Additionally, the examples of nervous were more than happy or peaceful. How about sad scenes? How does the model perform for those?
+* While MusicGen baselines are appropriate, a comparison to other multimodal generative models (e.g., VidMuse, V2Meow) would further position the contribution. Even a qualitative discussion would help.
+* The negative effect of adding genre labels to prompts is an interesting observation. It would be great if future versions explored if certain genre labels are consistently harmful, neutral, or helpful.
+* It would be insightful to show a few qualitative examples where the model fails (e.g., a mismatch between video and generated mood), helping readers better understand common failure modes and future improvement directions.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The primary contribution of the paper is the dataset. The methodology used to construct the dataset is thoughtful and detailed, and I have high hopes for its quality.</p>
+<p>In the title, I like the framing of "video-guided text-to-music generation" over "video to music generation" which other papers use to describe similar techniques.</p>
+<p>L174: "To achieve the highest music quality by obtaining soundtrack stems without unnecessary noise, we download soundtracks, instead of source-separated music, for each film from YouTube, guided by IMDB metadata." I really like this approach to ensuring high-quality audio rather than settling for youtube-encoded, source-separated audio with audio degradations and other artifacts like distortion from processing like audio ducking for speech and sound effects. I think more researchers should follow suit rather.</p>
+<p>L13: "To demonstrate the effectiveness of our dataset in improving the performance of pre-trained models on film music generation tasks..." Are there other tasks you can first use to show the quality of the dataset? To me there is a little bit of incongruity between the primary contribution of the paper - the dataset - and the focus of the paper - the methodology for fine-tuning and evaluating musicgen. A section analyzing the quality of the dataset and providing some statistics/distributions about the dataset compared to other SOTA datasets for the same task would go a long way in balancing things out.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

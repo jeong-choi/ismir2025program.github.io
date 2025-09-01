@@ -1,0 +1,640 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: The Rhythm In Anything: Audio-Prompted Drums Generation with Masked Language Modeling</title>
+    
+<meta name="citation_title" content="The Rhythm In Anything: Audio-Prompted Drums Generation with Masked Language Modeling" />
+
+<meta name="citation_author" content="Patrick O&#39;Reilly" />
+
+<meta name="citation_author" content="Julia Barnett" />
+
+<meta name="citation_author" content="Hugo Flores Garcia" />
+
+<meta name="citation_author" content="Annie Chu" />
+
+<meta name="citation_author" content="Nathan Pruyne" />
+
+<meta name="citation_author" content="Prem Seetharaman" />
+
+<meta name="citation_author" content="Bryan Pardo" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Musicians and nonmusicians alike use rhythmic sound gestures, such as tapping and beatboxing, to express drum patterns. While these gestures effectively communicate musical ideas, realizing these ideas as fully-produced drum recordings can be time-consuming, potentially disrupting many creative workflows. To bridge this gap, we present TRIA (The Rhythm In Anything), a masked transformer model for mapping rhythmic sound gestures to high-fidelity drum recordings. Given an audio prompt of the desired rhythmic pattern and a second prompt to represent drumkit timbre, TRIA produces audio of a drumkit playing the desired rhythm (with appropriate elaborations) in the desired timbre. Subjective and objective evaluations show that a TRIA model trained on less than 10 hours of publicly-available drum data can generate high-quality, faithful realizations of sound gestures across a wide range of timbres in a zero-shot manner.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Music and audio synthesis" />
+
+<meta name="citation_keywords" content="Music composition, performance, and production" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Rhythm, beat, tempo" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-11: The Rhythm In Anything: Audio-Prompted Drums Generation with Masked Language Modeling
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Patrick O&#39;Reilly" class="text-muted"
+        >Patrick O&#39;Reilly</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Julia Barnett" class="text-muted"
+        >Julia Barnett</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Hugo Flores Garcia" class="text-muted"
+        >Hugo Flores Garcia</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Annie Chu" class="text-muted"
+        >Annie Chu</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Nathan Pruyne" class="text-muted"
+        >Nathan Pruyne</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Prem Seetharaman" class="text-muted"
+        >Prem Seetharaman</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Bryan Pardo" class="text-muted"
+        >Bryan Pardo</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music and audio synthesis"
+        class="text-secondary text-decoration-none"
+        >Music and audio synthesis</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music composition, performance, and production"
+        class="text-secondary text-decoration-none"
+        >Music composition, performance, and production</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Rhythm, beat, tempo"
+        class="text-secondary text-decoration-none"
+        >Rhythm, beat, tempo</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Musicians and nonmusicians alike use rhythmic sound gestures, such as tapping and beatboxing, to express drum patterns. While these gestures effectively communicate musical ideas, realizing these ideas as fully-produced drum recordings can be time-consuming, potentially disrupting many creative workflows. To bridge this gap, we present TRIA (The Rhythm In Anything), a masked transformer model for mapping rhythmic sound gestures to high-fidelity drum recordings. Given an audio prompt of the desired rhythmic pattern and a second prompt to represent drumkit timbre, TRIA produces audio of a drumkit playing the desired rhythm (with appropriate elaborations) in the desired timbre. Subjective and objective evaluations show that a TRIA model trained on less than 10 hours of publicly-available drum data can generate high-quality, faithful realizations of sound gestures across a wide range of timbres in a zero-shot manner.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1GvRU_IVGaSd7R_LMYstwCpI2zj6dMwBQ/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>The citations for KAD aren't complete - KAD was already used as "KID" in
+Nistal et al., Comparing representations for audio synthesis using generative adversarial networks, 27th European Signal Processing Conference (EUSIPCO), 2019</p>
+<p>The authors missed several related works regarding drum sample and drum pattern generation. As that is the main topic of the paper, please include such works as well (see below for suggestions)</p>
+<p>Drum sample generation:</p>
+<p>J. Nistal, S. Lattner, and G. Richard,
+“DrumGAN: Synthesis of drum sounds with timbral feature conditioning using generative adversarial networks,”
+in Proc. Int. Soc. Music Inf. Retrieval Conf. (ISMIR), Montréal, Canada, 2020.</p>
+<p>A. Lavault, A. Roebel, and M. Voiry, “StyleWaveGAN: Style-based synthesis of drum sounds with extensive controls using generative adversarial networks,” in Proceedings of the Sound and Music Computing Conference (SMC), Saint-Étienne, France, 2022.</p>
+<p>J. Drysdale, M. Tomczak, and J. Hockman, “Style-based drum synthesis with GAN inversion,” in Extended Abstracts for the Late-Breaking Demo Session of the 22nd International Society for Music Information Retrieval Conference (ISMIR), Online, 2021</p>
+<p>Drum pattern/rhythm generation (audio and symbolic):</p>
+<p>G. Alain, M. Chevalier-Boisvert, F. Osterrath, and R. Piché-Taillefer,
+“DeepDrummer: Generating drum loops using deep learning and a human in the loop,”
+arXiv preprint arXiv:2008.04391, 2020.</p>
+<p>I.-C. Wei, C.-W. Wu, and L. Su,
+“Generating structured drum patterns using variational autoencoder and self-similarity matrix,”
+in Proc. Int. Soc. Music Inf. Retrieval Conf. (ISMIR), 2019.</p>
+<p>D. P. W. Ellis and J. Arroyo,
+“Eigenrhythms: Drum pattern basis sets for classification and generation,”
+in Proc. Int. Soc. Music Inf. Retrieval Conf. (ISMIR), 2004.</p>
+<p>D. Gómez-Marín, S. Jordà, and P. Herrera,
+“Network representations of drum sequences for classification and generation,”
+Frontiers in Computer Science, vol. 6, 2024.
+doi: 10.3389/fcomp.2024.1476996</p>
+<p>S. Lattner and M. Grachten,
+“DrumNet: High-level control of drum track generation using learned patterns of rhythmic interaction,”
+in Proc. IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), 2019.
+doi: 10.1109/WASPAA.2019.8937229</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<ul>
+<li>The interpretation of FAD is incorrect</li>
+</ul>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>I consider the way timbre information is injected as context a reusable insight.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Masked language modeling can be used for timbre transfer.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The paper introduces a masked Transformer model that produces audio clips of drums based on a timbre and a rhythm prompt. During training, a chosen "buffer" is partially masked, and the masked tokens are predicted based on the unmasked parts. At inference, the timbre prompt is appended to a fully masked segment that contains rhythm features.</p>
+<p>The paper is well structured and easy to follow. The sound examples are convincing, and most evaluations are reasonable. There is a major problem with the interpretation of KAD and some minor problems.</p>
+<p>Positive:
+- Well-structured and easy to follow paper with convincing results.
+- I appreciate the subjective study that shows that both models produce convincing output. It is understood that it wouldn't be fair to ask about timbre, as the MelodyFlow model isn't designed to adhere to a given timbre audio reference.</p>
+<p>Questions/Remarks:
+- The interpretation of KAD is incorrect: "Finally, as shown in Table 3, TRIA produces more realistic drum audio than MelodyFlow on average." The reference set chosen for KAD calculation is from the same distribution as the dataset used for timbre conditioning (i.e., MoisesDB dataset). Therefore it is understandable that the KAD from TRIA is lower than that from MelodyFlow, as MelodyFlow was prompted with random prompts that don't follow the reference data distribution. This test doesn't show "realistic drum audio"; it is rather redundant to the results in Table 2 (timbre column), where understandably, there are no results for MelodyFlow. Similar to omitting results for MelodyFlow in Table 2, the KAD comparison should also be considered invalid. Please remove or clarify that in the camera-ready version.
+- Why is the buffer chosen anywhere in the sequence during training, if at inference time, the generated part is only at the end? With enough training this doesn't really matter, but it seems to complicate things unnecessarily. Please clarify.
+- No reason is given why the range [0, 0.1, 0.2] was chosen for the re-noising parameter in MelodyFlow.
+- No mentioning about the used model architecture in either Abstract or Introduction. Please mention "Masked Transfomer" both in the Abstract and Introduction.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Overall, the reviews are positive, with two reviewers assigning Strong Accept and one Weak Accept. The reviewers consistently noted technical novelty, clarity of exposition, and practical relevance of the work. Highlights include:</p>
+<p>R1: “This is a very accomplished, polished piece of work which makes a valuable contribution,” and, “clear utility as a musical tool.”</p>
+<p>R2: “Very interesting disentangling method… clear contribution toward the emerging task of audio drum pattern synthesis.”</p>
+<p>R3: “Strong empirical evidence… modular conditioning and adaptive rhythm representation extendable to other tasks.”</p>
+<p>Areas for improvement included:</p>
+<p>R1: Clarification of the timbre/rhythm terminology and deeper ablations (e.g., on CFG).</p>
+<p>R2: Justification of choices such as the use of DAC codec and ChatGPT-based descriptors; concerns about potential western bias and prompt modality mismatches.</p>
+<p>R3: Correction of KAD interpretation and improved clarity on architectural description and training-inference masking mismatch.</p>
+<p>Meta-reviewer: Missing references to related work (especially KID/KAD, and prior work in drum synthesis and pattern generation); incorrect interpretation of KAD; lack of related literature on drum pattern/sound generation.</p>
+<p>Despite these concerns, the methodological contribution is considered solid and the experimental evaluation largely convincing.</p>
+<p>Recommendation
+The paper is technically sound, clearly written, and introduces a method that is novel and relevant to the ISMIR community. Remaining concerns are largely correctable in the camera-ready version. The authors are encouraged to revise the KAD interpretation, clarify architectural details in the introduction/abstract, and address the missing citations listed in the meta-review. Given the overall strong reviews and technical contribution, I recommend Accept.</p>
+<p>Congratulations to the authors for a strong and impactful paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I note that anonymity has been somewhat breached here: the authors shared this work widely online at the end of 2024 and I suspect it would be hard to find a reviewer with the appropriate expertise who is not already aware of this contribution. Nonetheless, I have endeavoured to evaluate the paper as impartially as I can.</p>
+<p>Overview:
+The work presents an audio generative model for percussion audio which is designed to disentangle rhythm and timbre conditioning signals. The model builds on VampNet to predict DAC tokens via masked generative modelling in a coarse-to-fine manner. It uses a “dualized” spectral representation with an adaptive crossover frequency as rhythm conditioning, and a DAC token prefix to represent timbre. The result is a model that effectively disentangles drum rhythms from drum timbre, allowing for a mapping from arbitrary recordings of “sound gestures” to realistic drum audio.</p>
+<p>Impression:
+My broad impression is extremely positive. This is a very accomplished, polished piece of work which makes a valuable contribution to an interesting research direction. Further, it continues in a trend of “musician-positive” work on generative AI which I feel sets a constructive example to the ISMIR community. Audio examples demonstrate that the resulting model clearly works well, and has clear utility as a musical tool.</p>
+<p>I do have some concerns about the KAD evaluation, with respect to the MelodyFlow baseline. These are detailed below. However, even in light of this, I believe the work is of sufficient value to the community to warrant acceptance.</p>
+<p>Some general observations:
+I wonder about the choice of “rhythm” and “timbre” as terminology for the conditioning signals. These should perhaps be referred to as “gesture” and “sound palette” signals, as the former captures extra-rhythmic aspects such as intensity and coarsely banded spectral centroid, while the latter is really capable of describing multiple timbres of which some or all may be present in the resulting signal, as well as other related timbres which are not captured in the conditioning.</p>
+<p>Given the predictability of many drum rhythms and the extreme information bottleneck in the rhythm representation, it’s something of a surprise that the disentanglement was so effective and the model so effectively ignores rhythmic content in the timbre prefix. Of course, the effects-based augmentation probably helped here, but I wonder whether the use of classifier-free guidance played a more important role. If the authors are planning any follow-up work, my opinion is that an ablation of CFG and exploration of sampling weights would be very helpful to readers in understanding how the proposed method actually works. Similarly, it would be helpful to know whether choices like the quantisation of the dualised representation are truly necessary.</p>
+<p>Excellent consideration of ethical implications. Perhaps there is a slight gap in the consideration of western bias: it is suggested that the model would function equally well if trained on percussion recordings from different musical cultures, but it does seem that the “dualized” adaptive rhythm representation exhibits a subtle bias to western rhythmic phraseology. All the prior work on this representation appears to focus on drum kit in western popular styles. Regardless, this does not detract from the work as presented, and is simply offered as a consideration for future research.</p>
+<p>Criticisms:
+My main criticism is that the KAD comparison to the MelodyFlow baseline is not under apples-to-apples conditions. TRIA receives timbre conditioning via a prefix of DAC tokens computed from MoisesDB recordings, while MelodyFlow receives a ChatGPT generated text description. I feel this distinction needs to be better emphasised in the text to make clear that MelodyFlow results can not be directly compared to TRIA results.</p>
+<p>I question the value of motivating this work on the basis, given in the introduction, that: “to realize a sound gesture as a fully-produced drum arrangement often requires significant time and skill”. I feel this line of reasoning risks alienating musicians by suggesting that it wishes to replace their labour rather than augment their abilities. It also seems a bit contradictory in light of the statement in section 6.1 that the authors view this work “as a means to provide music creators with additional agency”. </p>
+<p>To be clear, I'm not challenging the value of the work, just the framing of this particular motivation. Honestly, I feel the affordances of the proposed work stand on their own: it enables multiple new avenues for creative expression, which do not require justification as a mere time-saving contrivance.</p>
+<p>I found myself wondering about the performance of TRIA in the face of extreme OOD samples. To me, this would appear to be a very valuable creative use case: i.e. can I “play” any arbitrary sound as a percussion instrument by simply tapping or beatboxing? This is briefly addressed in the online supplement and in Fig. 4, but it would be nice to offer a more concrete evaluation of the model’s behaviour in the face of such extreme timbre conditioning. Honestly, I think such experimentation may have offered more insight into the musical value of the model than the FrameRNN transcription experiment.</p>
+<p>I also think this would be particularly revealing w.r.t. the MelodyFlow baseline. The paper points out that TRIA outperforms MelodyFlow despite being much smaller and trained with less data, but this is relatively unsurprising: task-specific models often outperform generalists on in-domain evaluations. I suspect that probing generalisation may reveal some (understandable) limitations of TRIA in comparison to MelodyFlow.</p>
+<p>Minutiae:
+Typo: Tables 1-3 all list MelodyFlow as MelodyFlowFlow</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper starts with the sentence "Musicians and non-musicians alike use rhythmic sound gestures, such as tapping and beat-boxing, to express drum patterns." but doesn't quote any reference to justify this statement. Later on, TRIA is presented as a solution that "produces audio of a drumkit playing the desired rhythm". It would be interesting to have further justification toward why producing an audio recording directly is useful to musicians (and non-musicians), considering that the producing workflow of musicians for example in EDM typically involve some sort of symbolic notation within a DAW or Drum Machines. More interestingly, it would be interesting to justify the other way around: what musicians and non-musicians are doing that requires to produce audio drum pattern.
+Regarding the technical aspect, it would also be interesting to justify further the use of the Descript Audio Codec to encode highly percussive audio content. Was it compared to other encoders or does the choice rely on another study?
+The Dualized Rhythm Representation is a very interesting part of this paper and it would be very useful to have some sort of graphic representation of the rhythm feature representation to visualize and insist further on one of the main contribution of the paper.
+Regarding the experiment, it was mentioned that the descriptions of the drum kits timbers was made with ChatGPT. It would be useful to explain why using a combination of MIR algorithms from the community couldn't be used at this point, or why already existing labeled drum content couldn't be used.
+In the subjective evaluation, TRIA2Band and MelodyFlow0.2 were selected. Would it be possible to justify this decision?
+Also since all the listeners are US speakers, it would be interesting to comment on the potential bias resulting of this decision/constraint.
+Finally, the Ethics Statement is interesting, but I do not know if all those details belongs to this paper. Maybe a separate paper about the ethical aspect of such research could be useful to address some details mentioned in this paragraph. Side comment: mentioning the energy cost of the research without the associated carbon footprint isn't very useful as different countries can have very different kWh/CO2 yearly average ratio.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths</p>
+<ol>
+<li>
+<p>Clear technical innovation: Dual-prompt conditioning and the adaptive 2-band dualized rhythm representation cleanly disentangle rhythm from timbre, yielding large gains over 1-band and naïve splits .</p>
+</li>
+<li>
+<p>Convincing empirical evidence with small resources: no significant listener preference between TRIA and MelodyFlow; both strongly preferred over random anchors</p>
+</li>
+<li>
+<p>Thorough ablations and fair crowd-sourcing protocol: Band-count, masking-ratio, and guidance ablations plus IRB-approved listening test with 116 paid evaluators enhance credibility</p>
+</li>
+</ol>
+<p>Weaknesses</p>
+<ol>
+<li>
+<p>Narrow evaluation scope – All tests employ ≤ 4 s Western drum prompts, leaving long-form grooves, polyrhythms, and non-Western percussion unvalidated and raising questions about external validity.</p>
+</li>
+<li>
+<p>Prompt-modality mismatch – TRIA receives an audio timbre prompt while MelodyFlow is conditioned on text, introducing a confound that may inflate TRIA’s apparent timbre adherence advantage.</p>
+</li>
+</ol>
+<p>The work delivers a significant, well-substantiated advance: a small, open, energy-efficient model that equals or beats a much larger proprietary system on multiple metrics. Experimental design is solid, writing is clear, and ethical transparency is exemplary. Remaining concerns—limited baselines, short prompts, and unreleased code—are important but fixable.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

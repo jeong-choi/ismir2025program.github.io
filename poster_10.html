@@ -1,0 +1,518 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Count The Notes: Histogram-Based Supervision for Automatic Music Transcription</title>
+    
+<meta name="citation_title" content="Count The Notes: Histogram-Based Supervision for Automatic Music Transcription" />
+
+<meta name="citation_author" content="Jonathan Yaffe" />
+
+<meta name="citation_author" content="Ben Maman" />
+
+<meta name="citation_author" content="Meinard Müller" />
+
+<meta name="citation_author" content="Amit Bermano" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Automatic Music Transcription (AMT) converts audio recordings into symbolic musical representations. Training deep neural networks (DNNs) for AMT typically requires strongly aligned training pairs with precise frame-level annotations. Since creating such datasets is costly and impractical for many musical contexts, weakly aligned approaches using segment-level annotations have gained traction. However, existing methods often rely on Dynamic Time Warping (DTW) or soft alignment loss functions, both of which still require local semantic correspondences, making them error-prone and computationally expensive. In this article, we introduce CountEM, a novel AMT framework that eliminates the need for explicit local alignment by leveraging note event histograms as supervision, enabling lighter computations and greater flexibility. Using an Expectation-Maximization (EM) approach, CountEM iteratively refines predictions based solely on note occurrence counts, significantly reducing annotation efforts while maintaining high transcription accuracy. Experiments on piano, guitar, and multi-instrument datasets demonstrate that CountEM matches or surpasses existing weakly supervised methods, improving AMT&#39;s robustness, scalability, and efficiency. Our project page is available at https://yoni-yaffe.github.io/count-the-notes.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Music transcription and annotation" />
+
+<meta name="citation_keywords" content="Alignment, synchronization, and score following" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Annotation protocols" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-12: Count The Notes: Histogram-Based Supervision for Automatic Music Transcription
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Jonathan Yaffe" class="text-muted"
+        >Jonathan Yaffe</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Ben Maman" class="text-muted"
+        >Ben Maman</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Meinard Müller" class="text-muted"
+        >Meinard Müller</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Amit Bermano" class="text-muted"
+        >Amit Bermano</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Music transcription and annotation"
+        class="text-secondary text-decoration-none"
+        >Music transcription and annotation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Alignment, synchronization, and score following"
+        class="text-secondary text-decoration-none"
+        >Alignment, synchronization, and score following</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Annotation protocols"
+        class="text-secondary text-decoration-none"
+        >Annotation protocols</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Automatic Music Transcription (AMT) converts audio recordings into symbolic musical representations. Training deep neural networks (DNNs) for AMT typically requires strongly aligned training pairs with precise frame-level annotations. Since creating such datasets is costly and impractical for many musical contexts, weakly aligned approaches using segment-level annotations have gained traction. However, existing methods often rely on Dynamic Time Warping (DTW) or soft alignment loss functions, both of which still require local semantic correspondences, making them error-prone and computationally expensive. In this article, we introduce CountEM, a novel AMT framework that eliminates the need for explicit local alignment by leveraging note event histograms as supervision, enabling lighter computations and greater flexibility. Using an Expectation-Maximization (EM) approach, CountEM iteratively refines predictions based solely on note occurrence counts, significantly reducing annotation efforts while maintaining high transcription accuracy. Experiments on piano, guitar, and multi-instrument datasets demonstrate that CountEM matches or surpasses existing weakly supervised methods, improving AMT's robustness, scalability, and efficiency. Our project page is available at https://yoni-yaffe.github.io/count-the-notes.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1elXDXHrJiZ2-Sz6iQCk_SOB0Lqbgfor-/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>Histograms are a viable alternative to sequence information in AMT training supervision.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Histograms provide sufficient information as input to a theoretically sound training process.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This work builds entirely on NoteEM (Reference 5). The NoteEM work presents certain limitations of using weakly aligned targets such as repeated cadenza, subtle nuances such as trills (which can easily be rendered differently from the score) and chords or arpeggios where the notes can come with delays in different order. The current works aims to alleviate the assumption of undisturbed event order by using an even weaker form of supervision via a note histogram (i.e. note counting only). Their approach obtains an improvement over NoteEM with the GuitarSet and GAPs datasets. It would have helped if they had discussed the precise contexts where the predictions showed differences and thus provided insights involving real-world score-audio mismatches. The paper presents results on simulated noise added to MAESTRO dataset but it is not clear what real-world musical phenomena are being captured by the noisy histograms generated in this manner. Overall the descriptions and explanations fall short of ideal.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Summarising the reviews post discussion phase, all reviewers agree that while the approach of histogram supervision is relevant and interesting, more discussion is needed to justify the substantial novelty of the contribution over the NoteEM paper. Clearer discussion is needed on how histogram supervision accounts for real-world score-audio mismatches with examples of specific scenarios where it helps over the DTW method.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper introduces a novel approach for improving automatic music transcription (AMT). To this end, it uses a pitch histogram criterion so-called CountEM which does not require temporal alignment and can fine-tune the estimated parameters of the model. While the idea is conceptually simple, it demonstrates potential usefulness and provides insights that could benefit and complement existing AMT techniques.</p>
+<p>Strengths:
+-The proposed method is simple yet effective, and it shows the potential of the approach without relying on explicit temporal alignment.</p>
+<p>-The framework offers reusable insights and can be integrated with existing AMT methods, potentially enhancing their performance.</p>
+<p>-The authors provide listening examples and a demo, which help illustrate the practical relevance and perceptual quality of the results.</p>
+<p>Weaknesses:
+-The proposed contribution appears incremental and closely related to NoteEM [5]. The paper should better emphasize the originality of its contributions and clearly delineate what is novel beyond existing work.</p>
+<p>-Maybe the CountEM process could be replaced by a regularization term within a standard training pipeline, rather than requiring a dedicated EM algorithm. This alternative should be discussed and justified in more depth.</p>
+<p>-The experimental results are limited. The study includes only two baseline methods (Hawthorne et al. [1,2] and Kong et al. [3]), while more recent and state-of-the-art methods such as Transkun [Yujia Yan &amp; Zhiyao Duan, ISMIR 2024] are not considered. A broader comparison would help clarify the benefits of the proposed approach.</p>
+<p>-The CountEM method may introduce errors when the histogram prior assumption is not met. This potential limitation should be addressed through targeted experiments and discussed to better understand the trade-offs.</p>
+<p>-The paper would benefit from improved organization and clearer exposition, particularly through a more formal problem definition and consistent use of mathematical notation.</p>
+<p>-No implementation code is provided, and there is no discussion of the computational complexity or runtime performance of the proposed method, which limits its reproducibility and practical evaluation.</p>
+<p>Recommendation:
+Although the paper is borderline in terms of novelty and experimental depth, I recommend a weak accept, as the core idea is potentially useful and could inspire further developments within the ISMIR community.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Summary:
+The paper introduces CountEM, a novel framework for Automatic Music Transcription (AMT) that leverages histogram-based supervision to convert audio recordings into symbolic musical representations. Unlike traditional AMT methods that rely on strongly aligned frame-level annotations or weakly aligned methods using Dynamic Time Warping (DTW) [1], CountEM uses note event histograms (counts of note onsets within time windows) as supervision. This approach eliminates the need for precise temporal alignment, reducing annotation effort and computational complexity. CountEM employs an Expectation-Maximization (EM) algorithm to iteratively refine predictions, starting with a model pre-trained on synthetic data. The framework is evaluated on piano (MAESTRO), guitar (GuitarSet), and multi-instrument (MusicNet, URMP) datasets, demonstrating performance improvements for both single-instrument and multi-instrument transcription.
+Review Comment:
+Recent literature has explored fine-tuning or semi-supervised retraining of transcription models pre-trained on datasets like MAESTRO. This paper offers a novel insight by proposing that DTW-based alignment can be replaced with histogram-based coarse peak picking to provide weak labels for fine-tuning. The experimental design is thorough, with detailed descriptions of the datasets and window sizes used. Notably, the noisy histogram setting is particularly compelling, as it simulates real-world transcription scenarios.
+I suggest the following revisions to strengthen the paper:
+Figure 1 and the corresponding paragraphs in Section 2 are difficult to follow. Terms such as “Ordering Inaccuracy,” “Translation Inaccuracy,” and “Timing Inaccuracy” are not clearly defined or referenced in the main text of Section 2. Additionally, the “[1*4] histogram supervision” is unclear; it took time to realize this refers to the count of pitches within a time window. The authors should provide a clearer explanation of Figure 1, as it appears central to the paper’s contribution.
+The highest scores in each table for each setting should be bolded to improve readability and emphasize the best-performing configurations.
+The paper should compare the training time of DTW-based methods versus histogram-based supervision. In some settings, methods from [1, 2] outperform CountEM, so the authors should emphasize the specific advantages of histogram-based supervision, such as reduced training time or improved performance in certain scenarios. The benefits of this approach need to be more clearly articulated, especially since fine-tuning is known to improve transcription performance based on prior literature.
+Overall, the paper proposes an innovative approach to fine-tuning transcription models, but its performance does not consistently surpass previous works. The advantages of histogram-based supervision should be further highlighted to strengthen the contribution. Based on the current content, I recommend a weak accept for this work.</p>
+<p>[1] B. Maman and A. H. Bermano, “Unaligned supervision for automatic music transcription in the wild,” in Proceedings of the International Conference on Machine Learning (ICML), Baltimore, Maryland, USA, 2022, pp. 14 918–14 934.
+[2] X. Riley, Z. Guo, and S. Edwards, Drew abd Dixon, “Gaps: A large and diverse classical guitar dataset and benchmark transcription model,” Proceedings of the International Society for Music Information Retrieval Conference (ISMIR), San Francisco, USA, 2024</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The core text it well written: The structure is logcial; the phrasing is understandable; the grammar is good; punctuation makes it easy to distinguish between individual ideas, and presents the work as easily digestible. I appreciate how they only introduce relevant information and supplies the information with contextual introductions, in case the reader is unaware of how it is relevant. Additionally, they add several examples, to put ideas in context. The figures are good, with figure 1 being self explanatory in conveying the overall idea of the paper. The experiments are well presented in a convincing manner.</p>
+<p>As I understand, the code is not going to be public, and if that is the case, I have a feeling that section 2 might be a little difficult to follow for reproduction. Algorithm 1 could have some more thorough explanation in my opinion, as the presented math and how it fits together takes some time to understand.
+Considering the argument on the inefficiency of DTW, it would seem obvious to include a discussion on the efficiency increase.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

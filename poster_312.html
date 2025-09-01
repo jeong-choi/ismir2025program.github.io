@@ -1,0 +1,556 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Refining music sample identification with a self-supervised graph neural network</title>
+    
+<meta name="citation_title" content="Refining music sample identification with a self-supervised graph neural network" />
+
+<meta name="citation_author" content="Aditya Bhattacharjee" />
+
+<meta name="citation_author" content="Ivan Meresman Higgs" />
+
+<meta name="citation_author" content="Mark Sandler" />
+
+<meta name="citation_author" content="Emmanouil Benetos" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Automatic sample identification (ASID) - the detection and identification of portions of audio recordings that have been reused in new musical works - is an essential but challenging task in the field of audio query-based retrieval. While a related task, audio fingerprinting, has made significant progress in accurately retrieving musical content under &#34;real world&#34; (noisy, reverberant) conditions, ASID systems struggle to identify samples that have undergone musical modifications. Thus, a system robust to common music production transformations such as time-stretching, pitch-shifting, effects processing, and underlying or overlaying music is an important open challenge. 
+In this work, we propose a lightweight and scalable encoding architecture employing a Graph Neural Network within a contrastive learning framework. Our model uses only 9% of the trainable parameters compared to the current state-of-the-art system while achieving comparable performance, reaching a mean average precision (mAP) of 44.2%.
+To enhance retrieval quality, we introduce a two-stage approach consisting of an initial coarse similarity search for candidate selection, followed by a cross-attention classifier that rejects irrelevant matches and refines the ranking of retrieved candidates - an essential capability absent in prior models. In addition, as queries in real-world applications are often short in duration, we benchmark our system for short queries using new fine-grained annotations for the Sample100 dataset, which we publish as part of this work.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Indexing and querying" />
+
+<meta name="citation_keywords" content="Fingerprinting" />
+
+<meta name="citation_keywords" content="Music retrieval systems" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Music signal processing" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Pattern matching and detection" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P5-02: Refining music sample identification with a self-supervised graph neural network
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Aditya Bhattacharjee" class="text-muted"
+        >Aditya Bhattacharjee</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Ivan Meresman Higgs" class="text-muted"
+        >Ivan Meresman Higgs</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Mark Sandler" class="text-muted"
+        >Mark Sandler</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emmanouil Benetos" class="text-muted"
+        >Emmanouil Benetos</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Indexing and querying"
+        class="text-secondary text-decoration-none"
+        >Indexing and querying</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Fingerprinting"
+        class="text-secondary text-decoration-none"
+        >Fingerprinting</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music retrieval systems"
+        class="text-secondary text-decoration-none"
+        >Music retrieval systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music signal processing"
+        class="text-secondary text-decoration-none"
+        >Music signal processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Pattern matching and detection"
+        class="text-secondary text-decoration-none"
+        >Pattern matching and detection</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Automatic sample identification (ASID) - the detection and identification of portions of audio recordings that have been reused in new musical works - is an essential but challenging task in the field of audio query-based retrieval. While a related task, audio fingerprinting, has made significant progress in accurately retrieving musical content under "real world" (noisy, reverberant) conditions, ASID systems struggle to identify samples that have undergone musical modifications. Thus, a system robust to common music production transformations such as time-stretching, pitch-shifting, effects processing, and underlying or overlaying music is an important open challenge. 
+In this work, we propose a lightweight and scalable encoding architecture employing a Graph Neural Network within a contrastive learning framework. Our model uses only 9% of the trainable parameters compared to the current state-of-the-art system while achieving comparable performance, reaching a mean average precision (mAP) of 44.2%.
+To enhance retrieval quality, we introduce a two-stage approach consisting of an initial coarse similarity search for candidate selection, followed by a cross-attention classifier that rejects irrelevant matches and refines the ranking of retrieved candidates - an essential capability absent in prior models. In addition, as queries in real-world applications are often short in duration, we benchmark our system for short queries using new fine-grained annotations for the Sample100 dataset, which we publish as part of this work.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1c1-9zALWWtf1vFDhyV6Kt158D2eBMgnd/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>It only compares with one previous system that doesn't seem to be peer-reviewed. Several references are listed incompletely.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>It is unclear to me whether the system presented in the paper is actually improving results over a previous (not peer-reviewed) method claiming to be state-of-the-art. The lack of comparison with different baselines and the closeness of the mAP question whether the presented system is a meaningful improvement.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Better sample detection inspired by fingerprinting.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The authors present a system of sample detection based on a GNN with a classifier. The topic of sample detection is somewhat underexplored, so I appreciate the work on it. The main contributions are improved annotations for an existing dataset, a meaningful way of augmenting the training data, and the application of a GNN plus a classifier for retrieving the candidates.</p>
+<p>I was a bit surprised by the general premise that a fingerprinting approach works for sample detection - it would be interesting to see a more detailed analysis on mixing levels and detection accuracy.</p>
+<p>My main concern is the lacking comparison with previous systems (the only one is from a non-peer-reviewed study) and that the results seem to be no improvement (mAP .442 vs .441) over this previous system. What makes me more skeptical is that the larger comparison system results are omitted in Table 3, only the results for the smaller, inferior system are presented as comparison..</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The authors present an approach for sample identification with GNNs that seems to perform on par with or outperform the state of the art at a considerably lower complexity. Sample identification is a fascinating yet generally underexplored task, and the presented detailed annotations to an existing dataset are an important contribution to the field. In addition, the augmentation strategy during training is a neat strategy for this task.</p>
+<p>The main weak point of the paper is that the actual comparison against the state of the art is missing for what are likely resource issues, preventing a decisive conclusion. The paper also could improve the description of methodology in some parts.</p>
+<p>The discussion mainly focused on whether the existing contributions of the paper outweigh the shortcomings of the evaluation, making this a borderline decision.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Dear authors, thank you for your clear and well-structured contribution.</p>
+<p>The paper presents a lightweight GNN-based model for automatic sample identification (ASID), combined with a retrieval refinement step using cross-attention and a detailed evaluation pipeline.</p>
+<p>The task itself (sample identification under realistic transformations) is highly relevant and practically valuable, particularly for industry use cases like rights management. The approach of combining approximate nearest-neighbor search with a learned ranking function is well-motivated.</p>
+<p>The extension of the Sample100 dataset with fine-grained annotations is one of the strongest contributions of the paper, and I greatly appreciate that both the dataset and code are shared for reproducibility. This will support follow-up research in this area. Your analysis of different sample types (beat vs. riff) and time-stretching levels (Table 4) provides helpful insights and reflects a thoughtful evaluation design.</p>
+<p>There are a few points where the paper could be clarified:
+* The equation for mean-pooling (eq 4) seems a bit redundant, as the operation is trivial and well known.
+* It might be beneficial to discuss and analyze false positives, to see if there is a pattern, e.g. similar beats or riffs.</p>
+<p>Overall, this is a useful and timely contribution with a clear structure, solid methodology, and strong practical grounding. I recommend acceptance.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Please find below my review </p>
+<p>====== REVIEW BEGINS HERE ======</p>
+<p>The paper is about proposing a new architecture for ASID task. The architecture is composed of lightweight GNN as the encoder and multi-head attention-based classifier. Authors also open-source the code and release an advanced annotation of the Sample 100 dataset to benefit community of the relevant research. Overall, authors did some interesting designs and do some good analysis about query length and sample characteristics. However, I have several comments about the paper: </p>
+<p>First, the clarity of the methodology part. In my opinion, the methodology part is hard to follow due to some not necessary math equation or notation. For example, the notation in section 3.1. I think the math notation of waveform y or fixed duration t_seg didn’t introduce clarity of the paper, plain text description will be more clear. Similar issues also existed in other part, such as the equation (2) is a standard GNN operation but authors didn’t state further new information. Also the similar issues from equation (3) to (5). Some informations are standard operation or it doesn’t necessary need an equation to illustrate the idea. It largely affect the clarity of the paper. </p>
+<p>Second, also about the clarity of the figure 1. It is hard to understand the concept by just checking figure 1. Although after checking the methodology part then the figure can be understood, i think authors can further enhance the clarity of the figure 1. For example, the dotted arrow from “database of reference songs” to “list of candidates” is unclear for me in the first glance. Also why three query embeddings will merge to correct match, how did they merge. Those informations only can be understood after checking the paper. Similar issues for multi-head cross-attention part. Embedding matrices NM_q and NM_r appears abrupt, such as does the correct match in stage (A) and stage (B) denotes same things? Does the A and B show the sequential processing or what’s the relationship between A and B? </p>
+<p>Third, the potential misleading contribution in evaluation part. From table 2, authors compare the proposed method with SOTA model, and further evaluate the performance with different batch sizes. However, it seems like author leverage the SimCLR-based learning framework already, it is not surprise to see that increasing batch size improve the performance. The paragraph from line 440 to 448 may easily misleads readers who unfamiliar with SimCLR to interpret this as the contribution of this paper. </p>
+<p>In the end, my decision of this paper will be weak reject. Though authors demonstrate some vary good start points of the project and definitely contribute the MIR community, I expect authors to further improve the clarity of the paper. </p>
+<p>Some minor comments about the clarity or possible missing references: </p>
+<ul>
+<li>line 171: k-nearest neighbour graph → k-nearest neighbors graph</li>
+<li>line 149 &amp; line 160: “mel-spectrogram” and “spectrogram” share the same notation (? I think the spectrogram in line 160 should also be “mel-spectrogram” not “spectrogram”.</li>
+<li>line 393: miss a reference about Adam optimizer</li>
+<li>line 235: it will be better to mention K=4 in this paper.</li>
+</ul>
+<p>====== REVIEW ENDS HERE ======</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I think this paper is exceptional. I really like that it was able to build upon the successes of GNNs in audio fingerprinting where CNNs have had such popularity recently, and established a new SOTA baseline. The explanation of the methodology was clear and easy to follow, and the results speak for themselves. The augmentation to the existing dataset was really a cherry on top.</p>
+<p>I do have a few criticisms/questions/comments though -</p>
+<p>The existing SOTA does feel a bit slighted in that it wasn't re-implemented for this paper to compare against the latest results. Not having implemented this existing baseline myself, I found myself wondering, exactly how far outside of the realm of practical are the computational needs to implement a ResNet50-IBN architecture as compared to the ResNet18-IBN model implemented in its place? Was the A100 GPU not suitable? I do understand that the replacement model used a number of parameters on the order of magnitude of the model proposed by this paper, which is part of the allure, but it doesn't feel like an <em>entirely</em> fair comparison to say you beat the benchmark. Maybe the existing SOTA architecture would have benefited from the Sample100 dataset augmentations added to this paper and performed even better? It is hard to know without trying.</p>
+<p>It was neat to see the ablation study showing the effectiveness of the GNN approach of this paper with and without the MHCA piece, as well as with varying batch sizes. I do wonder though why you stopped at batch size 1024 once you narrowly stepped ahead of the reported SOTA mAP score - why not try one or two even larger batch sizes to see if you could knock it out of the park? Were the returns already diminishing? Were the computational needs bordering on impractical? Perhaps some sort of memory pressure or something? I just found myself wondering if there was some additional runway here.</p>
+<p>Regarding the augmentation of the reference segments - were those augmented reference segments persisted and re-used, or were new augmentations created on-the-fly for every single batch?</p>
+<p>Also, the augmentation step described in equation (8) seems a bit wild to me in general - does it make sense to apply ALL FOUR transformations (time-offset, gain variation, pitch-shifting, time-stretching) to every single reference segment? Might it make sense to only apply one or a few, here or there? Also, to make the augmentations seem more plausible, might it make more sense to look a bit more in depth at the nature of augmentations used in Sample100 to try and closer-replicate more realistic transforms? For example, time-stretching a segment in the uniformly sampled range of 70-150% and then mixing with the remaining stems seems a bit unrealistic of real music sampling. Wouldn't a beat-matched time-stretch, even at a higher or lower tempo octave of the reference drums stem be more plausible?</p>
+<p>I thought Table 3 was quite helpful in showing model performance at varying query lengths, particularly that the proposed model excels with longer query lengths, but what about shorter query lengths? Using a minimum length of 5s feels even a bit long, but I could be wrong. This also got me wondering about the distribution of actual sample lengths present in the dataset.</p>
+<p>On the note of dataset transparency, I also liked that Table 4 sort of presented the proportion of samples in the dataset that exhibited certain characteristics (and the success of the model in these specific areas), but it also left me kind of seeking additional information. Specifically, it broke down time stretches into &gt;5% and &lt;5% buckets, but this got me curious - how much more than 5%? The time-stretching augmentation in this paper varies from 70-150% - does that cover the ranges found here? Also, the "1-note" type of sample class present in the table with no mAP result doesn't seem to be explained anywhere. Are there any other sample types in the dataset?</p>
+<p>Thanks again for your paper, I really enjoyed reading it.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

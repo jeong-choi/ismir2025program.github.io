@@ -1,0 +1,529 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: AN EVALUATION STRATEGY FOR LOCAL KEY ESTIMATION: EXPLOITING CROSS-VERSION CONSISTENCY</title>
+    
+<meta name="citation_title" content="AN EVALUATION STRATEGY FOR LOCAL KEY ESTIMATION: EXPLOITING CROSS-VERSION CONSISTENCY" />
+
+<meta name="citation_author" content="Yiwei Ding" />
+
+<meta name="citation_author" content="Yannik Venohr" />
+
+<meta name="citation_author" content="Christof Weiss" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Local key estimation (LKE) is an important yet challenging task in music information retrieval since it involves a high level of musical abstraction, which entails ambiguity and low inter-annotator agreement. Relying on limited (small) datasets with a single annotation may introduce not only dataset bias but also annotator bias. To address such problems, we propose in this paper a novel, annotation-free evaluation strategy for LKE. To this end, we exploit datasets where multiple versions of the same musical work are available. We investigate the models&#39; consistency across versions, expecting an effective and robust model to output similar predictions on different versions of the same work. In our experiments, we study the behavior of the proposed cross-version consistency measure at the example of different models and datasets, indicating a strong correlation between cross-version consistency and the models&#39; effectiveness on in-domain data as well as their generalization to out-of-domain data. Our further studies show that, while being correlated to common evaluation metrics, cross-version consistency is also capturing different aspects of model behavior, thus serving as an additional figure of merit for evaluating LKE models.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Evaluation metrics" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Harmony, chords and tonality" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-05: AN EVALUATION STRATEGY FOR LOCAL KEY ESTIMATION: EXPLOITING CROSS-VERSION CONSISTENCY
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Yiwei Ding" class="text-muted"
+        >Yiwei Ding</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yannik Venohr" class="text-muted"
+        >Yannik Venohr</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Christof Weiss" class="text-muted"
+        >Christof Weiss</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation metrics"
+        class="text-secondary text-decoration-none"
+        >Evaluation metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Harmony, chords and tonality"
+        class="text-secondary text-decoration-none"
+        >Harmony, chords and tonality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Local key estimation (LKE) is an important yet challenging task in music information retrieval since it involves a high level of musical abstraction, which entails ambiguity and low inter-annotator agreement. Relying on limited (small) datasets with a single annotation may introduce not only dataset bias but also annotator bias. To address such problems, we propose in this paper a novel, annotation-free evaluation strategy for LKE. To this end, we exploit datasets where multiple versions of the same musical work are available. We investigate the models' consistency across versions, expecting an effective and robust model to output similar predictions on different versions of the same work. In our experiments, we study the behavior of the proposed cross-version consistency measure at the example of different models and datasets, indicating a strong correlation between cross-version consistency and the models' effectiveness on in-domain data as well as their generalization to out-of-domain data. Our further studies show that, while being correlated to common evaluation metrics, cross-version consistency is also capturing different aspects of model behavior, thus serving as an additional figure of merit for evaluating LKE models.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1GDW7KTR_1atpLS_zcY7YFHiKd8kwzqIU/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>While the proposed metric can and probably should be adopted in future papers working on local key estimation, it teaches little about the type of errors being made, nor provides a straightforward way to lead to improved estimation.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>When multiple versions of a composition are available, the proposed metric can give insight into the local key estimation of an algorithm without relying on annotations.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<h2>Summary</h2>
+<p>A new metric for local key estimation is proposed, which is based on the consistency of the estimated local key across different versions of a piece of music and therefore does nor rely on annotations. It is shown to be correlated to existing, annotation-based recall metrics, by performing experiments with multiple deep learning based systems. There are the differences between the proposed and existing metrics though, for instance the ranking between models is not necessarily preserved, but it is not clear what the proposed metric captures that the existing ones don't and vice versa.</p>
+<h2>Positives</h2>
+<ul>
+<li>A well written text, with a clear structure and a good didactic approach.</li>
+<li>A variety of models and datasets used.</li>
+</ul>
+<h2>Negatives</h2>
+<ul>
+<li>Narrow focus on classical music. The method relies on the availability of multiple interpretations of the same piece of music, in a way that is common in classical music. It would be interesting to see if the proposed methed transcends this narrow field and would also work with popular or jazz music. The exact defintion of and difference between version would be crucial there. Is a remaster of a pop song sufficiently different? Does the metric still work with covers? Can this be used with repeated improvisations in jazz music?</li>
+<li>Creating models of varying quality by saving checkpoints every 10 epochs is the easiest, but likely not the best way to do this because of the obvious correlation between subsequent checkpoints. Better would be to do small architecture variants, such as reducing the number of neurons in a layer/number of layers/etc.</li>
+<li>While the clear explanation and increasing difficulty of the experiments is much appreciated, the proposed contribution feels relatively small to spread out over 6 pages. RQ3 is the one that matters in the end, the preceding RQs are part of the metric's development, but of lesser consequence. </li>
+<li>It's unclear if the new metric will have a significant impact on the field. The CVC can/will be reported in future papers on LKE, but will new methods be proposed/accepted only based on CVC performance on unlabelled data? Either further insights into the differences between CVC and recall measures or demonstration of its applicability beyond classical music should be added to ensure impact of the work. </li>
+</ul>
+<h2>Overall</h2>
+<p>A well executed and presented paper that is easy to read and understand. The proposed metric is interesting, but the narrow focus on classical music and the lack of insight into the differences between the proposed and existing metrics diminish the value of its contribution.</p>
+<h2>Presentation</h2>
+<ul>
+<li>The correlation matrices presented in Fig. 6 would be better presented as triangular matrix to avoid unnecessary duplication of data and visual distraction.</li>
+<li>l. 197: "mesaure" should be "measure"</li>
+<li>l. 237: "architecure" should be "architecture"</li>
+<li>l. 403: "shorteset" should be "shortest"</li>
+</ul>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All reviewers agree that the root of the ideas presented in this submission are very interesting and have great potential.
+The excellent presentation and writing style is also much appreciated. Some questions over the interpretation and applicability of the proposed metric remain, however, which would ideally be addressed in future iterations of this work. Do have a look at the individual reviews for more details.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Summary</p>
+<p>This paper presents a simple yet effective idea: in the absence of ground truth labels, align multiple datasets of the same songs, and treat agreement between predictions as a proxy for recall.</p>
+<p>Strengths
+- Clearly defined problem and straightforward solution
+- Comprehensive evaluation
+- Incorporates a music-knowledge-based scoring variation</p>
+<p>Weaknesses
+- The proposed metric correlates with recall, but the rationale for prioritizing recall is not well-justified
+- Lack of analysis involving other standard metrics, such as precision or F1-score
+- Unclear whether the reported recall is micro or macro. Given that the authors align it with accuracy, it should be micro.</p>
+<p>Detailed Comments</p>
+<p>The authors should elaborate on the choice of recall as the primary evaluation metric. From the manuscript, it appears they are using micro recall, that corresponds to overall accuracy in most settings (single label as this one).</p>
+<p>However, accuracy (or micro recall) is known to be biased toward the most frequent class. In highly imbalanced settings, a naive classifier that always predicts the most common label can achieve a high recall. It would be valuable to understand whether the proposed method accounts for this bias in any way.</p>
+<p>Moreover, a discussion on the trade-offs and limitations of relying solely on recall would strengthen the paper’s evaluation.</p>
+<p>Analysis
+I independently downloaded the dataset and used a quick script (with help from ChatGPT) to verify that the concerns raised above were not critical in this particular case. Nevertheless, the lack of discussion on metric selection remains a weakness, and I encourage the authors to address it.</p>
+<p>https://chatgpt.com/share/681fe25f-dec4-8006-b7d2-8dd3d1f048c5</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper cleverly exploits the fact that different performances of a western classical music piece should have the same local key annotations (given the same annotator) to define an annotation-free local key estimation evaluation metric (CVC) describing the cross-version model performance consistency. The key to making this happen is time-aligning the different performances of the same piece. </p>
+<p>The paper overall is well-written, with each concept and method being clearly explained. The music theory introduced and explained is sound. I would recommend that the fact that the method is applicable to western classical music be disclosed in the abstract, given that absolutely aligned reperformances with the same structural section ordering/repetitions are not standard outside of this context, at least for existing datasets.</p>
+<p>As mentioned before, I think the potential of annotation-free evaluation is big, and it has certainly driven progress in some areas in MIR. This particular trick, while not particularly complex, is clever. While one could think of it as simply a use of domain-shift generalization as a proxy for model evaluation, this particular application is particularly suited, given its "domain-shift" almost perfectly preserves non-performance-related factors of variation/content.</p>
+<p>Overall, I like the experiments conducted, particularly the idea of using the different checkpoints as a proxy to expected model performance. However, my main point of criticism is that while inter-annotator agreement is emphasized as a problem in these scenarios, and, thus, also of using recall/MIREX given they are based on annotations, the correlation experiments are still ran against them. If there is annotation bias in the annotations used, then correlating to recall based on the annotations is obviously limited and does not address the issue. Obviously I don't think this is an easy problem to solve, but I think the way it was introduced made me expect that an experiment would be conducted to address it. I think it would be useful to 1. acknowledge the limitations of using these metrics as a base of comparison in the experiment design, given the annotation limitations introduced, and 2. mention more valid uses of this metric, rather than the absolute measure of LKE performance (which currently is also hampered by the cross-model CVC inconsistencies) - one such use would be as a supervision signal.</p>
+<p>My other criticism is that, while the figure 6 experiment is well designed, the conclusion that the CVC variants are a novel figure of merit because of it is a bit of a generous interpretation of the weaker correlation. That's particularly because of the small differences between the original and EMD variant compared to MIREX. I would have liked to see these results investigated further. Given the overall potential of the method, I would have prefered that more space is allocated to a discussion about possible directions of improvement (particularly in the direction of more musically/perceptually informed approaches), limitations, and future work.</p>
+<p>Overall, I think this is a good paper with scientific merit, and some changes within the scope of the camera ready can increase its soundness and impact, though some mentioned limitations would remain.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The problem and the idea are both very interesting. However, the main comment is whether the results are convincing enough. In Figure 6, the MIREX and recall agree much better than do CVC_TVD and CVC_EMD, which in turn, are better than any cross combinations like Recall/MIREX and CVC_*.</p>
+<p>On the other hand, the authors have clarified that the CVC is not a replacement for current metrics, but complements them. In that case, the applications of CVC must be brought out. What additional utility does it bring?</p>
+<p>Some other points I noticed:
+Figure 2 is not referred in the text anywhere. Presumably illustrates the description in Section 3.
+Section 3: L is not defined, hopefully it is the number of gray segments in Figure 2. Similarly for M and N can be mapped to the figure.
+Please clarify in the text that the predictions are probabilities of the 24 keys at the introduction of p and q.</p>
+<p>I'm not an expert in the subject, but "frame" in the context of audio suggests 10 to 60 ms. The frame length is not in the paper anywhere. It is hard to imagine a local key every frame, unless there is a window of a few seconds ending at that frame.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

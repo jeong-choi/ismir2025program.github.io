@@ -1,0 +1,581 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: MIDI-VALLE: Improving Expressive Piano Performance Synthesis Through Neural Codec Language Modelling</title>
+    
+<meta name="citation_title" content="MIDI-VALLE: Improving Expressive Piano Performance Synthesis Through Neural Codec Language Modelling" />
+
+<meta name="citation_author" content="Jingjing Tang" />
+
+<meta name="citation_author" content="Xin Wang" />
+
+<meta name="citation_author" content="Zhe Zhang" />
+
+<meta name="citation_author" content="Junichi Yamagish" />
+
+<meta name="citation_author" content="Geraint Wiggins" />
+
+<meta name="citation_author" content="George Fazekas" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Generating expressive audio performances from music scores requires models to capture both instrument acoustics and human interpretation. Traditional music performance synthesis pipelines follow a two-stage approach, first generating expressive performance MIDI from a score, then synthesising the MIDI into audio. However, the synthesis models often struggle to generalise across diverse MIDI sources, musical styles, and recording environments. To address these challenges, we propose MIDI-VALLE, a neural codec language model adapted from the VALLE framework, which was originally designed for zero-shot personalised text-to-speech (TTS) synthesis. For performance MIDI-to-audio synthesis, we improve the architecture to condition on a reference audio performance and its corresponding MIDI. Unlike previous TTS-based systems that rely on piano rolls, MIDI-VALLE encodes both MIDI and audio as discrete tokens, facilitating a more consistent and robust modelling of piano performances. Furthermore, the model’s generalisation ability is enhanced by training on an extensive and diverse piano performance dataset. Evaluation results show that MIDI-VALLE significantly outperforms a state-of-the-art baseline, achieving over 75\% lower Fréchet Audio Distance on the ATEPP and Maestro datasets. In the listening test, MIDI-VALLE received 202 votes compared to 58 for the baseline, demonstrating improved synthesis quality and generalisation across diverse performance MIDI inputs.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Music and audio synthesis" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Expression and performative aspects of music" />
+
+<meta name="citation_keywords" content="Music synthesis and transformation" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-01: MIDI-VALLE: Improving Expressive Piano Performance Synthesis Through Neural Codec Language Modelling
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Jingjing Tang" class="text-muted"
+        >Jingjing Tang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xin Wang" class="text-muted"
+        >Xin Wang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Zhe Zhang" class="text-muted"
+        >Zhe Zhang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Junichi Yamagish" class="text-muted"
+        >Junichi Yamagish</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Geraint Wiggins" class="text-muted"
+        >Geraint Wiggins</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=George Fazekas" class="text-muted"
+        >George Fazekas</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music and audio synthesis"
+        class="text-secondary text-decoration-none"
+        >Music and audio synthesis</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Expression and performative aspects of music"
+        class="text-secondary text-decoration-none"
+        >Expression and performative aspects of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music synthesis and transformation"
+        class="text-secondary text-decoration-none"
+        >Music synthesis and transformation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        10-minute long-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Generating expressive audio performances from music scores requires models to capture both instrument acoustics and human interpretation. Traditional music performance synthesis pipelines follow a two-stage approach, first generating expressive performance MIDI from a score, then synthesising the MIDI into audio. However, the synthesis models often struggle to generalise across diverse MIDI sources, musical styles, and recording environments. To address these challenges, we propose MIDI-VALLE, a neural codec language model adapted from the VALLE framework, which was originally designed for zero-shot personalised text-to-speech (TTS) synthesis. For performance MIDI-to-audio synthesis, we improve the architecture to condition on a reference audio performance and its corresponding MIDI. Unlike previous TTS-based systems that rely on piano rolls, MIDI-VALLE encodes both MIDI and audio as discrete tokens, facilitating a more consistent and robust modelling of piano performances. Furthermore, the model’s generalisation ability is enhanced by training on an extensive and diverse piano performance dataset. Evaluation results show that MIDI-VALLE significantly outperforms a state-of-the-art baseline, achieving over 75\% lower Fréchet Audio Distance on the ATEPP and Maestro datasets. In the listening test, MIDI-VALLE received 202 votes compared to 58 for the baseline, demonstrating improved synthesis quality and generalisation across diverse performance MIDI inputs.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1RA4UQL2qt5E2R1maoZh5Dp_IQczXBbEH/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>code and demos</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Valle's methodology used in MIDI-Audio for expressive performance rendering</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper presents MIDI-VALLE, a neural codec language model for expressive piano performance synthesis, inspired by VALLE from the speech domain. The authors introduce Piano-Encodec, a piano-specific audio tokenizer, and propose a discrete tokenization pipeline for both MIDI and audio, enabling high-fidelity synthesis from symbolic input with either MIDI or audio prompts. The paper is solidly grounded in prior work and demonstrates clear technical contributions, especially in bridging symbolic and acoustic domains via discrete representations.</p>
+<p>That said, some limitations are noted. The model primarily targets classical piano and struggles with jazz/generalization; its evaluation lacks comparison to stronger baselines like Pianoteq; and claims around style prompting and codebook interpretability would benefit from more evidence. Importantly, while the architecture supports audio-prompt-based generation, the potential for style transfer (as explored in VALLE) is not fully demonstrated or evaluated. Highlighting this as a future direction—e.g., transferring expressive characteristics from a performer’s prompt to unseen MIDI—would significantly strengthen the work’s broader impact.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper combines a custom-trained audio codec with a discrete token-based MIDI-to-audio generation pipeline. The work is technically sound, well-motivated, and includes solid subjective/audio results demonstrating high-quality piano synthesis.</p>
+<p>reviewers all agree on an acceptance. For the final version, please pay attention to the weakness parts posted by reviewers, especially the todo list by R3.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths: </p>
+<ul>
+<li>
+<p>Flexible Framework: MIDI-VALLE presents an adaptable framework that can be applied to various music synthesis and transcription tasks, such as music score prediction, audio-to-MIDI transcription, and music generation beyond classical piano. </p>
+</li>
+<li>
+<p>The model introduces a novel method of treating MIDI as discrete tokens, avoiding traditional piano rolls and spectrograms, which improves generalization and synthesis quality. </p>
+</li>
+<li>
+<p>MIDI-VALLE’s training on transcribed MIDI data enhances its ability to generalize to recorded data without the need for fine-tuning, which is beneficial for real-world applications where recorded data is often limited. </p>
+</li>
+<li>
+<p>The model demonstrates improved synthesis quality (audio examples are provided), outperforming state-of-the-art baselines such as M2A on multiple datasets, with better preservation of timbral and ambient features. </p>
+</li>
+</ul>
+<p>Weaknesses : </p>
+<ul>
+<li>
+<p>MIDI-VALLE struggles to generalize beyond classical music, particularly with genres that involve richer harmonic content, syncopation, and subtle expressive variations. </p>
+</li>
+<li>
+<p>The remaining FAD gap between MIDI-VALLE generations and the ground truth may be due to the noisier outputs of the non-autoregressive model. </p>
+</li>
+<li>
+<p>The distinction between MIDI-VALLE’s MIDI tokenization and the Octuple MIDI method is unclear, particularly without a clear reference to the original model. Also, claims about note-wise encoding and reduced complexity lack sufficient explanation or comparison with the original model. </p>
+</li>
+<li>
+<p>It would have been interesting to provide audio examples to support this claim: “The first codebook captures primary acoustic features, such as pitch, note duration, and timbre, while the subsequent codebooks focus on finer details of these features.”</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths: 
+- Clear writing and analysis
+- Superior Synthesis Quality on Classical Music
+- Robust Tokenization Approach
+- Enhanced System Compatibility</p>
+<p>Weaknesses of the model
+- Struggles with Jazz, authors acknowledge this and provide appropriate justifications
+- Prompt Alignment Sensitivity, also discussed in the article</p>
+<p>Accept (confidence 4/5): this paper adapts the VALLE framework with discrete tokenization for MIDI and audio to achieve state‑of‑the‑art expressive piano synthesis, showing substantial improvements over the M2A baseline—particularly on classical repertoire—via better FAD scores, listening‑test preferences, generalization to recorded MIDI, and prompt‑acoustic adaptability. While limitations remain in jazz performance, prompt alignment, and pedal synthesis (all acknowledged for future work), the strong technical contributions and clear results on the primary task justify acceptance.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents MIDI-VALLE, a transformer-based model for expressive performance synthesis based on the architecture of VALL-E, a model for text-to-speech synthesis. The work introduces a fine-tuned audio codec for piano music, Piano-Encodec, and a MIDI-to-audio generative model with additional audio and MIDI acoustic prompts for conditioning. The results are convincing and well presented.</p>
+<p>The main strengths of the paper are:
+1. Theoretically sound and solid paper. Clear motivation and application of existing approaches from the related domain of speech synthesis to expressive music performance synthesis.
+2. The choice of model design is validated and all steps are explained in detail. The choice for audio tokenization is also validated and contrasted with the piano roll representation.
+3. The trained Piano-Encodec shows good reconstruction quality and can be used for any other research related to piano audio generation. To the best of my knowledge, there are no open-source audio codecs specifically tuned for piano music.
+4. The subjective evaluation and the demo samples on the website are convincing and show the effectiveness of the designed approach for performance synthesis.</p>
+<p>The main weaknesses of the work are the computational complexity of the model and the suboptimal subjective evaluation:
+1. The task of MIDI-to-audio inference does not involve generating an expressive performance from scratch, and thus is easier than end-to-end expressive performance rendering and audio synthesis. While the model design is sound, a 12-layer transformer may be overkill for this problem. The autoregressive part of the first inference stage makes inference slower than alternatives. An ablation on the model size and replacing tokens with mel spectrograms will be interesting.
+2. The work does not contribute much to the architectural design of audio codecs and synthesis. It is a successful adaptation of existing methods to a task of MIDI-to-audio synthesis. The choice of EnCodec might be a bit outdated when there are more advanced audio codecs in terms of compression and number of tokens. For example, DAC [1] as a better version of EnCodec or WavTokenizer [2] with a single codebook.
+3. MIDI-VALLE is only compared with the M2A model [3]. In the M2A paper, however, the model loses against MIDI files synthesized with Pianoteq. This raises the question: is MIDI-VALLE better than the Pianoteq synthesis? A direct comparison would strengthen the paper. In addition, the work on diffusion-based performance conditioning for preserving acoustics and style in audio synthesis can be used for a comparison [4].</p>
+<p>Some questions and comments that may be addressed in the final version of the paper:
+1. In Section 3.1.1, is there any scientific evidence that the first codebook models pitches, durations, and timbre? It follows intuitively, but without confirmation, e.g. by training only on the selected codebooks, it is an unconfirmed statement.
+2. In Table 1, why the vocabulary size for speech is 512 when each RVQ has a codebook of size 2048 (Section 4.2)?
+3. In Section 3.3, does it mean that for the MIDI prompt, some audio-to-MIDI transcription is required, when initially we only have audio for inference?
+4. In Section 4.1, pedals are excluded but do durations encode raw or sustained MIDI durations?
+5. In Section 4.2, why only 60 hours of the entire ATEPP dataset are used for codec tuning?
+6. Does the model skip or repeat notes in the middle of the sequence? For example, VALL-E is known to struggle with word skips/repeats for non-trivial sentences due to attention failures in the autoregressive token modeling. It is interesting to observe the attention maps for the trained transformer model.
+7. The model is trained on 15-20s snippets. Can it be used to synthesize a full-length MIDI performance? How well will the acoustic conditions be preserved?</p>
+<p>Minor:
+1. The abstract contrasts a two-step approach, and the wording implies that the paper solves its challenges, but the paper solves only the second step.
+2. In Section 3.2, the formal definition does not distinguish between MIDI prompt and target MIDI. If $x$ is the target MIDI, then the MIDI prompt should also be defined.
+3. In Section 3.2, is it correct that the AR model does not work with acoustic prompt? From Figure 1, this information is not trivial.
+4. In Section 6, split the Results section into several subsections for better readability.
+5. Line 415: "taht" -&gt; "that"</p>
+<p>Overall, this is a solid paper that should be accepted for presentation at the conference.</p>
+<p>References:
+[1] Kumar, Rithesh, et al. "High-fidelity audio compression with improved rvqgan." Advances in Neural Information Processing Systems. 2023
+[2] Ji, Shengpeng, et al. "Wavtokenizer: an efficient acoustic discrete codec tokenizer for audio language modeling." ICLR. 2025.
+[3] Tang, Jingjing, et al. "Towards An Integrated Approach for Expressive Piano Performance Synthesis from Music Scores." ICASSP. 2025.
+[4] Maman, Ben, et al. "Performance conditioning for diffusion-based multi-instrument music synthesis." ICASSP. 2024.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

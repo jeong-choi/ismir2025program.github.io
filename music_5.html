@@ -1,0 +1,306 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: The JAM_BOT: An Insight Into An AI-Human Co-Created Musical Improvisation</title>
+    
+<meta name="citation_title" content="5" />
+<meta name="citation_author" content="JamBot (Lancelot Blanchard,
+Perry Naseck)" />
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="This show is a demonstration of the JAM_BOT, a real-time system for collaborative free improvisation with music language models that was developed as part of a collaboration between MIT Media Lab researchers and GRAMMY-winning visiting artist Jordan Rudess. The JAM_BOT accompanies the improvisation of live performers onstage using optimized Transformer-based Music Language Models. It was first demonstrated publicly during a sold-out performance held at the MIT Media Lab on September 21, 2024. This ISMIR 2025 show intends to reproduce segments of the original show to demonstrate the potential of the system to the ISMIR scientific community."/>
+<meta id="yt-id" data-name=""/>
+<meta id="bb-id" data-name=""/>
+
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="vg3b6ih5d014szs"></script>
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<div class="music-page-wrapper mt-3 mb-5">
+  <div class="page-header">
+    <div class="image-wrapper">
+      <img alt="JamBot (Lancelot Blanchard,
+Perry Naseck)" src="static/images/music_headshots/5.jpg"/>
+    </div>
+    <div class="details">
+      <h1 class="mb-4">M5: The JAM_BOT: An Insight Into An AI-Human Co-Created Musical Improvisation</h1>
+      <h4 style="color: rgba(0,0,0,.5);">JamBot (Lancelot Blanchard,
+Perry Naseck)</h4>
+      <h5 style="color: rgba(0,0,0,.5);">MIT Media Lab</h5>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+    <div class="music-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#bio">
+        Bio
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#abstract">
+        Abstract
+      </button>
+<!--      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">-->
+<!--        Music-->
+<!--      </button>-->
+    </div>
+    
+    <div class="btn-group ml-3 mb-3">
+      <a href="https://vimeo.com/1107163458/c358b5432b" class="btn btn-outline-primary" target="_blank">Video</a>
+    </div>
+    
+    <!--  -->
+    <div class="btn-group ml-3 mb-3">
+      <a href="https://ismir2025.slack.com/archives/C09CDGPHWVD" class="btn btn-primary"><svg style="display: inline-block; width: 23px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="75 75 150 150" style="enable-background:new 0 0 270 270;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M99.4,151.2c0,7.1-5.8,12.9-12.9,12.9s-12.9-5.8-12.9-12.9c0-7.1,5.8-12.9,12.9-12.9h12.9V151.2z"/>
+		<path class="st0" d="M105.9,151.2c0-7.1,5.8-12.9,12.9-12.9s12.9,5.8,12.9,12.9v32.3c0,7.1-5.8,12.9-12.9,12.9
+			s-12.9-5.8-12.9-12.9C105.9,183.5,105.9,151.2,105.9,151.2z"/>
+	</g>
+	<g>
+		<path class="st0" d="M118.8,99.4c-7.1,0-12.9-5.8-12.9-12.9s5.8-12.9,12.9-12.9s12.9,5.8,12.9,12.9v12.9H118.8z"/>
+		<path class="st0" d="M118.8,105.9c7.1,0,12.9,5.8,12.9,12.9s-5.8,12.9-12.9,12.9H86.5c-7.1,0-12.9-5.8-12.9-12.9
+			s5.8-12.9,12.9-12.9C86.5,105.9,118.8,105.9,118.8,105.9z"/>
+	</g>
+	<g>
+		<path class="st0" d="M170.6,118.8c0-7.1,5.8-12.9,12.9-12.9c7.1,0,12.9,5.8,12.9,12.9s-5.8,12.9-12.9,12.9h-12.9V118.8z"/>
+		<path class="st0" d="M164.1,118.8c0,7.1-5.8,12.9-12.9,12.9c-7.1,0-12.9-5.8-12.9-12.9V86.5c0-7.1,5.8-12.9,12.9-12.9
+			c7.1,0,12.9,5.8,12.9,12.9V118.8z"/>
+	</g>
+	<g>
+		<path class="st0" d="M151.2,170.6c7.1,0,12.9,5.8,12.9,12.9c0,7.1-5.8,12.9-12.9,12.9c-7.1,0-12.9-5.8-12.9-12.9v-12.9H151.2z"/>
+		<path class="st0" d="M151.2,164.1c-7.1,0-12.9-5.8-12.9-12.9c0-7.1,5.8-12.9,12.9-12.9h32.3c7.1,0,12.9,5.8,12.9,12.9
+			c0,7.1-5.8,12.9-12.9,12.9H151.2z"/>
+	</g>
+</g>
+</svg> m5-the-jam-bot</a>
+    </div>
+
+  </div>
+
+  <div id="youtube" class="pp-card mt-3 collapse">
+    
+  </div>
+  <div id="gdrive" class="pp-card mt-3 collapse">
+    
+  </div>
+  <div class="music-content-wrapper">
+    <div id="bio" class="pp-card mt-3 collapse"><p><b>Perry Naseck</b>, pnaseck@media.mit.edu, Research Assistant, MIT Media Lab.
+Perry Naseck is an artist, engineer, and researcher working with interactive, kinetic, light- and time-based media. He specializes in interaction, orchestration, and animation of systems of sensors and actuators for live performance and permanent installation. Perry is pursuing a PhD in the Responsive Environments group at the MIT Media Lab where he focuses on creating new experiences for musicians and audiences. His research explores how to closely link live performance visual systems with a focus on improvised and AI-generated music. Perry completed a Bachelor's of Engineering Studies and Arts at Carnegie Mellon where he studied both Art and Electrical &amp; Computer Engineering.</p>
+<p><b>Lancelot Blanchard</b>, lancelot@media.mit.edu, Research Assistant, MIT Media Lab.
+Lancelot Blanchard is a musician, engineer, and AI researcher pursuing a PhD at MIT Media Lab's Responsive Environments group. His research explores the development of generative AI systems that can enhance the creative processes of musicians, with a special focus on live performances. Lancelot has collaborated with multiple GRAMMY-winning artists to create innovative tools for real-time AI-augmented music making. Lancelot holds a Master's of Research in Artificial Intelligence and Machine Learning and a Master's of Engineering in Computing from Imperial College London, as well as a degree in classical piano from the Conservatory of Rennes, France.</p></div>
+    <div id="abstract" class="pp-card mt-3 collapse"><p>This show is a demonstration of the JAM_BOT, a real-time system for collaborative free improvisation with music language models that was developed as part of a collaboration between MIT Media Lab researchers and GRAMMY-winning visiting artist Jordan Rudess. The JAM_BOT accompanies the improvisation of live performers onstage using optimized Transformer-based Music Language Models. It was first demonstrated publicly during a sold-out performance held at the MIT Media Lab on September 21, 2024. This ISMIR 2025 show intends to reproduce segments of the original show to demonstrate the potential of the system to the ISMIR scientific community.</p></div>
+  </div>
+
+</div>
+
+<script src="static/js/url_converter.js"></script>
+<script src="static/js/piece.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,512 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: STAGE: Stemmed Accompaniment Generation through Prefix-Based Conditioning</title>
+    
+<meta name="citation_title" content="STAGE: Stemmed Accompaniment Generation through Prefix-Based Conditioning" />
+
+<meta name="citation_author" content="Giorgio Strano" />
+
+<meta name="citation_author" content="Chiara Ballanti" />
+
+<meta name="citation_author" content="Donato Crisostomi" />
+
+<meta name="citation_author" content="Michele Mancusi" />
+
+<meta name="citation_author" content="Luca Cosmo" />
+
+<meta name="citation_author" content="Emanuele Rodolà" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Recent advances in generative models have made it possible to create high-quality, coherent music, with some systems delivering production-level output.
+Yet, most existing models focus solely on generating music from scratch, limiting their usefulness for musicians who want to integrate such models into a human, iterative composition workflow. 
+In this paper we introduce STAGE, our &#34;STemmed Accompaniment GEneration&#34; model, fine-tuned from the text-to-music MusicGen model to generate single-stem instrumental accompaniments conditioned on a given mixture. Inspired by instruction-tuning methods for language models, we extend the transformer&#39;s embedding matrix with a context token, enabling the model to attend to a musical context through prefix-based conditioning.
+Compared to the baselines, STAGE yields accompaniments that exhibit stronger coherence with the input mixture, higher audio quality, and closer alignment with textual prompts. 
+Moreover, by conditioning on a metronome-like track, our framework naturally supports tempo-constrained generation, achieving state-of-the-art alignment with the target rhythmic structure - all without requiring any additional tempo-specific module.
+As a result, STAGE offers a practical, versatile tool for interactive music creation that can be readily adopted by musicians in real-world workflows.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Music and audio synthesis" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-06: STAGE: Stemmed Accompaniment Generation through Prefix-Based Conditioning
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Giorgio Strano" class="text-muted"
+        >Giorgio Strano</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Chiara Ballanti" class="text-muted"
+        >Chiara Ballanti</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Donato Crisostomi" class="text-muted"
+        >Donato Crisostomi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Michele Mancusi" class="text-muted"
+        >Michele Mancusi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Luca Cosmo" class="text-muted"
+        >Luca Cosmo</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emanuele Rodolà" class="text-muted"
+        >Emanuele Rodolà</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search="
+        class="text-secondary text-decoration-none"
+        ></a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music and audio synthesis"
+        class="text-secondary text-decoration-none"
+        >Music and audio synthesis</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Recent advances in generative models have made it possible to create high-quality, coherent music, with some systems delivering production-level output.
+Yet, most existing models focus solely on generating music from scratch, limiting their usefulness for musicians who want to integrate such models into a human, iterative composition workflow. 
+In this paper we introduce STAGE, our "STemmed Accompaniment GEneration" model, fine-tuned from the text-to-music MusicGen model to generate single-stem instrumental accompaniments conditioned on a given mixture. Inspired by instruction-tuning methods for language models, we extend the transformer's embedding matrix with a context token, enabling the model to attend to a musical context through prefix-based conditioning.
+Compared to the baselines, STAGE yields accompaniments that exhibit stronger coherence with the input mixture, higher audio quality, and closer alignment with textual prompts. 
+Moreover, by conditioning on a metronome-like track, our framework naturally supports tempo-constrained generation, achieving state-of-the-art alignment with the target rhythmic structure - all without requiring any additional tempo-specific module.
+As a result, STAGE offers a practical, versatile tool for interactive music creation that can be readily adopted by musicians in real-world workflows.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1PbpT8Kwha6P9VVBWhjP7bvoO_UKYqWjz/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>This proposes a new, straightforward, light-weight method to perform accompaniment generation through prefix-based conditioning. The reusable insights include 1) using a context token + context is pre-pended to the models input is an efficient strategy for accompaniment generation 2) tempo conditioning via a click-track can be used for tempo/beat control 3) evaluation shows the proposed method works quite well compared to past works.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Light-weight fine-tuning of LLM-based music generation models can enable single-stem instrumental accompaniment generation, given a mixture.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Summary
+In this paper, the authors propose a new, straightforward, light-weight method to perform accompaniment generation through prefix-based conditioning for LLM-based music generation models (MusicGen). The reusable insights include 1) using a context token + context is pre-pended to the models input is an efficient strategy for accompaniment generation 2) tempo conditioning via a click-track can be used for tempo/beat control 3) evaluation shows the proposed method works quite well compared to past works. The results sound very convincing.
+Major comments
+Overall, very well done. The paper is an exciting update to stem accompaniment generation for MusicGen and related LLM-based musci generation models. The paper is well written both at a high-level and low-level gramaticaly structure, the review section is nice, compact and useful, and the proposed method is clean, straightforward, and works well. The evaluation is clear and compares against relevant past work this applicable and results show the method works well.</p>
+<p>Minor comments
+• To the best of my understanding, MusicGen is no longer state of the art. Stable Audio (Open) and even fast, distilled diffusion models like Presto outperform MusicGen. I would recommend reducing the use of such language w.r.t. MusicGen as it’s not too necessary to maintain the strong impact of the proposed work.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Summary: In this paper, the authors propose a new, straightforward, light-weight method to perform accompaniment generation through prefix-based conditioning for LLM-based music generation models (MusicGen). The reusable insights include 1) using a context token + context is pre-pended to the models input is an efficient strategy for accompaniment generation 2) tempo conditioning via a click-track can be used for tempo/beat control 3) evaluation shows the proposed method works quite well compared to past works. The results sound very convincing.</p>
+<p>Initial Scores: 1 strong accept, 1 weak accept, 1 weak reject, 1 strong reject</p>
+<p>Metareview: Overall, the reviews are generally positive. In summary, there are three main topic areas for improvement include </p>
+<h1>1 - R1 "it is not clear if this method could successfully be extended to other instruments. Therefore, I believe the paper’s claim of proposing a cost-effective and parameter-efficient method for single-stem generation conditioned on accompaniment is overly broad and not sufficiently supported by evidence."</h1>
+<h1>2 - R3 - "The results strongly overlap with concurrent work by MusicGen-Stem. This is acknowledged, but I would like to see a more direct comparison. MusicGen-Stem provides audio samples, showing comparisons on the same examples would strengthen this paper."</h1>
+<h1>3 - R3 - "No audio samples were provided, which I would expect for this type of research. No code is provided as well." -- Note this is incorrect and audio files were provided as well as promise of code release"</h1>
+<p>Discussion: Issue #3 is not a real issue as examples were provided. I believe issue #2 should not be a deciding factor given the costly natural of such data collection. Issue #2 is likely the largest issue so that we have a better idea on how different methods compare, but is noted as concurrent work (within between MusicGen-Stem Jan 7th and ISMIR deadline). This gap is relatively large to note concurrent work, but it’s possible this work was done beforehand and also arXiv’d. For reviewers and meta-reviewers, we must avoid any potential issue of discovering author information and not search for it and should assume the benefit of the doubt here. I recommend we accept the concurrent work comment and accept.</p>
+<p>Recommendation: Accept</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper proposes a method for stem generation using a pretrained music generation model. The paper is well-organized and well-written, and the logic is easy to follow. The motivation for single-stem generation is clearly explained. </p>
+<p>The drum generation model proposed in the paper clearly outperforms the state-of-the-art. The bass generation model, on the other hand, gives similar results to the methods included in the paper. Furthermore, given the performance gap between drum and bass models, it is not clear if this method could successfully be extended to other instruments. Therefore, I believe the paper’s claim of proposing a cost-effective and parameter-efficient method for single-stem generation conditioned on accompaniment is overly broad and not sufficiently supported by evidence. For this reason, I recommend a rejection for the paper.</p>
+<p>Below are a few additional comments:
+- The introduction mentions “natural music composition workflows”, and how the paper focuses on a “human-centered, intuitive generation task”. Without a reference, the paper sounds like it is the first one focusing on this iterative workflow. Some of the stem-based generation citations should be included here.
+- Line 208: An optional text prompt is mentioned; however, there are no experiments about this.
+- The evaluation methods are very solid and a strong point of the paper.
+- Lines 356–366: The paper explains why the results for bass generation are worse compared to drum generation. These factors could be even more amplified for other instruments, and therefore make the proposed method not successful for single-stem generation. 
+- Lines 414–417: Although having multiple STAGE instances (one per instrument) is a good idea, claiming this implies that STAGE can be successfully extended to other instruments, which is not supported by the paper.</p>
+<p>In conclusion, I believe the paper tackles an important task of iterative music generation. However, more experiments showing the proposed method can extend to different instrument types are crucial. I highly encourage the authors to incorporate experiments with more instruments and resubmit the work.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths:
+- Addresses a key workflow gap
+- Insightful discussion section
+- Parameter efficient conditioning</p>
+<p>Accept: this paper presents STAGE, a parameter‑efficient prefix‑conditioning method on pretrained MusicGen that delivers state‑of‑the‑art rhythmic alignment, strong coherence and audio quality, and flexible tempo control without extra modules, all with minimal fine‑tuning; while its focus on drums and bass limits instrument scope and bass performance, the approach’s efficiency, insightful comparisons of conditioning mechanisms, and planned code release make it a valuable contribution.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents a simple method for fine tuning MusicGen to make stem accompaniments. The paper shows this is possible with very little data and compute.</p>
+<p>The ablation of task mixing is good. I would like to see more ablations of similar nature, such as if a single model can be trained for both bass and drums.</p>
+<p>The results strongly overlap with concurrent work by MusicGen-Stem. This is acknowledged, but I would like to see a more direct comparison. MusicGen-Stem provides audio samples, showing comparisons on the same examples would strengthen this paper.</p>
+<p>No audio samples were provided, which I would expect for this type of research. No code is provided as well.</p>
+<p>More exploration of different ways of adding conditioning would be interesting. The note on cross attention performing poorly is great, I would like to see more analysis of that and other methods of conditioning.</p>
+<p>Overall I believe the core idea of the paper is strong, but it isn't surprising that this works given the literature of multimodal LLMs and concurrent work in the music domain. More analysis of alternate approaches, audio samples, and reproducible code would strengthen this paper to an accept.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

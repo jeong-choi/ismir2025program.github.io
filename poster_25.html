@@ -1,0 +1,570 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Versatile Symbolic Music-for-Music Modeling via Function Alignment</title>
+    
+<meta name="citation_title" content="Versatile Symbolic Music-for-Music Modeling via Function Alignment" />
+
+<meta name="citation_author" content="Junyan Jiang" />
+
+<meta name="citation_author" content="Daniel Chin" />
+
+<meta name="citation_author" content="Liwei Lin" />
+
+<meta name="citation_author" content="Xuanjie Liu" />
+
+<meta name="citation_author" content="Gus Xia" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Many music AI models learn a map between music content and human-defined labels. However, many annotations, such as chords, can be naturally expressed within the music modality itself, e.g., as sequences of symbolic notes. This observation enables both understanding tasks (e.g., chord recognition) and conditional generation tasks (e.g., chord-conditioned melody generation) to be unified under a music-for-music sequence modeling paradigm. In this work, we propose parameter-efficient solutions for a variety of symbolic music-for-music tasks. The high-level idea is that (1) we utilize a pretrained Language Model (LM) for both the reference and the target sequence and (2) we link these two LMs via a lightweight adapter. Experiments show that our method achieves superior performance among different tasks such as chord recognition, melody generation, and drum track generation. All demos, code and model weights are publicly available.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Symbolic music processing" />
+
+<meta name="citation_keywords" content="Melody and motives" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Harmony, chords and tonality" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Rhythm, beat, tempo" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P5-09: Versatile Symbolic Music-for-Music Modeling via Function Alignment
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Junyan Jiang" class="text-muted"
+        >Junyan Jiang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Daniel Chin" class="text-muted"
+        >Daniel Chin</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Liwei Lin" class="text-muted"
+        >Liwei Lin</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xuanjie Liu" class="text-muted"
+        >Xuanjie Liu</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gus Xia" class="text-muted"
+        >Gus Xia</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Symbolic music processing"
+        class="text-secondary text-decoration-none"
+        >Symbolic music processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Melody and motives"
+        class="text-secondary text-decoration-none"
+        >Melody and motives</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Harmony, chords and tonality"
+        class="text-secondary text-decoration-none"
+        >Harmony, chords and tonality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Rhythm, beat, tempo"
+        class="text-secondary text-decoration-none"
+        >Rhythm, beat, tempo</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Many music AI models learn a map between music content and human-defined labels. However, many annotations, such as chords, can be naturally expressed within the music modality itself, e.g., as sequences of symbolic notes. This observation enables both understanding tasks (e.g., chord recognition) and conditional generation tasks (e.g., chord-conditioned melody generation) to be unified under a music-for-music sequence modeling paradigm. In this work, we propose parameter-efficient solutions for a variety of symbolic music-for-music tasks. The high-level idea is that (1) we utilize a pretrained Language Model (LM) for both the reference and the target sequence and (2) we link these two LMs via a lightweight adapter. Experiments show that our method achieves superior performance among different tasks such as chord recognition, melody generation, and drum track generation. All demos, code and model weights are publicly available.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1gcm7wmZMXfuBy_ixVpwHclZZBku2G4bk/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The clear explanation of the models can help to better use them for other tasks.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>This paper proposes to treat standard MIR tasks as music generation tasks with a music-for-music model and function alignment.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Review_ISMIR2025_paper_25</p>
+<p>This paper proposes to treat standard MIR tasks as music generation tasks with a music-for-music model and function alignment.
+Although I am not a specialist of foundations models, I found the principles and architecture of the model proposed very clearly explained.
+Two implementations of the model are proposed (cross-attention between separately pretrained LM, self-attention on IO sequences of a single shared LM).
+The results of those models are compared to several models/baselines (Coco-Mulla, MLP Prober, Encoder-Decoder, MelodyT5, Composers assistant V2) on three MIR tasks: chord-conditioned melody generation, drum-conditioned song generation, and song-conditioned drum track generation.
+Results have been evaluated both through a listeners survey and with objective metric computation (perplexity, L1 distance between chromagrams, CTnCTR) demonstrating the good performance of the models proposed, with slightly better results for the self-attentive implementation.
+More details could be given on how the 8 songs for the survey were selected and on the participants.</p>
+<p>Examples are given in supplementary material and on a web page to compare output of the models.
+The code is not given at this step but the paper indicates that code and model weights will be publicly available on a web page.</p>
+<p>This paper appears like a solid and insightful contribution to the field.
+It could be more self-contained by a better explanation of the notion of function alignment.</p>
+<p>Minor remarks: </p>
+<p>p2 notations related to equation (1) -&gt; A reordering or items for each parameter would ease the reading
+b/b_j unclear
+l136: refain -&gt; refrain
+p3 l160: corrsponds -&gt; corresponds
+p4 l241: shwon -&gt; shown</p>
+<p>Figure 6 is too small and difficult to read, it has to be improved</p>
+<p>Bibliography: I was disturbed by the high number of arxiv citations in the references: 28/55.
+Though I understand that AI improvements go very fast and it is necessary to follow the trends on arxiv, I find it excessive to rely on so many non peer-reviewed papers. (A few have been published since they were posted on arxiv and should be updated.)
+Ref [17] is incomplete</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All reviewers appreciated the proposition to unify different MIR tasks by treating them as music generation tasks and agreed that the paper should be accepted to ISMIR.
+However, several weaknesses were highlighted in the reviews, notably:
+- the lack of clarity and soundness of the "function alignment" notion (all reviewers)
+- the need for more details on some technical aspects (conversion of generated MIDI notes to chord charts, experimental setup)
+We advise the authors to take reviewers's remarks into account to improve the paper and increase its impact on ISMIR community.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents an interesting approach to unified music-for-music modeling. The approach is to pre-train a foundation generative model on symbolic music, then finetune on downstream tasks framed as generation tasks.</p>
+<p>The first contribution claimed here is "unifying a broad range of music understanding and controllable generation tasks under a shared framework". The downstream tasks considered here are melody-to-chord, chord-to-melody, drum-to-others, others-to-drum, and chord recognition. Most of these (chord-to-melody, drum-to-others, others-to-drum) are already symbolic music generation tasks, and applying a generic pre-trained music generation model to these is certainly not a novel idea. Casting the "music-to-chords" tasks (melody-to-chord, chord recognition) under the same vocabulary (MIDI notes) is certainly an interesting and arguably novel idea, and is a valuable contribution. However, to make this contribution complete, I would appreciate more details on how the generated MIDI notes are converted back to a chord chart (beyond "template matching on 16 generation").</p>
+<p>The second stated contribution is to introduce the idea of "function alignment" [7] to the field of music AI. However, this is done without a clear explanation of what "function alignment" actually is, and the connection of the present work to it is unclear, making this claimed contribution feel quite artificial. It only seems to be related through a vague concept of "synergy", which is not explained. It is suggested that this "synergy" is achieved by "treating two language models (LMs) as agents", which, in my opinion, simply isn't true. In practice, this work adds cross-attention layers between pre-trained models as in [42,43], and it is not explained how this could be seen as treating the models as agents.</p>
+<p>Also note that the paper [7] is a very recent pre-print, is not peer-reviewed, and is not a cognitive science paper but a computer science "position paper", contrary to what the description "theory of mind that attributes the emergence of intelligence to the dynamic synergy among interacting agents" might suggest.</p>
+<p>For these reasons, I would recommend omitting the term "function alignment" from the title, and possibly from the paper altogether. Consider sticking to a term from prior work, like "zipping" [43] or "CALM" [42], which this work is essentially a form of, or simply something like "cross-attentive adapters". If the current framing is kept, it should be explained in much more detail what "function alignment" actually is and why it is useful to reframe these techniques that way.</p>
+<p>Finally, the third contribution, proposing concrete training/finetuning methodology, is again framed in terms of function alignment. That aspect aside, this work presents two approaches:
+- Cross-attentive: Adapting prior work [42,43], inserting cross-attention adapters, for the symbolic music domain.
+- Self-attentive: Instead of cross-attention between two models (the conditioning one and the generating one), both the conditioning and the output are concatenated and modelled by the same model. It is shown how this effectively introduces a cross-attentive mechanism between the two representations.</p>
+<p>The approach is validated using subjective and objective evaluation. Remarkably, the results on chord recognition seem to be close to or better than state of the art (as far as I can tell), which is a clear validation of the approach. The subjective evaluation results on the rest of the tasks are also favorable, although the sample size (2 to 4 songs) is very limited. I also appreciate the provided audio examples and think that they illustrate quite nicely the effectiveness of the approach, although I hope the authors can provide more of them.</p>
+<p>Other comments:
+- The specific framing of the proposed self-attentive technique as a form of PEFT is somewhat confusing to me. A form of PEFT used in this work is LoRA, but this is applied in <em>both</em> the cross- and self-attentive approach, and is therefore not specific to the latter. This choice also seems unrelated to the self-attentive approach (which could be just as well applied while finetuning the whole model, i.e. in a non-parameter-efficient way). Also, [35,38] are cited here as using PEFT, but it's not clear how that's relevant: [35] adds cross-attention (not self-attention) layers; [38] uses concatenation in a similar way to this work, but it is unclear how this is related to PEFT.
+- L207, L242: Instead of "append LoRAs", consider saying "apply LoRA" (referring to the technique, not the adapter itself, and avoiding the possibly misleading term "append").
+- The results tables and the supplementary examples contain a model called "seq2seq", which isn't introduced in the paper. I assume this is "MelodyT5"?</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p><strong>Summary</strong>
+This paper proposes a framework for symbolic music generation and analysis by modeling tasks as sequence-to-sequence mappings between symbolic sequences. Two parameter-efficient adapters are tested, namely cross-attentive between LMs and self-attentive within a shared LM. This approach proves to achieve strong performance across in both generative and few-shot symbolic music analysis tasks. While the connection to the broader “function alignment” theory remains abstract, the implementation proves effective and broadly applicable.</p>
+<p><strong>Strengths</strong>
+The paper introduces a unified modeling framework for symbolic music tasks (both generative and analytical) that are often approached with distinct, task-specific architectures (called “music-for-music” modeling in the paper). Methodologically, the work leverages existing parameter-efficient fine-tuning (PEFT) methods, integrating them into both cross-attentive and self-attentive adapter configurations. The evaluation is comprehensive, combining objective metrics with subjective listening tests, covers multiple tasks, and tests the fine-tuning capabilities on a diverse range of tasks. Experimental results demonstrate consistent improvements or competitive performance across a diverse set of tasks, including chord recognition, melody generation, and drum generation.</p>
+<p><strong>Weaknesses</strong>
+A major conceptual weakness is the weak and insufficiently explained link between the proposed method and the notion of “function alignment.” This terminology risks appearing metaphorical rather than technical, especially given that the underlying adapter-based fine-tuning between pre-trained models mechanisms are well established. Several design choices—e.g., adapter placement—are not experimentally justified. Finally, inconsistencies in the experimental setup, mainly related to the music analysis task, might reduce the strength of the evaluation. </p>
+<p><strong>Presentation</strong>
+The paper is generally well written and easy to follow, with clear structure and adequate use of figures to illustrate architectural components and evaluation outcomes. However, the introductory section would benefit from a more transparent conceptual framing. Specifically, the reference to “function alignment” as a “recently proposed theory of mind that attributes the emergence of intelligence to the dynamic synergy among interacting agents” (lines 46–48) is not sufficiently informative. The conceptual link to this theory is not convincingly established, nor is it clear how the notion of interacting agents is operationalized in the model. This is particularly relevant in the case of the self-attentive strategy, where only a single shared LM is used. I have the feeling that the function alignment terminology risks obfuscating what is essentially a standard PEFT design pattern. The related work section is complete and includes the most relevant literature in both music foundation models and PEFT. However, the positioning of the proposed approach within the literature, especially in the “Music Foundation Models” subsection, could be better clarified. A few minor issues can be found, including typographical error (“shwon” instead of “shown,” line 241) and a duplicated citation [54].</p>
+<p><strong>Methodology</strong>
+The methodology is well articulated and technically sound. Both adapter strategies are clearly described, and the use of a Roformer-based symbolic LM is explained in detail, as well as the data representation pipeline. However, the rationale behind specific design could be better explained. For example, the insertion points of the adapters, the particular LoRA parametrization, and the use of gated cross-attention mechanisms are not supported by ablation studies or empirical justification. Moreover, the description of data augmentation during pre-training (random pitch shifting within ±5 semitones - lines 269-270) is not quantified in terms of its prevalence across the dataset or its effect on training dynamics. Moreover, it would be helpful to quantify the added parameter count introduced by each adapter configuration, especially given that parameter-efficiency is one of the stated goals. </p>
+<p><strong>Evaluation</strong>
+The evaluation is extensive in terms of the range of tasks covered and the mix of subjective and objective analyses. In particular, the inclusion of a listening-based subjective evaluation is particularly welcome. However, the paper omits key details about the evaluation design: no information is provided on the demographics or musical expertise of the participants, nor on the level of inter-rater agreement. The objective evaluation of generative tasks is based on perplexity and task-specific metrics, and is presented with sufficient clarity. However, the music analysis task would deserve deeper inspection. The dataset is small (only 93 tracks) and homogeneous in terms of genre, annotators, and chord vocabulary used, which raises questions about generalizability. To make stronger claims, the evaluation might be extended to include widely used chord recognition benchmarks (e.g. Isophonics, Billboard, JAAH, etc.), which could provide larger and more diverse foundation to the experiments. Furthermore, the choice of evaluation metrics appears arbitrary, with the inclusion of root, majmin, and seventh metrics, but not justifying why these were selected over other ones (e.g. tetrads, MIREX, etc.). Also, the prober model is trained as a classifier, while the function alignment models and other baselines rely on sequence-to-sequence generation followed by template matching. This discrepancy might undermine the comparability of the results. Furthermore, two reference methods—HMM and Chorder—are only mentioned in Table 3 but are never introduced or discussed in the text. </p>
+<p><strong>Technical Quality/Reproducibility</strong>
+The technical exposition throughout the paper is clear, rigorous, and well-structured. Design choices are generally well motivated, and the implementation details are documented. The paper provide a supporting website that includes audio examples from experiments. Moreover, more supplementary is provided along with the paper submission. However, at the time of review, the source code and pre-trained models are still marked as “TBA.” While the intention to release them is stated, actual availability is essential for full reproducibility.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors present a technique for music-to-music domain in the symbolic music domain by fine-tuning a LM and applying parameter-efficient tuning</p>
+<p>Some minor comments:
+Abstract/intro —&gt; what is an adapter?</p>
+<p>Page 1 column 2 row 52 —&gt; first approach is “treating
+two language models (LMs) as agents” while “second approach is “creating synergy
+through Parameter-Efficient Fine-Tuning (PEFT).”? This is not very clear from the writing.</p>
+<p>Authors claim that they are the first to introduce Function Alignment, yet they state that it remains at the theoretical level, so what is the actual contribution? </p>
+<p>Also, the mentioned Function alignment pape why should we consider as beneficial considering it as a “theoretical perspective?</p>
+<p>I don’t understand p_t and d_t are summed? Ore flattened?</p>
+<p>Page 3 col 1 row 160 —&gt; corrsponds —&gt; corresponds</p>
+<p>Page 4 col1 line 241 shwon —&gt;shown</p>
+<p>4.5 the concept of “perplexity” should at least be introduced.</p>
+<p>“We
+evaluate using chord metrics (root, majmin, seventh) from
+the mir_eval package [53]. “ —&gt; what do the metrics represent?</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

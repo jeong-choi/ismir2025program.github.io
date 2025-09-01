@@ -1,0 +1,587 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Phylo-Analysis of Folk Traditions: A Methodology for the Hierarchical Musical Similarity Analysis</title>
+    
+<meta name="citation_title" content="Phylo-Analysis of Folk Traditions: A Methodology for the Hierarchical Musical Similarity Analysis" />
+
+<meta name="citation_author" content="Hilda Romero-Velo" />
+
+<meta name="citation_author" content="Gilberto Bernardes" />
+
+<meta name="citation_author" content="Susana Ladra" />
+
+<meta name="citation_author" content="José R. Paramá" />
+
+<meta name="citation_author" content="Fernando Silva" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="This study introduces and evaluates a new methodology for cross-cultural ethnomusicological analysis of symbolic music. We investigate music similarity in popular traditions rooted in oral transmission by identifying shared patterns at scale across multiple hierarchies. The novelty of our approach lies in expanding musical similarity phylo-analysis-typically adopting alignment metrics that compare entire scores-to structurally aware phrases and macro-structure (i.e., form) alignment. Additionally, we explore patterns derived from multiple representations (chromatic interval, diatonic interval, rhythmic ratios, and a combination of them) to facilitate the exploration of stylistic affinities across musical genres and traditions. Our method is tested on a new dataset of 600 Galician and Irish popular music scores, which includes expert annotations for 21 genres (four shared between the two traditions) and detailed phrase information, all made available as open-access data. We use the genre separation ratio to examine how alignment strategies capture stylistic structure, providing insights that support musicological exploration across genres and traditions. The resulting phylogenetic trees and distance matrices reveal relationships among traditions, genres, and scores, facilitating the exploration of cross-cultural influences and enabling the identification of shared patterns at multiple hierarchies.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="" />
+
+<meta name="citation_keywords" content="Computational ethnomusicology" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-09: Phylo-Analysis of Folk Traditions: A Methodology for the Hierarchical Musical Similarity Analysis
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Hilda Romero-Velo" class="text-muted"
+        >Hilda Romero-Velo</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gilberto Bernardes" class="text-muted"
+        >Gilberto Bernardes</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Susana Ladra" class="text-muted"
+        >Susana Ladra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=José R. Paramá" class="text-muted"
+        >José R. Paramá</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Fernando Silva" class="text-muted"
+        >Fernando Silva</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search="
+        class="text-secondary text-decoration-none"
+        ></a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Computational ethnomusicology"
+        class="text-secondary text-decoration-none"
+        >Computational ethnomusicology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>This study introduces and evaluates a new methodology for cross-cultural ethnomusicological analysis of symbolic music. We investigate music similarity in popular traditions rooted in oral transmission by identifying shared patterns at scale across multiple hierarchies. The novelty of our approach lies in expanding musical similarity phylo-analysis-typically adopting alignment metrics that compare entire scores-to structurally aware phrases and macro-structure (i.e., form) alignment. Additionally, we explore patterns derived from multiple representations (chromatic interval, diatonic interval, rhythmic ratios, and a combination of them) to facilitate the exploration of stylistic affinities across musical genres and traditions. Our method is tested on a new dataset of 600 Galician and Irish popular music scores, which includes expert annotations for 21 genres (four shared between the two traditions) and detailed phrase information, all made available as open-access data. We use the genre separation ratio to examine how alignment strategies capture stylistic structure, providing insights that support musicological exploration across genres and traditions. The resulting phylogenetic trees and distance matrices reveal relationships among traditions, genres, and scores, facilitating the exploration of cross-cultural influences and enabling the identification of shared patterns at multiple hierarchies.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1sG5bfKOGXA9LOk7vZMcQXNE4E1FSdH5i/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The core idea of this paper is to investigate music similarity by identifying shared patterns at multiple representations (chromatic interval, diatonic interval, rhythmic ratios) across multiple hierarchies (phrase, form, global).</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>The similarity metrics applied to phrase and macro structures derived from chromatic pitch and duration ratios are more effective in recognizing genres.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper develops a methodology for the cross-cultural ethnomusicological analysis of symbolic music. The core idea is to investigate music similarity by identifying shared patterns at multiple representations (chromatic interval, diatonic interval, rhythmic ratios) across multiple hierarchies (phrase, form, global). The methodology was tested on a new dataset comprising 600 Galician and Irish popular music scores, which features expert annotations for 21 genres (including four shared between the two traditions) and detailed phrase information. The findings indicate that similarity metrics applied to phrase and macro structures derived from chromatic pitch and duration ratios are more effective in recognizing genres. The authors position this methodology as an analytical tool for ethnomusicologists to explore large datasets, facilitating the study of cross-cultural influences and the identification of similar scores across genres and traditions.</p>
+<p>The main contributions of the paper include:
+1. Novel methodology: The paper presents a novel approach by applying phylogenetic analysis to incorporate the hierarchical structure of music, including phrases and musical form. This paper also tests the classification/similarity analysis method on several musical features (diatonic interval, chromatic interval, rhythmic ratio, and their combinations), which provides an overview of how different musical elements contribute to similarity and genre differentiation</p>
+<ol>
+<li>
+<p>New open dataset: An open-access of a new dataset of 600 Galician and Irish folk music scores with expert phrase annotations is a valuable contribution to the research community for further research.</p>
+</li>
+<li>
+<p>Systematic tool for quantitative analysis: This paper adapts methods from bioinformatics, particularly phylogenetic techniques and alignment algorithms, to ethnomusicological analysis. The use of the Genre Separation Ratio (GSR) metric provides a quantitative way to evaluate and compare the effectiveness of different features and similarity methods in separating genres.</p>
+</li>
+</ol>
+<p>However, there are several aspects of this paper that can be further improved:
+1. It is not entirely clear from the description how the results of the QT Clustering of phrases are converted into the final alignment value used for the shared phrases similarity method. Further detail on the rationale and computation of this "alignment value" derived from the clustering results would enhance clarity.
+2. The procedure or standard by which an ethnomusicologist selects target genres for deeper analysis and how the tree of scores is specifically computed for these preferred genres requires more explicit explanation. Detailing the interface between the expert's analytical decisions and the automated tool's functions would be beneficial.
+3. The choice of the threshold for QT Clustering seems empirically derived from analyzing distance distributions. A discussion or justification for this specific threshold, or an exploration of the sensitivity of the results to different thresholds, might strengthen the methodology.</p>
+<p>This paper presents an innovative methodology for applying phylogenetic analysis to folk music incorporating musical structure hierarchy, and also contribute to the creation of a new, open-access dataset for Galician and Irish popular music. The proposed method is evaluated using the GSR metric, particularly for the comparison of different rhythmic and chromatic-rhythmic features. Despite some areas requiring further clarification regarding specific computational steps (phrase clustering to similarity) and the user workflow (genre selection for score trees), the fundamental approach is sound and the results are compelling. The paper has demonstrated that this methodology can serve as a valuable tool for ethnomusicologists studying cross-cultural relationships in folk music.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Paper 212 has a mixed set of reviews: 1 strong accept, 2 weak accepts, and 1 weak reject. Below is a synthesis of the main points raised by the reviewers:</p>
+<p>Strengths:
+• Novel methodological contribution (all reviewers): This paper presents a novel integration of cultural evolutionary analysis with MIR techniques. The methodological innovation is viewed as a valuable contribution to the field.
+• New open dataset (all reviewers): The introduction of a new dataset was positively received by all reviewers, who noted its potential utility for future research.
+• Timely and underexplored topic (Reviewers #2 and #3): This paper addresses an important and relatively underexplored area in computational ethnomusicology through computational methods.</p>
+<p>Weaknesses:
+• Insufficient methodological detail (Meta-review, Reviewer #1): The paper lacks justification for key methodological choices, such as the selection of the corpus and the choice of data representations (e.g., melodic and rhythmic patterns). Clarifying these decisions would strengthen the reproducibility and interpretability of the study.
+• Limited depth in analysis and interpretation (Reviewers #1 and #3): Reviewers request a more thorough discussion of the analytical results, including:
+- How features from different musical genres manifest in both global and phrase-level similarity.
+- How the outcomes of the phylogenetic analysis relate to known characteristics of musical genres.
+- A clearer explanation of the correlation measures and the genre separation ratio.
+- Additional analyses to support statistical significance of the findings.</p>
+<p>Overall Assessment:
+The reviewers generally view the paper as a valuable contribution, particularly in terms of its dataset and the promise of the proposed analytical framework. While there are areas for improvement, especially in terms of methodological transparency and interpretive depth, the novelty and potential impact of the work support an accept recommendation.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents some interesting methods to analyze relationships between folk songs. The authors plan to provide the corpus, along with the analysis code and a Docker image, with is an excellent initiative towards reproducibility. The paper is overall well-written, but is not always easy to follow.</p>
+<p>First of all, the argument for the selection of the corpus is somewhat weak. Even if Irish and Galician folk traditions have influenced each other, the proposed dataset does not provide much beyond some shared genres to corroborate claims of interrelated musical traditions. If the dataset was enriched with annotations of melody equivalents, there would be a testable hypothesis. Being able to identify genres based on melodic similarity is perhaps not too surprising, as dance music entails different rhythmic structures.</p>
+<p>The authors compare a number of different music representations - diatonic and chromatic intervals, as well as rhythm intervals, and combinations thereof. While these are some good starting points, why these representations? Why report two different types of pitch intervals, and not explore representations such as pitch classes?</p>
+<p>The authors also compare a number of different similarity metrics - one based on global alignment, one based on phrases shared according to the Quality Threshold clustering algorithm, one based on sequences of such phrases, and weighed combinations of the latter two. Figure 3 presents the genre classification success of the different pitch representations and similarity measures. This is an interesting overview. What it tells me is that in some genres, such as alálás, genre classification works well based on global alignment of melodies, while in others, such as Waltz, it works poorly. In my opinion, it would be much more interesting to zoom in here and ask why some genres are easier to identify, and why the rhythmic feature is successful. Especially given the success of the rhythmic feature, it seems that the easy to distinguish genres have distinctive rhythmic patterns.</p>
+<p>The authors do not go into these kinds of analyses, however, but seem to take these results as a justification for dropping pitch representations and global alignment from their further analyses. As for the former: it seems strange to expect that pitch interval sequences would be so uniform within a genre that they can be used as an identifying feature. As for the latter: why is global alignment not analyzed further, given that it achieves better classification success than the shared phrases feature?</p>
+<p>The method to derive clustering of phrases - Quality Threshold clustering - is interesting, even though it is doubtful whether the clustering would correspond to human judgements, as the shown phrases in Figure 8 reveal. It also seems that phrase correspondences between songs matter less than the sequences of phrases within a song. This is interesting, but perhaps also not surprising: specific genres may have typical form structures. It would be welcome to see form examples here. While QT clustering is one way of generating labels for repeating phrases within a song, it stands to question whether other metrics, which compare phrases of songs in isolation, might not be just as successful, or even more successful, at generating a form representation.</p>
+<p>Furthermore, phylogenetic analysis is performed. Generally, this is an interesting way to study folk songs. Given the corpus, of which -- at least as far as the authors inform us -- there is no information about the time period in which the folk songs were recorded, it is not logical to represent relationships between genres, which may concur in time, in a phylogenetic tree. If one took Figure 4 at face value, this would meen that pasacorredoiras and mazurcas are the "oldest" genres, from which others are derived. This seems counter-intuitive, to say the least.</p>
+<p>In summary, the paper introduces many interesting ways of analyzing music, but it offers little in the way of musicological insights. While the methods are reproducible, they also rely on the presence of annotated patterns, which means they cannot be transferred onto an arbitrary dataset of symbolic music. That being said: there are some well-studied folk song datasets which do have such annotations, and in which there are also annotations of finer-grained musical relationships (e.g., tune families in Dutch folk songs). I would recommend that the authors verify their methods on such a dataset before applying them to a dataset of which we know less about melody relationships. Arguably, genre labels are too coarse to study musical relationships.</p>
+<p>Remarks
+107 and elsewhere: there are references to "score" here, while only the melodies of the folk songs are considered, and not the accompaniment.
+Figure 1: this figure contains many unnecessary or even unclear graphical elements: why are the circles with "CR" next to the arrows? Why are some arrows dotted, and others strong? What does the symbol right of the different similarity measures mean? "D", "R" etc. also are not explained in the caption.
+132 ff.: the representation as pitch intervals and duration intervals is not per se novel. Perhaps references to other studies could also be given here, as music representation for similarity metrics has been widely studied. Representing rests is an interesting choice, as these are often ignored when using inter-onset intervals. Whether they add any information is an open question.
+287 her/him -&gt; them
+252 ff. Combined smilarity - why was only form and shared phrases investigated here, seeing as the global similarity gave better results than the shared phrases?
+Figure 4 and 5 mention "the rhythmic feature". This seems to indicate that after the analysis of Figure 3, the rhythmic representation was chosen and the others were discarded. This is not stated clearly in text.
+326 and elsewhere: form information is referred to as "hierarchical relationship" of music, while it is about sequences of melodic phrases. I find the term "hierarchical" misleading, here and elsewhere.
+340 ff. This section is presented as a case study, while it is actually a qualitative evaluation of the model whose development was described in the previous sections. I would place question marks after any conclusions drawn from the resulting similarity metrics: perhaps they simply fail to capture essential information (meter!) to group genres such as waltz and valses together.
+382 He/She -&gt; They
+399 ff. the text states here valses adopt binary meter, while earlier, valses were related to waltz (triple meter)
+Figure 8 shows a cluster of phrases, but I would doubt whether humans would perceive them as similar.</p>
+<p>Typos
+90 case ~~of~~ study
+340 study case -&gt; case study</p>
+<p>EDIT: most reviewers argue in favour of accepting this paper, and I certainly share their enthusiasm for the methodology and open science. To address some of my criticisms, for the camera-ready version I would like to request that the authors add more details on the corpus, perhaps with exemplary melodies from one or two genres, which might help clarify the reasoning for choosing this task and the given methodology. To make space for this, perhaps Figure 1 could be left out. As mentioned above, I do not think it adds much information.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper studies the relationship between genres of folksong from two traditions, Irish and Galician, based on a combination of rhythmic and melodic patterns using an unrooted phylogenetic tree. The genre tree is built in two stages: first, a tree is built over melodies, without including genre information, and in the second stage the resulting distances between melodies of the same genre are aggregated and used to build the genre tree itself. Both trees are done with neighbor-joining. The result is convincing, generally grouping genres of the individual traditions into separate high-level clades, but with individual genres — waltzes and alalas — ending up in the „other“ clade. The data is made publicly available, including the phrase annotations, as well as all code.</p>
+<p>The paper is well-crafted, aware of related work, understands — as far as I can tell, as I am not familiar with the Galician tradition — the musical materials to the level required to make its point. I specifically appreciate the use of genre as an independent proxy for assessing the quality of different input representations properly, using the genre separation metric. (Though I would rather suggest phylogenetic signal as a possible alternative metric down the road.) It is an interesting, well-balanced mix between (ethno)musicological motivation, material, and appropriate computational methods. It puts a number of well-selected pieces together to work with folk music analysis, which is a field that has not been studied computationally as much — there is a lot of opportunity with these materials. Good to also see at least some overlap with cultural evolution, which is a field that could provide a principled link between MIR methods and models and conclusions about music and musical life. </p>
+<p>And, importantly, the paper is 1) not overclaiming, 2) not underestimating the complexity of dealing with ethnomusicological data, 3) took the effort to open its data already in the anonymous regime, and 4) reviews related work well, and justifies its choices on top of that well. It is not really a breakthrough in and of itself, but I think it clearly deserves a place at ISMIR.</p>
+<p>Some aspects of the method, however, could still be improved.</p>
+<p>(Most significant) Fig. 3 — There is some analysis of significance missing. Bootstrap sampling is generally an accepted method for this in the life sciences. Actually, perhaps better than bootstrapping and confidence intervals would be establishing a random baseline: what are the GSR values for a tree built randomly, rather than by neighbor joining? (Better, what is the distribution of GSR values across 10,000 or so random trees?) What are GSR values for a perfect genre tree („cheat“ and use genre directly to compute NJ distance, basically binary), and how much does it change when the „wrong“ tune is chosen and the perfect clustering is disturbed with some measure of probability? Then, the significance of having a higher vs. lower GSR value in the relatively small observed ranges could be made clear.</p>
+<p>L.240: Why Euclidean distance over counts? Wouldn’t a metric based on some distribution over pattern counts be more appropriate? (Binomial? Poisson?)</p>
+<p>Figs. 4 and 6 visually imply a root and passage of time, but the tree inference method does not really output any of that. The unrooted should have been presented differently. (See e.g. https://open.lib.umn.edu/humanbiology2e/chapter/1-5-introduction-to-phylogenies/ Fig. 1b for a more typical, better visualisation that I would recommend.)</p>
+<p>It may also have been worth it, perhaps instead of the large Figure 3, to provide a figure for all melodies, or at least a substantial sub-sample across all genres, which was in the supplementary materials repository.</p>
+<p>Fig. 5 — It is somewhat suspicious that the greatest distance aggregated over the first-stage melody tree is between waltzes and waltzes. It would be worth a comment, perhaps in the conclusions. Also, color-coding the genre names into Irish vs. Galician might help readability.</p>
+<p>It is not clear what the Pearson correlation between the two genre trees actually measures.</p>
+<p>Note also that given the presence of horizontal transmission in the 20th century, I’m not sure this is actually the best dataset to work with. Building a tree and evaluating it is a good first step before getting into network models with horizontal transmission, but if this is a methods development paper it is possibly more suitable to apply it on less complex material.</p>
+<p>Finally, I want to point to what I think is an unused opportunity: discussing the kinds of relationships between genres more. One idea is building a genre network instead of a tree (or at least did a NeighborNet visualisation, though these are also problematic because of distances scaling issues). Fig. 3 also could have been discussed more, beyond just the „requires more musicology“ statement on L.374. The low numbers in the table are actually just as interesting as the high numbers, because they show which genres are not necessarily distinguished from others via their rhythmic and melodic patterns at all, pointing to extra-musical source of their identity. This goes back to the missed opportunity to use this study for insight into what makes genres coherent categories, and to what extent is it the music. It may turn out from such an analysis that certain genres for instance should <em>not</em> be included in analyses based on musical content, for example, because these categories are not salient to it. </p>
+<p>Anyway, I will look forward to the presentation of this paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper introduces a methodology for hierarchical musical similarity analysis of folk traditions, specifically applied to a new dataset of 600 Galician and Irish folk music scores. The approach extends standard score alignment techniques to consider structural elements (phrases and form) and multiple representations (chromatic intervals, diatonic intervals, and rhythmic ratios).</p>
+<p>Strengths:
+1. The paper addresses an important topic in computational ethnomusicology, offering a systematic approach to comparing folk music traditions at scale.</p>
+<ol>
+<li>
+<p>The dataset is substantial (600 scores) and constructed with expert annotations for phrases and genre classification, providing a valuable resource for the MIR community.</p>
+</li>
+<li>
+<p>The hierarchical approach considering multiple levels of musical structure (notes, phrases, form) is innovative and well-motivated by the nature of oral music traditions.</p>
+</li>
+<li>
+<p>The adaptation of bioinformatics methods (sequence alignment, phylogenetic trees) to musical analysis is creative and potentially powerful.</p>
+</li>
+<li>
+<p>The visualizations effectively illustrate relationships between genres within and across traditions.</p>
+</li>
+</ol>
+<p>Weaknesses:
+1. Limited scope of representation: The paper acknowledges but does not address the limitation of working with symbolic scores, which omit crucial aspects of folk music traditions such as timbre, instrumentation, ornamentation and performance practice, elements that often carry significant cultural information.</p>
+<ol>
+<li>
+<p>Methodological concerns: The extremely high correlation (0.99) between chromatic-rhythmic and rhythmic trees suggests that the analysis pipeline may be introducing biases that override the actual discriminative power of different feature types.</p>
+</li>
+<li>
+<p>Statistical significance: The paper lacks statistical analysis to determine whether the observed differences between genres (GSR values) are statistically significant or merely artifacts of the processing pipeline.</p>
+</li>
+<li>
+<p>Narrow range of results: The averaged across genres separation ratio values (1.04-1.21; last row in Fig. 3) fall within a tight range (1.04-1.21), raising questions about the discriminative power of the proposed methodology.</p>
+</li>
+<li>
+<p>Unclear details: Several technical aspects are insufficiently explained, such as the exact implementation of the Quality Threshold Clustering algorithm and the specifics of the Neighbor Joining method used for phylogenetic tree construction.</p>
+</li>
+<li>
+<p>Expert dependency: The methodology relies heavily on expert annotations for phrases, which limits its scalability and application to other datasets without significant manual effort.</p>
+</li>
+</ol>
+<p>Recommendations:
+1. Provide a deeper analysis of the correlation between different feature representations (chromatic, diatonic, rhythmic). The near-perfect correlation between some trees suggests potential issues with the methodology.</p>
+<ol>
+<li>
+<p>Include statistical significance testing to validate that the observed genre separations are meaningful.</p>
+</li>
+<li>
+<p>For each distance matrix between genres (e.g., Figure 5), compare the diagonal elements (within-genre similarity) to the average of off-diagonal elements (which represent across-genre similarity), to directly test the assumption made in Section 3.2, that "pieces within each genre tend to share patterns at the pitch and rhythmic levels". </p>
+</li>
+<li>
+<p>Provide more details on the QT Clustering algorithm parameters and the Neighbor Joining method implementation.</p>
+</li>
+<li>
+<p>Investigate the potential for automating phrase detection to reduce dependency on expert annotations.</p>
+</li>
+</ol>
+<p>Minor suggestions:
+1. Figure 1: A description of 'D', 'R', 'CR' etc. would help the reader.
+2. line 113: "**kern": Undefined term.
+3. lines 267-268: "Neighbour Joining": missing reference
+4. lines 323,350 etc: ensure the usage of latex <code>\ref</code> command for the figures.</p>
+<p>This paper presents a valuable contribution to computational ethnomusicology with its hierarchical approach to musical similarity analysis. The methodology shows promise for understanding relationships between folk traditions, though there are concerns about the robustness of the results given the high correlations between different feature representations. With refinements to address the methodological issues and more comprehensive statistical analysis, this work could provide significant insights into cross-cultural musical influences and similarities.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

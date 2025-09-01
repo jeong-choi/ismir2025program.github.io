@@ -1,0 +1,568 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Improving BERT for symbolic music understanding using token denoising and pianoroll prediction</title>
+    
+<meta name="citation_title" content="Improving BERT for symbolic music understanding using token denoising and pianoroll prediction" />
+
+<meta name="citation_author" content="Jun-You Wang" />
+
+<meta name="citation_author" content="Li Su" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="We propose a pre-trained BERT-like model for symbolic music understanding that achieves competitive performance across a wide range of downstream tasks. To achieve this target, we design two novel pre-training objectives, namely token correction and pianoroll prediction. First, we sample a portion of note tokens and corrupt them with a limited amount of noise, and then train the model to denoise the corrupted tokens; second, we also train the model to predict bar-level and local pianoroll-derived representations from the corrupted note tokens. We argue that these objectives guide the model to better learn specific musical knowledge such as pitch intervals. For evaluation, we propose a benchmark that incorporates 12 downstream tasks ranging from chord estimation to symbolic genre classification. Results confirm the effectiveness of the proposed pre-training objectives on downstream tasks.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Symbolic music processing" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Evaluation metrics" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-09: Improving BERT for symbolic music understanding using token denoising and pianoroll prediction
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Jun-You Wang" class="text-muted"
+        >Jun-You Wang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Li Su" class="text-muted"
+        >Li Su</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Symbolic music processing"
+        class="text-secondary text-decoration-none"
+        >Symbolic music processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation metrics"
+        class="text-secondary text-decoration-none"
+        >Evaluation metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>We propose a pre-trained BERT-like model for symbolic music understanding that achieves competitive performance across a wide range of downstream tasks. To achieve this target, we design two novel pre-training objectives, namely token correction and pianoroll prediction. First, we sample a portion of note tokens and corrupt them with a limited amount of noise, and then train the model to denoise the corrupted tokens; second, we also train the model to predict bar-level and local pianoroll-derived representations from the corrupted note tokens. We argue that these objectives guide the model to better learn specific musical knowledge such as pitch intervals. For evaluation, we propose a benchmark that incorporates 12 downstream tasks ranging from chord estimation to symbolic genre classification. Results confirm the effectiveness of the proposed pre-training objectives on downstream tasks.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1axSJdG1-Nj1pXIFRpKyjAzmmemeDCd1j/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>Musically informed pre-text tasks (pre-training objectives) improve a model's learning of high-level music representations from symbolic data.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Testing on a mixture of established and novel symbolic music understanding downstream tasks, the authors show that musically informed pre-training objectives outperform vanilla masked-language modeling in learning meaningful music representations.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This is the initial review for the paper "Improving BERT for symbolic music understanding using token denoising and pianoroll prediction", submitted to ISMIR 2025 in Daejeon. The paper approaches representation learning from symbolic music data in various formats (score, score-derived MIDI, performance-derived MIDI) using Transformer-based language modeling. As their main contribution, the authors propose to replace the vanilla masked language modeling (MLM) pre-training with two more musically informed pre-training objectives: correcting slightly corrupted tokens and predicting piano-roll-like pitch and chroma representations. Moreover, the authors extend an existing set of downstream tasks in symbolic music understanding with various other tasks, using this set of tasks for a comprehensive and systematic evaluation that shows the model's efficacy in the context of baselines and other models variants.</p>
+<p>In general, this is an interesting idea. While not revolutionary and, in some respect, being an incremental adapation to previous models, the clear description, good motivation and, in particular, the comprehensive and systematic evaluation makes it an insightful contribution to ISMIR, which I recommend for acceptance. The only substantial criticism I have is the strict assumption of a 4/4 time signature. This crucially limits the model's applicability and contradicts the musically informed approach (moreover, this important information is mentioned much too late in the paper).</p>
+<p>Overall, the paper is well-structured and the writing is clear. However, there are a number of imprecise and even wrong statements/definitions that have to be corrected. Moreover, some important information is given in the paper at a later stage but should be mentioned earlier to guide the reader into the right direction. I will list these problems in the following:</p>
+<p>line (l.) 11: "predict the [...] piano roll" - from what (single note representation)???
+l. 51: Why is 5 tasks not comprehensive enough? Is 12 comprehensive?
+l. 64: "infer pitch and chroma distribution from the input note sequence" - this seems trivial as described here, does it involve the correction of corrupted notes? Then, this should be made clear
+l. 92: "Symbolic music is an abstract form of music" - This is not correct. There is no "symbolic music", maybe "symbolic music data" or "representation". Moreover, these are representations and not "forms of music" - please correct!
+l. 97: "Both MIDI and sheet music are forms of symbolic music" - This is also not correct. In particular, sheet music refers to the written artifact, which could be physical paper, or (as data) simple pixel graphics, which are <em>NOT</em> symbolic (i.e. machine-readable by explicitly encoding musical information). Please correct this
+l. 145: "raw DB information [by retrieving] tick information (ticks per beat)" - this is unclear, doesn't it rather require knowlege of the ticks per measure? If this is derived by assuming a constant time signature (4/4), this assumption needs to be mentioned beforehand.
+l. 164 ff: What is a "1/4 beat" compare to a "32nd" note? Are beats assumed to be equal to quarter notes? This is a crude simplification of symbolic music data, and crucially limits model performance! Moreover, please stick to one semantic description (beats or note durations) and explain why onset positions and durations are modeled in different resolutions!
+l. 187: "15% in practice" - 15% of what?
+l. 223: "sampling from all tokens" - from all possible tokens?
+l. 255: "tatum-level prediction": confusing, better "local prediction"! 
+l. 264: "one bar contains 16 tatums" - Why??? Oversimplification!
+l. 331: "Piano performer style classification" - up to this point, the reader assumes only score-like music in the data. It should be mentioned much earlier that the model works with performance-like data (e.g. performance MIDI) as well!
+l. 434f.: "while excluding all no-4/4 time signatures" - This information is way too late! Also, this is a crude oversimplification that crucially limits the model's usefulness!
+l. 464.: "almost the downstream tasks" - almost all the downstream tasks?
+l. 502: "outperforms SOTAs in six tasks" - unscientific statement!
+l. 515: "Due to page limitation..." - this is not an excuse! Please adapt the paper writing to fit more of these results.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Summarizing the main aspects from the four reviews, this paper constitutes a valuable and interesting contribution to ISMIR. All authors agree on this positive assessment, emphasize the interesting strategy and the insightful multi-task benchmark.</p>
+<p>There are two substantial issues of criticism (apart from several minor writing problems), which should be addressed:
+* There is a strict assumption of a 4/4 time signature, which substantially limits the model's applicability and contradicts the musically informed approach. Please mention this earlier and bring arguments for this choice.
+* The claims from the experiments are too strong. In particular, the effect of the proposed training strategies (token denoising &amp; piano roll prediction) are rather small, while other tweaks have a stronger effect. Please discuss this more carefully and cautiously.</p>
+<p>Overall, we congratulate the authors to this interesting submission and look forward to see this paper at ISMIR!</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper introduces M2BERT, a model for understanding symbolic music (notes). It learns by 1) fixing "broken" notes and 2) predicting piano rolls. It also presents the SMC benchmark (12 tests) to evaluate music understanding, aiming to improve learning beyond old methods. 
+Results are limited by over-simplification of the problem (e.g. only 4/4 timings, only MIDI), and by missing tests and resources, but code is shared, aiding community work. 
+Overall, a valuable ISMIR contribution.</p>
+<p>Here is the list of notes that highlights my critics.</p>
+<ol>
+<li>PROPOSED METHOD</li>
+<li>Getting beat start (DB) info is poorly explained (ala "not perfect but works"), hurting trust in input quality and repeatability.</li>
+<li>Rounding note timing for tokens might lose rhythm details, bad for time-sensitive music.</li>
+<li>Tokenization for scores vs. performances isn't clearly different, despite their timing variations.</li>
+<li>
+<p>Choice of how much to "break" notes for fixing (corruption levels) isn't well justified or tested for optimality.</p>
+</li>
+<li>
+<p>THE SMC BENCHMARK</p>
+</li>
+<li>Tests mix score and performance data without a clear strategy. This makes it hard to know what the model learns from each distinct music type.</li>
+<li>
+<p>For beat-finding tests, forcing all music to one tempo/rhythm (4/4) is unrealistic and questions test validity in real case scenarios.</p>
+</li>
+<li>
+<p>EXPERIMENT SETUP</p>
+</li>
+<li>Excluding non-4/4 music from the "Reduced" learning set limits rhythm understanding. No reason given.</li>
+<li>The "Full" dataset model (for SOTA comparison) didn't train long enough (25 epochs, still improving), making results unreliable.</li>
+<li>
+<p>30% note corruption and specific breakage levels lack clear justification or ablation study.</p>
+</li>
+<li>
+<p>RESULTS </p>
+</li>
+<li>Conclusions from the "Full" dataset (including SOTA claims) are weak due to insufficient training.</li>
+<li>Impact of music changes for beat-finding tests isn't discussed enough.</li>
+<li>Longer music piece test (ablation) only on two tasks; too limited to generalize.</li>
+</ol>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>In my opinion the two strongest point of this work are:</p>
+<p>1) To build an extensive downstream evaluation framework with 12 different tracks.
+2) To perform an exhaustive ablation of all the proposed contributions showing mostly consistent improvements in most of the proposed task.</p>
+<p>As a downside, I find it a bit misleading that, while the paper's title and abstract suggest that the token denoising and the pianoroll prediction are the main contributions of the paper, it can be seen in Table that typically these are not the modifications causing the highest performance bost (except for tasks VE and OT). Most of the time, the highest performance boost is due to the improved architecture (ModernBERT, row 2) or the extended training dataset (row 6). While I believe that ISMIR's policy doesn't allow for a title change, I'll encourage the authors to highlight the impact of these modificaiton in the model performance.</p>
+<h2>Specific comments</h2>
+<p>Lines 192-197: I disagree with the authors statement suggesting that the proposed model accounts for domain specific knowledge. While this is something that is not proven by the proposed experiments, a simpler explanation is that providing noise that is closer to the in-distribution data (instead of a MASK token or pure random noise) is a harder tasks to solve, so it results is more robust representations which benefit the downstream tasks.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper improves Midi-BERT by introducing a new backbone architecture, a musically informed token corruption method, and piano-roll/chroma generation pre-tasks, achieving superior performance in most of the 12 downstream tasks. </p>
+<p>Overall, the writing is clear and accessible, and the model demonstrates clear performance gains compared to Midi-BERT with similar model size and dataset.</p>
+<h2>Raised question:</h2>
+<p>Raised Question: From my understanding, the relationship between pitch in CP-tokens and pitch in piano-roll representations is nearly a 1:1 mapping. Unless piano-roll prediction includes additional spatial (e.g., octave-related) mechanism, their training effect seems limited, making me partially disagree with the authors. In contrast, chroma representations could enable learning of octave relationships (e.g., C1-C2) not captured in CP-tokens. Thus, I wish Table 1 included an ablation study showing the individual contributions of chroma and piano-roll to better understand their respective impacts.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

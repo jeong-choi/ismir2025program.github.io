@@ -1,0 +1,714 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Day 2</title>
+    
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+        
+<ul class="nav nav-pills justify-content-center">
+  
+  <li class="nav-item">
+    <a
+      id="calendar-html"
+      class="nav-link text-muted"
+      href="calendar.html"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Calendar
+    </a>
+  </li>
+  
+  <li class="nav-item">
+    <a
+      id="tutorials-html"
+      class="nav-link text-muted"
+      href="tutorials.html"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Sep-21
+    </a>
+  </li>
+  
+  <li class="nav-item">
+    <a
+      id="day_2-html"
+      class="nav-link text-muted"
+      href="day_2.html"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Sep-22
+    </a>
+  </li>
+  
+  <li class="nav-item">
+    <a
+      id="day_3-html"
+      class="nav-link text-muted"
+      href="day_3.html"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Sep-23
+    </a>
+  </li>
+  
+  <li class="nav-item">
+    <a
+      id="day_4-html"
+      class="nav-link text-muted"
+      href="day_4.html"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Sep-24
+    </a>
+  </li>
+  
+  <li class="nav-item">
+    <a
+      id="day_5-html"
+      class="nav-link text-muted"
+      href="day_5.html"
+      aria-controls="nav-home"
+      aria-selected="true"
+      >Sep-25
+    </a>
+  </li>
+  
+</ul>
+
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+<!---->
+<!--  -->
+<!--localcheck: Etc/UTC-->
+<!---->
+<!--finalchosen: Etc/UTC-->
+
+<div id="day">
+
+  
+
+  
+    <h2 class="day-title" id=open>Opening</h2>
+    <div class="cards row p-4">
+  
+  
+  <div class="col-12 p-3" style="box-sizing: border-box;">
+    <div class="card" style="display: block; overflow: hidden; width: 100%;">
+      <div
+        class="card-header text-center"
+        style="min-height: 200px; width: 100%;"
+      >
+        
+          <a id="Op" >
+            <h3 class="card-title main-title m-3 text-left">Opening Session</h3>
+          </a>
+        
+        <div class="m-3 text-left card-subtitle text-muted">
+          <p>Session chair: opening session chair</p>
+        </div>
+        <div class="m-3 text-left card-subtitle" style="display:flex; align-content: center;">
+          2025-09-22 | 05:00 (Europe/Berlin)
+        </div>
+<!--        <div class="m-3 text-center">-->
+<!--        -->
+<!--        </div>-->
+        <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+          <p>Opening Session</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+  
+  <h2 class="day-title" id=all>Keynote Speaker</h2>
+  
+
+<div class="row p-4">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-2 col-sm-5">
+            <img src="static/images/speakers/soo-man_lee.jpg" width="100%" class="img-thumbnail" />
+          </div>
+          <div class="col-md-10 col-sm-6">
+            <div class="m-3 text-muted">
+              <h3>
+                <a href="" class="main-title">
+                  Keynote-1: Soo-man Lee on &#34;Culture Technology in the Age of AI&#34;
+                </a>
+              </h3>
+            </div>
+            <div class="m-3 text-muted">
+              <span class="card-title h3">
+                Soo-man Lee  /  Key Producer &amp; Visionary Leader at A2O Entertainment
+              </span>
+            </div>
+            <div class="m-3 text-left card-subtitle">
+              2025-09-22 | 09:30 (Europe/Berlin)
+            </div>
+
+            <div class="m-3 text-center">
+            
+            </div>
+
+
+            <div class="m-3">
+              This keynote addresses the significance and future vision of the convergence of culture and technology in driving the global growth of K-Pop. The speaker, founder of SM Entertainment and A2O Entertainment, pioneered the concept of "<b>Culture Technology (CT)</b>", which has served as the foundation for the worldwide spread of Korean popular culture. CT systematized the entire value chain—from artist discovery and training to content production and distribution—establishing a framework for artist and IP creation that enabled the rise of K-Pop, while also integrating emerging technologies into music and content to transform the entertainment industry. Through "<b>Zalpha Pop</b>," the speaker envisions a world where humanity connects beyond borders and languages, and foresees the emergence of a prosumer-driven ecosystem in which fans actively participate as creators rather than remaining passive consumers. In a future where artificial intelligence and other advanced technologies accelerate the transformation of the entertainment landscape, CT will serve as a catalyst to amplify human creativity and as the cornerstone of a culturally enriched future where culture and technology thrive in harmony.
+            </div>
+            <div class="ml-3 mr-3 mt-4 mb-3 h5">
+              Bio
+            </div>
+
+            <div class="m-3">
+              Born in 1952, Soo-man Lee made his musical debut as part of the duet April and May (4월과 5월) in 1971. He began his solo career in 1974 and was honored with the MBC Top 10 Singer Award in 1977. In 1978, he earned his bachelor's degree from Seoul National University. In 1980, he became a prominent media figure, hosting MBC Radio's Starry Night (별이 빛나는 밤에) and the MBC TV talk show With Soo-man Lee (이수만과 함께). He later pursued graduate studies in the United States, earning a master's degree in Computer Engineering from California State University, Northridge in 1985. In 1989, he founded SM Planning, which evolved into SM Entertainment Co., Ltd. in 1995. Under his leadership, SM debuted its first idol group, H.O.T., in 1996, followed by the debut of solo artist BoA in 2000. He went on to produce and debut leading K-pop acts such as TVXQ, Girls' Generation, EXO, NCT, and aespa, shaping the foundation of the modern K-pop industry. His contributions have been recognized with numerous honors, including the Korea Entertainment Arts Development Award (2005), the Producer Award at the Golden Disc Awards (2008), the Order of Cultural Merit (2011), and Asia's Best Producer at the Top Chinese Music Awards (2016). He was also appointed Honorary Ambassador of Los Angeles in 2005 and awarded the 'Commanderie de Bontemps' honor from Château Mouton Rothschild in 2009. Internationally, he was selected for 'Variety 500' by Variety (USA) (2017–2020) and Billboard's Impact List (2020). Domestically, he received the K-Pop Contribution Award at the Gaon Chart Music Awards (2021). From 2022 to 2024, he served as Visiting Distinguished Professor in the Department of Computer Science at KAIST. In 2024, he founded A2O Entertainment, continuing his influence as one of the most prominent producers and entrepreneurs in global entertainment.
+            </div>
+
+
+<!--            <div class="ml-3 mr-3 mt-4 mb-3 h5 text-muted">-->
+<!--              Zoom links will be shared on Slack.-->
+<!--            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+    <h2 class="day-title" id=pos>Poster Sessions</h2>
+    <div class="cards row p-4">
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+<!--    <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">-->
+        <div class="col-12 p-3" style="box-sizing: border-box;">
+      
+
+      
+      
+
+
+
+      
+      
+
+      <a class="full-card-link" href="papers.html?session=1">
+        <div class="card" style="display: block; overflow: hidden; width: 100%;">
+          <div
+            class="card-header text-center"
+            style="width: 100%;"
+          >
+          
+            
+            <h3 class="m-3 card-title main-title text-left">
+              Oral Session - 1
+            </h3>
+            <div class="m-3 text-left card-subtitle text-muted">
+              <p>Session Chair: Session Chair Paper Session 1</p>
+            </div>
+            <div class="m-3 text-left card-subtitle">
+              2025-09-22 | 05:30 (Europe/Berlin)
+            </div>
+
+            <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+              
+            </div>
+
+          
+          </div>
+        </div>
+      </a>
+    </div>
+  
+<!--    <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">-->
+        <div class="col-12 p-3" style="box-sizing: border-box;">
+      
+
+      
+      
+
+
+
+      
+      
+
+      <a class="full-card-link" href="papers.html?session=Session">
+        <div class="card" style="display: block; overflow: hidden; width: 100%;">
+          <div
+            class="card-header text-center"
+            style="width: 100%;"
+          >
+          
+            
+            <h3 class="m-3 card-title main-title text-left">
+              coffee + Poster Session - 1
+            </h3>
+            <div class="m-3 text-left card-subtitle text-muted">
+              <p>Session Chair: Session Chair Paper Session 1</p>
+            </div>
+            <div class="m-3 text-left card-subtitle">
+              2025-09-22 | 07:00 (Europe/Berlin)
+            </div>
+
+            <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+              
+            </div>
+
+          
+          </div>
+        </div>
+      </a>
+    </div>
+  
+<!--    <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">-->
+        <div class="col-12 p-3" style="box-sizing: border-box;">
+      
+
+      
+      
+
+
+
+      
+      
+
+      <a class="full-card-link" href="papers.html?session=2">
+        <div class="card" style="display: block; overflow: hidden; width: 100%;">
+          <div
+            class="card-header text-center"
+            style="width: 100%;"
+          >
+          
+            
+            <h3 class="m-3 card-title main-title text-left">
+              Oral Session - 2
+            </h3>
+            <div class="m-3 text-left card-subtitle text-muted">
+              
+            </div>
+            <div class="m-3 text-left card-subtitle">
+              2025-09-22 | 11:00 (Europe/Berlin)
+            </div>
+
+            <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+              
+            </div>
+
+          
+          </div>
+        </div>
+      </a>
+    </div>
+  
+<!--    <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">-->
+        <div class="col-12 p-3" style="box-sizing: border-box;">
+      
+
+      
+      
+
+
+
+      
+      
+
+      <a class="full-card-link" href="papers.html?session=2">
+        <div class="card" style="display: block; overflow: hidden; width: 100%;">
+          <div
+            class="card-header text-center"
+            style="width: 100%;"
+          >
+          
+            
+            <h3 class="m-3 card-title main-title text-left">
+              Poster Session - 2
+            </h3>
+            <div class="m-3 text-left card-subtitle text-muted">
+              
+            </div>
+            <div class="m-3 text-left card-subtitle">
+              2025-09-22 | 12:30 (Europe/Berlin)
+            </div>
+
+            <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+              
+            </div>
+
+          
+          </div>
+        </div>
+      </a>
+    </div>
+  
+</div>
+  
+
+  
+    <h2 class="day-title" id=industry>Industry Session</h2>
+    <div class="cards row p-4">
+  
+  
+  <div class="col-12 p-3" style="box-sizing: border-box;">
+    <div class="card" style="display: block; overflow: hidden; width: 100%;">
+      <div
+        class="card-header text-center"
+        style="min-height: 200px; width: 100%;"
+      >
+        
+          <a id="In" >
+            <h3 class="card-title main-title m-3 text-left">Industry Meetup</h3>
+          </a>
+        
+        <div class="m-3 text-left card-subtitle text-muted">
+          
+        </div>
+        <div class="m-3 text-left card-subtitle" style="display:flex; align-content: center;">
+          2025-09-22 | 14:00 (Europe/Berlin)
+        </div>
+<!--        <div class="m-3 text-center">-->
+<!--        -->
+<!--        </div>-->
+        <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+    <h2 class="day-title" id=mus>Music Sessions</h2>
+    <div class="cards row p-4">
+  
+  
+  
+    
+  
+  
+    
+  
+
+  
+<!--    <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">-->
+        <div class="col-12 p-3" style="box-sizing: border-box;">
+      
+
+      
+      
+
+
+
+      
+      
+
+      <a class="full-card-link" href="music.html?session=">
+        <div class="card" style="display: block; overflow: hidden; width: 100%;">
+          <div
+            class="card-header text-center"
+            style="width: 100%;"
+          >
+          
+            
+            <h3 class="m-3 card-title main-title text-left">
+              ISMIR Music Program
+            </h3>
+            <div class="m-3 text-left card-subtitle text-muted">
+              
+            </div>
+            <div class="m-3 text-left card-subtitle">
+              2025-09-22 | 16:00 (Europe/Berlin)
+            </div>
+
+            <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+              
+            </div>
+
+          
+          </div>
+        </div>
+      </a>
+    </div>
+  
+</div>
+  
+
+  
+    <h2 class="day-title" id=social>Social Events</h2>
+    <div class="cards row p-4">
+  
+  
+  <div class="col-12 p-3" style="box-sizing: border-box;">
+    <div class="card" style="display: block; overflow: hidden; width: 100%;">
+      <div
+        class="card-header text-center"
+        style="min-height: 200px; width: 100%;"
+      >
+        
+          <a id="co" >
+            <h3 class="card-title main-title m-3 text-left">coffee</h3>
+          </a>
+        
+        <div class="m-3 text-left card-subtitle text-muted">
+          
+        </div>
+        <div class="m-3 text-left card-subtitle" style="display:flex; align-content: center;">
+          2025-09-22 | 10:30 (Europe/Berlin)
+        </div>
+<!--        <div class="m-3 text-center">-->
+<!--        -->
+<!--        </div>-->
+        <div class="mt-3 ml-3 mr-3 mb-4 text-left card-subtitle">
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+  
+
+</div>
+
+<script src="static/js/schedule_nav.js"></script>
+<script src="static/js/anchor_offset.js"></script>
+
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

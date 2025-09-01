@@ -1,0 +1,601 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: GlobalMood: A cross-cultural benchmark for music emotion recognition</title>
+    
+<meta name="citation_title" content="GlobalMood: A cross-cultural benchmark for music emotion recognition" />
+
+<meta name="citation_author" content="Harin Lee" />
+
+<meta name="citation_author" content="Elif Celen" />
+
+<meta name="citation_author" content="Peter Harrison" />
+
+<meta name="citation_author" content="Manuel Anglada-Tort" />
+
+<meta name="citation_author" content="Pol van Rijn" />
+
+<meta name="citation_author" content="Minsu Park" />
+
+<meta name="citation_author" content="Marc Schönwiesner" />
+
+<meta name="citation_author" content="Nori Jacoby" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Human annotations of mood in music are essential for music generation and recommender systems. However, existing datasets predominantly focus on Western songs with terms derived from English, which may limit generalizability across diverse linguistic and cultural backgrounds. We introduce &#39;GlobalMood&#39;, a novel cross-cultural benchmark dataset comprising 1,180 songs sampled from 59 countries, with large-scale annotations collected from 2,519 individuals across five culturally and linguistically distinct locations: U.S., France, Mexico, S. Korea, and Egypt. Rather than imposing predefined emotion and mood categories, we implement a bottom-up, participant-driven approach to organically elicit culturally specific music-related emotion terms. We then recruit another pool of human participants to collect 988,925 ratings for these culture-specific descriptors. Our analysis confirms the presence of a valence-arousal structure shared across cultures, yet also reveals significant divergences in how certain emotion terms (despite being dictionary equivalents) are perceived cross-culturally. State-of-the-art multimodal models benefit substantially from fine-tuning on our cross-culturally balanced dataset, particularly in non-English contexts. Broadly, our findings inform the ongoing debate on the universality versus cultural specificity of emotional descriptors, and our methodology can contribute to other multimodal and cross-lingual research.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Music transcription and annotation" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Annotation protocols" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Metadata, tags, linked data, and semantic web" />
+
+<meta name="citation_keywords" content="Musical affect, emotion and mood" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P1-01: GlobalMood: A cross-cultural benchmark for music emotion recognition
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Harin Lee" class="text-muted"
+        >Harin Lee</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Elif Celen" class="text-muted"
+        >Elif Celen</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Peter Harrison" class="text-muted"
+        >Peter Harrison</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Manuel Anglada-Tort" class="text-muted"
+        >Manuel Anglada-Tort</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Pol van Rijn" class="text-muted"
+        >Pol van Rijn</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Minsu Park" class="text-muted"
+        >Minsu Park</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Marc Schönwiesner" class="text-muted"
+        >Marc Schönwiesner</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Nori Jacoby" class="text-muted"
+        >Nori Jacoby</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music transcription and annotation"
+        class="text-secondary text-decoration-none"
+        >Music transcription and annotation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Annotation protocols"
+        class="text-secondary text-decoration-none"
+        >Annotation protocols</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Metadata, tags, linked data, and semantic web"
+        class="text-secondary text-decoration-none"
+        >Metadata, tags, linked data, and semantic web</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical affect, emotion and mood"
+        class="text-secondary text-decoration-none"
+        >Musical affect, emotion and mood</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        10-minute long-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Human annotations of mood in music are essential for music generation and recommender systems. However, existing datasets predominantly focus on Western songs with terms derived from English, which may limit generalizability across diverse linguistic and cultural backgrounds. We introduce 'GlobalMood', a novel cross-cultural benchmark dataset comprising 1,180 songs sampled from 59 countries, with large-scale annotations collected from 2,519 individuals across five culturally and linguistically distinct locations: U.S., France, Mexico, S. Korea, and Egypt. Rather than imposing predefined emotion and mood categories, we implement a bottom-up, participant-driven approach to organically elicit culturally specific music-related emotion terms. We then recruit another pool of human participants to collect 988,925 ratings for these culture-specific descriptors. Our analysis confirms the presence of a valence-arousal structure shared across cultures, yet also reveals significant divergences in how certain emotion terms (despite being dictionary equivalents) are perceived cross-culturally. State-of-the-art multimodal models benefit substantially from fine-tuning on our cross-culturally balanced dataset, particularly in non-English contexts. Broadly, our findings inform the ongoing debate on the universality versus cultural specificity of emotional descriptors, and our methodology can contribute to other multimodal and cross-lingual research.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1E-f8lC-SgLbTPSJTHzHexmXb3oBTcAfS/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>Yes, although some overview of other datasets that focus on getting raters from different cultures, e.g. MERP or survey could be provided.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>The paper presents a new dataset for emotion labelling with a global focus. It is always great to see more data available.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q18 ( If yes, please explain why it should be awarded.)</strong></p>
+<p>The paper presents a new dataset for emotion labelling with a global focus. It is always great to see more data available.</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The paper presents a new dataset for emotion labelling with a global focus. It is always great to see more data available. The LLM evaluation approach adopted is also interesting. </p>
+<p>The paper is well written and provides a great new resource. </p>
+<p>The authors may want to have a look at this recent MER dataset survey paper as well: https://arxiv.org/abs/2406.08809</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All reviewers agree this is a valuable contribution to the community.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper "GlobalMood: A cross-cultural benchmark for music emotion recognition" presents an open dataset containing music mood tags and their ratings from five locations, together with the methods for sourcing and refinement. </p>
+<p>As the authors elaborate, mood tags may vary across different cultures, and even translation-equivalent terms may have different meanings depending on the cultural context. </p>
+<p>The authors present several use-cases of their data by providing an such analysis of term equivalence versus translation equivalence across locations, using a subspace-mapping of tag representations collected from different locations across the music corpus.
+They furthermore provide an evaluation of agreement of the human data with multi-modal audio LLMs.</p>
+<p>The paper is well-structured and written and systematically describes the contributions. Figures successfully visualise the data, results and collection method. </p>
+<p>The description of the annotation method, in my opinion a key contribution, could use some clarification, as details of the collection chain are somewhat spread across several sections (end of Section 3.2, 4.1, 4.2). 
+Regarding Figure 1 - it would be great to add to either the figure or related text a description that the tagging chain (A) is (if I understand correctly) performed by annotators from the same country and location for a specific location's tagging and emotional tag repertoire (thus the tagging chain resting culture-homogenous). This could be also clarified in the text around "two parallel chains per country". Line 161 "elicits mood terms across languages" also could be rephrased to e.g. "elicits culture-specific mood terms in local languages" if the above assumption is correct. On the contrary, if participants in Figure 1A are from multiple locations, there would be doubts about mutual understanding along the chain.</p>
+<p>The analysis in Section 4.2.2 shows particular promise in showing limits of "dictionary translation" of tags. So was the analysis of audio LLMs for individual locations. Regarding line 412, it would be interesting to know how the capacity and training data in the Gemini audio models changed. </p>
+<p>The specific experiments of improvements for CLAP for specifically Arabic tags showcase very concrete avenues to improve tagging performance in existing methods.</p>
+<p>Depending on whether the vision is to extend the data and benchmark to further locations, I would ask the authors to consider the naming ("global") of the dataset/paper - notwithstanding this is a great novelty and improvement in global spread of locations - as the five used locations still are somewhat limited. Also consider the mention of "globally balanced" in Line 162.</p>
+<p>I recommend the paper to be presented at ISMIR 2025.</p>
+<p>Notes:
+I appreciated the sharing of the data - which helped confirmation of understanding. It seems that the csv lines with Arabic tags are ordered differently, and inconsistent regarding the csv column headers in both files for global mean and raw ratings: The Arabic tags are always at the outer (last) column, whereas the other languages position tags in the 3rd column e.g.:</p>
+<p>country,videoID,tag,mean_rating,sd_rating,n_ratings
+EG,L7A9gIIYE8U,الاستمتاع,3.5,1.0801234497346435,10
+vs
+KR,Y2cyFXBo9o4,활기찬,3.1818181818181817,0.8738628975053029,11
+vs
+MX,IWLcPqj3poM,amor,2.3636363636363638,1.5015143870590968,11</p>
+<p>Smaller notes:</p>
+<p>Line 93 - our results demonstrate - this could go into the conclusion</p>
+<p>I noted the anthropomorphising terminology of "human-like capabilities for understanding" for Gemini in (ln 412), and wonder if this is warranted and within the scope of the presented evidence. Just a paragraph below (ln 419) the correlation with human ratings is considered comparable in performance to pre-existing specific mood-estimation algorithms.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper explores the culture-specific usage of music-related mood terms through a large-scale annotation study. The authors present a clearly defined research question and a carefully designed methodology to investigate it. I strongly recommend this paper for acceptance based on the following strengths:</p>
+<ul>
+<li>
+<p>The cross-cultural design—using data from five culturally diverse countries—helps overcome the common WEIRD (Western, Educated, Industrialized, Rich, and Democratic) bias in human-subject research and strengthens the generalizability of findings in emotion studies, where cultural variability in mood perception presents a significant methodological and interpretive challenge. The scale and scope of this annotation effort are particularly impressive, given the logistical and cultural complexity involved in such experiments.</p>
+</li>
+<li>
+<p>A wide range of annotations in different languages broadens the applicability of Music Emotion Recognition (MER) systems and contributes to NLP research across linguistic and cultural boundaries. By capturing how mood terms are interpreted within specific cultural contexts, this work lays important groundwork for developing personalized or culturally adaptive emotion recognition systems.</p>
+</li>
+<li>
+<p>A robust experimental design—comprising two stages followed by model evaluation—supports the reliability of the results. Careful stage-specific song selection and a bottom-up procedure for mood-term extraction ensure ecological validity. Additionally, the comparison of human annotations with two computational models strengthens the interpretive framework of the study.</p>
+</li>
+</ul>
+<p>Suggestions for improvement:</p>
+<ul>
+<li>
+<p>In Section 4.2.2, where the authors compare within-country and cross-country agreement, no baseline or statistical comparison is provided for interpreting the reported coefficients. Given this, it may be premature to conclude that the emotion term ‘happy’ shows “a considerable gap between cross- and within-country agreement” (Lines 377–378).</p>
+</li>
+<li>
+<p>I suggest clarifying the phrasing in Lines 361–365 on two fronts. First, if I understand correctly, the term “mean correlations across language pairs” refers to inter-country agreement computed as the average of pairwise correlation coefficients. If so, a brief explanation would improve clarity. Second, I would like to ask whether it is appropriate to interpret within-country agreement—calculated using the Spearman–Brown formula—as a proxy for measurement error. If that is the intended interpretation, it may be helpful to explicitly frame it as such to guide the reader's understanding.</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper contributes a novel dataset that takes into account culture and allows the annotation of free-text. The top-down approach to annotation of free-text descriptors in native language is highly-relevant and a significant contribution to the task of MER. Moreover, using LLMs to analyze native language features is interesting and relevant. </p>
+<p>Major comments:
+Although completely agreeing with the authors regarding the issue of using English descriptors to music, some work has been done to validate some emotion models in other languages - particularly for GEMS. See Strauss2024.
+General intra-rater statistics could be added to section 4.2.1, Krippendorff’s alpha or ICC could give a general notion of how agreement works within the same language as compared across languages. 
+One of the major issues of cross-cultural work is that evaluating textual information from an unknown language can be challenging. Figure 2 shows mood terms such as “latino” with high arousal and positive valence or “foreign” with maybe low arousal and negative valence? Although this is briefly mentioned in the discussion section, perhaps more could be written about the difficulty of making such translations (see next comment).
+The finding in section 4.2.2 is very interesting. I’m not sure if I understand this correctly, but having a rating for terms like “latino” or “foreign” would already bias the calculation from the MDS. If the mean rating per term is introduced for the 1180 songs, would there be a circular logic to this? Perhaps I’m not understanding this section correctly and there is only a need to better clarify it. </p>
+<p>Minor comments:
+Figure 2 has some sliders that I would assume are in Spanish. Are they “alegría”, “paz” and “nostalgia”?
+Section 3.2 is a bit unclear in L229. Can you clarify how you selected a subset of 180?
+L299 refers to mitigating a priming effect which might not be clear to the general MIR reader. Please clarify a bit further. </p>
+<p>References: 
+@article{Strauss2024,
+title = {{The Emotion-to-Music Mapping Atlas (EMMA): A systematically organized online database of emotionally evocative music excerpts}},
+author = {Strauss, Hannah and Vigl, Julia and Jacobsen, Peer-Ole and Bayer, Martin and Talamini, Francesca and Vigl, Wolfgang and Zangerle, Eva and Zentner, Marcel},
+year = 2024,
+month = jan,
+journal = {Behavior Research Methods},
+volume = 56,
+number = 4,
+pages = {3560–3577},
+doi = {10.3758/s13428-024-02336-0},
+issn = {1554-3528},
+url = {http://dx.doi.org/10.3758/s13428-024-02336-0}
+}</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,520 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Simple and Effective Semantic Song Segmentation</title>
+    
+<meta name="citation_title" content="Simple and Effective Semantic Song Segmentation" />
+
+<meta name="citation_author" content="Filip Korzeniowski" />
+
+<meta name="citation_author" content="Richard Vogl" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="We propose a simple, yet effective approach to semantic song segmentation. Our model is a convolutional neural network trained to jointly predict frame-wise boundary activation functions and segment label probabilities. The input features consist of a log-magnitude log-frequency spectrogram and self-similarity lag matrices, combining modern deep learning approaches with hand-crafted features.
+
+To evaluate our approach, we first examine commonly used datasets and find substantial overlap (up to 22%) between training and testing sets (SALAMI vs. RWC-Pop). As this overlap invalidates meaningful comparisons, we propose using the previously unexplored McGill Billboard dataset for testing. We carefully eliminate duplicate entries between McGill Billboard and other datasets through both audio fingerprinting and string-matching of song titles and artist names. Using the resulting set of 719 tracks, we demonstrate the effectiveness of our approach.
+&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Structure, segmentation, and form" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-13: Simple and Effective Semantic Song Segmentation
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Filip Korzeniowski" class="text-muted"
+        >Filip Korzeniowski</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Richard Vogl" class="text-muted"
+        >Richard Vogl</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Structure, segmentation, and form"
+        class="text-secondary text-decoration-none"
+        >Structure, segmentation, and form</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>We propose a simple, yet effective approach to semantic song segmentation. Our model is a convolutional neural network trained to jointly predict frame-wise boundary activation functions and segment label probabilities. The input features consist of a log-magnitude log-frequency spectrogram and self-similarity lag matrices, combining modern deep learning approaches with hand-crafted features.</p>
+<p>To evaluate our approach, we first examine commonly used datasets and find substantial overlap (up to 22%) between training and testing sets (SALAMI vs. RWC-Pop). As this overlap invalidates meaningful comparisons, we propose using the previously unexplored McGill Billboard dataset for testing. We carefully eliminate duplicate entries between McGill Billboard and other datasets through both audio fingerprinting and string-matching of song titles and artist names. Using the resulting set of 719 tracks, we demonstrate the effectiveness of our approach.
+<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1J_50_v05CoATo0d7-99Wm4MnriygBAFC/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>Much previous work is cited. However, the connection between this work and previous work is not clear. Sections 1 and 2 do not hint at the need for future work on MSA. A brief contrast with this work is given in lines 143–153, which states a desire to diverge from "current trends in deep learning". If this is the main motivation for the design of the proposed model, I think an explanation of these trends — why they are popular, what are some examples, and how the trajectory of these trends has soared or fizzled in other MIR tasks — is deserved.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<p>The explanations are all very clear. The critiques of earlier evaluations and recommendations for future ones are clear, although I am not sure that the evaluation conducted here resolves all the issues. While the comparison using the McGill Billboard dataset seems fair (Table 4), the comparison in Table 3 seems unfair, given that the proposed algorithm was tested using cross-validation, whereas the competing algorithms are all tested in a cross-dataset scheme. It is true that the "train-test overlap ... could lead to inflated results" (line 419–20); but it also seems true that training within a dataset could inflate results compared to a cross-dataset scenario.</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Strongly Disagree (Well-explored topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The paper sets a good example for evaluation in MSA in several respects: it emphasises the importance of using 'trimmed' annotations (i.e., not including trivial 'begin' and 'end' tokens in the evaluation) and it points out the overlapping datasets compromise the cross-dataset evaluation. These are valuable recommendations that may be known by others in the field (mir_eval has a 'trimmed' setting, and the overlap between SALAMI, RWC and Isophonics is intentional) but are still worth committing to the proceedings.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>MSA evaluation should be conducted correctly and reported carefully, and cross-dataset performance of MSA is poorer than within-dataset performance.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper proposes a new algorithm for music structure analysis (MSA) with a simple architecture, combining different implementation tricks from previous work. The paper describes some previous MSA evaluations as sloppy and propose a more rigorous approach, and they also identify a new dataset for evaluation in MSA: the McGill Billboard dataset (MBD).</p>
+<p>The paper is clear and well written. The high level of detail in the algorithm description will be appreciated by anyone wanting to replicate this work. The tips for making sure evaluations are correct and rigorous are important and valid critiques of previous work, and the MBD is a good dataset to include in future work. I think this paper merits acceptance based on this.</p>
+<p>That said, I think each of the 3 main contributions (algorithm, evaluation, choice of dataset) from the authors could be made clearer in an updated version.</p>
+<p>Regarding the first contribution: I trust that the new pipeline was built correctly, and the evaluation with the MBD suggests it is a new state of the art. But in the explanation of proposed design (Section 3), I did not find reusable insights. This is because the connection to the existing literature is unclear, so for each chosen element in the pipeline, I am not sure what the other options were, and why any particular option was chosen. An ablation study would have been interesting, since there are a few points where it is clear that preliminary studies were used to fine-tune the process (e.g., line 202: "we found that this does not further improve performance", and line 243 footnote: "we found in preliminary experiments that individual probabilities for each segment label work better in practice").</p>
+<p>One motivation for the proposed design is clear from the title: simplicity. The introduction says the proposal is "a simple, yet effective approach". If the simplicity of the algorithm is part of its value, why is it not clearly contrasted with the complexity of previous work? Also, by what standard is it "simple"? The level of detail in Section 3 suggests it is a sophisticated algorithm relying on many clever submodules and implementation tricks. I would have enjoyed a discussion about how other systems and training methods are needlessly complex, and in what way the proposed method is simple, and what makes simplicity desirable for a given task. For example, simplicity may come from there being a clear musical intuition that underlies a method. This paper does not discuss the musicality of the problem.</p>
+<p>Regarding the 2nd contribution, the paper sets a good example for evaluation in MSA in several respects: it emphasises the importance of using 'trimmed' annotations (i.e., not including trivial 'begin' and 'end' tokens in the evaluation) and it points out the overlapping datasets compromise the cross-dataset evaluation. These are valuable insights, worth repeating, but they are not strictly new: mir_eval has a 'trimmed' setting because it is known among MSA researchers that this makes a big impact. Different authors make different choices about the parameter, but I hope that within any paper, the authors make consistent choices so that they are comparing apples to apples. And regarding the overlap between datasets: this overlap is known — it is by design! The original SALAMI paper mentions that data from RWC and Isophonics was deliberately included for comparison. Still, it is good to point out that this affects the value of the evaluations, and this overlap is evidently not common knowledge.</p>
+<p>However, while the comparison using the McGill Billboard dataset seems fair (Table 4), the comparison in Table 3 seems unfair, given that the proposed algorithm was tested using cross-validation, whereas the competing algorithms are all tested in a cross-dataset scheme (albeit with small amounts of overlap between test and train sets). The paper argues earlier (Section 4.1), persuasively, that cross-dataset evaluation may lead to underperformance, since the datasets differ greatly. It sounds like training on all the datasets might lead to more robust methods. Given this, why devote Table 3 to comparing the proposed method (CV-8) with so many methods trained in a cross-dataset (CD) way? Given the CD results from other works, the apples-to-apples comparison would be to also train the proposed system in the (unrecommended) CD way and report these results. This would seem more fair, and also would not detract from SOTA findings shown in Table 3 (top section: Harmonix) and Table 4.</p>
+<p>Put another way: in an evaluation, I am most interested in the comparison of methods, not the absolute performance achieved. So, comparing apples to apples (on a dataset with 3% leakage) is better than comparing apples to oranges (on datasets with no leakage).</p>
+<p>Finally, regarding that 3rd contribution: given that this is the first use of MBD for evaluating structure, perhaps the paper should say a bit more about the creation of this dataset: how were the structure labels annotated, and how does it differ from SALAMI and Harmonix? This information is available from the respective papers about each, but since the contribution is highlighted in the introduction, I expected more commentary on it in the results section.</p>
+<p>Post-discussion comment: the paper does not discuss the provenance of the audio data. How was the audio accessed? If the MBD was not provided by the original dataset owners, how did was the alignment between audio and annotations verified?</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The initial ratings that the reviewers gave for this paper ranged from strong reject to strong accept, with an average rating slightly favouring acceptance.</p>
+<p>Some aspects that the reviewers agreed on:
+1. The model architecture is interesting and the explanation of the method was clear (R1, R3, MR)
+2. The discussion of evaluation integrity in music structure analysis (MSA) is insightful (R1, R2, R3, MR)
+3. The evaluation makes unfair comparisons between algorithms, and does not perform any ablations on the proposed method (R2, MR, and R1 post-discussion).
+4. The title states that the method is "simple" (and the text says "lightweight"), but it is not clear by what standard this is claimed.</p>
+<p>Outside of this, the reviewers had a variety of suggestions for how to improve the paper. In particular, R2 wrote that the tone of the paper seemed unfairly dismissive of previous work. The way that point 3 undercuts point 2 (in my list above) may contribute to this.</p>
+<p>Overall, we lean towards accepting this paper for the clear contributions outlined above. However, we strongly recommend that the authors revise their work to give clearer justifications for the choices made in the algorithm design, training procedure and evaluation, and to ensure that no claims or critiques in the paper are overstated.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<ul>
+<li>
+<p>General comment: 
+The paper introduces a convolutional neural network (CNN)-based approach for "semantic song segmentation," which utilizes hand-crafted features as input (namely a log mel-like representation and self-similarity lag matrices). The authors address key challenges in music structure analysis (MSA), such as dataset overlap and inconsistent evaluation metrics, and propose a robust framework for segmenting songs into "semantic" sections, i.e., functionally labeled sections (intro, chorus, verse, etc.). The paper is well-written, and the problem is clearly motivated, making it a valuable contribution to the field.</p>
+</li>
+<li>
+<p>Strengths:</p>
+</li>
+<li>The paper is well-written, with clear explanations of the methodology, datasets, and evaluation metrics.</li>
+<li>The authors address key issues in MSA evaluation, providing a more reliable benchmark for future research.</li>
+<li>The authors propose a novel model with SOTA performance.</li>
+<li>
+<p>The model in itself is quite simple, with relatively few different elements.</p>
+</li>
+<li>
+<p>Weaknesses:</p>
+</li>
+<li>The training routine is very complicated and seems very ad hoc.</li>
+<li>
+<p>The model is said to be "lightweight", but does not seem lightweight to me: 9 convolutional layers as front-ends (3 layers per front-end), followed by 11 blocks composed of both convolutional and dense layers, and 2 final dense layers. It may be very few compared to the recent standard in the literature, but I feel that this is far more than the compared models, e.g., (using the references from the paper, and not limited to): [9, 13, 14, 15, 16]. *NB: I voluntarily restricted this list to conv models, because comparing convolution and attention layers does not seem fair in terms of parameters vs. data required for training.</p>
+</li>
+<li>
+<p>Comments:
+-- The authors propose to process music audio signals using log-frequency log-magnitude spectrograms. How do the log-frequency triangular filters relate to mel filters?
+-- I do not understand why the authors state that "60 channels [are] reduced to 30 using 1x1 convolution" (lines 217-218, section 3.2): shouldn't 1x1 convolution result in the same shape as outputs?
+-- Lines 284-288: Maybe I misunderstood, but, to the best of my understanding, when several annotations are available, the authors use this data several times in training, using each annotation once. It feels to me that this compromises the principle of learning, where the same data should be associated with only one ground truth (how should the error backpropagation make sense otherwise?).
+-- Lines 318-319: The authors state that their model should work with a wide variety of music but evaluate it on Western music (mostly popular). In my opinion, a "wide variety of music" should include far more than the proposed datasets. I suggest the authors lower that sentence or rephrase it.
+-- The authors use the 0.5s tolerance only, while standards use both 0.5 and 3s tolerances. Why is this choice, and why not use both tolerances?</p>
+</li>
+</ul>
+<p>Overall, I found the paper sound, and would recommend it for publication.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Overall, the major scope of this work remains unclear. On one hand, the proposed method lacks sufficient ablation studies to identify which components contribute to its performance gains. On the other hand, if the paper aims to guide the field toward more rigorous evaluation practices, it would benefit from broader comparisons with existing approaches under the proposed controlled environment to generate deeper insights.</p>
+<p>I do see value in the paper’s emphasis on evaluation methodology, which is timely and useful for the community. I encourage the authors to consider reshaping the paper’s focus toward evaluation and reproducibility, and to resubmit it to a more appropriate track at ISMIR or relevant conferences. For broader impact, it would be highly beneficial to open-source the experimental protocols, allowing future work to build upon and benchmark against a common, well-defined setup.</p>
+<p>Another concern relates to the writing style of the paper. While it is both valid and important to highlight limitations or issues in previous evaluations, presenting these observations in a more constructive and collaborative tone would help foster a more positive and productive dialogue within the research community. Acknowledging the inherent challenges of working with dataset limitations in prior work could further strengthen the paper’s message, framing its critique as part of a collective effort to advance reproducibility and methodological rigor in the field.</p>
+<p>Other Concerns:
+- Table 1, Convolutional Front-End: It is unclear how the dimensionality is reduced from 81 to 1 using three layers of (3, 1) max-pooling. Based on the pooling configuration, this setup appears to reduce the dimension by a factor of 27 (i.e., 3 × 3 × 3), not 81. 
+- Post-Processing: The contribution of the optimized post-processing method to overall performance remains unclear. Post-processing is often dataset-dependent and, in some cases, can affect evaluation scores by more than 10%. Quantifying its impact would help readers better understand the relative contributions of the model and the post-processing step.
+- Table 2: It is not clear whether the addition of the “solo” label affects performance. Labels such as "impro", "interlude" and "guitars" may implicitly include solo sections.
+- Section 5.1, Line 409: The statement that “the effect of using additional training data is not straightforward to assess” is somewhat unclear. If the benefit of extra training data is uncertain, it raises the question of why mixing datasets was used in this paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors present a simple architecture for music structure analysis. The paper is well written and its methodology is explained with detail. Despite the approach does not present any novel idea in terms of feature implementation, model architecture or post-processing stage, it shows an elegant and efficient solution for a well-known problem. The previous work is appropriately described and referenced. In my view, the primary strength of this paper lies in its critical examination of the evaluation methodologies used in previous studies. </p>
+<p>A minor criticism of this work is the absence of the pairwise frame clustering (PFC) metric in the reported results. Given that including this metric would require minimal additional effort, I recommend its inclusion provide a more transparent evaluation.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

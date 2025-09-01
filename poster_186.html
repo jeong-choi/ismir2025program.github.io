@@ -1,0 +1,589 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Enhancing Neural Audio Fingerprint Robustness to Audio Degradation for Music Identification</title>
+    
+<meta name="citation_title" content="Enhancing Neural Audio Fingerprint Robustness to Audio Degradation for Music Identification" />
+
+<meta name="citation_author" content="Recep Oguz Araz" />
+
+<meta name="citation_author" content="Guillem Cortès-Sebastià" />
+
+<meta name="citation_author" content="Emilio Molina" />
+
+<meta name="citation_author" content="Joan Serra" />
+
+<meta name="citation_author" content="Xavier Serra" />
+
+<meta name="citation_author" content="Yuhki Mitsufuji" />
+
+<meta name="citation_author" content="Dmitry Bogdanov" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Audio fingerprinting (AFP) allows the identification of unknown audio content by extracting compact representations, termed audio fingerprints, that are designed to remain robust against common audio degradations. Neural AFP methods often employ metric learning, where representation quality is influenced by the nature of the supervision and the utilized loss function. However, recent work unrealistically simulates real-life audio degradation during training, resulting in sub-optimal supervision. Additionally, although several modern metric learning approaches have been proposed, current neural AFP methods continue to rely on the NT‑Xent loss without exploring the recent advances or classical alternatives. In this work, we propose a series of best practices to enhance the self-supervision by leveraging musical signal properties and realistic room acoustics. We then present the first systematic evaluation of various metric learning approaches in the context of AFP, demonstrating that a self‑supervised adaptation of the triplet loss yields superior performance. Our results also reveal that training with multiple positive samples per anchor has critically different effects across loss functions. Our approach is built upon these insights and achieves state-of-the-art performance on both a large, synthetically degraded dataset and a real-world dataset recorded using microphones in diverse music venues.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Music retrieval systems" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Music signal processing" />
+
+<meta name="citation_keywords" content="Digital libraries and archives" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-04: Enhancing Neural Audio Fingerprint Robustness to Audio Degradation for Music Identification
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Recep Oguz Araz" class="text-muted"
+        >Recep Oguz Araz</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Guillem Cortès-Sebastià" class="text-muted"
+        >Guillem Cortès-Sebastià</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emilio Molina" class="text-muted"
+        >Emilio Molina</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Joan Serra" class="text-muted"
+        >Joan Serra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xavier Serra" class="text-muted"
+        >Xavier Serra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yuhki Mitsufuji" class="text-muted"
+        >Yuhki Mitsufuji</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Dmitry Bogdanov" class="text-muted"
+        >Dmitry Bogdanov</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music retrieval systems"
+        class="text-secondary text-decoration-none"
+        >Music retrieval systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music signal processing"
+        class="text-secondary text-decoration-none"
+        >Music signal processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Digital libraries and archives"
+        class="text-secondary text-decoration-none"
+        >Digital libraries and archives</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Audio fingerprinting (AFP) allows the identification of unknown audio content by extracting compact representations, termed audio fingerprints, that are designed to remain robust against common audio degradations. Neural AFP methods often employ metric learning, where representation quality is influenced by the nature of the supervision and the utilized loss function. However, recent work unrealistically simulates real-life audio degradation during training, resulting in sub-optimal supervision. Additionally, although several modern metric learning approaches have been proposed, current neural AFP methods continue to rely on the NT‑Xent loss without exploring the recent advances or classical alternatives. In this work, we propose a series of best practices to enhance the self-supervision by leveraging musical signal properties and realistic room acoustics. We then present the first systematic evaluation of various metric learning approaches in the context of AFP, demonstrating that a self‑supervised adaptation of the triplet loss yields superior performance. Our results also reveal that training with multiple positive samples per anchor has critically different effects across loss functions. Our approach is built upon these insights and achieves state-of-the-art performance on both a large, synthetically degraded dataset and a real-world dataset recorded using microphones in diverse music venues.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1aj7_R_eIDuSbo-lwEKoSDwMXkA3i9F5-/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The paper explores different ideas -- often developed in computer vision applications -- in the context of music fingerprinting. The results are sometimes surprising, which should make our community reconsider some assumptions about best practices.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>This paper significantly improves the performance of neural music fingerprinting techniques through systematic exploration of loss functions, data handling, and hyperparameter selection.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Some of the paper’s strengths:
++ One significant contribution of the paper is a larger, more comprehensive, and more realistic benchmark for evaluating music fingerprinting. The paper significantly expands the database size compared to previous works, considers a wider range of additive background noise and room impulse responses and microphone responses, and corrects erroneous (or at least poorly chosen) data pre-processing techniques. This will be a valuable resource to the community moving forward.
++ The results show large gains over a previously proposed method (NAFP, GraFP). The cumulative effect of careful attention to the data preparation, training configuration, and architecture design led to very large improvements in overall performance.
++ The paper is very thorough and systematic in presenting a detailed analysis of the effect of many different design choices: the degradation dataset used, the selection of examples in each batch, the effect of impulse responses &amp; reverberation, the loss function, the number of anchors per batch, etc. The experimental results are very systematic and well organized, and offer insights into the importance of these important parts of the pipeline.
++ The writing is very clear, well organized, and easy to follow. </p>
+<p>Some of the paper’s weaknesses:
+- The title is somewhat misleading in two senses: (a) it suggests that the paper proposes a new fingerprinting method, whereas this paper is more of an analysis paper, and (b) the results don’t really study the scalability aspect other than running all experiments on a larger dataset. To claim that a method is more scalable, I would expect there to be some comparison of the size of the fingerprint databases, experimental runtimes, comparison of results vs database size, etc. I think a title like “Improved Neural Music Fingerprinting” or “Improving the Robustness of Neural Music Fingerprinting” would be a more accurate title.
+- The paper is missing an explanation of what NAFP actually does (section 2.2). Once it computes the log (or power) mel spectrogram, how does it convert it into a real-valued fingerprint? What architecture does it use? This could be just a few brief sentences, but I think it is important for completeness.
+- There is little novelty in the way of new ideas, though the experimental results and insights are novel.</p>
+<p>Other feedback:
+- Are both the synthetic and industrial datasets being released to the community? It was not clear to me, and often industrial datasets are not released due to copyright issues.
+- In Table 7 and the corresponding discussion in section 5, it was not explained very clearly what “exact match” and “near match” meant.
+- L481: Could you explain what “completing in a reasonable time” means? This is hard to interpret because there is no discussion in this paper of runtimes.</p>
+<p>Overall, I appreciate the thoroughness of the experimental results and feel like it will be a valuable contribution to the community.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers discussed the strengths and weaknesses of the paper, which we summarize below.</p>
+<p>Strengths
+• The paper proposes a more comprehensive and realistic benchmark for evaluation of music fingerprinting systems. In constructing this benchmark, the authors addresses multiple weaknesses in previous evaluation protocols, including insufficient diversity of room acoustics, background noise and unrealistic audio degradations. This is a valuable contribution to facilitate future research on this topic. 
+• The experimental results are very systematic and thorough. The authors clearly document the steps in improving the baseline fingerprinting system. The ablation studies are done systematically and provide useful insights to other practitioners on practical issues like loss functions, batch construction, data preprocessing (filtering out higher frequencies), etc. 
+• The experimental results offer clear recommendations to researchers on best practices. Careful selection of these practices led to significant improvements in overall performance of the fingerprinting system. Of particular note, some of the findings contradict some of the recommendations in the Computer Vision community (from which several of the techniques originated), so these insights are particularly helpful to the MIR community.
+• The paper provides a critical assessment of earlier work and benchmarks. The review of related work is comprehensive and current.
+• The authors plan to share their model and code with the community, which will facilitate open and reproducible research.</p>
+<p>Weaknesses
+• The biggest criticism raised by reviewers was that the “marketing” of the paper was misleading. For example, the title makes it sound like a new fingerprinting method is being proposed, whereas in actuality the paper is making lots of small improvements to an existing approach. Another reviewer felt that the naming of the sections is misleading, and recommends renaming section 3 to make it clear that it describes the baseline system. The emphasis on “scalable” in the title and abstract is somewhat misleading since scalability is not really studied (other than evaluating on a larger dataset). The reviewers request the authors to make it clear in the title and abstract that this paper is about improving an existing system. This is itself a valuable contribution that does not need to be “oversold”.
+• Some parts of the writing could be improved. One reviewer suggests that a figure (or at least a brief textual summary) giving an overview of the system and training/evaluation pipelines would be very helpful to the reader. The introduction could be improved by mentioning earlier unsupervised approaches (like Shazam) and convincing the reader that the newer “neural” fingerprinting approaches have been shown to be better. A brief description of the NAFP method and architecture would be helpful for completeness.
+• One reviewer points out that the training was done on fma_medium and evaluation was done on a part of fma_full. This may indicate overlap between songs in the training and evaluation datasets. This should be clarified if there is no overlap, or acknowledged if there is overlap.</p>
+<p>The paper has no major novelty in terms of new ideas, but the reviewers nonetheless agree that the paper presents a very systematic and thorough set of experimental results that suggests best practices and can help guide other researchers in the field.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <h1>ERROR!</h1>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>General comments:
+- I feel that the title, abstract, and listed contributions are a bit misleading. Essentially, the authors are proposing various ways to improve an existing method. While incremental works are not proscribed, I would clarify this from the very beginning. Besides that point, I am a bit on the fence, as this works feels more like a technical report to me, but the reported increases in performance are significant. I would have perhaps framed this work differently and re-organized some of the parts. See my detailed comments below.</p>
+<p>Detailed comments:</p>
+<ol>
+<li></li>
+<li>
+<p>I feel that the introduction could be improved. You kind of directly start talking about machine learning-based systems without mentioning the successful unsupervised methods which came first, such as scalable peak-based approaches like in the Shazam algorithm. It would be nice to first convince the reader that these new "neural" fingerprinting systems are "better," or at least more promising.</p>
+</li>
+<li></li>
+<li>
+<p>More accurately, triplet loss is a function not an approach.</p>
+</li>
+<li>
+<p>"Representation quality is improved by each anchor sample in a batch having multiple positive samples." Is this claim backed up by reference [15]?</p>
+</li>
+<li>
+<p>I would briefly explain what the NT-Xent loss is.</p>
+</li>
+<li>
+<p>"A&amp;U [17] proposes two metrics that good representations should obtain..." I am not sure to understand this. Could you perhaps rephrase?</p>
+</li>
+<li>
+<p>You mentioned the number of anchors and positives per anchor in a batch. At this point, I am unclear if you are going to use negatives as well.</p>
+</li>
+<li>
+<p>While higher sampling frequencies may not be necessary for music identification, they could definitely help, as you are getting more information which can possibly survive noise, for example. And I don't think that it's uncommon for audio to be transmitted at higher rates (8k is fairly low). </p>
+</li>
+<li>
+<p>I am not sure that you really need Table 1. You are basically proposing cheaper parameters compared to other systems.</p>
+</li>
+<li></li>
+<li>
+<p>I would just explicitly mention the problems of NAFP rather than giving a link to GitHub open issue.</p>
+</li>
+<li>
+<p>What does it mean that some query tracks were represented many times? Are you saying that some queries were used multiple times and some not at all in the final evaluation? How come??</p>
+</li>
+<li>
+<p>Instead of "industrial evaluation," I would rather talk about "real-world evaluation."</p>
+</li>
+</ol>
+<p>4.
+- I feel the organization is a bit confusing. Perhaps Sections 3, 4, and 5 could be re-organized better, combining some parts?</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Dear authors, thank you for this well-executed paper.</p>
+<p>The paper demonstrates strong scientific quality and clarity, combining thoughtful engineering with rigorous experimentation. The related work is comprehensive and current, and the methodological contributions are clearly motivated. Your evaluation setup addresses multiple weaknesses of previous works, and your ablation studies are among the most useful I’ve seen in neural AFP literature.</p>
+<p>Your "best practices" approach is highly pragmatic and well-executed. Each step, from refining the degradation pipeline, to resolving false negatives in batches, to restoring low frequencies, is clearly justified and shown to contribute meaningfully to the final performance. The improvements in Table 2 are especially illustrative. I also appreciate the decision to lower the frequency threshold from 300 Hz to 160 Hz, which makes practical sense for music recorded in noisy real-world environments.</p>
+<p>Your exploration of metric learning losses is another strong point. I found the analysis of NT-Xent’s degradation with more than one positive per anchor particularly insightful. As you suggest, this behavior likely stems from the softmax denominator not being able to simultaneously assign high similarity to multiple positives. It would be interesting to explore modified loss formulations that either decouple positives or replace the softmax entirely. This direction could lead to more robust representations in AFP and beyond.</p>
+<p>A few suggestions for improvement:
+* Including pitch and tempo changes in your degradation pipeline would significantly strengthen your robustness claims, as these are common in music identification use cases.
+* Consider adding Top-3 or Top-5 hit rate in future work; these are often relevant in practical systems where near matches matter.
+* Provide analysis of false positives, i.e. when the right result is not the first one found. What would be the main reason(s) to see such false positive matches?</p>
+<p>Finally, it’s excellent that you plan to release the code, models, and curated data. This greatly boosts the paper's impact and will support reproducibility and further research in the field.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

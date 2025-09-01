@@ -1,0 +1,502 @@
+[
+  {
+    "calendarId": "registration",
+    "category": "time",
+    "end": "2025-09-22T08:30:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-22T08:00:00+09:00",
+    "title": "Registration"
+  },
+  {
+    "calendarId": "open",
+    "category": "time",
+    "end": "2025-09-22T09:00:00+09:00",
+    "link": "day_2.html#open",
+    "location": "day_2.html#open",
+    "scrollKey": null,
+    "start": "2025-09-22T08:30:00+09:00",
+    "title": "Opening Session"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-22T10:30:00+09:00",
+    "link": "papers.html?session=1",
+    "location": "papers.html?session=1",
+    "scrollKey": null,
+    "start": "2025-09-22T09:00:00+09:00",
+    "title": "Oral Session - 1"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-22T12:00:00+09:00",
+    "link": "papers.html?session=1",
+    "location": "papers.html?session=1",
+    "scrollKey": null,
+    "start": "2025-09-22T10:30:00+09:00",
+    "title": "coffee + Poster Session - 1"
+  },
+  {
+    "calendarId": "lunch",
+    "category": "time",
+    "end": "2025-09-22T13:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-22T12:00:00+09:00",
+    "title": "Lunch"
+  },
+  {
+    "calendarId": "all",
+    "category": "time",
+    "end": "2025-09-22T14:00:00+09:00",
+    "link": "day_2.html#all",
+    "location": "day_2.html#all",
+    "scrollKey": null,
+    "start": "2025-09-22T13:00:00+09:00",
+    "title": "Keynote - 1"
+  },
+  {
+    "calendarId": "social",
+    "category": "time",
+    "end": "2025-09-22T14:30:00+09:00",
+    "link": "day_2.html#social",
+    "location": "day_2.html#social",
+    "scrollKey": null,
+    "start": "2025-09-22T14:00:00+09:00",
+    "title": "coffee"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-22T16:00:00+09:00",
+    "link": "papers.html?session=2",
+    "location": "papers.html?session=2",
+    "scrollKey": null,
+    "start": "2025-09-22T14:30:00+09:00",
+    "title": "Oral Session - 2"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-22T17:30:00+09:00",
+    "link": "papers.html?session=2",
+    "location": "papers.html?session=2",
+    "scrollKey": null,
+    "start": "2025-09-22T16:00:00+09:00",
+    "title": "Poster Session - 2"
+  },
+  {
+    "calendarId": "industry",
+    "category": "time",
+    "end": "2025-09-22T18:30:00+09:00",
+    "link": "industry.html?session=Platinum",
+    "location": "industry.html?session=Platinum",
+    "scrollKey": null,
+    "start": "2025-09-22T17:30:00+09:00",
+    "title": "Industry Meetup"
+  },
+  {
+    "calendarId": "registration",
+    "category": "time",
+    "end": "2025-09-21T09:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-21T08:00:00+09:00",
+    "title": "Registration"
+  },
+  {
+    "calendarId": "tut",
+    "category": "time",
+    "end": "2025-09-21T12:30:00+09:00",
+    "link": "tutorials.html#T1",
+    "location": "tutorials.html#T1",
+    "scrollKey": null,
+    "start": "2025-09-21T09:00:00+09:00",
+    "title": "T1(M): Differentiable Physical Modeling Sound Synthesis: Theory, Musical Application, and Programming"
+  },
+  {
+    "calendarId": "tut",
+    "category": "time",
+    "end": "2025-09-21T12:30:00+09:00",
+    "link": "tutorials.html#T2",
+    "location": "tutorials.html#T2",
+    "scrollKey": null,
+    "start": "2025-09-21T09:00:00+09:00",
+    "title": "T2(M): Self-supervised Learning for Music - An Overview and New Horizons"
+  },
+  {
+    "calendarId": "tut",
+    "category": "time",
+    "end": "2025-09-21T12:30:00+09:00",
+    "link": "tutorials.html#T3",
+    "location": "tutorials.html#T3",
+    "scrollKey": null,
+    "start": "2025-09-21T09:00:00+09:00",
+    "title": "T3(M): PsyNet: Online Research Platform for Music Studies"
+  },
+  {
+    "calendarId": "lunch",
+    "category": "time",
+    "end": "2025-09-21T14:30:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-21T13:00:00+09:00",
+    "title": "Lunch"
+  },
+  {
+    "calendarId": "tut",
+    "category": "time",
+    "end": "2025-09-21T17:30:00+09:00",
+    "link": "tutorials.html#T4",
+    "location": "tutorials.html#T4",
+    "scrollKey": null,
+    "start": "2025-09-21T14:30:00+09:00",
+    "title": "T4(A): Differentiable Alignment Techniques for Music Processing: Techniques and Applications"
+  },
+  {
+    "calendarId": "tut",
+    "category": "time",
+    "end": "2025-09-21T17:30:00+09:00",
+    "link": "tutorials.html#T5",
+    "location": "tutorials.html#T5",
+    "scrollKey": null,
+    "start": "2025-09-21T14:30:00+09:00",
+    "title": "T5(A): Explainable AI for Music Information Retrieval"
+  },
+  {
+    "calendarId": "social",
+    "category": "time",
+    "end": "2025-09-25T18:00:00+09:00",
+    "link": "day_5.html#social",
+    "location": "day_5.html#social",
+    "scrollKey": null,
+    "start": "2025-09-25T17:00:00+09:00",
+    "title": "Unconference"
+  },
+  {
+    "calendarId": "social",
+    "category": "time",
+    "end": "2025-09-21T21:30:00+09:00",
+    "link": "day_1.html#social",
+    "location": "day_1.html#social",
+    "scrollKey": null,
+    "start": "2025-09-21T18:30:00+09:00",
+    "title": "Welcome Reception"
+  },
+  {
+    "calendarId": "tut",
+    "category": "time",
+    "end": "2025-09-21T17:30:00+09:00",
+    "link": "tutorials.html#T6",
+    "location": "tutorials.html#T6",
+    "scrollKey": null,
+    "start": "2025-09-21T14:30:00+09:00",
+    "title": "T6(A): MIR for Health, Medicine, and Well-being"
+  },
+  {
+    "calendarId": "industry",
+    "category": "time",
+    "end": "2025-09-24T18:30:00+09:00",
+    "link": "industry.html?session=Platinum",
+    "location": "industry.html?session=Platinum",
+    "scrollKey": null,
+    "start": "2025-09-24T17:30:00+09:00",
+    "title": "Special Session"
+  },
+  {
+    "calendarId": "social",
+    "category": "time",
+    "end": "2025-09-24T21:30:00+09:00",
+    "link": "day_4.html#social",
+    "location": "day_4.html#social",
+    "scrollKey": null,
+    "start": "2025-09-24T19:30:00+09:00",
+    "title": "Banquet + Jam Session"
+  },
+  {
+    "calendarId": "registration",
+    "category": "time",
+    "end": "2025-09-25T09:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-25T08:00:00+09:00",
+    "title": "Registration"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-25T10:30:00+09:00",
+    "link": "papers.html?session=7",
+    "location": "papers.html?session=7",
+    "scrollKey": null,
+    "start": "2025-09-25T09:00:00+09:00",
+    "title": "Oral Session - 7"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-25T12:00:00+09:00",
+    "link": "papers.html?session=7",
+    "location": "papers.html?session=7",
+    "scrollKey": null,
+    "start": "2025-09-25T10:30:00+09:00",
+    "title": "coffee + Poster Session - 7"
+  },
+  {
+    "calendarId": "lunch",
+    "category": "time",
+    "end": "2025-09-25T13:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-25T12:00:00+09:00",
+    "title": "Lunch"
+  },
+  {
+    "calendarId": "all",
+    "category": "time",
+    "end": "2025-09-25T14:00:00+09:00",
+    "link": "day_5.html#all",
+    "location": "day_5.html#all",
+    "scrollKey": null,
+    "start": "2025-09-25T13:00:00+09:00",
+    "title": "Society Meeting / Board Election"
+  },
+  {
+    "calendarId": "all",
+    "category": "time",
+    "end": "2025-09-25T14:30:00+09:00",
+    "link": "day_5.html#all",
+    "location": "day_5.html#all",
+    "scrollKey": null,
+    "start": "2025-09-25T14:00:00+09:00",
+    "title": "Award and Test-of-time Talks"
+  },
+  {
+    "calendarId": "all",
+    "category": "time",
+    "end": "2025-09-25T15:00:00+09:00",
+    "link": "day_5.html#all",
+    "location": "day_5.html#all",
+    "scrollKey": null,
+    "start": "2025-09-25T14:30:00+09:00",
+    "title": "Closing Remarks, ISMIR 2026"
+  },
+  {
+    "calendarId": "lbd",
+    "category": "time",
+    "end": "2025-09-25T17:00:00+09:00",
+    "link": "lbds.html?session=Late-breaking/Demo",
+    "location": "lbds.html?session=Late-breaking/Demo",
+    "scrollKey": null,
+    "start": "2025-09-25T15:00:00+09:00",
+    "title": "Late-breaking/Demo"
+  },
+  {
+    "calendarId": "mus",
+    "category": "time",
+    "end": "2025-09-23T19:30:00+09:00",
+    "link": "music.html",
+    "location": "music.html",
+    "scrollKey": null,
+    "start": "2025-09-23T18:30:00+09:00",
+    "title": "K-Culture Night"
+  },
+  {
+    "calendarId": "mus",
+    "category": "time",
+    "end": "2025-09-23T20:30:00+09:00",
+    "link": "music.html",
+    "location": "music.html",
+    "scrollKey": null,
+    "start": "2025-09-23T19:30:00+09:00",
+    "title": "Korean Traditional Music Concert"
+  },
+  {
+    "calendarId": "registration",
+    "category": "time",
+    "end": "2025-09-24T09:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-24T08:00:00+09:00",
+    "title": "Registration"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-24T10:30:00+09:00",
+    "link": "papers.html?session=5",
+    "location": "papers.html?session=5",
+    "scrollKey": null,
+    "start": "2025-09-24T09:00:00+09:00",
+    "title": "Oral Session - 5"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-24T12:00:00+09:00",
+    "link": "papers.html?session=5",
+    "location": "papers.html?session=5",
+    "scrollKey": null,
+    "start": "2025-09-24T10:30:00+09:00",
+    "title": "coffee + Poster Session - 5"
+  },
+  {
+    "calendarId": "lunch",
+    "category": "time",
+    "end": "2025-09-24T13:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-24T12:00:00+09:00",
+    "title": "Lunch"
+  },
+  {
+    "calendarId": "all",
+    "category": "time",
+    "end": "2025-09-24T14:00:00+09:00",
+    "link": "day_4.html#all",
+    "location": "day_4.html#all",
+    "scrollKey": null,
+    "start": "2025-09-24T13:00:00+09:00",
+    "title": "Keynote - 2"
+  },
+  {
+    "calendarId": "social",
+    "category": "time",
+    "end": "2025-09-24T14:30:00+09:00",
+    "link": "day_4.html#social",
+    "location": "day_4.html#social",
+    "scrollKey": null,
+    "start": "2025-09-24T14:00:00+09:00",
+    "title": "coffee"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-24T16:00:00+09:00",
+    "link": "papers.html?session=6",
+    "location": "papers.html?session=6",
+    "scrollKey": null,
+    "start": "2025-09-24T14:30:00+09:00",
+    "title": "Oral Session - 6"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-24T17:30:00+09:00",
+    "link": "papers.html?session=6",
+    "location": "papers.html?session=6",
+    "scrollKey": null,
+    "start": "2025-09-24T16:00:00+09:00",
+    "title": "Poster Session - 6"
+  },
+  {
+    "calendarId": "mus",
+    "category": "time",
+    "end": "2025-09-22T21:30:00+09:00",
+    "link": "music.html",
+    "location": "music.html",
+    "scrollKey": null,
+    "start": "2025-09-22T19:30:00+09:00",
+    "title": "ISMIR Music Program"
+  },
+  {
+    "calendarId": "registration",
+    "category": "time",
+    "end": "2025-09-23T09:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-23T08:00:00+09:00",
+    "title": "Registration"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-23T10:30:00+09:00",
+    "link": "papers.html?session=3",
+    "location": "papers.html?session=3",
+    "scrollKey": null,
+    "start": "2025-09-23T09:00:00+09:00",
+    "title": "Oral Session - 3"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-23T12:00:00+09:00",
+    "link": "papers.html?session=3",
+    "location": "papers.html?session=3",
+    "scrollKey": null,
+    "start": "2025-09-23T10:30:00+09:00",
+    "title": "coffee + Poster Session - 3"
+  },
+  {
+    "calendarId": "lunch",
+    "category": "time",
+    "end": "2025-09-23T13:00:00+09:00",
+    "link": null,
+    "location": null,
+    "scrollKey": null,
+    "start": "2025-09-23T12:00:00+09:00",
+    "title": "Lunch"
+  },
+  {
+    "calendarId": "all",
+    "category": "time",
+    "end": "2025-09-23T14:00:00+09:00",
+    "link": "day_3.html#all",
+    "location": "day_3.html#all",
+    "scrollKey": null,
+    "start": "2025-09-23T13:00:00+09:00",
+    "title": "Industry Session"
+  },
+  {
+    "calendarId": "social",
+    "category": "time",
+    "end": "2025-09-23T14:30:00+09:00",
+    "link": "day_3.html#social",
+    "location": "day_3.html#social",
+    "scrollKey": null,
+    "start": "2025-09-23T14:00:00+09:00",
+    "title": "coffee"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-23T16:00:00+09:00",
+    "link": "papers.html?session=4",
+    "location": "papers.html?session=4",
+    "scrollKey": null,
+    "start": "2025-09-23T14:30:00+09:00",
+    "title": "Oral Session - 4"
+  },
+  {
+    "calendarId": "pos",
+    "category": "time",
+    "end": "2025-09-23T17:30:00+09:00",
+    "link": "papers.html?session=4",
+    "location": "papers.html?session=4",
+    "scrollKey": null,
+    "start": "2025-09-23T16:00:00+09:00",
+    "title": "Poster Session - 4"
+  },
+  {
+    "calendarId": "industry",
+    "category": "time",
+    "end": "2025-09-23T18:30:00+09:00",
+    "link": "industry.html?session=Platinum",
+    "location": "industry.html?session=Platinum",
+    "scrollKey": null,
+    "start": "2025-09-23T17:30:00+09:00",
+    "title": "WIMIR Session"
+  }
+]

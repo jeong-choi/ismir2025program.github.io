@@ -1,0 +1,588 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: A Survey on Vision-to-Music Generation: Methods, Datasets, Evaluation, and Challenges</title>
+    
+<meta name="citation_title" content="A Survey on Vision-to-Music Generation: Methods, Datasets, Evaluation, and Challenges" />
+
+<meta name="citation_author" content="Zhaokai Wang" />
+
+<meta name="citation_author" content="Chenxi Bao" />
+
+<meta name="citation_author" content="Le Zhuo" />
+
+<meta name="citation_author" content="Jingrui Han" />
+
+<meta name="citation_author" content="Yang Yue" />
+
+<meta name="citation_author" content="Yihong Tang" />
+
+<meta name="citation_author" content="Victor Shea-Jay Huang" />
+
+<meta name="citation_author" content="Yue Liao" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Vision-to-music generation, including video-to-music and image-to-music tasks, is a significant branch of multimodal artificial intelligence demonstrating vast applications like film scoring and short video creation. However, research in vision-to-music is still in its preliminary stage due to its complex internal structure and the difficulty of modeling dynamic relationships with video. Existing surveys focus on general music generation without comprehensive discussion on vision-to-music. In this paper, we systematically review the research progress in the field of vision-to-music generation. We first analyze the technical characteristics and core challenges for three input types: general videos, human movement videos, and images, as well as two output types of symbolic music and audio music. We then summarize the existing methodologies from the architecture perspective. A detailed review of common datasets and evaluation metrics is provided. Finally, we discuss current challenges and future directions. We hope our survey can inspire further innovation in vision-to-music generation and the broader field of multimodal generation in academic research and industrial applications.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Multimodality" />
+
+<meta name="citation_keywords" content="Music and audio synthesis" />
+
+<meta name="citation_keywords" content="Music videos, multimodal music systems" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-13: A Survey on Vision-to-Music Generation: Methods, Datasets, Evaluation, and Challenges
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Zhaokai Wang" class="text-muted"
+        >Zhaokai Wang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Chenxi Bao" class="text-muted"
+        >Chenxi Bao</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Le Zhuo" class="text-muted"
+        >Le Zhuo</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Jingrui Han" class="text-muted"
+        >Jingrui Han</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yang Yue" class="text-muted"
+        >Yang Yue</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yihong Tang" class="text-muted"
+        >Yihong Tang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Victor Shea-Jay Huang" class="text-muted"
+        >Victor Shea-Jay Huang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yue Liao" class="text-muted"
+        >Yue Liao</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Multimodality"
+        class="text-secondary text-decoration-none"
+        >Multimodality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music and audio synthesis"
+        class="text-secondary text-decoration-none"
+        >Music and audio synthesis</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music videos, multimodal music systems"
+        class="text-secondary text-decoration-none"
+        >Music videos, multimodal music systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Vision-to-music generation, including video-to-music and image-to-music tasks, is a significant branch of multimodal artificial intelligence demonstrating vast applications like film scoring and short video creation. However, research in vision-to-music is still in its preliminary stage due to its complex internal structure and the difficulty of modeling dynamic relationships with video. Existing surveys focus on general music generation without comprehensive discussion on vision-to-music. In this paper, we systematically review the research progress in the field of vision-to-music generation. We first analyze the technical characteristics and core challenges for three input types: general videos, human movement videos, and images, as well as two output types of symbolic music and audio music. We then summarize the existing methodologies from the architecture perspective. A detailed review of common datasets and evaluation metrics is provided. Finally, we discuss current challenges and future directions. We hope our survey can inspire further innovation in vision-to-music generation and the broader field of multimodal generation in academic research and industrial applications.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1OJ9DbBPGo9BB0MKNrtXZh1WB3rrv20hV/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>A well-written, (mostly) complete survey of vision-to-music generation works covering methods, datasets, evaluation, and challenges. The work notes that video-to-music generation works are still in early stages and have yet to fully have a complete treatment in the academic literature (I agree). This work will help advance this progress and is worth a read for anyone looking to start working on the topic.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>A well-written, (mostly) complete survey of vision-to-music generation works covering methods, datasets, evaluation, and challenges.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Summary: 
+In this work, the authors present a survey of vision-to-music generation works covering the topics of methods, datasets, evaluation, and challenges. Multiple timelines of representative works and categorizations of methods, datasets, eval methods, and similar are provided as well as example architecture diagrams. The references section is also extensive.
+Major/minor comments
+Overall, very nice survey and informative work. The work is well organized at a high-level and has well written sentence structure at a low level. The survey topics of methods, datasets, evaluation, and challenges are well done as well, along with the extensive references section.
+Regarding issues for improvement, I would suggest 
+• Clarification on the language of rhythmic videos. In the intro, you break down the topic into three main areas 1) general videos 2) human movement videos and 3) images. Here, the focus on “human movement videos” is more focused than parts of later in the work that discuss rhythmic videos where human movement videos are a subset. It could be useful broaden the focus of human movement videos to videos with rhythmic motion where human movement videos are a subset.
+• When commenting on page 2 and elsewhere “However, audio music lacks controllability, and the generated music is typically shorter (usually under 20 seconds) due to sampling rate limitations, I would argue this is generally untrue. Over the last few years, there have been several works showing extensive controllability for audio-domain music generation (e.g. Music ControlNet) as well as long-form generation (StableAudio). The controllability of symbolic-domain music is also focused on more typical note-level control, however.
+The issues above are minor and easily addressable.</p>
+<p>Grammatical comments:
+• Abstract: “Vision-to-music Generation” -&gt; “Vision-to-music generation”</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Summary: In this work, the authors present a survey of vision-to-music generation works covering the topics of methods, datasets, evaluation, and challenges. Multiple timelines of representative works and categorizations of methods, datasets, eval methods, and similar are provided as well as example architecture diagrams. The references section is also extensive.</p>
+<p>Initial Scores: 2 strong accept, 2 strong rejects</p>
+<p>Metareview: Overall, initial reviews were very mixed because of the format of a survey paper.
+Overall, everyone agrees the paper has strong points
+-R1 "excellent tables with collected systems, datasets, metrics and the structured information like durations, music length, and so on"
+-R2 "very ambitious article that tackles the state of the art on vision-to-music generation, looking at models, datasets and evaluation"
+-R2 "timely, clear, and comprehensive contribution to an emerging multimodal field and will be of immediate use to both academic and applied communities. It is presented in a way that is very useful and very clear."
+-R3 "datasets and metrics tables are a helpful views of the research landscape presented in a well-formatted and highly usable format for future researchers."</p>
+<p>Areas for improvement
+-R1 "I'm not really sure what the contribution of the paper is."
+-R1 "The identified challenges and their importance would be a lot more convincing if they were contextualized with impact"
+-R3 "However, outside of compiling information, the paper does not engage with the material very deeply and is therefore not original or impactful."
+-R3 "These insights are very surface level."
+Discussion: The discussion focused on issues w.r.t. technical correctness and scope which were mistakenly flagged by the meta-reviewer as minor issues before the discussion. R1 and R2 confirmed concern on some of the technical descriptions as well as the idea that this could become a wonder (potentially long-form) paper if refined a little bit more.</p>
+<p>Recommendation: Reject (Weak)</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I've had a difficult time with this paper. On the one hand, I greatly appreciate the excellent tables with collected systems, datasets, metrics and the structured information like durations, music length, and so on. On the other hand, I'm not really sure what the contribution of the paper is. The identified challenges and their importance would be a lot more convincing if they were contextualized with impact. If the intended contribution of the paper is to attempt to establish a shared taxonomy for vision-to-music generation I would like more details on the process for that.</p>
+<p>I think this would become a wonderful review article if it receives an additional pass with details ironed out, and some sections merged/split/rearranged. Additionally, some smaller technical details seem wrong to me, or at least misleading, which isn't up to the standard I would like to see for a published survey paper that people would rely on.</p>
+<p>Some potential improvements:</p>
+<ul>
+<li>
+<p>344: What is Frechet Distance in this context? Frechet Inception Distance (FID) or something else? Strongly recommend not just referring to the general measures of probability distribution similarity. Typically we mean KL-divergence given some specific, suitable feature representation, and not just time-domain audio or MIDI byte sequences.</p>
+</li>
+<li>
+<p>Why is FAD under “music-only” metrics while CLAP is not. Especially considering 380-381</p>
+</li>
+<li>
+<p>381: KL isn’t trained</p>
+</li>
+<li>
+<p>“CLAP score” needs clarification. Do we mean cosine similarity between text and audio embeddings? How is that a vision-music correspondence? Or do we mean adapting CLAP to CLIP (e.g. wav2clip) to get a matching still frame (image) encoder as well?</p>
+</li>
+<li>
+<p>I wonder if a better term for “vision-to-music generation” is “soundtracking” or “soundtrack generation”. Perhaps too limiting in use case, but just a loose thought.</p>
+</li>
+<li>
+<p>Nice to avoid “generative music” as term due to historical meanings, rather see “music generation” in ethics statement</p>
+</li>
+<li>
+<p>148-149 claim deserves backing reference (or remove)</p>
+</li>
+<li>
+<p>I would like to see a distinction between input types for music videos (video created for the song) and soundtracking (songs selected for the video) in figure 2</p>
+</li>
+<li>
+<p>Add compute resources to table 1 (e.g. GPU hours needed to train the final system)</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This is a very ambitious article that tackles the state of the art on vision-to-music generation, looking at models, datasets and evaluation. This paper makes a timely, clear, and comprehensive contribution to an emerging multimodal field and will be of immediate use to both academic and applied communities. It is presented in a way that is very useful and very clear. While clearly structure and spacing were very well thought out to allow the necessary content to fit, model listing could have been extended with additional useful information on open-sourceness, existence of demo UIs, pretrained weights, etc. There could have been quantitative summary of trends (eg. Yearly evolutions of number of models, model types, dataset sizes, etc.) possibly in graphical or tabular form, but again it had to be a compromise in available space. There are some claims that are too definitive (“No previous surveys have focused on vision-to-music generation” without “to the best of our knowledge”; “CLAP is the dominant method” instead of ““CLAP is currently one of the most widely used models”), but given the overall soundness of the paper they become admissible.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This datasets and metrics tables are a helpful views of the research landscape presented in a well-formated and highly usable format for future researchers. However, outside of compiling information, the paper does not engage with the material very deeply and is therefore not original or impactful. I expect a good survey to point out trends, identify open questions, and reflect on the big picture of where we started and where we're going. The extent of these insights are:
+1. There is a lack of standardized datasets and benchmarks
+2. Customization and controllability are important for practical use
+3. A promising direction is to combine symbolic and audio methods</p>
+<p>These insights are very surface level. You have laid out a list of evaluation metrics used in the literature. Are there gaps? You analyze 3 input types: general videos, human movement videos, and images. Why are these three the focus? What are the other input types? L402: "Exploring how to align these technologies with applications offers significant commercial opportunities". For example? The ethical statement in section 8 simply says "we think the ethics of this work should be considered" but does no critical thinking to further the consideration.</p>
+<p>The paper also makes a number of claims that are unsubstantiated opinions:</p>
+<p>L132: "we will mainly focus on general videos and images, while paying relatively less attention to human movement videos. This is because their semantic association with music is not strong" and "Their application scenarios are also relatively limited."</p>
+<p>To me, it's clear that the semantic association with dancing videos with music is strong, and there are many application scenarios.</p>
+<p>L278: "the diversity of content and styles in [music videos] may be limited"</p>
+<p>To me, this is not the case. Music videos are incredibly diverse in content and style.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,518 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: AI-Generated Song Detection via Lyrics Transcripts</title>
+    
+<meta name="citation_title" content="AI-Generated Song Detection via Lyrics Transcripts" />
+
+<meta name="citation_author" content="Markus Frohmann" />
+
+<meta name="citation_author" content="Elena Epure" />
+
+<meta name="citation_author" content="Gabriel Meseguer Brocal" />
+
+<meta name="citation_author" content="Markus Schedl" />
+
+<meta name="citation_author" content="Romain Hennequin" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="The recent rise in capabilities of AI-based music generation tools has created an upheaval in the music industry, necessitating the creation of accurate methods to detect such AI-generated content. This can be done using audio-based detectors; however, it has been shown that they struggle to generalize to unseen generators or when the audio is perturbed. Furthermore, recent work used accurate and cleanly formatted lyrics sourced from a lyrics provider database to detect AI-generated music. However, in practice, such perfect lyrics are not available (only the audio is); this leaves a substantial gap in applicability in real-life use cases. In this work, we instead propose solving this gap by transcribing songs using general automatic speech recognition (ASR) models. We do this using several detectors. The results on diverse, multi-genre, and multi-lingual lyrics show generally strong detection performance across languages and genres, particularly for our best-performing model using Whisper large-v2 and LLM2Vec embeddings. In addition, we show that our method is more robust than state-of-the-art audio-based ones when the audio is perturbed in different ways and when evaluated on different music generators. Our code is available at https://github.com/deezer/robust-AI-lyrics-detection.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Lyrics and other textual data" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P1-13: AI-Generated Song Detection via Lyrics Transcripts
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Markus Frohmann" class="text-muted"
+        >Markus Frohmann</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Elena Epure" class="text-muted"
+        >Elena Epure</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gabriel Meseguer Brocal" class="text-muted"
+        >Gabriel Meseguer Brocal</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Markus Schedl" class="text-muted"
+        >Markus Schedl</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Romain Hennequin" class="text-muted"
+        >Romain Hennequin</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Lyrics and other textual data"
+        class="text-secondary text-decoration-none"
+        >Lyrics and other textual data</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>The recent rise in capabilities of AI-based music generation tools has created an upheaval in the music industry, necessitating the creation of accurate methods to detect such AI-generated content. This can be done using audio-based detectors; however, it has been shown that they struggle to generalize to unseen generators or when the audio is perturbed. Furthermore, recent work used accurate and cleanly formatted lyrics sourced from a lyrics provider database to detect AI-generated music. However, in practice, such perfect lyrics are not available (only the audio is); this leaves a substantial gap in applicability in real-life use cases. In this work, we instead propose solving this gap by transcribing songs using general automatic speech recognition (ASR) models. We do this using several detectors. The results on diverse, multi-genre, and multi-lingual lyrics show generally strong detection performance across languages and genres, particularly for our best-performing model using Whisper large-v2 and LLM2Vec embeddings. In addition, we show that our method is more robust than state-of-the-art audio-based ones when the audio is perturbed in different ways and when evaluated on different music generators. Our code is available at https://github.com/deezer/robust-AI-lyrics-detection.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1qF4Yq4mVYSPTiaxBQMwGwPW0TAljeT4D/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The core idea of the paper is that AI-generated songs can be distinguished from human-generated songs, and it justifies the use of lyrics transcription as a more robust way to achieve that compared to audio-based approaches. While I can agree on the latter, I personally think the former is misleading and promotes research in the wrong direction, so it goes in the opposite direction of "accurate and deep understanding" or "reusable insights". Let me explain here.</p>
+<p>The goal of any generative model (including LLMs) is to mimic the real-world training distribution. In the limit, when a generative model is good "enough", there should be almost no distinction between real and generated text. Thus, I'd argue that current models (and specially LLMs), given enough data, already have reached this point (one only needs to look at common LLM benchmarks out there, or the trend in FID for image generation). The fact that they maybe have not reached this point for music lyrics is, I believe, just a matter of time, not enough or inadequate data, or non-careful implementation or lack of attention of LLM providers to the particular sub-task of lyrics generation (or the blending of lyrics and accompaniment).</p>
+<p>Given this premise, I think the classifiers employed in the paper are just overfitting to LLM problems in generating lyrics or the lack of proper alignment between lyrics and music (which is generated by another generative model conditioned on the lyrics). In the near future, generative models will continue to become better, cut these "lyric generation problems" to almost zero, and ultimately render AI-generated music detectors as the one proposed in the paper quite useless. It is true that maybe lyrics-based detectors are better and more robust than audio-based ones, and I agree with the authors that they may work better in out-of-domain cases (but I would not dare to say Udio and Suno are different systems; on the contrary, I think they might be largely the same, see below). Overall, I think the assumption that generative modeling will not do a decent job in modeling the real-world distribution is not pointing in the right direction and promotes further research on such "wrong" direction...</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>The paper proposes to detect AI-generated songs by partially transcribing lyrics to text embeddings and training a classifier, which should be more robust than audio-based classifiers.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The research seems properly conducted and the methodology and results, although basic, are probably better and more comprehensive than previous research works on the topic. As meta-reviewer, I temporarily set a weak accept even though I'm personally inclined towards a weak reject for the reasons I exposed above (Reusable Insights question). I'll wait and carefully read the other reviews before agreeing on a decision. Below I put both major and minor comments to further substantiate the discussion.</p>
+<p>Major comments:
+- The research does only address the case where everything (music and lyrics) is AI-generated. However, I think it is precisely the opposite case we will mostly see in the future (and the one that is more interesting to tackle): The case where only some (potentially small) parts of the composition are made with the help of some AI assistant. Thus, AI generation tools will become more of a companion and hence one will have to accept them in the composition process as we accepted synthesizers and loop machines.
+- Introduction, "Crucially, it does so besides the extra difficulty of transcription" -&gt; I think this is the only point that the paper is (indirectly) proving: That current transcriptors are quite good, and that tasks requiring transcription can be approached by using such tools. Notice that this is a different point than the one in the title and abstract of the paper.
+- As mentioned, I think the paper only leverages the still poor performance of LLMs in generating lyrics and/or the still poor performance of music generation models in combining lyrics and music. Generative models will become better and outdate the paper's research. Notice also that the fact that the embeddings with more dimensions (LLM2Vec-LLAMA and BGE-ML-Gemma) are the ones with better scores already points towards some form of overfitting (that is, capacity to focus on a random error from the generative model).
+- Details about how the (pseudo-) transcription process is done are missing.
+- I think it is wrong to consider Suno and Udio as two different models, and hence to consider the evaluation with the latter as "out-of-distribution". We do not know the details of the two models, but I personally think it is highly probable that both train on similar data, that both are latent diffusion models, that both have a similar architecture, that both have used a similar set of lyrics, etc.
+- Therefore, the study of generalization to unseen generative models, which is the crucial (and only?) aspect that should be properly assessed in these deepfake detection setups, is largely missing.</p>
+<p>Minor comments:
+- Introduction, first paragraph -&gt; A paragraph should be three sentences or more, not just one.
+- Introduction -&gt; Maybe it could be a good idea to discuss other possible options like a "certification of human artist", which is much easier to do (and for which processes exist), rather than attempting to perform automatic detection.
+- Introduction, "audio-generated lyrics" -&gt; I think this is troubling in the grammatical sense?
+- Introduction, "leveraging lyrics should lead to..." -&gt; I think the authors should better develop pros and cons here; develop the topic further.
+- Introduction, "real music with AI-generated lyrics..." -&gt; I think this is not true. Many artists may be already getting inspiration from ChatGPT to do lyrics. Do the authors have any numbers or research to go beyond opinions or perceptions?
+- Related work -&gt; Perhaps some mentions about what is done in the image domain could have added value to the section.
+- Related work "necessity of accessing model logits" -&gt; I think this is not true. There are plenty of black-box or gray-box approaches (and white-box approaches not restricted to the logits).
+- Method, "we also experiment with various types..." -&gt; Maybe explain more those ones and why they did not improve performance?
+- Method, "learning rate to 1e-3" -&gt; Watch out the line break.
+- Experimental setup, "lyrics dataset Here,..." -&gt; Dot missing.
+- Table 5 -&gt; Should be "UAR-MUD" instead of just "MUD"?
+- Organization -&gt; Maybe switch the order of sections 5.1 and 5.2?</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>After discussing with the reviewers we decided to set a "weak accept" score for the paper. Although the lack of generalization and future utility of these type of works was stressed during the discussion, it was found the quality and overall topic were interesting for triggering future discussion at ISMIR. Also, the fact that the paper tackles a real and current problem was positively valued.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The first phrase in the abstract is greatly exaggerated. Not <em>all</em> industry has been disrupted, and not <em>all</em> industry <em>necessitates</em> detection of AI-generated content.</p>
+<p>I find this paper very interesting. It has a straightforward methodology. Section 5.3 is especially interesting. </p>
+<p>The main weakness of this paper is that it only used one generator for testing, which may limit the generalization of the results.</p>
+<p>About the paper structure, I miss a figure indicating how each dataset was used (this information is scattered all over the paper).</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This is a deepfake detection task for lyrics-conditioned music generation. The method for topic modeling and labeling is appropriate for this purpose. The experiments are solid and reveal findings from multiple perspectives. The structure is easy to follow. </p>
+<p>Here are some comments that could potentially improve the paper:
+- Regarding the problem formulation (L324), this is a classification task distinguishing between fake lyrics/fake audio and real lyrics/real audio. Here, the fake lyrics/fake audio class represents AI-generated music. However, AI-generated music with human-written lyrics (L80 mentioned this), instrumental tracks, or singing voice without linguistic meaning all fall outside the scope. Careful wording is needed when using terms such as AI-generated music, AI-generated songs, and AI-generated audio, and the scope/limitation should be clearly stated. 
+- L29: It would be helpful to include links to the commercial products mentioned.
+- L52: This statement needs a citation, or the authors could note that it will be demonstrated later in the paper. 
+- L125: It would be helpful to explain how the limited architectural details relate to the challenges of the deepfake detection task.
+- L129: There is a longer history of deepfake detection in CV, NLP, and speech. The cited works represent the first attempts in singing voice. 
+- Text encoders are discussed extensively in the method section, but the results provide little insight into how they compare.
+- It would be helpful to dedicate a subsection in the experimental setup to describe the three sets of experiments (Tables 4, 5, and 6). Currently, the unseen data experiment is only referenced in the dataset discussion (L327–341), and the out-of-distribution setup is not mentioned beforehand.
+- Whisper performs differently across languages, which might partially explain some observed trends. Would it be possible to compute WERs between Whisper’s predictions and the ground truth lyrics?
+- The authors of [10] are missing</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper presents a timely and practical method to detect AI-generated music by transcribing audio into lyrics and applying text-based detection approaches. The writing is clear and the experiments, particularly the ablation studies, are thorough and informative, which strengthens the overall scientific quality. Furthermore, the analysis of cross-lingual performance is appreciated, as it shows awareness of the real-world multilingual landscape of music. However, several areas require improvement. First, while the authors provide some qualitative observations on language differences (e.g., Arabic vs. English), no quantitative evidence or detailed analysis (such as statistics or correlation studies) are offered to support these claims, limiting the strength of these insights. Second, regarding input modalities, the work only considers audio transcriptions and overlooks other important generative models like YUE or Jukebox, and does not investigate music reconstructed from latent codes (e.g., Encodec), which may behave differently. Third, although the work claims robustness, the evaluation does not explore newer LLMs (e.g., GPT-4o, Gemini) for lyric generation, which may present more challenging detection scenarios. Finally, the presentation can be further polished — for example, Figure 1 uses color coding that does not reflect any meaningful distinction, which affects visual clarity. Overall, while this paper proposes a valuable direction with clear strengths in experimental design and writing quality, further exploration and evaluation are suggested for the claims.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

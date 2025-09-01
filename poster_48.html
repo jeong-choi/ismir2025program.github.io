@@ -1,0 +1,528 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: GD-Retriever: Controllable generative text-music retrieval with diffusion models</title>
+    
+<meta name="citation_title" content="GD-Retriever: Controllable generative text-music retrieval with diffusion models" />
+
+<meta name="citation_author" content="Julien Guinot" />
+
+<meta name="citation_author" content="Elio Quinton" />
+
+<meta name="citation_author" content="George Fazekas" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Multimodal contrastive models have achieved strong performance in text-audio retrieval and zero-shot settings, but improving joint embedding spaces remains an active research area. Less attention has been given to making these systems controllable and interactive for users. In text-music retrieval, the ambiguity of freeform language creates a many-to-many mapping, often resulting in inflexible or unsatisfying results.
+
+We introduce Generative Diffusion Retriever (GDR), a novel framework that leverages diffusion models to generate queries in a retrieval-optimized latent space. This enables controllability through generative tools such as negative prompting and denoising diffusion implicit models (DDIM) inversion, opening a new direction in retrieval control. GDR improves retrieval performance over contrastive teacher models and supports retrieval in audio-only latent spaces using non-jointly trained encoders. Finally, we demonstrate that GDR enables effective post-hoc manipulation of retrieval behavior, enhancing interactive control for text-music retrieval tasks.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Music retrieval systems" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Multimodality" />
+
+<meta name="citation_keywords" content="Interactions" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P3-02: GD-Retriever: Controllable generative text-music retrieval with diffusion models
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Julien Guinot" class="text-muted"
+        >Julien Guinot</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Elio Quinton" class="text-muted"
+        >Elio Quinton</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=George Fazekas" class="text-muted"
+        >George Fazekas</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music retrieval systems"
+        class="text-secondary text-decoration-none"
+        >Music retrieval systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Multimodality"
+        class="text-secondary text-decoration-none"
+        >Multimodality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Interactions"
+        class="text-secondary text-decoration-none"
+        >Interactions</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Multimodal contrastive models have achieved strong performance in text-audio retrieval and zero-shot settings, but improving joint embedding spaces remains an active research area. Less attention has been given to making these systems controllable and interactive for users. In text-music retrieval, the ambiguity of freeform language creates a many-to-many mapping, often resulting in inflexible or unsatisfying results.</p>
+<p>We introduce Generative Diffusion Retriever (GDR), a novel framework that leverages diffusion models to generate queries in a retrieval-optimized latent space. This enables controllability through generative tools such as negative prompting and denoising diffusion implicit models (DDIM) inversion, opening a new direction in retrieval control. GDR improves retrieval performance over contrastive teacher models and supports retrieval in audio-only latent spaces using non-jointly trained encoders. Finally, we demonstrate that GDR enables effective post-hoc manipulation of retrieval behavior, enhancing interactive control for text-music retrieval tasks.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1DFsjiCssCbQRMJ3oYHus9KAozY6hZcef/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Strongly Agree (Very novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The application of diffusion models for retrieval is very interesting, specially to possibility of doing negative or refined queries.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Generative models using diffusion can be leveraged for music retrieval from text, and have the ability to perform negative and refined queries.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper presents an approach for multimodal music retrieval that instead of training a multimodal joint model, it uses a generative diffusion-based model to translate embeddings obtained from a text encoder to the space of audio embeddings. The particularity is that instead of one embeddings, this generative approach generates several embeddings that better represent non-exact queries. The major contribution to the field of music retrieval is the possibility of adding conditioning in the generative model to perform operations like negative queries, or refine previous queries. This is very relevant in real-world retrieval systems.
+The paper is well written and explained and the evaluation is comprehensive. I have some minor comments:
+- When the authors refers to sequence of embeddings it is not clear if they are referring to a sequence of dimensions, or a set of embeddings that correspond to different parts of a song. This should be better explained.
+- There is a missing capital letter at the beginning of the sentence in line 132.
+- The authors argue that this approach avoids the training of a multimodal model. However there is just a substitution of a contrastive learning model by this diffusion model that translates the embeddings from the text modality to the audio modality. Therefore there is no simplification, the model needs to be trained on embeddings from both modalities, in the same way contrastive learning multimodal approaches can be trained with frozen encoders. This claim should be toned down accordingly.
+- In the paragraph starting in line 160 a description of what is the difference between z and Z would be useful. Here when you say time-wise average pooling you realize that maybe sequence of embeddings are related to different parts of a track, but not before.
+- Authors uses MULE baseline, they say that the approach was reimplemented in the MTG Jamendo dataset. Does it mean they trained the unsupervised approach described in the reference paper or that they used the released model and computed the embeddings of the Jamendo dataset?
+- A little description of what is out-of-domain for the authors would be useful.
+- Table 2 would benefit of a reordering. Having the teacher model and the GD retriever one next to the other would help to visualize the discussion. I mean having CLAP and right after GDE-CLAP for example.
+- Add a short description of the CLAP scores, so the reader doesn't have to check the source paper.
+- I think the part of negative queries and query conditioning is the most interesting part of the paper, a deeper dive in this section would have been nice, and also a discussion about future work in this direction.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers agree about the novelty and relevance of the work. The method is clearly explained, and the experimental results are convincing. The idea of leveraging pre-trained modality-specific encoders while avoiding joint training is appreciated, though as one reviewer noted, the claim that this “avoids multimodal training” might be too strong, since the model still learns mappings between modalities. This point should be toned down accordingly.</p>
+<p>Another common point in the reviews concerns the controllability aspect. Several reviewers, including myself, find this to be one of the most interesting features of the paper. However, the current experiments and analysis around it are relatively limited. A deeper exploration — either through qualitative examples or user-facing use cases — would significantly strengthen this part of the work.</p>
+<p>There were also comments about generalization, particularly regarding the reliance on the PrivateCaps dataset. While the use of private data is acceptable within ISMIR guidelines, the limited evaluation on public datasets makes it harder to assess reproducibility and broader applicability. Clarifying these points and discussing future directions to address domain mismatch would be helpful.</p>
+<p>Finally, the paper would benefit from some minor edits and clarifications, including:</p>
+<p>A clearer explanation of what is meant by "sequence of embeddings"</p>
+<p>More details about how baselines like MULE were implemented</p>
+<p>Better organization in tables (especially Table 2)</p>
+<p>Minor corrections in grammar and table labels</p>
+<p>Overall, this is a solid and timely contribution that opens up new directions in controllable music retrieval. Despite the noted limitations, I support acceptance of this paper and look forward to seeing further developments on this line of work.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper proposes Generative Diffusion Retriever (GD-RETRIEVER), which applies diffusion models to focus on the important challenge of controllability in text-to-music retrieval, making it a pioneering work in the field. The main contribution, adapting generative model control techniques such as negative prompting and DDIM inversion to retrieval, is interesting, and the idea of enabling interactive search experiences for users is commendable. Furthermore, the flexibility to utilize encoders that are not jointly trained is an advantage.</p>
+<p>However, there are several concerns regarding the proposed method.
+Most notably, retrieval performance varies between in-domain data (PrivateCaps) and out-of-domain data (MusicCaps). Although the paper attributes this to domain mismatch and proposes latent space alignment as a mitigation strategy, analyzing such mismatch for each model is not practical in real-world scenarios.</p>
+<p>Another concern is that the main training results rely heavily on a private dataset (PrivateCaps). While this is permitted under ISMIR’s policy, it limits the ability of other researchers to reproduce or verify the results. It also remains unclear whether the trends observed with PrivateCaps hold when evaluated solely on public datasets.</p>
+<p>Although the controllability of the model is evaluated, including some quantitative analyses using CLAP scores, the lack of user studies assessing how effective or intuitive these control features are from a user perspective is unfortunate. Even simply illustrating the example retrieval results that can be performed in real-world scenarios would serve as a strong validation of the usefulness of the proposed method.</p>
+<p>These concerns, especially those regarding generalizability and reproducibility, somewhat weaken the overall impact of the paper. Nevertheless, the novel direction of controllable retrieval, the creative use of diffusion models for retrieval tasks, and the thorough analyses (on domain mismatch and query quality) make this a valuable contribution. Future work is expected to address domain mismatch more comprehensively and to strengthen evaluation on public datasets.</p>
+<p>There are also a few typographical errors:
+* Lines 214–216: punctuation (period placement)
+* Table 6: “NPP” should be “PNP”, etc.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper proposed to use diffusion model for text-to-music retrieval task not the audio generation. The methodology is to train a diffusion model to generate audio embeddings using text conditioning. To verify the effectiveness of the proposed method, the authors first verified that whether the proposed approach is superior than CLAP like text-audio joint embedding model-based text-to-music retrieval. If we see the Table 2, we can see that the proposed method is superior than CLAP like models. However, since they utilized CLAP like joint embedding model for their text conditioning and audio embeddings, there exists some performance degrades due to incompleteness of the joint embedding models. Therefore, they used separated models for text conditioning and audio embeddings, then in Table 4, this problem was solved well. If we take a step back and look at the proposed method again, then it can be viewed as a simple regressor. So, the model is trained to predict audio embeddings using texts, and they retrieve songs based on the predicted audio embeddings. Therefore, the authors compared the proposed method with a simple regression method + simpler diffusion model. And, they verified that the proposed method outperforms regressions and simpler method. At last, since the proposed method is a diffusion model, they could apply several techniques like negative prompting and DDIM inversion for more controllable retrieval. Overall, the paper is well-written and the experiments verified me the concerns I've had while reading paper (especially regression experiment seems really nice to have). </p>
+<p>This is an additional comments that the authors can think of. Since the model is trained on caption-audio pairs using diffusion model, I'm curious about how much this model works well on really simple tag-based retrieval cases. For example, if the user types "hiphop" then would the model works well? I think if the authors can evaluate the proposed model on tag-based retrieval task (using well established tag dataset) and compare the pros and cons compared to the CLAP like model, then it would give many insights to the readers further. (Even though the performance got worse in this scenario, there would be many lessons that the readers can receive from this experimentation)</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<ul>
+<li>
+<p>Highly relevant work overall.</p>
+</li>
+<li>
+<p>Well introduced and well explained approach and justification. Clear writing.</p>
+</li>
+<li>
+<p>As mentioned in section 15, it's a topic that can inspire and branch out into multiple adjacent and follow up explorations and use cases.</p>
+</li>
+<li>
+<p>minor observation: in your conclusion you mention "...uses diffusion models to produce latent queries in retrieval-optimized spaces." While not necessarily incorrect, I'd frame this more like "retrieval-relevant or retrieval-friendly spaces" rather than "optimized". "optimized" sounds a bit strong or at least, a) I thought I'd see something related to the optimization of the retrieval space itself and/or b) it left me wanting to see a justification as to why these spaces are already optimal in a retrieval setting.</p>
+</li>
+<li>
+<p>minor omission: "Figure 2: GD Retriever Method: We train a model to generate text-conditioned ghost queries for retrieval. Left: A diffusion model is trained to generate audio [LATENTS] from text captions. Right: Using the frozen model, we generate audio embeddings from a caption to retrieve similar audio via ghost queries." -&gt; you're missing the term latents (or something similar, maybe "embeddings"), otherwise it reads as if you are generating the actually audio output. </p>
+</li>
+<li>
+<p>My reason for weak accept and not strong accept is mainly related to the Controllability section. The emphasis on the overall claim is centered around Controllability. While the authors did carry experiments with negative prompting and DDIM inversion and provided some results and metrics, for this to be a strong accept I would have needed more in-depth experiments and more clear evidence on controllable retrieval behavior under different settings, including examples and potentially demos. Within the current scope of the experiments, controllability in retrieval seems promising but not conclusive enough to declare it a robust or preferred approach for controllable retrieval, compared to other methods.</p>
+</li>
+</ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

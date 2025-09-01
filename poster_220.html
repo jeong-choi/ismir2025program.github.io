@@ -1,0 +1,556 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Beyond Genre: Diagnosing Bias in Music Embeddings Using Concept Activation Vectors</title>
+    
+<meta name="citation_title" content="Beyond Genre: Diagnosing Bias in Music Embeddings Using Concept Activation Vectors" />
+
+<meta name="citation_author" content="Roman Gebhardt" />
+
+<meta name="citation_author" content="Arne Kuhle" />
+
+<meta name="citation_author" content="Eylül Bektur" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Music representation models are widely used for tasks such as tagging, retrieval, and music understanding. Yet, their potential to encode cultural bias remains underexplored. In this paper, we apply Concept Activation Vectors (CAVs) to investigate whether non-musical singer attributes - such as gender and language - influence genre representations in unintended ways. We analyze four state-of-the-art models (MERT, Whisper, MuQ, MuQ-MuLan) using the STraDa dataset, carefully balancing training sets to control for genre confounds. Our results reveal significant model-specific biases, aligning with disparities reported in MIR and music sociology. Furthermore, we propose a post-hoc debiasing strategy using concept vector manipulation, demonstrating its effectiveness in mitigating these biases. These findings highlight the need for bias-aware model design and show that conceptualized interpretability methods offer practical tools for diagnosing and mitigating representational bias in MIR.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Evaluation metrics" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Philosophical and ethical discussions" />
+
+<meta name="citation_keywords" content="Ethical issues related to designing and implementing MIR tools and technologies" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P3-04: Beyond Genre: Diagnosing Bias in Music Embeddings Using Concept Activation Vectors
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Roman Gebhardt" class="text-muted"
+        >Roman Gebhardt</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Arne Kuhle" class="text-muted"
+        >Arne Kuhle</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Eylül Bektur" class="text-muted"
+        >Eylül Bektur</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation metrics"
+        class="text-secondary text-decoration-none"
+        >Evaluation metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Philosophical and ethical discussions"
+        class="text-secondary text-decoration-none"
+        >Philosophical and ethical discussions</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Ethical issues related to designing and implementing MIR tools and technologies"
+        class="text-secondary text-decoration-none"
+        >Ethical issues related to designing and implementing MIR tools and technologies</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Music representation models are widely used for tasks such as tagging, retrieval, and music understanding. Yet, their potential to encode cultural bias remains underexplored. In this paper, we apply Concept Activation Vectors (CAVs) to investigate whether non-musical singer attributes - such as gender and language - influence genre representations in unintended ways. We analyze four state-of-the-art models (MERT, Whisper, MuQ, MuQ-MuLan) using the STraDa dataset, carefully balancing training sets to control for genre confounds. Our results reveal significant model-specific biases, aligning with disparities reported in MIR and music sociology. Furthermore, we propose a post-hoc debiasing strategy using concept vector manipulation, demonstrating its effectiveness in mitigating these biases. These findings highlight the need for bias-aware model design and show that conceptualized interpretability methods offer practical tools for diagnosing and mitigating representational bias in MIR.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1j66ElKlmTmNVXIQTpQcTEFaIBh47qfQY/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The manuscript does a good job outlining the linearity of representation among some widely-used music embeddings with respect to several basic musical concepts. The general approach would also be applicable to other models and concept ontologies.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Concept activation vectors (CAVs) can be used to find linear hyperplanes separating some high-level musical concepts (gender, language, and genre) in modern neural embeddings.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This manuscript explore the effectiveness of concept activation vectors (CAVs) in a selection of widely-used neural music embeddings to show whether certain high-level musical concepts are represented linearly. Overall, it is an interesting glimpse into the state of music embeddings today, and it would surely generate some discussion and interest at ISMIR. The manuscript does suffer, however, from several methodological limitations that reduce its impact. While I personally lean toward accepting the work, there would be stronger motivations possible.</p>
+<p>The key limitation is inherent in the technique: concept activation vectors can only identify linear relationships. In a somewhat confusing footnote (3), the authors mention that any linear classifier would be suitable while also mentioning the possibility of adding hidden layers. This should be fixed for the camera-ready: adding any hidden layers would almost surely generate a non-linear classifier...and the author's model in Equation 1 already encompasses all possible linear ones. I <em>think</em> that the authors mean that any differentiable classifier would be applicable (and indeed, given that §5 goes on to avoid using derivatives, perhaps any classifier would in fact be applicable).</p>
+<p>But enforcing linearity rather sharply limits the usefulness of the technique for the authors' purposes: there is no particular reason to believe that the concepts considered would be linearly separable. Where the authors find positive results, these can certainly be seen as evidence for the presence of a particular concept in a neural model. Where the authors do not, it may be that the concept is even strongly present, just non-linearly. The authors should clarify this limitation in the camera-ready version.</p>
+<p>I am also not fully convinced by the bias-reducing approaches, neither for generating the dataset nor for vector manipulation. In both cases, the approaches seem too ad-hoc to be fully sound or widely scalable.</p>
+<p>Fundamentally, I see this manuscript as a proof of a methodological concept, and as such, the particular choice of concepts considered is reasonable enough. That said, I still would have found the manuscript more interesting with a richer set of concepts. We don't really need AI to make a gender assessment of a vocalist, and genre is notoriously difficult to formulate as a well-posed scientific classification. If the authors tested any other concepts, it would be wonderful to add some information about them to the camera-ready. </p>
+<p>Finally, as a small point, it is not clear from the manuscript whether the authors used <em>all</em> embedding layers for the CAV training or chose specific layers.</p>
+<p>In the spirit of moving science forward, however, I still think there is benefit to sharing this work as is with ISMIR. The work is well written, and extending the authors' approach to incorporate non-linearity or other musical concepts would be straightforward. Some of the conclusions do rely on potentially biased concept interactions, but the authors have made a good-faith, if ad-hoc, effort to reduce this bias. The results as presented do show that some current models can already convincingly incorporate certain musical concepts.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers agreed that the approach in this manuscript is interesting, although collectively, the group struggled to understand all of the methodological detail. The most important issue in the discussion was the issue of balance (or lack thereof) in the dataset. In the case of imbalance, there seems to be a substantial risk that the results as presented are primarily a reflection of the imbalances rather than the desired message. In addition to the other comments from reviewers, the authors should spend particular attention clarifying balance or imbalance in the dataset and how it affects interpretation of the results. </p>
+<p>If, after closer inspection, the authors find that class imbalance is a serious enough problem to have thrown off the entire analysis, it would be most appropriate to withdraw the paper. For the purposes of the review, however, the group decided to give the authors the benefit of the doubt.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Summary: This is a well-written paper looking into an interesting application of the TCAV method. The topic is relevant (and would benefit) the ISMIR community, and has the potential for reusable insights or generating discourse, as this could be used in the future to investigate biases of music representation models (which gain popularity). Unfortunately, the description of how CAVs are computed exactly (i.e., their data setup) should be clarified, as the current state makes the presented results rather hard to interpret, and I am unsure whether the proposed adaptation of the TCAV score actually reflects what is desired. Also the debiasing method would need further elaborations as to how this could actually help in debiasing a system (post-hoc). </p>
+<p>Novelty: While TCAV has been previously used within MIR, and beyond this field as a way of detecting biases in systems, to the best of my knowledge applying TCAV to detect biases in MIR systems is novel. </p>
+<p>Reproducibility: The dataset modifications to account for underrepresented genre-gender combinations are provided via additional material, and the code is also said to be released upon acceptance, aiding the reproducibility of this work. The only difficulty for reproduction purposes might be the difficult-to-understand setup of training/test sets for deriving CAVs . </p>
+<p>Pioneering proposals: While the proposed work exhibits a level of novelty, this application to a new field does not really provide any pioneering proposals (as TCAV has previously been used to detect biases in systems). </p>
+<p>Readability and paper organisation:
+- The title reflects the content of the paper, and the abstract is written well (the only minor issues I have are discussed in detail in the scholarly and scientific comments). 
+- References should be touched up and made consistent (e.g., all caps Journal names, Proc. vs. Proceedings, no venue for [12], all lower case acronyms...)
+- The paper is very well-written and nicely structured. Some minor remarks about rephrasings are listed below. 
+- Sec. 1: It was not immediately clear to me what 'audio representations' are referring to (i.e., internal representations vs. pre-processed audio), maybe this could be clarified by adding something like 'internal' or audio representations learned by a system when talking about them first (l40). 
+- Sec. 2.1: The section jumps around a bit between (T)CAV and alternative approaches, which could be restructured slightly (this would probably allow for some space to briefly mention other concept-based approaches as discussed in 'References'). 
+- l165-176: To make the differences between [5] and this work clearer, 1) the 'datasets' (l169) should be clarified (e.g., to separate two different (?) datasets), and 2) the sentence from l169-l176 should be split up, where the content of the second half should follow the initial description of [5] (e.g., ... to separate two datasets. This method addresses the domain.... . In contrast, our CAV-based method... ). 
+- Figure 1: As this figure consists of two figures, I would make them subfigures (this also allows for easier referencing); the titles of the individual model plots could be improved by using only the model name also used in the paper, e.g., MERT instead of mert_v1_95m; the legend should be made a bit bigger and clearer, I am unsure what the TCAV dist. (distance? distribution?) is, and it might be easier to understand if the three colours are explained separately; also, the results (i.e., passing or lack thereof) of the significance tests should be indicated somehow, or is that reflected in the colours as well? Finally, it should be stated somewhere why there are fewer genres depicted in the lower part of the figure, is it because language-genre examples were missing?
+- The symmetry of the concepts 'male' and 'female' go beyond intuition (l497) - at least depending on how the according CAVs are computed. If the corresponding CAV of 'male' is just -CAV of female (which I assume could be the case if this is derived via a binary classifier as suggested in l250), then (4) and (5) should indeed be equivalent (which then could raise the question as to why the results in Figure 2 are different at all, numeric instabilities?)
+- l485: The 'sorting' should be explained once more at this point (e.g., where we compute the TCAV values for ... and sort ... according to...)</p>
+<p>Potential to generate discourse: I could see this work having the potential to generate discourse, as it might be an interesting approach to look into biases within MIR models. However, the work might need some touch ups and more concrete ideas of how the debiasing could be realised. </p>
+<p>Relevance of the topic to ISMIR: Both the bias in musical data and systems, as well as the interpretation of musical embedding systems is relevant to the ISMIR community. As the work on interpretable deep learning is limited in the MIR community, work like this is even more valuable. </p>
+<h2>Minor/detailed remarks:</h2>
+<p>l23: more recently
+l31: linebreak 
+l47: maybe: unexplored
+l154: as -&gt; via (as neurons etc. are not biases themselves)
+l159: remove '.'; sources [29-31] should preferably be referenced immediately after the according concept (e.g., counterfactual attention learning [30]), same for references in l164
+l170: undesireable biases as concepts
+l241: footnote should be after '.'
+l258: To construct the training and test sets required for the computation of CAVs (as these have not been defined yet)
+l311: this acronym was already introduced (a few times), can be used as is
+formula (3): 'I' needs to be defined
+l322: Some gradient information can certainly be extracted of an embedding system, just not the needed one (e.g., w.r.t. a target class) - this needs to be corrected
+l359: rank higher in terms of ('rank' is not really used a lot in this context, so it is not entirely clear what that means)
+l301, l390: linearly encoded -&gt; not necessarily, it can be linearly separated well enough from embeddings of random samples; maybe: indicating that the CAVs should represent the concepts they are targeting reasonably well, as the concept and random activations can be linearly separated. 
+l356: briefly clarify 'balancing constraints' here -&gt; e.g., without balancing the distribution of other factors like gender or language in the training set, and ... 
+l393: indicated by the 95% confidence intervals not spanning across the 0.5 mark (or similar?)
+l451: meaning (?) it is still above chance but (?) should be interpreted...</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This is an interesting, if frustrating, paper using some interpretable-AI tricks to identify when embeddings of music implicitly are learning concepts about their data that oughtn't be relevant to classification, such as classifying genre based on the perceived gender of a performer in a song.</p>
+<p>I will say that I don't understand some of the goals of this study: the claim is essentially that, "the only thing that should be different if you substitute out a male singer for a female singer is the one variable about gender of performer". But that's obviously not right, despite the claim, "we expect female-led and male-led English language jazz to be musically comparable, despite differences in vocal timbre." Why would this be true? The instrumental blend would be different! You might have differen backing performers. They might emphasize different octaves in their accompaniment. Etc. Like, I get what they're trying to say, but there's almost a claim that the k.d. lang version of "Hallelujah" should be just as easy to classify as the Leonard Cohen version, and ... why would that be true? </p>
+<p>So I admit I was a little suspicious, and I'm still a little suspicious: the fix is literally just "take a convex combination of the classifier for genre and the classifier for the lead singer being female and use that, and not just the uncorrected classifier for genre." </p>
+<p>This overall approach does "work", in that if we emphasize the classifier for gender, the songs that are rated as most clearly hip-hop start to be also with female singers. But it's a little frustrating, in that it suggests that the hardest-to-classify-for-gender songs will probably get tossed out quickest (like, e.g., k.d. lang). I'd love a much more detailed study of what actually is returned than just the tiny bit that's in 6.3.</p>
+<p>All told, it's in interesting overall idea, and I'd watch a talk on this paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>In this paper, the authors propose to use a CAV-based method to investigate the bias presented in pretrained models (embeddings). The method trains a linear classifier of concepts and explore whether some genre of music tends to be classified as positive or negative (or, in authors’ words, whether they align with the concept). The authors investigate four SOTA music embeddings and reveal that there exist strong gender bias and language bias in these embeddings. Based on these findings, the authors propose a strategy to adjust the bias, and it is able to provide a less-biased CAV.</p>
+<p>Strengths
+- The paper is clearly motivated. It reveals and tries to address an important issue in the era of large foundation models. It is crucial to be aware of the gender, cultural, and any kind of potential biases introduced in these data-based models.
+- The choice of different embeddings spans a wide variety of pre-training strategies, and the resulting model bias reflect the bias introduced in the pre-training.
+- The careful curation of datasets reflects a rigorous experimental design to minimize the bias introduced in the dataset.
+- The results are clear and easy to explain, which show the clear bias presenting in the embeddings.
+- The proposed de-biasing strategy is simple yet effective.</p>
+<p>Weaknesses and Questions
+- In section 5.1, the authors mention that there is no downstream classifier and therefore “no gradient information can be extracted”, but the genre classification seems to be a straight-forward downstream task to extract logits and gradient so that [7] can be fully adapted.
+- The description of how TCAV is done is confusing. CAV has different meanings, sometimes it means “concept activation vectors” and sometimes it represents a vector, as in Eq. (2). The vector CAV is the same as the weight vector in Eq. (1). There concepts are mixed together and makes it hard to read.
+- (Important) Following the previous point, the process described in Section 5.1 suggests that the TCAV score is actually the percentage of test samples per genre that are classified as positive samples by the classifier in Eq. (1), and since each genre has a balanced test set, the ideal percentage is 50%. However, this is not pointed out, and the authors opt for a more abstract and complicated way to explain the idea - the idea of “how well two concepts align”, which comes from [7] (but the authors’ implementation has significantly deviated from [7]). Also, I suggest creating a new name since this is no longer the TCAV introduced in [7].
+- Line 348-349: the authors mention the statistical test but do not present the results in Section 6. The statistical test with Bonferroni correction would fail to reject the null hypothesis in many cases because there is at least one genre where there is no bias and Bonferroni correction requires that there is significance in all sub-tests. 
+- The section 5.2 and 6.3 also read a bit confusing to me. The authors mention the ranking of different tracks. I suppose this is the ranking of the p_{CAV} scores as in Eq. 2 (the likelihood of the song’s being a hip-hop song)? This should be explicitly described.
+- A minor question: while the authors have discussed the difference between the proposed de-biasing strategy and [5], I think both of them assume linearity. Therefore, I am curious how they will perform differently. The discussion in Section 2.2 only points out the difference in motivation (dataset bias in [5] and demographic bias in this paper). What I see is that [5] debias the embedding and the paper debias the CAV (the classifier), but this is not pointed out in the paper.</p>
+<p>While I think the paper is addressing the crucial problem of implicit bias in music embeddings, and the authors have done extensive and careful studies to show interesting and meaningful results, the description of methods is really unclear (see weaknesses and questions). Since the methods deviate significantly from the TCAV reference [7] and therefore no reference could be found, it is crucial to clearly state everything in the implementation. Therefore, I could not recommend accepting the paper as it is. While my main criticism is about presentation, which can be done in the camera-ready version, I expect not minor but a great amount of adjustment for a good, clearly-written paper, so I would have to recommend a weak reject even though I like all the results and discussions.</p>
+<p>To improve the paper, I would suggest considering the problems of presentations mentioned above. Even though I did not mention in the weaknesses, the process of dataset construction is also a bit hard to read. Section 4 and 5 takes great effort to understand because of the unclarity. Visualization (both of dataset and methods, as in [7]) could help. Also, without explaining original TCAV in detail, mentioning “gradient information” and why the bias term is required can be confusing. The authors could opt for either including the details of [7] or focusing on their implementations.</p>
+<p>Minor corrections
+- Eq. (1) suggests linear regression but what is done here is (I suppose) logistic regression.
+- Many references are not properly formatted. For example, [12] and [16] don’t show proceeding names; [7] is published in ICML not in NeurIPS; “MuChoMusic” in [6] should contain upper cases; [6] and [14] are both from ISMIR and should be in the same format (including abbr. in [14]).</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

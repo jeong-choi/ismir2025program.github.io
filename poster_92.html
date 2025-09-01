@@ -1,0 +1,590 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Matchmaker: An Open-Source Library for Real-Time Piano Score Following and Systematic Evaluation</title>
+    
+<meta name="citation_title" content="Matchmaker: An Open-Source Library for Real-Time Piano Score Following and Systematic Evaluation" />
+
+<meta name="citation_author" content="Jiyun Park" />
+
+<meta name="citation_author" content="Carlos Eduardo Cancino-Chacón" />
+
+<meta name="citation_author" content="Suhit Chiruthapudi" />
+
+<meta name="citation_author" content="Juhan Nam" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Real-time music alignment, also known as score following, is a fundamental MIR task with a long history and is essential for many interactive applications. Despite its importance, there has not been a unified open framework for comparing models, largely due to the inherent complexity of real-time processing and the language- or system-dependent implementations. In addition, low compatibility with the existing MIR environment has made it difficult to develop benchmarks using large datasets available in recent years. While new studies based on established methods (e.g., dynamic programming, probabilistic models) have emerged, most evaluations compare models only within the same family or on small sets of test data. This paper introduces Matchmaker, an open-source Python library for real-time music alignment that is easy to use and compatible with modern MIR libraries. Using this, we systematically compare methods along two dimensions: music representations and alignment methods. We evaluated our approach on a large test set of solo piano music from the (n)ASAP, Batik, and Vienna4x22 datasets with a comprehensive set of metrics to ensure robust assessment. Our work aims to establish a benchmark framework for score-following research while providing a practical tool that developers can easily integrate into their applications.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Alignment, synchronization, and score following" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Reproducibility" />
+
+<meta name="citation_keywords" content="Expression and performative aspects of music" />
+
+<meta name="citation_keywords" content="Real-time considerations" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P1-11: Matchmaker: An Open-Source Library for Real-Time Piano Score Following and Systematic Evaluation
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Jiyun Park" class="text-muted"
+        >Jiyun Park</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Carlos Eduardo Cancino-Chacón" class="text-muted"
+        >Carlos Eduardo Cancino-Chacón</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Suhit Chiruthapudi" class="text-muted"
+        >Suhit Chiruthapudi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Juhan Nam" class="text-muted"
+        >Juhan Nam</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Alignment, synchronization, and score following"
+        class="text-secondary text-decoration-none"
+        >Alignment, synchronization, and score following</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Reproducibility"
+        class="text-secondary text-decoration-none"
+        >Reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Expression and performative aspects of music"
+        class="text-secondary text-decoration-none"
+        >Expression and performative aspects of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Real-time considerations"
+        class="text-secondary text-decoration-none"
+        >Real-time considerations</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Real-time music alignment, also known as score following, is a fundamental MIR task with a long history and is essential for many interactive applications. Despite its importance, there has not been a unified open framework for comparing models, largely due to the inherent complexity of real-time processing and the language- or system-dependent implementations. In addition, low compatibility with the existing MIR environment has made it difficult to develop benchmarks using large datasets available in recent years. While new studies based on established methods (e.g., dynamic programming, probabilistic models) have emerged, most evaluations compare models only within the same family or on small sets of test data. This paper introduces Matchmaker, an open-source Python library for real-time music alignment that is easy to use and compatible with modern MIR libraries. Using this, we systematically compare methods along two dimensions: music representations and alignment methods. We evaluated our approach on a large test set of solo piano music from the (n)ASAP, Batik, and Vienna4x22 datasets with a comprehensive set of metrics to ensure robust assessment. Our work aims to establish a benchmark framework for score-following research while providing a practical tool that developers can easily integrate into their applications.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1CBBK74gzATCkY_ZQ2dv4jpqsR_qYyKjd/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The package makes score following algorithms easily available to the community, which in turn allows for a deeper analysis and understanding of these algorithms, as well as baselines for future experiments.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>A Python package for real-time score following algorithms.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper presents an open-source Python package designed for real-time audio-based score following. The authors provide and evaluate several algorithms and features on three public piano datasets.</p>
+<p>Main Strengths:</p>
+<ul>
+<li>Main contribution: an open framework for real-time score following is provided, comparable to available offline tools like the Sync Toolbox or Match. This makes score following algorithms easily available for everyone.</li>
+<li>The provided algorithms work well on piano music. Additionally the design of the packages suggests that it should be easy to add additional algorithms in the future.</li>
+<li>Standardising the evaluation of these algorithms is important, thus providing the evaluation measures directly with this Python package is very valuable for future research.</li>
+</ul>
+<p>Main Weaknesses:</p>
+<ul>
+<li>Limited Scope: Only three algorithms are included and evaluated (two OLTW and one HMM), excluding some well-known older approaches (like Antescofo) as well as more recent approaches based on learned features. One problem is that most of the approaches are not publicly available, but these would be worthwhile additions to this package (and to the comparison of approaches in the paper). Additionally, the algorithms are only evaluated on piano music, while in general they should work on any kind of music. It would be very useful to include at least some results on other genres.</li>
+</ul>
+<p>Further Comments:</p>
+<ul>
+<li>
+<p>It would be interesting to look into the relationship between quantitative evaluations and qualitative feedback to identify which evaluation measures show a high correlation with the perceived quality. This is probably highly dependent on the application (automatic accompaniment vs. visualisations vs ...), but it is something I am missing in the literature and it would provide some grounding of the evaluation results.</p>
+</li>
+<li>
+<p>I was a bit confused by ASAP vs (n)ASAP, e.g. in the table it is named ASAP, in the text it is referred to as (n)ASAP. Would be good to unify/clarify this.</p>
+</li>
+<li>
+<p>I do not fully understand Table 4. How are these delays measured? Is this the time it takes to compute one step of the algorithm? This would then be highly dependent on the implementation details of each of the algorithms. This makes sense in the context of the package (on certain hardware), but it is not a general guideline regarding the properties of the algorithms. Also, how is the MAE for the different features types computed? This only makes sense in combination with an alignment algorithm. Or is this some average over all algorithms?</p>
+</li>
+<li>
+<p>Regarding features, there is also another version of the LSE features in Arzt, Widmer, Dixon: "Adaptive distance normalization for real-time music tracking" (EUSIPCO 2012), where they were combined with chroma features, which led to further improvements. </p>
+</li>
+</ul>
+<p>Typos, Grammar, Style:
+- Line 113: othen -&gt; often
+- Line 142: The usage of the package is mainly divided into two scenarios -&gt; The package supports two main usage scenarios
+- Line 145: with default setting -&gt; with the default setting
+- Line 220: We only included performance -&gt; We only included performances
+- Line 239: which we name it log-spectral energy -&gt; which we name log-spectral energy
+- Line 430: ourperforms -&gt; outperforms
+- Figure 6: OTLWArzt -&gt; OLTWArzt</p>
+<p>Summary:</p>
+<p>This paper presents a much-needed easily usable Python package for real-time score following. While there is room for improvements (e.g. providing more algorithms and considering more music genres, not only classical piano music) it is as a valuable contribution to the field of MIR.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper presents an open-source Python framework for the evaluation and benchmarking of real-time audio-based score following algorithms. The framework includes implementations of multiple alignment algorithms, standardised evaluation metrics, and public datasets. Reviewers broadly agree that this is a useful contribution that addresses a significant gap in reproducibility and standardisation in the score following community.</p>
+<p>However, there are a number of concerns with this manuscript, with the main one being the strong focus on piano music. It would be good to see other music genres included, also to make sure that the focus on a specific genre does not lead to design decisions that make it hard to use in a more general case.</p>
+<p>Further concerns include a limited discussion of real-world problems of score following and their evaluation (e.g. trills, skips, repeats), a lack of deeper error analysis (why does the HMM underperform?), some needed clarifications (e.g. how is the delay measured?), and the writing style (incl. typos). Please see the individual reviews for details.</p>
+<p>Overall, despite these concerns, this is a useful contribution which fits well into ISMIR. Before a potential publication, the authors are strongly advised to improve the writing of this paper and to try to address/discuss some of the concerns discussed in the reviews.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I believe the team has thoroughly examines state of the art score following methods and the manuscript demonstrates their passion not only to make fair comparisons but also to make the job easier for fellow researchers and developers. However, I recommend border line reject due to the writing style. At times, the style of this manuscript is more like a combination of review article (quick mention of 58 citations) + user manual (Sec. 3). It contains a lot of useful information but sometimes this makes it hard for a reader to find out the emphasis and identify where the novelty truly is. I think the paper might generate discourse as a demo but I am not sure if it is ready to be accepted as a technical paper. Below are some additional comments and inquiries for the authors to consider.</p>
+<ol>
+<li>in Sec. 2.2 we see some empty citations "[]".</li>
+<li>
+<p>I suppose that AE (absolute error) would remove an important aspect of score following -- whether the follower is lagging behind or rushing forward. Since I am not fully aware of the current progress on this topic, I am curious whether anybody has discussed this and use median and average error with a sign (+/-) to supplement for the lost information due to taking the absolute value?</p>
+</li>
+<li>
+<p>In Sec. 5.1: please define $\theta_e$ -- I suppose it is the tolerance of inaccuracy?</p>
+</li>
+<li>
+<p>In line 316-323, the symbols t_i, t_j are performance "time" but t_k is performance "beat". Does that mean t_k is in the unit of beat while t_i and t_j are in seconds? I am puzzled and thus the equation looks vague to me.</p>
+</li>
+<li>
+<p>Line 390: I cannot see where the "horizontal segments" are. Perhaps they can be manually marked to enhance visibility?</p>
+</li>
+<li>
+<p>Sec. 8 is great and I very much look forward to playing with the Web demo.</p>
+</li>
+<li>
+<p>The performance of HMM looks far below the other methods in Table II and III and the authors revealed that it might have been under-evaluated (Line 434). This might weaken the overall acceptability of the manuscript, but I agree that this is worth future investigation.</p>
+</li>
+</ol>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper provide a unified, open-source Python framework for evaluating and benchmarking score-following algorithms. This is important since the lack of such a framework has hindered progress in the field due to issues with reproducibility, comparability, and generalizability of research findings. This paper makes a valuable contribution to the field of music information retrieval, specifically in the area of real-time audio score following. </p>
+<p>The strengths of the paper lie in:</p>
+<p>Addressing a Real Need: The paper tackles the problem of fragmented implementations and the difficulty of comparing score-following methods, which is a significant bottleneck in the field.</p>
+<p>Open-Source Framework: The development and release of an open-source Python package provide a valuable tool for the MIR community.</p>
+<p>Systematic Evaluation: The authors conduct a systematic evaluation of different music representations and alignment methods using multiple datasets. The use of diverse datasets (ASAP, Batik, and Vienna4x22) and comprehensive evaluation metrics strengthens the validity of their findings.</p>
+<p>Despite the strengths, I have several concerns and questions:</p>
+<p>The paper focuses on alignment accuracy but does not consider how systems handle large deviations like repeats, skips, or performer errors. These are common in live piano practice. Could the framework take these factors in to accound beyond local timing errors?</p>
+<p>Table 4 reports extremely low alignment delay values (e.g., 0.07 ms for OLTWArzt). However the performance MIDI files from ASAP only have 3 ms resolution. Can the authors clarify how latency was measured and whether reporting sub-millisecond values is meaningful under these resolution limits?</p>
+<p>While the focus is real-time alignment, offline score following remains important for batch evaluation or annotation purposes. Does the current framework support an offline evaluation mode using non-causal alignment (e.g., full-sequence DTW)? If not, could it be extended for that purpose?</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper proposes a new framework for score following evaluation. This tool could be of great use for the scientific community. An open source tool that is well-maintained could also evolve for wider use, integrating new metrics and model benchmarking as new research comes to the field. While the article is well-written and proposes a novel evaluation framework, there are some areas for improvement:</p>
+<ul>
+<li>
+<p>The experimental analysis is clear and covers a decent amount of baselines. However, there is no clear explanation to the errors seen on models like HMM. The experimental analysis would benefit from having more examples of error analysis. This would inform why some methods struggle more than others. </p>
+</li>
+<li>
+<p>In scores, there is often musical ornamentation, such as "trills". Trills are a good example that add notes to the musical performance while they do not show on the score. This is an area that requires to be discussed as it can improve the error correction for the proposed metrics.</p>
+</li>
+<li>
+<p>Does the framework support other instruments and polyphonic performance? It sounds like the tool applies to other instruments as well. If that is the case, the experimental analysis would benefit from discussion on other instruments.</p>
+</li>
+<li>
+<p>Missing citations in line 102, 107</p>
+</li>
+</ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

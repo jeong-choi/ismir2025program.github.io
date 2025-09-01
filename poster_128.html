@@ -1,0 +1,611 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Investigating Music Track Liking in the Halo of Album Covers</title>
+    
+<meta name="citation_title" content="Investigating Music Track Liking in the Halo of Album Covers" />
+
+<meta name="citation_author" content="Oleg Lesota" />
+
+<meta name="citation_author" content="Anna Hausberger" />
+
+<meta name="citation_author" content="Ivanna Pshenychna" />
+
+<meta name="citation_author" content="Oleksandr Shvydanenko" />
+
+<meta name="citation_author" content="Olha Yehorova" />
+
+<meta name="citation_author" content="Markus Schedl" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Research on music retrieval and recommendation often neglects the fact that a user’s response to a music track depends on contextual factors, such as the composition of the results list, the design of the user interface or the additional media displayed.
+However, a body of psychological research suggests that human perception and decision making can be strongly influenced by contextual factors. In particular, an initial positive aesthetic impression of a product may influence a buyer&#39;s perception of its features unrelated to appearance, such as utility or reliability, which is a manifestation of a cognitive bias called the halo effect. The work at hand investigates whether an album cover shown to the listener during playback can create a halo effect, influencing the listener&#39;s liking of the track. We approach this question by means of a two-stage user study. In the first stage, participants individually rated a series of album covers and music snippets. In the second stage, they were presented with music tracks and album covers (from those they indicated as unfamiliar to them at the first stage) arranged in pairs, such that their least liked tracks were shown with their most liked album covers and vice versa. The results show that displaying an appealing album cover while playing a music track may result in a higher rating of the track and vice versa. We also observe an indication of halo effect created by the perceived degree of matching between the music tracks and the album cover shown.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Music retrieval systems" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="User behavior analysis and mining, user modeling" />
+
+<meta name="citation_keywords" content="Music recommendation and playlist generation" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_keywords" content="Cognitive MIR" />
+
+<meta name="citation_keywords" content="Music interfaces and services" />
+
+<meta name="citation_keywords" content="Human-centered MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-08: Investigating Music Track Liking in the Halo of Album Covers
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Oleg Lesota" class="text-muted"
+        >Oleg Lesota</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Anna Hausberger" class="text-muted"
+        >Anna Hausberger</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Ivanna Pshenychna" class="text-muted"
+        >Ivanna Pshenychna</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Oleksandr Shvydanenko" class="text-muted"
+        >Oleksandr Shvydanenko</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Olha Yehorova" class="text-muted"
+        >Olha Yehorova</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Markus Schedl" class="text-muted"
+        >Markus Schedl</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Music retrieval systems"
+        class="text-secondary text-decoration-none"
+        >Music retrieval systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=User behavior analysis and mining, user modeling"
+        class="text-secondary text-decoration-none"
+        >User behavior analysis and mining, user modeling</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music recommendation and playlist generation"
+        class="text-secondary text-decoration-none"
+        >Music recommendation and playlist generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Cognitive MIR"
+        class="text-secondary text-decoration-none"
+        >Cognitive MIR</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music interfaces and services"
+        class="text-secondary text-decoration-none"
+        >Music interfaces and services</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-centered MIR"
+        class="text-secondary text-decoration-none"
+        >Human-centered MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Research on music retrieval and recommendation often neglects the fact that a user’s response to a music track depends on contextual factors, such as the composition of the results list, the design of the user interface or the additional media displayed.
+However, a body of psychological research suggests that human perception and decision making can be strongly influenced by contextual factors. In particular, an initial positive aesthetic impression of a product may influence a buyer's perception of its features unrelated to appearance, such as utility or reliability, which is a manifestation of a cognitive bias called the halo effect. The work at hand investigates whether an album cover shown to the listener during playback can create a halo effect, influencing the listener's liking of the track. We approach this question by means of a two-stage user study. In the first stage, participants individually rated a series of album covers and music snippets. In the second stage, they were presented with music tracks and album covers (from those they indicated as unfamiliar to them at the first stage) arranged in pairs, such that their least liked tracks were shown with their most liked album covers and vice versa. The results show that displaying an appealing album cover while playing a music track may result in a higher rating of the track and vice versa. We also observe an indication of halo effect created by the perceived degree of matching between the music tracks and the album cover shown.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1to5r7XN2NFTztW3ziSGS8znWMJlaLrQd/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>The work could include machine learning (ML) works that employ album cover image and audio information tackling downstream tasks such as music classification in the multi-modal setup. For instance, following two works can be under such category:</p>
+<p>Sergio Oramas, Francesco Barbieri, Oriol Nieto, Xavier Serra:
+Multimodal Deep Learning for Music Genre Classification. Trans. Int. Soc. Music. Inf. Retr. 1(1): 4-21 (2018)
+Igor Vatolkin, Cory McKay:
+Multi-Objective Investigation of Six Feature Source Types for Multi-Modal Music Classification. Trans. Int. Soc. Music. Inf. Retr. 5(1): 1-19 (2022)</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>As contextual material, the album cover can affect the perception/appreciation of the music while listening. This insight opens up a number of research directions, both in music psychology and MIR applications such as recommender systems.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Album cover art co-presented during music listening can affect listeners' perception of music.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<h1>Summary</h1>
+<p>The work investigates the halo/horn effect of the presence of album cover art as a contextual material in music preference (liking) when it is presented during music listening. An two-stage experiment is designed, where the first phase collect each participants' preference on music and album cover art independently as a baseline, and in the second phase participants indicate the preference on each music with which are paired with album covers of the most significant preference difference to the music in the first round. The result indicates that the delta between the preference scores of music on the two stages positively correlates with the album covers, which implies the halo/horn effect of album covers on the music when presented. Additionally, the matching between audio and cover is recorded in the second phase, which shows the lesser, but positive effect on the delta of preference, might suggest that the matching can be contributed as the latent factor.</p>
+<h1>Major Comments</h1>
+<h2>Strengths</h2>
+<ul>
+<li>The work investigates a novel topic. The effectiveness of album cover art has already been studied considerably, but mainly on machine learning (ML) downstream applications in the MIR field, which generally positively affects the automatic (machine) music understanding. To my knowledge, psychological studies involving human perception study, which are relatively less studied in MIR, could not only explain the positive effect in applications, but also build fundamental understanding of the phenomenon.
+The experimental design is reasonably sound, and the result shows the effect's existence (even with some noise concern that will be followed in the next subsection). This has several interesting implications for applications and opens some future research directions.</li>
+<li>The work is well-read in general.</li>
+</ul>
+<h2>Weaknesses</h2>
+<ul>
+<li>The experimental design could be improved:</li>
+<li>The primary material can be more representative:</li>
+<li>The study album covers are heavily sampled, but in a skewed way that filters out ones containing any text. This results in about 1% of the covers from the study population, potentially implying that the remaining samples might be atypical. An alternative approach might be uniform sampling followed by anonymization (i.e., anonymization of title/artist/album name text), which might be better for the distribution of images.</li>
+<li>Music data might also not be the most representative, as it includes the least popular songs from each popular genre. Popularity might be confounded with qualities of musical/production aspects of the song (i.e., songs can be unpopular due to their poor production, or musically too atypical, etc.). This could make the remaining study materials less representative.</li>
+<li>The experimental procedure could be less noisy by controlling a few factors:</li>
+<li>The participants are allowed to listen to music songs for 5 seconds to 15 seconds, which might add variability in the result as the stimuli vary arbitrarily per participant.</li>
+<li>As it is not indicated that the participants are from a US representative population (which one could choose in the prolific platform), I assume that there is a chance that the participants' distribution is less representative.</li>
+</ul>
+<h1>Minor Comments</h1>
+<ul>
+<li>p3.l219 "In the second stage, ... a song snippet.": Is this randomized? Or with sorting applied to the previous paragraph?</li>
+<li>p3.l258 "The agreement score ... computed analogously.": This seems to be an identical definition to precision@K, which is popularly used in recommender systems literature</li>
+<li>p3.l264 "To ensure that ... over the 100 runs.": The variance of these individual bootstrap values would also be interesting.</li>
+<li>p3.l270 "... Spearman's rank correlation ... second stage ($a_s^1$)": Why Spearman's rho is used? It may be due to the standardization, which transforms the integer scale to something closer to a Gaussian distribution. However, as Kendall's Tau is non-parametric, I assume the result would be almost identical.</li>
+<li>p4.l328 "This suggests that ... affected track ranking.": There is no control group (i.e., coming to the second stage and doing the same thing as the first round, without being presented with album covers). There might be a baseline fluctuation because people can forget things.</li>
+<li>p4.l332 "... (with the threshold 0.05) ...": I assume it is the threshold on p-value, but it could be better clarified.</li>
+<li>p5.l440 "... to knew ...": It seems "new" is intended here.</li>
+<li>p6. "5. LIMITATIONS &amp; FUTURE WORK": it could be interesting to check (as a side study) to see how the participants generally care about the album cover in their daily lives. Some might be keen to check the album cover if they are music fans, while others might not even see it while using streaming services. Controlling this factor might get a more precise result</li>
+<li>p6.l474 "The study at hand ... streaming platforms.": Is it a representative US population (from Prolific option)?</li>
+<li>p6.l489 "Future work could ... first listening session.": Also, the experimental design could add a third session, to see if the effect decreases?</li>
+</ul>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<h1>Summary of the reviews</h1>
+<h2>Strengths:</h2>
+<ul>
+<li>The topic is novel, relevant, and interesting, and opens new research directions</li>
+<li>The experimental design overall is sound and reproducible to some extent</li>
+<li>The presentation of the work is generally good and easy to follow</li>
+</ul>
+<h2>For improvement:</h2>
+<ul>
+<li>A few methodological limitations can be found:</li>
+<li>Experimental materials (e.g., selection of songs and album covers) need more elaboration and justification</li>
+<li>Participants study population can be better representative</li>
+<li>It would benefit from a more in-depth introduction of related work surveys, connected to methodological choices</li>
+</ul>
+<p>Other notable points brought by reviewers are:
+- Explicit mention of the ethics approval procedure seems to be missing
+- The work could offer the experimental design as a product of the work, which can be reused for future works in an extended context
+- Presentation of the result section could be improved (e.g., using a correlation matrix)</p>
+<h1>Overall comment on the decision</h1>
+<p>The reviewers all agreed that the work conducted a novel and interesting study, opening future research directions. The experimental design is overall sound and well-presented. Reviewers also found a few points to be improved: 1) methodological limitations such as representativeness of participants and study materials (i.e., study samples of covers and songs) and 2) related work, including engineering-centered MIR papers involving the album covers as part of data. The overall decision was unanimous, indicating that all reviewers agreed that the work is a valuable contribution to the conference, especially with these improvements.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>i love the idea of this submission - the research question is really interesting and well-supported by background literature. I had some questions about the method: 
+Selecting 40 album covers from 38746 - i'd like to know more about the choices. And 5 most pop + 8 least pop x 5 genres seems to be more than 40 tracks, so again, i'd love to know the details of the media selected for the study (also what 15 sec of 30 were selected). and if people are getting individualised study media in the second step, is the sample large enough (power) for the analyses?</p>
+<p>i found the results section hard to easily engage with. but i think this piece of research will create lively discussion amongst the community.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths of this paper:</p>
+<blockquote>
+<blockquote>
+<p>A very interesting topic that is worth the exploration.</p>
+<p>The study has opened up further integration of psychological perspectives in to MIR research and practices.</p>
+<p>The research questions are clearly presented.</p>
+<p>Various research design decisions are fairly well-justified, e.g., 5 seconds as the minimum duration of each snipper, participation in the second part no earlier than 36 hours, etc.</p>
+<p>Results and their implications are clearly presented.</p>
+<p>There is potential for further research on</p>
+</blockquote>
+</blockquote>
+<p>Issues/potential improvement of this paper:</p>
+<blockquote>
+<blockquote>
+<p>As mentioned in the abstract, there could be other contextual factors affecting users’ preferences of music tracks. If space allows, perhaps the literature review can briefly cover what other of these contextual factors are, and also how the study’s design attempted to minimize the confounding influences of these other factors.</p>
+<p>Perhaps more details about the music tracks can be supplied, e.g., instrumental vs. vocal music, if with lyrics then what are the languages, etc.</p>
+<p>What are the demographics of the participants? (It has been briefly mentioned in the Limitations section, though more demographic information should have been described earlier in the paper.) Many factors could come into play, e.g., their music listening habits/experience, the preferences over multimedia materials (e.g., visual vs. auditory)</p>
+<p>As pinpointed in the Conclusion, the album covers were supposed to be “unfamiliar” to the users, though it is possible that some visual elements in an album cover art might be seen by the users before — even though the entire album cover is “new” to the users.</p>
+<p>While the current way of presenting the results seem clear, authors can consider using a correlation matrix, which would help fast readers understand the results better.</p>
+<p>In addition to practical implications, authors can think about what methodological contributions this study (and/or their further endeavours) can make, such as the experimental design for research in similar directions (e.g., matching between contextual media and listeners’ preferences of tracks) and/or the modalities of data (e.g., incorporating multimodal data for the evaluation), etc.</p>
+</blockquote>
+</blockquote>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper describes a user study looking into context of music recommendations - specifically, album art. My overall evaluation is to weakly accept this paper, as it has added value to the ISMIR community, but there is room for improvement in several aspects.</p>
+<p>Strengths:</p>
+<p>General topic: The investigation of the halo effect in this specific domain and context has not been done before (though is not ground-breaking), and the authors discuss how results from this study may impact future work in a broader application area.</p>
+<p>Writing and structure: The paper is written very well and has a clear structure. It is useful that key findings are outlined separately, though it sometimes does lead to some duplicate information.</p>
+<p>Introduction: The context and research gaps are provided well.</p>
+<p>Method: I appreciate that this is a user study, focusing on measuring the halo/horn effect in a novel context. It is clearly described how songs and album covers were selected, and familiarity is taken into account and controlled for (though it still may be that participants recognize an artist, but not the specific song). The evaluation metrics seem appropriate.</p>
+<p>Results: The tables and graphs are helpful in understanding the insights, which are clearly described.</p>
+<p>Reproducibility: The paper provides all questions asked in the study, and the final dataset that was used. </p>
+<p>Weaknesses:</p>
+<p>Abstract: The last sentence is put somewhat too strong based on the presented evidence, it would be good to introduce some of the nuance that is descibed in the paper.</p>
+<p>Research questions: It could be made more clear what the difference is between the two RQs and the approach to answer them. The questions are separately answered as described in the method section, with RQ1 seemingly looking into changes in ranking due to having an album cover present yes/no, and RQ2 looking into changes in ranking due to the appeal of the album cover. However, as both influence each other, it could be clarified that they are not completely independent. Also, the phrasing implies only RQ2 is measuring the halo/horn effect, but is RQ1 effectively not also describing this effect? </p>
+<p>Method: While some choices in the study are supported (e.g., number and length of samples), it is not clear whether the method as a whole was based on any previous work. The decisions on the song-album matching, as well as the survey questions, should be validated in order to know whether they actually measure what is intended, but it is unclear if they were. How do other works measure halo/horn effect?
+Secondly, as the study contains several steps and data/participant filtering mechanisms, it would be helpful to include a flowchart of the process to visualize it.
+Thirdly, as the specific UI might have slightly influenced the study (as also mentioned in limitations), it would have been good to also include one or several screenshots.</p>
+<p>Ethical considerations: Even though this is a user study, the authors do not mention any ethical considerations or approval of an ethical review board.</p>
+<p>Results: Perceived matching between album and song is described in the context of RQ2 as a control question, but in the results, it is mentioned as being relevant to halo/horn effects. The introduction and RQs do not mention song/album matching in the context of these effects, so it is unclear how this survey question came about and whether it helps answering RQ2. </p>
+<p>Discussion: There is no comparison with insights from previous work, which makes it more difficult to properly assess the contribution of the current work. </p>
+<p>Implications: In a real-life music listening setting, listeners will likely see the album cover before actually hearing the music, as opposed to receiving both at the same time. Also, users are likely to receive recommendations in the context of a playlist, possibly also mixed in with songs/album covers that are familiar to them. It would be good if expected changes in outcome compared to this study’s, were discussed.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

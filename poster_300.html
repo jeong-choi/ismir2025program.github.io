@@ -1,0 +1,590 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Do Music Source Separation Models Preserve Spatial Information in Binaural Audio?</title>
+    
+<meta name="citation_title" content="Do Music Source Separation Models Preserve Spatial Information in Binaural Audio?" />
+
+<meta name="citation_author" content="Richa Namballa" />
+
+<meta name="citation_author" content="Agnieszka Roginska" />
+
+<meta name="citation_author" content="Magdalena Fuentes" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Binaural audio remains underexplored within the music information retrieval community. Motivated by the rising popularity of virtual and augmented reality experiences as well as potential applications to accessibility, we investigate how well existing music source separation (MSS) models perform on binaural audio. Although these models process two-channel inputs, it is unclear how effectively they retain spatial information. In this work, we evaluate how several popular MSS models preserve spatial information on both standard stereo and novel binaural datasets. Our binaural data is synthesized using stems from MUSDB18-HQ and open-source head-related transfer functions by positioning instrument sources randomly along the horizontal plane. We then assess the spatial quality of the separated stems using signal processing and interaural cue-based metrics. Our results show that stereo MSS models fail to preserve  the spatial information critical for maintaining the immersive quality of binaural audio, and that the degradation depends on model architecture as well as the target instrument. Finally, we highlight valuable opportunities for future work at the intersection of MSS and immersive audio.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_keywords" content="User-centered evaluation" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Gaming, augmented/virtual reality" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Human-centered MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-07: Do Music Source Separation Models Preserve Spatial Information in Binaural Audio?
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Richa Namballa" class="text-muted"
+        >Richa Namballa</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Agnieszka Roginska" class="text-muted"
+        >Agnieszka Roginska</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Magdalena Fuentes" class="text-muted"
+        >Magdalena Fuentes</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=User-centered evaluation"
+        class="text-secondary text-decoration-none"
+        >User-centered evaluation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Gaming, augmented/virtual reality"
+        class="text-secondary text-decoration-none"
+        >Gaming, augmented/virtual reality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-centered MIR"
+        class="text-secondary text-decoration-none"
+        >Human-centered MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Binaural audio remains underexplored within the music information retrieval community. Motivated by the rising popularity of virtual and augmented reality experiences as well as potential applications to accessibility, we investigate how well existing music source separation (MSS) models perform on binaural audio. Although these models process two-channel inputs, it is unclear how effectively they retain spatial information. In this work, we evaluate how several popular MSS models preserve spatial information on both standard stereo and novel binaural datasets. Our binaural data is synthesized using stems from MUSDB18-HQ and open-source head-related transfer functions by positioning instrument sources randomly along the horizontal plane. We then assess the spatial quality of the separated stems using signal processing and interaural cue-based metrics. Our results show that stereo MSS models fail to preserve  the spatial information critical for maintaining the immersive quality of binaural audio, and that the degradation depends on model architecture as well as the target instrument. Finally, we highlight valuable opportunities for future work at the intersection of MSS and immersive audio.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1SBY6XEWQZ7On21uZi4rjL6wPxafcWX8J/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>This manuscript opens a new path in the well-explored territory of source separation, incorporating binaural localisation. It combines this novelty with some well-known algorithms in the area. Researchers in the area should be able to incorporate the insights easily into their own work. The work also includes a new dataset to support further research.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Binaural source separation is a interesting problem domain for which traditional source-separation algorithms are not yet fully adequate.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This manuscript is a solid investigation of problem of growing importance: traditional source separation techniques don’t work that well for binaural audio. The localisation binaural audio provides is essential to VR and AR, and the authors also nicely motivate other use cases, for example, benefitting people with certain types of hearing impairment. The has not yet been much work in the field, and this manuscript sets a baseline for how well current approaches work (or don’t) in this context.</p>
+<p>The work includes a synthesised dataset based on standard corpora for the field, incorporating localisation effects. This dataset is a contribution in and of itself, and will surely benefit researchers in source separation trying to innovate in binaural audio.</p>
+<p>The discussion of evaluation metrics in the paper is readable and convincingly identifies the key challenges and limitations of using signal-based metrics for this purpose. A human evaluation would be the logical next step, but such an evaluation is clearly out of the scope of what an ISMIR-length paper could achieve on top of the other contributions in the manuscript.</p>
+<p>The authors test several well-known source-separation models for their analysis. The manuscript gives a good high-level explanation of these models, although it lacks a sufficient <em>motivation</em> for why these algorithms were chosen (and not others). For completeness and value to the community, it would have been better if the authors could have added one or two other complementary techniques. I suspect this would be too much for the camera-ready version, but if the authors have time, it would be worthwhile.</p>
+<p>The results are clear and highlight specific limitations of traditional source-separation approaches in binaural contexts. The manuscript tries to cover a broad ground in little space, and given that constraint, it strikes a good balance between showing detail and explaining possible causes for the results.</p>
+<p>Overall, the manuscript presents a kind of ‘negative’ result, in the sense that current algorithms are not as successful as one would hope for this task. But this negative result is also the authors’ motivation. The manuscript establishes a clear baseline for the community, includes helpful reasoning for why current algorithms are not up to the task, and suggests practical paths for future work. It definitely has a place at this year’s ISMIR.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper prompted a lengthy discussion among the reviewers, and in particular, there were questions about the formulae used for some of the computations, particularly SDR. It was not possible to resolve all of these questions from tracing the references. If these metrics needed to be recomputed, it could substantially alter the results.</p>
+<p>The full reviews have more details, and several reviewers also highlighted the positive contributions in the paper – hence the final recommendation of only a weak reject. The authors should be encouraged to double-check their formulae and references for them, make them more explicit in the manuscript, and consider resubmitting here or elsewhere.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents a good investigation into how well current music source separation (MSS) models preserve spatial information when running on binaural audio. The authors provide a novel binaural dataset derived from MUSDB18-HQ and evaluate multiple popular MSS models using both standard and spatial metrics. The results are clear and relevant, especially as interest in immersive audio continues to grow.</p>
+<p>That said, I have two main points for improvement, both of which I believe are straightforward to address and would strengthen the manuscript:</p>
+<ol>
+<li>Clarify Practical Relevance Beyond the Atmos production Workflow</li>
+</ol>
+<p>In its current form, the paper connects the problem to the growing importance of spatial audio. However, in music production, immersive formats such as Dolby Atmos, stems are typically already separated before spatialization is applied. As such, the relevance of performing source separation on already-binaural material may seem limited in this context. To be fair, the authors don’t claim that this is a relevant application. Nonetheless, I suggest that the authors briefly clarify this distinction in the introduction. A more compelling case for the utility of binaural MSS could be made by highlighting real-world examples where binaural mixes exist outside the production pipeline, such as:</p>
+<ul>
+<li>ambient or field recordings</li>
+<li>live concert captures recorded with binaural microphones</li>
+<li>consumer content or binaural podcasts where multitrack spatial mixes are unavailable</li>
+</ul>
+<p>This adjustment would help ground the work in practical scenarios where such technology is indeed needed.</p>
+<ol>
+<li>Provide Guidance on Improving Binaural MSS Performance</li>
+</ol>
+<p>The paper effectively demonstrates that spatial cues degrade under current MSS models, but it stops short of offering guidance on how researchers could address this issue in future work. I encourage the authors to provide concrete and constructive suggestions, such as:</p>
+<ul>
+<li>Data augmentations: Leverage tools such as github:facebookresearch/BinauralSpeechSynthesis to simulate a variety of binaural conditions during training.</li>
+<li>HRTF diversity: Introduce variations in HRTF profiles to help models generalize across different listener anatomies.</li>
+<li>Model modifications: Explore modifications to encoder-decoder architectures or loss functions that account for interaural level/time differences (ILD/ITD), or design models that explicitly process spatial features. Is there a specific time-delay that a model should be invariant to?</li>
+<li>Include a simple baseline: A version of one of the tested models (e.g., Demucs or OpenUnmix) retrained on the Binaural-MUSDB dataset would be a valuable comparison and help validate the feasibility of training on binauralized data directly. I understand that this might be out-of-scope for the paper but it would significantly improve the usefulness of the work.</li>
+</ul>
+<p>Adding even a short section outlining these strategies would provide practical value to readers and encourage further progress in this promising research direction.</p>
+<p>Overall, I appreciate the novelty of the work and the thorough analysis. Addressing the points above would significantly improve both the paper’s clarity and its applicability.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors investigate the performance of state-of-the-art music source separation (MSS) models on binaural audio. Using synthetic binaural mixtures created from MUSDB18-HQ stems and head-related transfer functions, they assess how well these models preserve spatial information. Their evaluation reveals that standard stereo MSS models often fail to maintain critical spatial cues, with degradation varying across model architectures and instrument types, highlighting the need for future research at the intersection of MSS and immersive audio.</p>
+<p>I find the work interesting, clear, and well-written. I have some comments that I would like the authors to address in order to improve the quality of the manuscript.</p>
+<ul>
+<li>Introduction: I believe it is also important to mention (e.g., In the paragraph starting at line 116) and cite the SDX Workshop, from which pretty much all the state-of-the-art models come. </li>
+<li>Introduction, line 154: I find cumbersome seeing a paragraph beginning with a citation. I suggest to modify it in, e.g., “The work in [30]” or “Reference [30]”.</li>
+<li>Sec. 3, line 196: You reference Fig. 2 (and Fig. 3 too, later on) before Fig. 1. I think it is better to swap places.</li>
+<li>Figure 2: You should swap -90° with 90° in order to match the positive direction of \theta. </li>
+<li>Figure 3: Do you have the thetas still in the range [-90°, 90°]? If you randomly extracted values in this range, why does not the distribution follow a normal distribution? Is it due to the fact that it is not completely random as you discarded angles to prevent the overlapping of sources in space? Please, comment on it.</li>
+<li>Sec. 4.1: I think it is better to have the equations part of the text, thus avoiding to reference them as if they were figures. You can still have them in display mode, I am suggesting to consider them as part of your logical flow. Then, each variable should be formally defined, e.g., there is no definition of s, \hat{s}, x, N, k, etc.</li>
+<li>Sec. 4.2: Why did you consider those models, and not more recent models such as BSRoformer?</li>
+<li>Sec. 5: the models that you considered are not the state-of-the-art anymore. It is more precise to reference them as “old” state-of-the-art models.</li>
+<li>Table 1 and 2: the caption of tables is typically reported above tables. Again, Table 2 is referenced before Table 1. You should swap places. </li>
+<li>Sec. 5.5: The work would benefit from further information about the perceptual test, and, at least, a plot/table, otherwise I do not see how this section could be useful.</li>
+<li>If I did not get it wrong, you selected a single HRTF to perform the analysis. In order to have more reliable results, I think you should have selected more than one. Can you, at least, comment on the generalizability of the results? How do you think the HRTF conditions the results?</li>
+<li>Finally, why did you choose to have a binaural realization? Probably, the most complete way of evaluating the spatial characteristics of MSS models would be to compute inter-channel level distances of the nth-order ambisonics encoding, and maybe computing the DOA to verify whether the angle is maintained after demixing. Please, comment on it.</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>In this work, the authors present an analysis of the spatial errors introduced by music source separation models. In particular, the authors consider 3 models: Demucs v4, Spleeter, and Open-Unmix. The authors also used ITD calculated via GCC-PHAT, ILD, as well as SSR and SRR from Watcharasupat and Lerch to support their analysis. While the subject is indeed worthy of investigation, the paper in its current form is, in my opinion, not quite thorough enough to warrant its publication as a full ISMIR paper. I would encourage the authors to continue pursuing this line of analysis and resubmit in the future (or perhaps as LBD).</p>
+<ul>
+<li>
+<p>L31-35: It is perhaps very important to establish that the main distinction between binaural and stereo audio is the method of reproduction. Interaural cues can also be recreated (somewhat) in stereo, but would have been done without an explicit assumption on the use of headphones. </p>
+</li>
+<li>
+<p>L89-91: Practically all source separation work are based on signal processing anyway. Perhaps the authors mean model-driven (as opposed to data-driven)?</p>
+</li>
+<li>
+<p>L98: If anything, I would argue that deep learning undid quite a fair bit of progress on real-time source separation. What DL did offer is the ability to perform SS on single-channel or non-array signals, in a more complex environments, and generally with much higher fidelity than ICA/NMF-era systems.</p>
+</li>
+<li>
+<p>L121-124, L277-279, L323-324: It appears that the authors are somewhat confused by SDR (which is admittedly a very confusing metric; see Le Roux et al., "SDR - half-baked or well done?", in ICASSP 2019 for more details). In fact, there are two versions of SDR, and it is unclear which version the authors are referring to. The "correct" version for MSS is the one that is basically the same as SNR. The one that is typically misused however does not penalize <em>everything</em> --- rather, it <em>forgives</em> significant timbral impairments that can be captured within 512-taps. It is also very important to note that even with a consistent SDR/SNR definition, there are also many other factors that can (potentially wildly) affect the calculations: </p>
+</li>
+</ul>
+<p>(1) Was the computation done on the full-track or chunk-wise?
+(a) If full-track, was the reported summary median or mean? 
+(b) If chunk-wise, was the reported summary median of median, or median or mean, of mean of median, or mean of mean? Typically it is nanmedian of nanmedian. </p>
+<p>(2) Was there significant regions of silence in the reference track? There isn't a particular standardized way of dealing with this yet, but it can affect any SNR-like metric.</p>
+<p>(3) How were the arguments of the log stabilized? Was the "epsilon" only in the denominator, only in the numerator, or on both? Same question for Eq. 5 between L256/257. Specifically, how was hard-panning handled in Eq 5?</p>
+<ul>
+<li>L197-199: The choice of location sampling has to be justified. Also, Fig. 3 looks very non-uniform. I understand random sampling can do that, but this is very non-uniform. </li>
+<li>
+<p>Also, was each song only assigned one set of locations?</p>
+</li>
+<li>
+<p>L259-266, L323-324: It is perhaps better if the decomposition for both SDR and SSR/SRR are written out explicitly, given that nature of this work.</p>
+</li>
+<li>
+<p>Fig.4 has to be separated by stem. It is unclear whether this is a pattern across all or just one stem.</p>
+</li>
+<li>
+<p>Table 1: The GCC-PHAT parameters have to be stated. The bass ITD looks very far off. This could be an issue with either SSR/SRR or GCC-PHAT and has to be more thoroughly checked and discussed.</p>
+</li>
+<li>
+<p>Table 1: How was Overall $\Delta\text{ITD}$ calculated?</p>
+</li>
+<li>
+<p>The supplementary cannot be easily judged since there is no reference track from the ground truths. </p>
+</li>
+<li>
+<p>It is somewhat a missed opportunity to not compare more models. While I understand the 3 chosen have easily accessible open-source implementation, it would be more interesting to perhaps also consider other model archetypes of similar "leagues". For example, one could compare hybrid (Demucs v3 or 4) vs time-domain (Demucs v2) vs learnt basis (ConvTasNet) vs full-band TF-domain (ByteSep) vs subband TF-domain (Bandsplit RNN). Most of these have official open-source implementations, and those without do have a few unofficial implementations or related systems with official implementations.</p>
+</li>
+</ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

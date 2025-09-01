@@ -1,0 +1,620 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Enabling Empirical Analysis of Piano Performance Rehearsal with the Rach3 MIDI Dataset</title>
+    
+<meta name="citation_title" content="Enabling Empirical Analysis of Piano Performance Rehearsal with the Rach3 MIDI Dataset" />
+
+<meta name="citation_author" content="Alia Morsi" />
+
+<meta name="citation_author" content="Suhit Chiruthapudi" />
+
+<meta name="citation_author" content="Silvan Peter" />
+
+<meta name="citation_author" content="Ivan Pilkov" />
+
+<meta name="citation_author" content="Laura Bishop" />
+
+<meta name="citation_author" content="Akira Maezawa" />
+
+<meta name="citation_author" content="Xavier Serra" />
+
+<meta name="citation_author" content="Carlos Eduardo Cancino-Chacón" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="The study of piano rehearsals can offer interesting insights into the strategies adopted by a pianist in order to learn, interpret and eventually perform musical pieces. The analysis of rehearsal processes requires computational methods that differ from those used for piano performance, due to challenges like mistakes, repetitions of musical segments, or forward and backward skips to sections in the piece. The scarcity of publicly available rehearsal data limits the empirical understanding of these challenges. We release the Rach3 MIDI Dataset, an openly available collection of MIDI files containing more than 750 hours of recordings of piano rehearsals and corresponding MusicXML scores by four pianists (3 advanced, 1 beginner), collected over a period of more than 4 years. This dataset records the progression of pianists learning new repertoire, as well as practicing familiar pieces, all in the Western Classical tradition. We describe the rehearsal piece identification process used for automatically labeling a portion of the data in this release. Furthermore, we use the Rach3 data to highlight several challenges and future research directions pertaining to the computational analysis of piano rehearsals, specifically symbolic rehearsal-to-score alignment, rehearsal structure analysis, and automatic mistake
+identification.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Symbolic music processing" />
+
+<meta name="citation_keywords" content="Fingerprinting" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Similarity metrics" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Expression and performative aspects of music" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-14: Enabling Empirical Analysis of Piano Performance Rehearsal with the Rach3 MIDI Dataset
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Alia Morsi" class="text-muted"
+        >Alia Morsi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Suhit Chiruthapudi" class="text-muted"
+        >Suhit Chiruthapudi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Silvan Peter" class="text-muted"
+        >Silvan Peter</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Ivan Pilkov" class="text-muted"
+        >Ivan Pilkov</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Laura Bishop" class="text-muted"
+        >Laura Bishop</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Akira Maezawa" class="text-muted"
+        >Akira Maezawa</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xavier Serra" class="text-muted"
+        >Xavier Serra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Carlos Eduardo Cancino-Chacón" class="text-muted"
+        >Carlos Eduardo Cancino-Chacón</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Symbolic music processing"
+        class="text-secondary text-decoration-none"
+        >Symbolic music processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Fingerprinting"
+        class="text-secondary text-decoration-none"
+        >Fingerprinting</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Similarity metrics"
+        class="text-secondary text-decoration-none"
+        >Similarity metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Expression and performative aspects of music"
+        class="text-secondary text-decoration-none"
+        >Expression and performative aspects of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>The study of piano rehearsals can offer interesting insights into the strategies adopted by a pianist in order to learn, interpret and eventually perform musical pieces. The analysis of rehearsal processes requires computational methods that differ from those used for piano performance, due to challenges like mistakes, repetitions of musical segments, or forward and backward skips to sections in the piece. The scarcity of publicly available rehearsal data limits the empirical understanding of these challenges. We release the Rach3 MIDI Dataset, an openly available collection of MIDI files containing more than 750 hours of recordings of piano rehearsals and corresponding MusicXML scores by four pianists (3 advanced, 1 beginner), collected over a period of more than 4 years. This dataset records the progression of pianists learning new repertoire, as well as practicing familiar pieces, all in the Western Classical tradition. We describe the rehearsal piece identification process used for automatically labeling a portion of the data in this release. Furthermore, we use the Rach3 data to highlight several challenges and future research directions pertaining to the computational analysis of piano rehearsals, specifically symbolic rehearsal-to-score alignment, rehearsal structure analysis, and automatic mistake
+identification.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1Y1UF8G110PPJQcXGJM_W9nxfuSW0Cfre/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<ul>
+<li>use fingerprinting methods for matching original score and rehearsal notes.</li>
+<li>ways to collect such dataset (the need of a big time span as well as the large range of the format types of the data signals -e.g. video/audio/symbolic domain).</li>
+</ul>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>A large piano rehearsal dataset with a large time-span is made publicly available and it highlights challenges and further research directions in practice analysis.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The paper introduces a new dataset which includes MIDI files associated with piano rehearsals. It is claimed that it is the largest open-source dataset of its kind and an expansion plan is highlighted. The authors provide a solution for rehearsal piece identification since a part of the dataset missed the exact match of original score and rehearsal excerpt. Also, they explore how to group repeated or related musical fragments and finally, they showcase the ways such a dataset can be used in mistake identification, providing some initial results using published algorithms.</p>
+<p>The paper is well-structured in general and provides evidence of the importance of such dataset in various research domains. Also, the supplementary material is very informative. Hence, I suggest an acceptance. However, I found Section 5 being weak, which I explain in-detail below. Also, I provide some additional comments that should be addressed in the revised version.</p>
+<ul>
+<li>
+<p>In Section 5, the reader would expect a preliminary computational analysis of rehearsal structure, as it is stated in Introduction. Instead, the section was mainly focused on the limitations the authors found of the technique they designed to identify fragments. It would be more informative and impactful if in Section 5 you presented some preliminary results, given the aforementioned limitations, for example by comparing a file being rehearsed by an expert versus a file being rehearsed by a beginner. If this is not possible, then you would need to adjust the text in Introduction of what exactly Section 5 presents. </p>
+</li>
+<li>
+<p>For clarity, in line 222, I would suggest you present the percentage of the dataset that needed the fingerprinting step. </p>
+</li>
+<li>
+<p>Line 336: need more details about how a “chord” bin is defined.</p>
+</li>
+<li>
+<p>Figure 3 font size is very small. I would suggest you reduce the size of the square by including only the non-matching rows, since this part is more interesting.</p>
+</li>
+</ul>
+<p>Further suggestions:
+- Line 66: I would add GigaMIDI Dataset as well (https://arxiv.org/pdf/2502.17726)</p>
+<ul>
+<li>
+<p>In the background section, I would add the following study for completeness: A Novel Interface for the Graphical Analysis of Music Practice Behaviors J Sokolovskis, D Herremans, E Chew - Frontiers in Psychology, 2018 </p>
+</li>
+<li>
+<p>It's not very common to separate the abstract to multiple paragraphs.I would merge them to one.</p>
+</li>
+</ul>
+<p>Minor comments:
+- Lines 76, 340: missing “.”</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The paper presents a large piano rehearsal dataset with a large time-span and it highlights challenges and further research directions in practice analysis. All reviewers have decided to accept the submission and we can see potential on collaborations across disciplines with researchers in music perception and cognition, exploring this data further.</p>
+<p>Below, I’m highlighting some key points, however please see the individual reviews for details:</p>
+<ul>
+<li>
+<p>In Section 5, the reader would expect a preliminary computational analysis of rehearsal structure, as it is stated in Introduction, however this is not the case. Please adjust the text in introduction of what Section 5 actually presents, or edit Section 5, including some preliminary results, given the mentioned limitations.</p>
+</li>
+<li>
+<p>For more clarity, provide the insights on the peculiarities of rehearsal (versus the more commonly studied performance) situations in a separate dedicated section. </p>
+</li>
+<li>
+<p>Elaborate on definitions and decisions in lines 328-340. </p>
+</li>
+<li>Elaborate on annotation procedures (for fragments or mistakes).</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Most of the manuscript is well-prepared. I am inspired by the down-to-earth manner this manuscript shows in terms of data collection, repertoire selection, and ways to conquer unique challenges. I am also convinced that the future work directions in Sec. 8 are worth exploration, as an amateur classical pianist who has been practicing over 40+ years.</p>
+<p>The quality can be further improved in a few small places, listed below.</p>
+<ol>
+<li>Line 314: what does TEC stand for?</li>
+<li>In general, line 328-340 could benefit from further elaboration. I have difficulty understanding what exactly have been done to generate the self-similarity matrix in Fig. 4. First, is Nbin the length of the fragment divided by 100 ms? Secondly, what exactly does it mean to convolve each "chord" vector with a small kernel? Is the convolution kernel 1D or 2D? I suppose it's 1D, and adding an equation may help. Third, in Eq. (1), please add an index to indicate the range of multiplication in the product $\Pi$. In the same equation, what does the exponent pitch_i mean? I suppose it's not a pitch and the naming of the variable confuses me. </li>
+</ol>
+<p>Also, in Fig. 1b, I am curious how come the music score could look so different to the instances shown below. The plot of the instances contains much more notes than the score, for example. It might be good to explain this in the caption so readers are not puzzled early during their read.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<h3><strong>Review Summary:</strong></h3>
+<p>This paper presents the <Anonymized> MIDI Dataset—an extensive collection (750+ hours) of piano rehearsals—which fills a major gap in symbolic MIR resources. It includes efforts in piece identification via symbolic fingerprinting, rehearsal structure analysis, and initial steps toward mistake detection. The paper also discusses the substantial challenges of applying performance-score alignment methods to rehearsal data.</p>
+<hr />
+<h3><strong>Strengths:</strong></h3>
+<ul>
+<li>
+<p>Valuable and original dataset focused on real rehearsal data, not just polished performances.</p>
+</li>
+<li>
+<p>Timely discussion of limitations in applying alignment techniques to noisy, fragmented rehearsal data.</p>
+</li>
+<li>
+<p>Opens new research directions in performance analysis, pedagogy, and mistake modeling.</p>
+</li>
+</ul>
+<hr />
+<h3><strong>Weaknesses:</strong></h3>
+<ul>
+<li>
+<p>The rehearsal structure analysis lacks formal evaluation and is sensitive to parameters.</p>
+</li>
+<li>
+<p>Performance-score alignment is discussed clearly, but no solution is proposed—only limitations.</p>
+</li>
+<li>
+<p>Annotation procedures (for fragments or mistakes) are not fully explained.</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>While several projects have attempted to implement applications that track pianist's performances, the rehearsal context with its non-linearity, non-score-prescribed repetition, and proneness to error is particularly challenging to manage. This new dataset provides opportunities for improving algorithms and software targeting this use-case. </p>
+<p>The paper is well-structured, well-written, and easy to follow. The effort taken in making the set-up and analytical pipeline reproducible is much appreciated, and promises potential future expansion in the availability of this sort of data. </p>
+<p>That said, while the present dataset provides very rich, deep, valuable reflection of the rehearsal behaviour of the four pianists over a long period, the fact that it is "only" four participants should be more clearly acknowledged as a limitation in the paper. Note that this is not intended as a criticism of the dataset -- there are good reasons why vastly expanding the set of participants would be unfeasible -- but this should still be spelled out in the paper. In particular, the generalisability of insights on specific rehearsal behaviours is likely limited by this small sample frame, and this should be explicitly stated.</p>
+<p>The first paragraph of Section 4 mentions a switch in practice from recording rehearsal sessions as single takes in the first two years of the project, to recording on a more granular level later. It is stated that this decision was taken "for practical reasons" - could you expand on this slightly? It seems like convenience-to-pianist (pressing record once per rehearsal session) may have been sacrificed for convience-to-researcher (having salient segmentation of the recorded data already be performed in-situ, reducing post-processing needs). In particular, it would be important to know how much intervention was required on the part of the pianists in order to reset the recording set-up, as this could have implications regarding ecological validity; ideally one would interfere with the normal rehearsal environment and workflow as little as possible. </p>
+<p>These concerns are all minor and could readily be addressed before camera-ready. I congratulate the authors on this interesting paper and am happy to recommend strong acceptance. </p>
+<p>Two more minor nitpicks to finish: 
+* there are some minor errors and formatting (capitalization) inconsistencies in your references -- please do another edit pass over all of these. Particularly, I have spotted typos in [6], [21], [31]; a problem in the URL in [20]; and some issues with format in [17].
+* in following up your references I noticed that the Vienna piano dataset's webpage lists a DOI: 10.21939/4X22. Indeed, resolving this DOI (https://doi.org/10.21939/4X22) forwards to a different version of the website than the one listed in your submission: 
+https://datasets.mdw.ac.at/datasets/dataset/98ea25fa-2468-43ff-929b-3c926e163583. 
+Rather than URLs, please always cite the DOI when one is available; it should be assumed to provide the canonical reference.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

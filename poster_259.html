@@ -1,0 +1,561 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Barwise Section Boundary Detection in Symbolic Music Using Convolutional Neural Networks</title>
+    
+<meta name="citation_title" content="Barwise Section Boundary Detection in Symbolic Music Using Convolutional Neural Networks" />
+
+<meta name="citation_author" content="Omar Eldeeb" />
+
+<meta name="citation_author" content="Martin Malandro" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Current methods for Music Structure Analysis (MSA) focus primarily on audio data. While symbolic music can be synthesized into audio and analyzed using existing MSA techniques, such an approach does not exploit symbolic music&#39;s rich explicit representation of pitch, timing, and instrumentation. A key subproblem of MSA is section boundary detection-determining whether a given point in time marks the transition between musical sections. In this paper, we study automatic section boundary detection for symbolic music. First, we introduce a human-annotated MIDI dataset for section boundary detection, consisting of metadata from 6134 MIDI files that we manually curated from the Lakh MIDI dataset. Second, we train a deep learning model to classify the presence of section boundaries within a fixed-length musical window. Our data representation involves a novel encoding scheme based on synthesized overtones to encode arbitrary MIDI instrumentations into 3-channel piano rolls. Our model achieves an F1 score of 0.77, improving over the analogous audio-based supervised learning approach and the unsupervised block-matching segmentation (CBM) audio approach by 0.22 and 0.31, respectively. We release our dataset, code, and models.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Symbolic music processing" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Structure, segmentation, and form" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-14: Barwise Section Boundary Detection in Symbolic Music Using Convolutional Neural Networks
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Omar Eldeeb" class="text-muted"
+        >Omar Eldeeb</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Martin Malandro" class="text-muted"
+        >Martin Malandro</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Symbolic music processing"
+        class="text-secondary text-decoration-none"
+        >Symbolic music processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Structure, segmentation, and form"
+        class="text-secondary text-decoration-none"
+        >Structure, segmentation, and form</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Current methods for Music Structure Analysis (MSA) focus primarily on audio data. While symbolic music can be synthesized into audio and analyzed using existing MSA techniques, such an approach does not exploit symbolic music's rich explicit representation of pitch, timing, and instrumentation. A key subproblem of MSA is section boundary detection-determining whether a given point in time marks the transition between musical sections. In this paper, we study automatic section boundary detection for symbolic music. First, we introduce a human-annotated MIDI dataset for section boundary detection, consisting of metadata from 6134 MIDI files that we manually curated from the Lakh MIDI dataset. Second, we train a deep learning model to classify the presence of section boundaries within a fixed-length musical window. Our data representation involves a novel encoding scheme based on synthesized overtones to encode arbitrary MIDI instrumentations into 3-channel piano rolls. Our model achieves an F1 score of 0.77, improving over the analogous audio-based supervised learning approach and the unsupervised block-matching segmentation (CBM) audio approach by 0.22 and 0.31, respectively. We release our dataset, code, and models.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1t7eIK4p5KhEA16GDKXdq25YF7xOE0NgU/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The discovery that there are "markers" in the Lakh dataset that have not been studied but that might relate to music structure is a great discovery that could benefit models in this field.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>The Lakh dataset may have more information in it than we yet know how to use. Also, predicting boundaries in MIDI scores is possible using standard techniques.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The article makes two major contributions that I think should be presented at ISMIR:</p>
+<ul>
+<li>It introduces a new dataset of boundary annotations in over 6000 MIDI files.</li>
+<li>It adapts the boundary prediction algorithm of Grill and Schlüter 2015 (GS15) to a MIDI context, and studies some parts of the adapted model in an ablation study.</li>
+</ul>
+<p>However, describing a new dataset and a new algorithm in the same work leaves less room to do either of them justice. For the dataset, we learn mostly about the preparation of the data and less about the contents. For the algorithm, we understand the method well but not the design choices made, and there are many missed opportunities in the evaluation.</p>
+<p>Extended comments:</p>
+<p>The motivation for this work and the rationale for the method they present are made clear in the Introduction and Related Work sections. The dataset — which could have been reported in a publication on its own — is described clearly in Section 4, and is a delightful discovery of the authors. On the other hand, since the dataset is only part of the paper, there is no room to present and discuss an illustrated example, or to discuss basic statistics of the dataset (e.g., number of artists; variety of genres; average segment duration; etc.). How "diverse" datasets are is discussed twice in the paper (line 93, line 238), so the lack of detail here is surprising.</p>
+<p>The explanation of the method (Section 3) was clear, although the rationale for the overtone encoding feature was not clear to me. It seems like many choices were made in designing it that are not discussed or defended. Why 3 overtones? Why randomise their frequency and velocity? Why not linear decay? What exponent of decay was used and why? Was it the same for each overtone? Why or why not?).</p>
+<p>I found Section 5 harder to understand. The ablation study (Section 5.2) was the most interesting part of this section. The evaluation (Section 5.3) was disorienting, since it discusses the results of the baseline algorithms before they are explained (in line 381 and line 395). The audio-based approaches (Section 5.4) described algorithm designs, unofficial iteration, new aspects of prior work (like HPSS), and evaluation strategies, all in a subsection of the "Experiment". I recommend moving the explanation of the analogous audio method earlier, possibly to Section 3. Also, it would be valuable to perform another ablation study on the analogous audio method and report the results.</p>
+<p>Other comments:</p>
+<ul>
+<li>The authors mention that RWC is more diverse than SALAMI, but the SALAMI set is fairly diverse, with lots of jazz, classical and "world" music.</li>
+<li>The word "our" in the section titles "Our Method" and "Our Dataset" is not needed.</li>
+<li>How was the harmonic overtone series encoding inspired by the "Attention is All You Need" paper [27]?</li>
+<li>The analogous audio method and the CBM system are listed as "baselines". Aren't they just competing systems?</li>
+<li>Given that converting MIDI to audio is possible, why not compare the proposal with other audio-based systems like those discussed in [8]?</li>
+<li>The phrase "measure endpoints" (line 255) leads to a garden-path sentence. They could also be called "bar lines".</li>
+<li>When positive examples are oversampled by a factor of 2 (lines 318–9), does this mean each positive example is viewed twice, or that some negative examples are ignored? This could be clarified in lines 340–4.</li>
+</ul>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers agreed that the two main contributions, the dataset and the boundary detection algorithm, were valuable. Outside of that, reviews were mixed: initial reviews ranged from weak reject to strong accept, and each reviewer's constructive comments touched on different parts of the paper.</p>
+<p>Our average recommendation is to accept the paper. If it is accepted, the authors will find valuable suggestions among all of the reviews on how to improve each section of their paper, and on what aspects of the work should be defended better.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper presents a new model for section boundary detection for symbolic music. Besides the model implementation and data representation method, the paper also invented a dataset by filtering out songs from LMD. The dataset preparation process itself is highly novel, carefully manually curated, and described in detail. As far as I know there is not a symbolic structure dataset of this size and quality. I also checked the validity of some annotations by myself, and I could say the dataset itself is highly useful for future works and provides a big bonus for the paper.</p>
+<p>The methodology of the paper also includes high novelty. One question: I think the whole section 3.1 aims to represent the symbolic music in an audio-like format. In this case, a pretrained audio model might be helpful since the downstream data format is close to the pretraining format. But in section 3.2 the author says the model is pretrained from ImageNet instead of audio, which is highly unexpected (but also gives interesting results). I wonder why the author chose this method and whether the author has tried to perform pretraining on audio and fine-tune on symbolic music.</p>
+<p>The experiments are generally sound and the results are very promising. One limitation is that the results on other datasets (like RWC Pop, which has audio-aligned MIDI scores + structure annotation) are not reported. I would suggest to modify/replace Tab 3 with results on other datasets.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper concerns section boundary detection for symbolic music, which can be considered as an early step in music structure analysis. Although most prior work for this task uses audio data, the authors see merit in improving methods that solve this problem in the symbolic domain because:
+a. According to the authors, audio approaches do not best exploit representations of pitch, timing and instrumentation, so it is better to conduct structure analysis of symbolic data in symbolic form rather than to synthesize the files and conduct the analysis in audio. 
+b. They are further motivated due to the potential impact of structural boundary information on quality of the symbolic music generation results, but conducting an experiment to verify this aspect is left as future work. </p>
+<p>To acheive these goals, the authors:
+a) Rely on existing metadata in LMD to create a new annotated dataset for the section boundary detection. The authors manually verify the annotations by visual inspection .
+b) Train several models to classify presence of section boundaries with fixed length windows
+ i. Create 4 training setups and compare their results + the result of an ensemble of them all together
+ ii. One of their training setups involved encoding MIDI instrumentations into a 3 channel piano roll, based on overtone relationships. 
+c) Compare with an audio baseline by synthesizing their midi evaluation set and conducting a parameter search. </p>
+<p>They find that their method achieves an improvement to the audio baseline. </p>
+<p>Overall, the work is interesting and has the potential to become a more solid contribution, but the writing structure and organization of ideas (not the language) has a lot to improve.</p>
+<p>For example, a very big part of the introduction was devoted to the potential positive impact of symbolic section boundary detection on symbolic music generation systems, whereas verifying this is something left as future work. I agree that referring to this aspect is an important motivation but it has taken too much space in the introduction given that it is not a core part of the work presented. Perhaps just a hint of this should be in the intro but much of it can be moved to the discussion section, </p>
+<p>Then, the related work starts by mentioning the best performing system and the related tolerance, without mentioning beforehand how boundary detection is even evaluated. Even prior to that, it would be more readable to explain to readers (who might not be very familiar yet with structure analysis or boundary detection). the difference between hierarchical and non hierarchical approaches and the supervised + unsupervised approaches.</p>
+<p>Another point which is important but not clearly articulated in the introduction and the abstract is the source of the data; the fact that the annotations are based on metadata in LMD that was verified by the authors, and what the motivation was to search through LMD in the first place (which seems to be mentioned in 87 - 103), should be clearer at the start. </p>
+<p>Other comments:
+104 - 110 seems to be yet another motivation for solving this task in the symbolic domain. Perhaps it is more suited for the introduction, or just simply not included in the related work section.
+119 - 120: the manuscript does not discuss related work thoroughly enough.
+245: what is meant by ‘appeared to be a valid segmentation’? I believe this by comparing the ratios and so but perhaps something more rigorous needs to be done. 
+373 - 374: please explain what the output is and how the peak picking method works. </p>
+<p>Although I believe that there could be more insights than what is currently expressed in the paper just by an improvement of the writing structure and an extension to the analysis, I have chosen to reject the paper because in its current form I don't think it is ready to be published yet.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors present an approach for section-boundary detection in symbolic music. In general, the paper is well detailed and clear in the approach. I have some minor comments/questions:</p>
+<ul>
+<li>The authors, inspired by audio spectrograms, add a series of overtones to each note. This is explained with an example in lines 162-172 but, was this consistent for all the training data? Were different amounts and combinations of overtones tested? </li>
+<li>Similarly, please detail the linear decay applied to the overtones.</li>
+<li>Disregarding boundaries that fall within 16 bars of the first and last note seems to be a considerable amount of bars. It is certain that many MSA papers avoid giving details about edge cases, so it is appreciated that the authors of this paper are open about this. However, I see an excellent opportunity to show this effect in either the ablation study or in a separated experiment. Identifying section boundaries "in the middle of a song" is useful, but it also seems to omit an important aspect of structure analysis. The authors briefly mentioned that this issue "can be addressed in future work", which is understandable. Nevertheless, including these edge cases in the accuracy metrics could help to assess the results of the proposed method.</li>
+<li>Lines 369-371: if no peak picking was chosen as a first approach and several consecutive frames exceed the threshold, which one determines the start/end of the section?</li>
+<li>Lines 428-431: what do the authors mean with oversampling positive examples and undersampling negative examples? Is this target smearing and weighting?</li>
+</ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

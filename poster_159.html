@@ -1,0 +1,570 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: IdolSongsJp Corpus: A Multi-Singer Song Corpus in the Style of Japanese Idol Groups</title>
+    
+<meta name="citation_title" content="IdolSongsJp Corpus: A Multi-Singer Song Corpus in the Style of Japanese Idol Groups" />
+
+<meta name="citation_author" content="Hitoshi Suda" />
+
+<meta name="citation_author" content="Junya Koguchi" />
+
+<meta name="citation_author" content="Shunsuke Yoshida" />
+
+<meta name="citation_author" content="Tomohiko Nakamura" />
+
+<meta name="citation_author" content="Satoru Fukayama" />
+
+<meta name="citation_author" content="Jun Ogata" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Japanese idol groups, comprising performers known as &#34;idols,&#34; are an indispensable part of Japanese pop culture. They frequently appear in live concerts and television programs, entertaining audiences with their singing and dancing. Similar to other J-pop songs, idol group music covers a wide range of styles, with various types of chord progressions and instrumental arrangements. These tracks often feature numerous instruments and employ complex mastering techniques, resulting in high signal loudness. Additionally, most songs include a song division (utawari) structure, in which members alternate between singing solos and performing together. Hence, these songs are well-suited for benchmarking various music information processing techniques such as singer diarization, music source separation, and automatic chord estimation under challenging conditions. Focusing on these characteristics, we constructed a song corpus titled IdolSongsJp by commissioning professional composers to create 15 tracks in the style of Japanese idol groups. This corpus includes not only mastered audio tracks but also stems for music source separation, dry vocal tracks, and chord annotations. This paper provides a detailed description of the corpus, demonstrates its diversity through comparisons with real-world idol group songs, and presents its application in evaluating several music information processing techniques.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Timbre, instrumentation, and singing voice" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Sound source separation" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-04: IdolSongsJp Corpus: A Multi-Singer Song Corpus in the Style of Japanese Idol Groups
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Hitoshi Suda" class="text-muted"
+        >Hitoshi Suda</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Junya Koguchi" class="text-muted"
+        >Junya Koguchi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Shunsuke Yoshida" class="text-muted"
+        >Shunsuke Yoshida</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Tomohiko Nakamura" class="text-muted"
+        >Tomohiko Nakamura</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Satoru Fukayama" class="text-muted"
+        >Satoru Fukayama</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Jun Ogata" class="text-muted"
+        >Jun Ogata</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Timbre, instrumentation, and singing voice"
+        class="text-secondary text-decoration-none"
+        >Timbre, instrumentation, and singing voice</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Sound source separation"
+        class="text-secondary text-decoration-none"
+        >Sound source separation</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Japanese idol groups, comprising performers known as "idols," are an indispensable part of Japanese pop culture. They frequently appear in live concerts and television programs, entertaining audiences with their singing and dancing. Similar to other J-pop songs, idol group music covers a wide range of styles, with various types of chord progressions and instrumental arrangements. These tracks often feature numerous instruments and employ complex mastering techniques, resulting in high signal loudness. Additionally, most songs include a song division (utawari) structure, in which members alternate between singing solos and performing together. Hence, these songs are well-suited for benchmarking various music information processing techniques such as singer diarization, music source separation, and automatic chord estimation under challenging conditions. Focusing on these characteristics, we constructed a song corpus titled IdolSongsJp by commissioning professional composers to create 15 tracks in the style of Japanese idol groups. This corpus includes not only mastered audio tracks but also stems for music source separation, dry vocal tracks, and chord annotations. This paper provides a detailed description of the corpus, demonstrates its diversity through comparisons with real-world idol group songs, and presents its application in evaluating several music information processing techniques.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1tT2nLOZoda5AqZ-aRwZmZo17BHMkXLao/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>A few other items might be appropriate to discuss here, especially since the analysis section dovetails into computational musicology analysis of the chord distributions. These are not well known and so it is not surprising the authors would not know them, but still useful:</p>
+<p>[Note first one is in Japanese and requires translation].
+[1] 横山真男, 斉藤勇也, Y. Masao, and S. Youya, “ヒットチャートランキング上位に入る楽曲の特徴分析,” 研究報告音楽情報科学（MUS）, vol. 2015-MUS-106, no. 22, pp. 1–6, Feb. 2015.</p>
+<p>[2] J. Lim, "Gendered Voices in Japanese Popular Music: A Data-Driven Analysis." Order No. 28769325, University of Toronto (Canada), Canada -- Ontario, CA, 2021.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The corpus, while technically small, is very clean and well curated, fostering a fair amount of tasks if one considers data augmentation. For computational musicological analysis it is less useful on account of the small number of songs, but still a valuable contribution to the community for the other tasks mentioned by the authors; many of which are biased by reliance on primarily Western materials.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>The authors release a small but extremely high quality corpus of musical material specifically composed to be in the style of JPOP idol music including audio stems, annotations, lyrics, as well as dry and produced &amp; mastered audio.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Note: While I don't think that ISMIR has had any size restrictions, 3.2Gb for supplementary materials is very large and does not work with Microsoft cmt. For the future, please simply upload one or two examples for illustrative purposes. (FYI reviewers are not obligated to view supplementary materials).</p>
+<p>Review: </p>
+<p>The authors put together a well-written paper outlining a novel (albeit modest) corpus of original music in the style of J-POP idol music. The corpus is small but of extremely high quality on account of the methods for creating it. Not only did they provide great detail about the corpus and how it was assembled, but they went beyond hypothetical use cases to actually provide several demonstrations of the performance of their corpus with stem separation, automatic chord estimation, and lyric transcription. Overall, this is a great paper and I commend the authors on their contribution. I mostly have minor comments on things that would improve the readability of the paper and figures, and the utility of the corpus as well, in particular for computational musicology use. </p>
+<p>Minor details: </p>
+<p>The first paragraph of the introduction is quite weak and "zooms out" too far to basically describe all of MIR. I suggest some restructuring of the intro. In fact, I recommend removing the whole first paragraph -- it seems that the second paragraph could work better as the opening paragraph with some revision.</p>
+<p>LInes 76-77: I assume this is a video technique? What does this sentence add, exactly? Is it relevant?</p>
+<p>Lines 77-79: it's not clear to me what "specialized methods" is referring to.</p>
+<p>Line 99: In psychoacoustics we like to distinguish between auditory (perceptual) phenomena and acoustic (measurable) phenomena. Here "loudness" is an auditory phenomena and I wonder if the authors could consider replacing this with whatever the primary parameter being modulated actually is? (E.g., compression?)</p>
+<p>Line 107-111: Consider removing. (Perhaps I am mistaken but I don't think the reading audience should need additional "proof" of the cultural and musical relevance of JPOP.)</p>
+<p>Line 116: Suggest replacing with "realistic song structure" (since the "division" part is ambiguous at this point. Or else put the "utawari" in parentheses.)</p>
+<p>Lines 123-127: these are 100% cloned from the abstract (or vice-versa). I would suggest some (at least subtle) rewriting.</p>
+<p>Figure 1: It is unclear why only the drums and "other instruments" (guitar, fx, piano) go into the "stems for music source separation"? Obviously the paper talks about the vocals for stem separation but this doesn't seem to be reflected in the figure? (vocals only go to 'master bus w/o limiter' in the diagram).</p>
+<p>Lines 225-228: Could we have a bit more info on the chord annotations? Most papers that work in chord labels or have provided expert labels will note problems of ambiguity, etc. How many annotators per song? Were at least some songs done in duplicate to examine differences, etc.? Also, in my professional experience there is no such thing as a "professional annotator"? So I assume the authors are referring to someone who got paid to annotate (and who would be qualified to do so)? Some clarification on this methodology would be very helpful for people hoping to use the chord labels with confidence.</p>
+<p>Lines 229-238: Very nice to put this right in the paper! Often people forget to even put it in their github repos! However, I would suggest moving it to the end of the paper under a "License/Usage" subsection?</p>
+<p>Figure 5: Could the authors kindly clarify the difference between the chords being evaluated in "MIREX" versus "MIREX4"? (I presumed the latter was a subset of the former but then the outcome would be odd.) Likewise, a "tetrad" is merely any 4-note chord, which is not defined here but presumably would overlap with both "sevenths" and "MIREX4" yet the outcomes are quite different. Please clarify.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All reviewers were in agreement about the strength of the contribution of this paper to our community, as well as the novelty and quality of the work itself. Two reviewers pointed out some flaws related to the experiments conducted as "tests" of the dataset. Specifically, Reviewers #1 and #2 both independently pointed out the problem with many mastering effects being non-linear, and that applying the same parameters to individual stems may be technically inaccurate. </p>
+<p>We strongly encourage the authors to include a statement acknowledging the issues related to separation of mastered music, as pointed out by Reviewer 3, and to amend to the paper how a possible solution to this issue would be "future work". This would strengthen the paper significantly.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>In this paper, the authors propose the IdolSongsJP corpus, a collection of songs in the style of Japanese idol groups. Overall, the paper is well-written, easy to read, and presents a much-needed contribution to the academic community. I think there is a flaw in the experiment regarding the separation of mastered music but since this paper's contribution is much more impactful to the community, I recommend this paper as 'weak accept'. My comments are as follows:</p>
+<p>Strengths:</p>
+<ol>
+<li>Curating and publicly releasing datasets is a time-consuming and costly endeavor, so I greatly appreciate the authors’ efforts. This is a tremendous asset for the MIR community. </li>
+<li>While similar to MedleyDB [1], this corpus is distinctive in that it focuses on idol songs. Also, it takes mastering effects into account. This better reflects the characteristics of real-world commercial music. Additionally, for the vocal tracks, raw stems before the application of effects are included, making it potentially valuable for future multi-singer separation research.</li>
+<li>The authors go beyond simply providing data by conducting benchmark experiments for several applications such as music source separation, automatic chord estimation, and lyrics transcription. Especially in Section 6, they offer detailed performance analysis, such as pointing out hallucination issues with Whisper.</li>
+</ol>
+<p>Comments:</p>
+<ol>
+<li>While the introduction is generally well written, there are some parts that could be misleading. For example, in lines 52–53, musdb is described as lacking numerous tracks of both instruments and vocals. This is not entirely accurate for all tracks in musdb. A better phrasing might be to emphasize that the IdolSongsJP corpus more clearly reflects the characteristics of modern commercial idol music, where all songs consist of numerous tracks.</li>
+<li>In lines 61–62, the authors mention overlapping vocal separation [2] and the jaCappella corpus [3], but they should not omit MedleyVox [4], which also addresses multi-singer separation in popular music. Furthermore, its original version, MedleyDB [1], should also be mentioned since it is another representative multi-track corpus consisting of the multiple singer tracks with the individual instrumental tracks.</li>
+<li>Lines 107–111 (e.g., "received the Best Lyrics Award") seem unnecessary. The idea that idol group songs are an indispensable part of Japanese pop culture is sufficiently convincing without this example.</li>
+<li>Regarding lines 166–169, I believe it's quite rare for creators to prepare a low-loudness version specifically for online platforms. Mastering at lower loudness is not as simple as reducing the limiter; it often involves rebalancing via EQ and other processing on the master bus— it is a second round of mastering. Therefore, professionals usually finish mastering targeting high loudness levels and simply submit those tracks to streaming platforms. Platforms like YouTube and others perform loudness normalization (e.g., to -14 to -16 LUFS) by reducing gain. Of course, some artists release less-compressed version for CD release by the way. </li>
+<li>Related to the previous point, in lines 293–299, it is crucial to clarify the target LUFS level used for mastering in this corpus. If tracks were originally mastered at -9 LUFS and then simply made louder by adjusting the gain, the balance between instruments would change unless EQ and dynamics parameters were also adjusted. Saying the tracks were made louder merely by tweaking gain parameters could be misleading. A more technically accurate description would be: the tracks were mastered at -9 LUFS, and additional loudness was achieved by gain adjustment, not by full re-mastering.</li>
+<li>In lines 300–302, the authors should specify exactly what kinds of mastering effects were applied—e.g., limiter, EQ, imager, distortion, compressor, etc. To my understanding, parameter settings for these effects are not included in the corpus. Assuming the project files for each song still exist, a future extension of the corpus (possibly via a separate paper or journal extension?) including such information could contribute to research on automatic mixing and mastering.</li>
+<li>In lines 303–307, it is stated that the same mastering effects were applied to individual stems. However, many mastering effects (except EQ) are non-linear, so applying the same parameters to individual stems may be technically inaccurate. In the case of limiters or compressors, [5] already proposed a method to calculate the sample-wise gain ratio between the input mixture (summation of stems before applying limiter) and the limiter-applied mixture, which can then be used to derive ground-truth stems. If such considerations were included, this should be clearly stated. If not, they should be addressed for the camera-ready version. I understand that the schedule for additional experiments would be very tight so at least I STRONGLY recommend that at least the authors include the limitation of the current experimental setting. For imagers, a different method may be required, and I am unsure if such a method or related research currently exists.</li>
+</ol>
+<p>[1] Bittner, R. M., Salamon, J., Tierney, M., Mauch, M., Cannam, C., &amp; Bello, J. P. (2014, October). Medleydb: A multitrack dataset for annotation-intensive mir research. In Ismir (Vol. 14, pp. 155-160).
+[2] D. Petermann, P. Chandna, H. Cuesta, J. Bonada, and E. Gomez, “Deep learning based source separation ap- plied to choir ensembles,” in Proc. 21st International Society for Music Information Retrieval Conference (ISMIR 2020), 2020. 
+[3] T. Nakamura, S. Takamichi, N. Tanji, S. Fukayama, and H. Saruwatari, “jaCappella Corpus: A Japanese a cappella vocal ensemble corpus,” in Proc. 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023, pp. 1–5. 
+[4] Jeon, C. B., Moon, H., Choi, K., Chon, B. S., &amp; Lee, K. (2023, June). Medleyvox: An evaluation dataset for multiple singing voices separation. In ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 1-5). IEEE.
+[5] Jeon, C. B., &amp; Lee, K. (2022, December). Towards robust music source separation on loud commercial music. In Ismir 2022 Hybrid Conference.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Main Comments:
+1. The paper was well written and easy to follow.
+2. I think the authors could have emphasized the novelty of their corpus much more, especially in comparison to other multi-singer and J-pop corpora. I know that a key characteristic of this corpus is that it is free to share without copyright restrictions and open for non-commercial use, but beyond that, what improvements does it make upon prior work? Is it the loudness criteria and mastering chain? More details about very similar previously published corpora would strengthen the value added by this dataset to the MIR research community.
+3. The dataset is described in detail, but I am confused by some of the design choices:
+- Why are the audio signals being saved as 32-bit float? I believe that 24-bit should be sufficient and would consume a lot less memory. Do you foresee any advantage in using a higher bit depth in terms of the results of the various MIR applications?
+- For clarification, are all tracks stereo? Was there any artificial stereoizer used in the FX chain? What kinds of bus FX were used in the stems?
+- I found the description of solo version tracks very confusing (lines 218-224). Was it the same singer throughout the entire track? This part should be revised to be much clearer.
+4. I did not understand what exactly was meant by lines 236-238 regarding the instrumental tracks. Does this mean that only the full tracks or vocals only can be used for training ML models? Why is there a restriction on using the instrumentals?
+5. In Section 4, the "same mastering effects" (line 304) were applied to the individual stems to match the "acoustic characteristics" of the final mastered version (input mixture), so were those used as the reference stems for computing the SDR? If so, I don't think this is a fair comparison. Some of the FX in the mastering chain, e.g. limiters, are not LTI (specifically, linear) systems, so applying the same FX to the original stems does not directly replicate the separated versions of the input mixture (the mastered tracks). Audibly, the difference will be minor, but in terms of computing SDR, this would affect the accuracy of the reported results. I encourage the authors to look into this further and justify why they think this is the correct approach for this experiment.</p>
+<p>Minor Comments:
+- Lines 28-39: This is a very generic overview of MIR and could be more concise and/or more specific to the topic of the paper.
+- Lines 107-111: I would remove this sentence.
+- Line 180: As mentioned in Comment #3 above, justify the use of 32-bit.
+- Line 262-263: I didn't understand the justification of only using female group songs due to "Japanese trends"; this claim requires more information to support it.
+- Line 309: State that you are evaluating the separation results using SDR, even if it's obvious from the figure.
+- Lines 317-323: HT Demucs was trained on MUSDB + other songs, which contains different styles of music. I don't think we can necessarily conclude that the poor SDR results are due to the loudness of the tracks. If none of the tracks in the training set were mastered, I think these results are very much expected. Maybe this part could be written more convincingly.
+- Lines 370-373: What do these chord estimation results say about this corpus specifically? Chord estimation is an open topic, so I think this section should focus more on how including the chord annotations is beneficial to future research.
+- Line 383: I am assuming that ASR methods were used due to the existing ALT models processing only English? If this is the case, identifying this gap would be important as this is something this corpus could address.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper introduces a very high-quality, Japanese idol songs dataset for various MIR tasks such as source separation, lyrics transcription, chord recognition, and so on. By listening to the provided samples, the dataset looks well-formatted and has great potential to apply to tasks beyond those mentioned in the paper. In addition, since it's well-known that J-pop/Anisong tends to favour chord progressions that are less common in mainstream Western music, which is somehow verified in the paper, the addition of IdolSongsJp can significantly increase the diversity of already Western-dominant MIR datasets (with extra icing of Idol sub-culture research on the cake). I enjoy reviewing this great work while listening to the provided idol songs.</p>
+<p>Although the current writing is fine, the introduction section can be structured better. The current structure reads like keeping going from this task to the other task (first source separation, then singer diarization, active music listening, etc.), which the readers could easily lose focus on. A better format could be 1) focusing on one task/topic per paragraph (and state it clearly in the beginning!), and 2) when introducing a new task/topic, show how the proposed dataset is connected to it. Tasks that will not be the paper's primary focus can be merged into one paragraph. In this way, the dataset is always at the centre of discussion and gets full attention from the readers.</p>
+<p>When discussing source separation on singing voice, the author should mention and compare the MedleyVox dataset. IdolSongsJp could be very useful in the choir/unison voice separation task, which I suggest the author emphasise more. Especially unison separation, since each song has a solo version sung by more than five singers, with all the available combinations, it will be the largest public dataset for this task. I recommend the author compute the total length of vocal tracks and compare it to MedleyVox, where I think the difference will be huge.</p>
+<p>Since the dataset provides versions at different stages of the mixing process, the paired dry and wet tracks could be used for blind audio effects/mixing graph inversion and estimation. As far as I know, this will probably be the first publicly available dataset with paired data to this level of detail. I recommend briefly mentioning this and citing relevant papers (e.g., GRAFx) to have more impact.</p>
+<p>Minor nit suggestions and questions:</p>
+<ul>
+<li>"f_o" =&gt; "f_0". Just like Gundam 00 is written with zeros, not "OO".</li>
+<li>What are the dots in Figure 3? Please explain it in the caption.</li>
+<li>It would be better if the author uploaded listening materials to other websites and provided an anonymous link instead of putting them on CMT, which has a very slow download speed and wasn't designed to host large files.</li>
+<li>Could add a section at the end discussing ethical considerations related to the dataset, like: what license was agreed on when recruiting the singers, any ethical issues if somebody misuses the data, etc.</li>
+</ul>
+<p>Regarding reference entries format:
+Please add the DOI of the MUSDB18 dataset [21, 22], as recommended on their websites. Avoid citing pre-prints if they have a corresponding published version, e.g., MoisesDB was published in ISMIR 2023 proceedings.</p>
+<p>References:
+Jeon, Chang-Bin, et al. "Medleyvox: An evaluation dataset for multiple singing voices separation." ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2023.
+Lee, Sungho, et al. "Searching for music mixing graphs: A pruning approach." arXiv preprint arXiv:2406.01049 (2024).</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,534 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: CoDiCodec: Unifying Continuous and Discrete Compressed Representations of Audio</title>
+    
+<meta name="citation_title" content="CoDiCodec: Unifying Continuous and Discrete Compressed Representations of Audio" />
+
+<meta name="citation_author" content="Marco Pasini" />
+
+<meta name="citation_author" content="Stefan Lattner" />
+
+<meta name="citation_author" content="George Fazekas" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Efficiently representing audio signals in a compressed latent space is critical for latent generative modelling. However, existing autoencoders often force a choice between continuous embeddings and discrete tokens. Furthermore, achieving high compression ratios while maintaining audio fidelity remains a challenge.  We introduce CoDiCodec, a novel audio autoencoder that overcomes these limitations by both efficiently encoding global features via summary embeddings, and by producing both compressed continuous embeddings at ~11 Hz and discrete tokens at a rate of 2.38 kbps from the same trained model, offering unprecedented flexibility for different downstream generative tasks. This is achieved through Finite Scalar Quantization (FSQ) and a novel FSQ-dropout technique, and does not require additional loss terms beyond the single consistency loss used for end-to-end training. CoDiCodec supports both autoregressive decoding and a novel parallel decoding strategy, with the latter achieving superior audio quality and faster decoding. CoDiCodec outperforms existing continuous and discrete autoencoders at similar bitrates in terms of reconstruction audio quality. Our work enables a unified approach to audio compression, bridging the gap between continuous and discrete generative modelling paradigms.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Music and audio synthesis" />
+
+<meta name="citation_keywords" content="Transformations" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-08: CoDiCodec: Unifying Continuous and Discrete Compressed Representations of Audio
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Marco Pasini" class="text-muted"
+        >Marco Pasini</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Stefan Lattner" class="text-muted"
+        >Stefan Lattner</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=George Fazekas" class="text-muted"
+        >George Fazekas</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music and audio synthesis"
+        class="text-secondary text-decoration-none"
+        >Music and audio synthesis</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Transformations"
+        class="text-secondary text-decoration-none"
+        >Transformations</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Efficiently representing audio signals in a compressed latent space is critical for latent generative modelling. However, existing autoencoders often force a choice between continuous embeddings and discrete tokens. Furthermore, achieving high compression ratios while maintaining audio fidelity remains a challenge.  We introduce CoDiCodec, a novel audio autoencoder that overcomes these limitations by both efficiently encoding global features via summary embeddings, and by producing both compressed continuous embeddings at ~11 Hz and discrete tokens at a rate of 2.38 kbps from the same trained model, offering unprecedented flexibility for different downstream generative tasks. This is achieved through Finite Scalar Quantization (FSQ) and a novel FSQ-dropout technique, and does not require additional loss terms beyond the single consistency loss used for end-to-end training. CoDiCodec supports both autoregressive decoding and a novel parallel decoding strategy, with the latter achieving superior audio quality and faster decoding. CoDiCodec outperforms existing continuous and discrete autoencoders at similar bitrates in terms of reconstruction audio quality. Our work enables a unified approach to audio compression, bridging the gap between continuous and discrete generative modelling paradigms.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/19FJvtyYjJhSpsm-Tu2yguh7X_qhJECAg/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>See below</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Using quantization as dropout works and works well.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The authors present extentions for the Music2Latent2 representation which is typically used in systems for generating music. A main contribution is the addition of a quantizer dropout bottleneck, which enables parallel training for continous and discrete representations, as well as a parallel decoding mechanism, which accelerates the previous autoregressive decoding scheme. Evaluation results indicate competitive or stronger results than competing solutions.</p>
+<p>Overall, a strong paper. A lot of detail, well written, concise, comprehensive, gives insights and shoes clearly that the authors know what they are talking about.</p>
+<p>Yet, there are also issues:</p>
+<p>My main concern is that little attention is given to the modelability, sometimes called diffusibility, of the representation in comparison to others. Latent representations face a tradeoff between compression rate, reconstruction quality and modelability, where the latter means that we often increase the capacity in the latent network, but pay for it by the fact that a music generator model needs to 'unpack' the resulting non-linearity and complexity from doing so, requiring either additional capacity there or leading to difficulties training such a system. Ignoring modelability it is much easier to obtain very competitive compression rates. While there is an experiment that looks into training a generative downstream model, the results are only compared between the quantized and non-quantized version of the proposed system. That does not indicate how the proposed system compares to Music2Latent2 or other competing latents with respect to quality of generation results given a certain capacity in the network. This is especially important as the new version focused much more on transformer layers in the latent and dials back on convolutive layers, while most image and video compression systems employ convolutive layers only to limit the non-linearity of the network to increase modelability.</p>
+<p>The second biggest issue is the lack of a listening test. Maybe FAD-clap improves upon standard FAD, but FAD's correlations with listening tests is so low that I don't expect FAD_clap to be much more informative.</p>
+<p>Another issue is that Stable Audio Open, prepresenting the most standard VAE based approach, which is pretty much the standard in almost all image and video generation systems, was not trained on vocals at all. Hence any test material using vocals will naturally be significantly worse, as vocals are unlike any other instrument. Hence a version of Stable Audio Open trained on material using vocals should create significantly better metrics than what is shown here.</p>
+<p>Some minor comments:</p>
+<p>Line 167: "Our model uses CT, allowing for training in isolation without a pretrained teacher model." But line 177 clearly states that a teacher model is used. This should be clarified, including where the teacher model is coming from, and how and for what it was trained. 
+Line 177: While it's clear that you don't want to update the teacher, the notation used here does not make that clear to someone who does not that know yet. 
+Line 363: Why did you use a single, fixed value for N? This looks like a clear candidate for an ablation. Space issues?</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper introduces a technically sophisticated extension of the Music2Latent2 system, proposing a unified framework that supports both continuous and discrete latent representations through the novel use of FSQ-dropout. The authors further enhance the model by implementing a parallel decoding strategy to speed up generation, all while achieving competitive performance metrics in terms of reconstruction quality and compression rates.</p>
+<p>The submission has received a strong consensus from reviewers, with three assigning a “strong accept” and one offering a “weak accept.” All reviewers acknowledge the paper’s clarity, soundness, and relevance to the ISMIR community. The writing is well-structured and the methodology is well-grounded, reflecting the authors’ expertise and the maturity of the research.</p>
+<p>Strengths
+Technical Contributions: The introduction of FSQ-dropout is seen as an impactful and broadly applicable innovation. The approach enables the simultaneous training of models with both continuous and discrete representations, a practical feature with wide utility across audio synthesis and compression.</p>
+<p>Parallel Decoding: The paper’s proposal to replace autoregressive decoding with a faster, parallel alternative is well-received, offering significant improvements in generation speed, though with minor trade-offs.</p>
+<p>Reusable Insights: All reviewers highlight that the paper provides valuable, generalizable insights — including detailed ablations for multiple architectural components — which could serve as a foundation for future research in MIR and related fields.</p>
+<p>Comprehensive Evaluation: Although there are some caveats, the experimental section convincingly demonstrates the efficacy of the proposed model. Audio examples and ablations further support the validity of the results.</p>
+<p>Areas for Improvement
+Modelability of Latent Representations: The meta-reviewer and Reviewer #1 raise concerns about the paper’s limited attention to modelability — a critical trade-off in latent design. There is a need for deeper comparative analysis on how the proposed representations fare in terms of generative ease and network complexity relative to alternatives like Music2Latent2 or VAE-based systems.</p>
+<p>Perceptual Evaluation: The absence of listening tests is repeatedly noted. While the authors rely on FAD and its derivative metrics, several reviewers express skepticism regarding their correlation with human perception. Alternative metrics like KAD or actual listening tests would strengthen the evaluation.</p>
+<p>Reproducibility Concerns: Two reviewers highlight that the paper does not fully meet reproducibility standards, particularly due to the use of proprietary datasets or unclear documentation regarding training procedures.</p>
+<p>Clarifications and Minor Issues: There are a few inconsistencies and unclear points — such as the role of the teacher model, fixed hyperparameter choices, and citation formatting — that should be addressed in the camera-ready version.</p>
+<p>Final Recommendation
+Given the innovative methodological contributions, clear presentation, and strong practical implications, this paper stands out as a valuable addition to ISMIR 2025. While there are areas that warrant further clarification or empirical rigor, they are outweighed by the strengths and the potential impact of the work. Therefore, the final recommendation is Accept.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper presents an evolution of a recent autoencoder Music2Latent2 that uses drop out of the quantizer stage of a Finite Scalar Quantizer to allow producing a continuous and discrete latent representation with a single model. Addtionally the paper introduces a new parallel decoding strategy for the Music2Latent2. </p>
+<p>Overall I consider the presentation clear and the argumentation convincing. The experimental evaluation demonstrates improvement compared to the Music2Latent2 model, which besides the quantization strategy appears to be similar in the overall structure.</p>
+<p>I have a problem with the presentation of the novelties, which appear a little bit distorted</p>
+<p>The introduction fails to mention [36], which is later mentioned under FSQ-dropout. I think [36] needs to appear in the introduction. They report to be able to trade of quality and code size during inference. This then slightly changes the perception of the novelties concerning FSD. It can probably be said the at the drop out stragey is new, and switching between discrete and continuous codes has never been investigated before. The sue of summary embeddings with Music2Latent2 have been introduced in [18] and should therefore not appear under "introduce a new model" in the introduction.</p>
+<p>Another problem for me is that the authors somewhat misleadingly claim to improve over existing continuous and discrete autoencoders in terms of reconstruction quality measured by FAD (line 88). 
+I would caution that FAD does not measure reconstruction quality. It measures similarity in an embedding-space. It is sometimes used as a proxy for perceptual quality, but it is not appropriate to say that this measures reconstruction quality. Indeed it frequently happens that a model with a lower FAD is perceived to have lower quality than a model with a higher FAD. </p>
+<p>In the present case without percetopual tests, SISDR appears to be a better metric for quality. When compared to Stable Audio Open the proposed model does not perform that well. On one hand the proposed model compresses stronger, so I think we cannot conclude anything here. On the other hand there is alos a difference in the training losses. While the present study uses a single loss for consistency training, stable audio open uses reconstruction loss and adversarial loss. Given reconstruction loss is part of the training of stable audio this might favor lower SISDR.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper combines many techniques to train a strong audio codec. They test the following:
+- FSQ dropout
+- scaling transformer architectures
+- Consistency loss
+- Parallel decoding
+- Random mixing</p>
+<p>The results are impressive and the audio samples are appreciated. The promised code release would benefit the ISMIR community.</p>
+<p>I appreciate the ablations for each technique, providing general knowledge others can utilize.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Overall, the paper is well-organized and clearly written. It introduces a novel approach to unify the generation of both continuous and discrete representations within a single model using a technique called FSQ-dropout (which closely resembles an approach in [36]). Additionally, similar to Music2Latent2, the method incorporates summary embeddings to enhance the system's compression capabilities while improving its architectural design. The paper also proposes an alternative parallel decoding strategy to replace standard autoregressive decoding, offering improved decoding speed (albeit with the trade-off of requiring multiple generation steps rather than just one). The proposed model achieves a higher compression ratio than baseline methods while maintaining strong reconstruction fidelity.</p>
+<p>The model is trained on a mixture of music, speech, and general audio data. However, the evaluation focuses solely on music reconstruction, leaving open the question of the model's robustness on speech and other types of audio. Furthermore, it is unclear whether the full MusicCaps dataset was used for evaluation or just a subset. The authors state that they manually verified none of the evaluation samples overlap with the training data, an approach that may be difficult to scale. As noted in the paper "KAD: No More FAD! An Effective and Efficient Evaluation Metric for Audio Generation", FAD is sensitive to sample size. It would also be valuable to see evaluation results using KAD, which has demonstrated stronger alignment with human perception and is not sensitive to sample size.</p>
+<ul>
+<li>
+<p>Minor grammar issue: Line 498: "inevitable" should be "inevitably"</p>
+</li>
+<li>
+<p>References:</p>
+</li>
+<li>Several references are cited as arXiv preprints instead of their corresponding conference proceedings. For example: [2] TMLR 2023, [3] &amp; [4] NeurIPS 2023, [9] ICLR 2021, [14] ICML 2024, [15] ISMIR 2024, [16] ICASSP 2025...</li>
+<li>Citation [35]: The conference name is missing (should be ICLR 2025).</li>
+</ul>
+<p>Overall, I recommend this paper for acceptance.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

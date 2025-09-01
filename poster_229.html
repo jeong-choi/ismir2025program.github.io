@@ -1,0 +1,610 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: A Fourier Explanation of AI-music Artifacts</title>
+    
+<meta name="citation_title" content="A Fourier Explanation of AI-music Artifacts" />
+
+<meta name="citation_author" content="Darius Afchar" />
+
+<meta name="citation_author" content="Gabriel Meseguer Brocal" />
+
+<meta name="citation_author" content="Kamil Akesbi" />
+
+<meta name="citation_author" content="Romain Hennequin" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="The rapid rise of generative AI has transformed music creation, with millions of users engaging in AI-generated music. Despite its popularity, concerns regarding copyright infringement, job displacement, and ethical implications have led to growing scrutiny and legal challenges. In parallel, AI-detection services have emerged, yet these systems remain largely opaque and privately controlled, mirroring the very issues they aim to address. This paper explores the fundamental properties of synthetic content and how it can be detected. Specifically, we analyze deconvolution modules commonly used in generative models and mathematically prove that their outputs exhibit systematic frequency artifacts -- manifesting as small yet distinctive spectral spikes. This phenomenon, related to the well-known checkerboard artifact, is shown to be inherent to a chosen model architecture rather than a consequence of training data or model weights. We validate our theoretical findings through extensive experiments on open-source models, as well as commercial AI-music generators such as Suno and Udio. We use these insights to propose a simple and interpretable detection criterion for AI-generated music. Despite its simplicity, our method achieves detection accuracy on par with deep learning-based approaches, surpassing 99\% accuracy on several scenarios.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="Philosophical and ethical discussions" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Music signal processing" />
+
+<meta name="citation_keywords" content="Ethical issues related to designing and implementing MIR tools and technologies" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-01: A Fourier Explanation of AI-music Artifacts
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Darius Afchar" class="text-muted"
+        >Darius Afchar</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gabriel Meseguer Brocal" class="text-muted"
+        >Gabriel Meseguer Brocal</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Kamil Akesbi" class="text-muted"
+        >Kamil Akesbi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Romain Hennequin" class="text-muted"
+        >Romain Hennequin</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Philosophical and ethical discussions"
+        class="text-secondary text-decoration-none"
+        >Philosophical and ethical discussions</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music signal processing"
+        class="text-secondary text-decoration-none"
+        >Music signal processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Ethical issues related to designing and implementing MIR tools and technologies"
+        class="text-secondary text-decoration-none"
+        >Ethical issues related to designing and implementing MIR tools and technologies</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented Virtually
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        10-minute long-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>The rapid rise of generative AI has transformed music creation, with millions of users engaging in AI-generated music. Despite its popularity, concerns regarding copyright infringement, job displacement, and ethical implications have led to growing scrutiny and legal challenges. In parallel, AI-detection services have emerged, yet these systems remain largely opaque and privately controlled, mirroring the very issues they aim to address. This paper explores the fundamental properties of synthetic content and how it can be detected. Specifically, we analyze deconvolution modules commonly used in generative models and mathematically prove that their outputs exhibit systematic frequency artifacts -- manifesting as small yet distinctive spectral spikes. This phenomenon, related to the well-known checkerboard artifact, is shown to be inherent to a chosen model architecture rather than a consequence of training data or model weights. We validate our theoretical findings through extensive experiments on open-source models, as well as commercial AI-music generators such as Suno and Udio. We use these insights to propose a simple and interpretable detection criterion for AI-generated music. Despite its simplicity, our method achieves detection accuracy on par with deep learning-based approaches, surpassing 99\% accuracy on several scenarios.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1qkNSmq3r5wVmyNakbZrfM2KN6owNgi_o/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Strongly Agree (Very novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>Rather than developing a blackbox model to detect AI-generated music, this paper instead tries to understand the theory behind the artifacts from neural codecs. This provides more understanding of where these artifacts come from.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Modern AI music generators leave predictable artifacts in the music's spectrum; these artifacts can be understood from a Fourier analysis of the deconvolution operation.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>Yes</p>
+<p><strong>Q18 ( If yes, please explain why it should be awarded.)</strong></p>
+<p>A few reasons come to mind: (a) The problem this paper tackles is very timely and relevant to our community, (b) rather than simply training a blackbox model, this paper offers insight and understanding into the problem based on a thoughtful analysis of modern AI music generation architectures, and (c) it further validates the theory by running experimental simulations and developing a simple, elegant, yet effective discriminator. It is also very well written. A delight to read!</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Some of the paper’s strengths:
++ The problem that this paper tackles is very timely and relevant. A large dataset for detection of AI-generated music was only recently proposed at ICLR this year. This is a new task that has only been recently studied, and this paper makes a substantial contribution to the topic.
++ The paper proposes a very simple, elegant, and effective method for detecting AI-generated music when the architecture uses deconvolution modules (as most do today). The performance is on par with much bigger models, but is interpretable and compact. And the absolute performance is very high (&gt;99%).
++ More importantly, the paper offers insight and understanding into the nature of the artifacts in AI-generated music. Rather than simply training a blackbox model that performs effective classification, this model sheds light on the reasons for the artifacts. Often research papers do not provide this kind of insight, so I applaud the authors for their work. This paper was a delight to read!
++ The paper validates the theory with empirical analysis of recent datasets and popular AI-generators, including commercial generators like Suno and Udio. I also appreciate that the authors were upfront and transparent about the limitations of their analysis, and where empirical simulation is needed. The empirical results also bring up some interesting questions (like why the discriminator works so well even when the spectral peaks do not appear).
++ The paper is well written. Even as someone with a background in signal processing, there are parts of the paper that are quite dense. But the authors did a good job explaining the key concepts in a concise manner.</p>
+<p>A few suggestions for improvement:
+- One question I have is, does this only apply to waveform-based 1-D CNN models (as opposed to models that work with a spectrogram and then invert it back to the time-domain as a separate stage/step)? I think it is important to explicitly define the boundaries of what this analysis pertains to.
+- It would be helpful to provide more details when describing the artifact fingerprint (last paragraph of section 4.1). Even though it is not the main focus of the paper, future researchers may want to compare their models to the approach described in this paper. I would recommend including a few sentences explaining the FFT analysis window size (does it depend on the sampling rate?), how the averaging is done (I assume it is averaging the DFT magnitudes over all analysis windows, but this was not explicitly described), etc. Of particular note, I did not understand this phrase (line 368): “subtract local minima of the spectrum over sliding windows”. A more detailed and comprehensive explanation here would be helpful.
+- Line 148: there is a typo in the equation for convolution – the t(t-tau) should be r(t-tau).
+- In line 104-105, it is claimed that “One difference is that we do not find this artifact related to kernel overlap, but to spectral periodization.” A similar statement is also made in line 220-221. Aren’t these describing the same phenomenon, but just in different domains (time vs frequency)? Either this needs to be explained more fully, or the language should be softened or adjusted (e.g. “This provides a Fourier domain perspective that compliments…”).
+- In lines 289-292, I would recommend using either subscripts or put superscripts in parentheses. Right now the notation looks like k raised to the (i+1) power.</p>
+<p>This paper raises many interesting questions, so I look forward to seeing the authors’ future work!</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers discussed the strengths and weaknesses of the paper, which we summarize below.
+Strengths
+• The paper tackles a very relevant and timely topic: detecting AI-generated music. This topic has only been explored very recently due to the rise of commercial services for generating music.
+• The paper investigates what a deconvolution layer does through the lens of Fourier analysis. Based on this reasoning, it points out that deconvolution layers leave predictable artifacts in the spectrum.
+• Based on this argument, the paper then conducts experiments to show that a very simple logistic regression model can be used to detect AI-generated music. It shows very strong results that are on par with deep learning models. This is a very surprising and unexpected result. This model is interpretable, well motivated by theory, and shows strong empirical results on both academic and commercial AI-music generators. The authors also show that the artifacts are consistent, even when training data or seeds vary.
+• Many reviewers commented that the paper was a very interesting and enjoyable paper to read.</p>
+<p>Weaknesses and suggestions for improvement:
+• The current manuscript is very dense and several reviewers commented on having to read it several times before being able to understand it. There was a consensus among reviewers that a complete description of the theory would be difficult to fit into a short conference paper, so our recommendation is to focus more on the practical side of proposing a simple approach to detecting AI-generated music. We encourage the authors to also write a more complete journal article in which the ideas can be fully fleshed out and described more rigorously and comprehensively.
+• Some aspects of the paper were confusing to reviewers: (a) Figure 1 was very confusing to multiple reviewers and needs to be explained more clearly. (b) The manuscript has uneven coverage of requisite background knowledge. For example, space is given to describing basic Fourier definitions, but more advanced concepts like deconvolution and the equivalence of zero-padding in time and spectral interpolation are not reviewed or explained. (c) Section 3 can be polished quite a bit, and section 4 can be developed more fully (especially the description of the artifact fingerprint). However, given our recommendation above to focus on the practical side of proposing a simple way to detect AI-generated music, the authors may wish to omit some content and save it for an extended journal article on this topic.
+• We urge the authors to clarify that the “checkerboard” effect is not a novel insight of the paper, and to explain that the novelty in this paper is in exploiting this phenomenon to detect AI-generated music. 
+• There was a request to replace non peer-reviewed sources with more peer-reviewed sources where possible, especially on the “checkerboard” artifacts.</p>
+<p>It should be mentioned that the reviewers were not able to come to a consensus: three reviewers felt very enthusiastic about the insight and impact of this paper, and one reviewer felt that the shortcomings in the presentation of content were severe enough to warrant a rejection. Since three reviewers nominated the paper for a best paper award, we have retained a joint recommendation of “strong accept” and ask the authors to consider the reviewers’ suggestions to focus more on the practical application and leave more extensive treatment for an extended journal article.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>General comments:
+- This is a very interesting article, I personally enjoyed reading it. I love the use of basic signal processing techniques to solve such a problem (it reminded me of works done for audio codec detection). It shows that not every problem needs "training" to be tackled. My main suggestions would be to polish section 3 (see details below) and develop a bit section 4, perhaps spent less time on the theory and more on the practice, as I think the reader can get the gist of the approach (you can refer to particular references for more details) but they would be more interested in the practicality of it. You could expand on the theory in a journal article for example! I would also proofread everything as there are times it feels that the authors rushed to write some parts, the text feels too linear, there are distracting typos; some rephrasing here and there would really make the article look better. Thank you for your work!</p>
+<p>Detailed comments:</p>
+<ol>
+<li></li>
+<li>
+<p>I understand the appeal to show that quote from the CEO of Suno, but not only it is a very debatable statement (I personally disagree with it), but he most likely said that to make a point for people to use his technology. My point is that it is certainly not a fact but an opinion, so I am not sure it has value being shared here.</p>
+</li>
+<li>
+<p>I believe both Suno and Udio got sued.</p>
+</li>
+<li></li>
+<li>
+<p>Could you briefly explain here what spectral periodization is?</p>
+</li>
+<li></li>
+<li>
+<p>Spectrograms are not being used because they "better align[s] with the human ear's perception," but because they are a convenient visual representation of a signal (audio or not); some spectrograms do align better with the human perception of sounds, such as the CQT-based spectrogram. I think this whole paragraph could be rephrased better. You don't have to motivate the use of the FT from the audio spectrogram; FT are commonly used for non-audio inputs, including images. I would also clarify the following statement: "Our overall proof sketch is to show that deconvolution operation periodize the spectra of hidden layers, hence creating peaks by tiling the constant component of the signal."</p>
+</li>
+<li>
+<p>"Since not all of the ISMIR community is familiar with signal processing techniques, ..." I think it's not necessary to mention this. This article will (hopefully!) reach to other communities as well, so perhaps do not specifically target the ISMIR community :)</p>
+</li>
+<li>
+<p>I would be careful when talking about convolution in the context of CNNs. The convolution operation in a CNN is more accurately a cross-correlation; while the FT of a convolution is equal to the point-wise multiplication of the FTs (as per the convolution theorem), the FT of a correlation will involve a complex conjugate. </p>
+</li>
+<li>
+<p>What happens to the parameter k when going from the deconvolution with stride k to the zero-completion+1-strided convolution in Figure 1?</p>
+</li>
+<li>
+<p>Typo: "We have seen that a the zero-upsampling of a ..."</p>
+</li>
+<li>
+<p>Footnotes 2 and 3 could be in the text. This is actually the core of your approach, I would make these paragraphs as clear as possible for the reader. I am actually unclear at this point; do you use the 2d FT for 2d kernels? And please, I am seeing few distracting typos, make sure to proofread everything.</p>
+</li>
+<li>
+<p>What would the x-axis represents for the spectra of the latent representations in Figure 3?</p>
+</li>
+<li>
+<p>The last paragraph of 3.3 is very interesting statement; please, say more!</p>
+</li>
+<li>
+<p>Section 3 needs a bit of polishing. There is a lot to digest and I feel that everything is going a bit too linearly. This section could really benefit from some better formatting and clarifications; they would really help the reader.</p>
+</li>
+</ol>
+<p>4.</p>
+<ul>
+<li>
+<p>The idea of averaging music patches to emphasize the artifact peaks might be worth more details. What would be the length of those patches, for example?</p>
+</li>
+<li>
+<p>4.2 is a very welcome and interesting subsection!</p>
+</li>
+<li>
+<p>"audios" -&gt; audio files?</p>
+</li>
+<li>
+<p>Figure 5 is too small.</p>
+</li>
+</ul>
+<p>6.
+- Please, make sure your references are correct:
+- Use capitalized letters when needed (e.g., for acronyms)
+- Avoid repetition (e.g., the year shown twice)
+- Be consistent (e.g., ICASSP citations should show the same info)</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This article interprets the “deconvolution” operation in generative AI from a signal processing perspective to explain the “checkerboard” artifact resulting from repeated convolutions in CNN. Overall, the text is poorly written, poorly organized, technically flawed and unbalanced. Many aspects of the presentation need a lot of improvement, such as a more mathematically rigorous argumentation instead of relying on confusing illustrations and rewriting most of the explanations of signal processing concepts, which is currently the weakest aspect of the manuscript. There might be a contribution to the community in this manuscript, but the presentation is so poor that it obscures any potential contribution. Other works have investigated the “checkerboard artifact” in CNN (see, for example, Sugawara et al. 2019) and it is well known to be caused by “forward-propagation of upsampling layers and backpropagation of convolutional layers. [Sugawara et al. 2019]” So, what exactly is the novelty or contribution of this work? The idea of using it in AI detection might be a contribution provided that the work is redone from scratch focusing on that instead. In my opinion, this work hasn’t been fully developed yet into a solid and long-lasting contribution because most basic aspects are still very unclear and confusing. The first thing to do is a thorough review of the SOTA to avoid rehashing ideas and build on it to describe a solid and long-lasting contribution to the community. My review will focus on what I think must be improved.</p>
+<p>The current manuscript does not provide answers to some basic questions, such as: What is the goal of the work? What is the contribution of the work described? What is the state of the art (SOTA)?</p>
+<p>Currently, the goal of the work is unclear. The abstract revolves around “AI detection”, but line 50 and then 70-73 state otherwise without any clear reason. Whatever the goal, everything in the manuscript must revolve around it, from the review of the state of the art (SOTA) and contribution to the experimental protocol and takeaway message. AI detection seems like a clear goal that can be easily motivated, justified, and evaluated in comparison with the SOTA. If the goal is interpretability, the experiments must be designed with that in mind, but I personally find it more abstract and harder to do.</p>
+<p>When the goal is unclear, so is everything else. Interpretability requires a review of other works that focus on interpretability aspects and techniques. Similarly for AI detection. Finally, the Introduction must clearly state what the contribution of the work is. The current text hints at a potential contribution, but it’s still unclear to the reader. The potential contribution seems to be "the detection of checkerboard artifacts in AI-generated music, and how that detection can be used to differentiate it from non-AI music" based on the insight that "CNN architectures leave certain artifacts in their generated audio due to the deconvolution layers, and these artifacts can be detected in a very simple and straightforward way". By the way, the current title is very generic and does not reflect core aspects of the work. Terms like “Convolutional Neural Networks” and “AI-generated music detection” should appear in the title to better reflect the work.</p>
+<p>A quick search for “checkerboard effect” returned several results from the image processing literature that explain it (similarly to the current text) and propose ways to avoid it. For example, Sugawara et al. 2019. The citations in the current manuscript (also see comment below about it) indicate a lack of knowledge of the SOTA.</p>
+<p>I find the technical aspects of the presentation very uneven (probably due to an assumption about the reader’s background and knowledge stated in the first paragraph of Sec 3.1). While Sec 3.1 presents a very superficial (and superfluous, in my opinion) recap of a few concepts from Fourier analysis, the most important subsection of 3.1 (deconvolution) is not presented in enough detail. For example, the arguments in 244-245 rely on the equivalence of zero-padding to spectral interpolation, but this is never reviewed or explained (the reader is assumed to be familiar with this property of the DFT but not with the fundamentals of Fourier analysis?). My background is signal processing (SP) and, in my opinion, the current version of the manuscript has a very patchy presentation of SP concepts. In what follows, I’ll focus on that.</p>
+<p>I understand that the manuscript is following the jargon and presentation style commonly found in the AI literature, but it needs to bridge the gap between SP and AI carefully. I find the presentation of most SP concepts uneven and confusing. For example, in my understanding, the SP use of “deconvolution” refers to an operation that reverts the effect of a convolution. Given a signal that is a convolution between two others, the deconvolution operation would attempt to retrieve one of these original signals. For example, given the LTI system response to some known input, retrieve the system’s transfer function. The deconvolution operation in Fig 1 seems to illustrate a different operation (but I find Fig 1 hard to understand, so I don’t understand how the operation is done or the impact or the operation). Additionally, the “convolution” operation in SP is different from the one suggested by Fig. 1, which seems to better correspond to autocorrelation in SP terms.</p>
+<p>In SP, the upsampling operation comprises two steps, namely expansion and low-pass filtering. Upsampling by $L$ inserts $L-1$ zeros between samples, and low-pass filtering (when done appropriately), replaces the zeros by interpolated values.</p>
+<p>Fig 1 is intended to illustrate the core argument of the manuscript, but I find it unclear and unhelpful. I think Fig 1 needs more details and annotations (part a, b, and c, etc) and possibly to be redesigned from scratch to clearly illustrate the mathematical operations (adding mathematical formulas would also go a long way in clarifying the operations). I’ll refer to parts a), b), and c) going left to right for simplicity. For example, are the vectors X in (a) and (b) the same? The figure seems to indicate that they have different lengths because the “convolution matrix” is not square. I do not see how the matrix multiplication in the middle is equivalent to the one on the right-hand side. How many zeros are there in the beginning of the vector X? More importantly, as far as I can understand, the operations in b) and c) are equivalent if there are $k$ zeros between samples in vector $X$, which corresponds to an expansion of $k-1$ (I reached this conclusion after a lot of time and effort trying out different examples until it seemed to work, but the text cannot expect the reader to have to do that to be able to understand anything, let alone its main argument). However, Figs 1 and 2 seem to illustrate upsampling by $2$. Very unclear to me. By the way, even if Fig 1 was clear, it is not a proof, just an illustration. All mentions of “proof” in the text must be replaced because it makes the text come across as very naive.</p>
+<p>Sec 3.2 seems to indicate that it is indeed an expansion (not upsampling, just the first step) by $k-1$, but the SP jargon used is very inconsistent and confusing throughout. For example, Fig 1 clearly illustrates a discrete convolution, but part of the argument (e.g., line 202) relies on a “continuous transform perspective”? Even Sec 3.1 uses continuous transform definitions that are inconsistent with the discrete nature of the argument, which relies on resampling. Sec 3.1 on onwards that must be rewritten and clarified.</p>
+<p>Double-check English with the help of a native speaker.</p>
+<p>There are currently 9/37 citations to non peer-reviewed sources. Replace these with peer-reviwed when possible.</p>
+<p>REFERENCES
+Sugawara Y, Shiota S, Kiya H. Checkerboard artifacts free convolutional neural networks. APSIPA Trans Sig Inform Proc. 2019.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper provides a theoretically rigorous and empirically grounded analysis of systematic artifacts in AI-generated music, rooted in Fourier analysis. The authors demonstrate that deconvolution layers in generative models inherently produce spectral peaks due to periodization effects from zero-upsampling, a property tied solely to architecture—not training data or weights. By decomposing deconvolution operations mathematically, they explain how spectral peaks emerge recursively through layers, offering a clear, step-by-step framework. Experiments across open-source (DAC, Encodec) and commercial (Suno, Udio) models confirm these artifacts’ consistency, enabling a simple frequency-based detector that matches deep learning approaches in accuracy. The work bridges signal processing theory and MIR, advancing interpretability in AI detection and addressing ethical concerns around opaque systems.
+Strengths:
+The Fourier-based explanation of artifacts is novel and mathematically sound, linking architectural choices to spectral patterns.
+Empirical validation across diverse models shows artifacts are consistent, even when training data or seeds vary.
+The detection method’s simplicity and interpretability contrast with black-box alternatives, offering practical value.
+Suggestions for Improvement:
+Dataset Overlap: I wonder if there is overlap between the MTAT and Jamendo datasets? This could weaken the claim of data independence and should be addressed.
+Figure 5 Peaks: Why are there less peaks in DAC and Encodec (24) compared to the ones in figure 4? I'd assume, if the decoders introduce more artifacts, that there would be more peaks. It's fine to leave this as future work, but it would be nice to maybe mention this.
+Minor Fixes:
+Line 36: Include references to lawsuits against Suno and Udio (e.g., [1], [2]).
+Line 235: Remove the extra "a".
+Line 261: Correct "there [is] one case that" to "there is one case that".
+Readability: Font sizes in Figure 5 are too small.</p>
+<p>Conclusion: This is a standout contribution to MIR, offering both theoretical insights and practical tools for detecting AI-generated music. While minor edits have been suggested, the work’s clarity, technical depth, and societal relevance make it a strong accept. Its Fourier-based framework sets a new standard for interpreting generative models and could earn an award for its interdisciplinary impact.</p>
+<p>References for Lawsuits:
+[1] https://www.courtlistener.com/docket/68878608/umg-recordings-inc-v-suno-inc/
+[2]https://www.courtlistener.com/docket/68878697/umg-recordings-inc-v-uncharted-labs-inc-dba-udiocom/</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

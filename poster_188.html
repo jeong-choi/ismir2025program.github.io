@@ -1,0 +1,571 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: On the de-duplication of the Lakh MIDI dataset</title>
+    
+<meta name="citation_title" content="On the de-duplication of the Lakh MIDI dataset" />
+
+<meta name="citation_author" content="Eunjin Choi" />
+
+<meta name="citation_author" content="Hyerin Kim" />
+
+<meta name="citation_author" content="Jiwoo Ryu" />
+
+<meta name="citation_author" content="Juhan Nam" />
+
+<meta name="citation_author" content="Dasaem Jeong" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="A large-scale dataset is essential for training a well-generalized deep learning model. Most such datasets are collected via scraping from various internet sources, inevitably introducing duplicated data. In the symbolic music domain, these duplicates often come from multiple user arrangements and metadata changes after simple editing. However, despite critical issues such as unreliable training evaluation from data leakage during random splitting, dataset duplication has not been extensively addressed in the MIR community. This study investigates the dataset duplication issues regarding Lakh MIDI Dataset (LMD), one of the largest publicly available sources in the symbolic music domain. To find and evaluate the best retrieval method for duplicated data, we employed the Clean MIDI subset of the LMD as a benchmark test set, in which different versions of the same songs are grouped together. We first evaluated rule-based approaches and previous symbolic music retrieval models for de-duplication and also investigated with a contrastive learning-based BERT model with various augmentations to find duplicate files. As a result, we propose three different versions of filtered list of LMD, which filters out at least 38,134 samples in most conservative settings among 178,561 files.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Symbolic music processing" />
+
+<meta name="citation_keywords" content="Music retrieval systems" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Similarity metrics" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Philosophical and ethical discussions" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P1-05: On the de-duplication of the Lakh MIDI dataset
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Eunjin Choi" class="text-muted"
+        >Eunjin Choi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Hyerin Kim" class="text-muted"
+        >Hyerin Kim</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Jiwoo Ryu" class="text-muted"
+        >Jiwoo Ryu</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Juhan Nam" class="text-muted"
+        >Juhan Nam</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Dasaem Jeong" class="text-muted"
+        >Dasaem Jeong</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Symbolic music processing"
+        class="text-secondary text-decoration-none"
+        >Symbolic music processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music retrieval systems"
+        class="text-secondary text-decoration-none"
+        >Music retrieval systems</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Similarity metrics"
+        class="text-secondary text-decoration-none"
+        >Similarity metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Philosophical and ethical discussions"
+        class="text-secondary text-decoration-none"
+        >Philosophical and ethical discussions</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>A large-scale dataset is essential for training a well-generalized deep learning model. Most such datasets are collected via scraping from various internet sources, inevitably introducing duplicated data. In the symbolic music domain, these duplicates often come from multiple user arrangements and metadata changes after simple editing. However, despite critical issues such as unreliable training evaluation from data leakage during random splitting, dataset duplication has not been extensively addressed in the MIR community. This study investigates the dataset duplication issues regarding Lakh MIDI Dataset (LMD), one of the largest publicly available sources in the symbolic music domain. To find and evaluate the best retrieval method for duplicated data, we employed the Clean MIDI subset of the LMD as a benchmark test set, in which different versions of the same songs are grouped together. We first evaluated rule-based approaches and previous symbolic music retrieval models for de-duplication and also investigated with a contrastive learning-based BERT model with various augmentations to find duplicate files. As a result, we propose three different versions of filtered list of LMD, which filters out at least 38,134 samples in most conservative settings among 178,561 files.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1jzV-qqr3e5VlgSMQ8BjWj3UQNubInGaF/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The methodologies are proposed are directly and usefully applicable to existing and new datasets (assuming they are released on publication as promised).</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>This paper proposes and evaluates methods for removing duplicates in large symbolic data sets, with the primary goal of preventing these duplicates from corrupting validation and testing music generation models.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Overall, this paper presents a highly useful evaluation of different methodologies for removing duplicates from large symbolic datasets. It could be usefully applied to a wide range of MIR-related domains, beyond even those highlighted by the authors. The Lakh MIDI Dataset (and the Clean version of it) are good choices for carrying out the research, and the methodology and evaluation are generally good (although the language used should perhaps be moderated, as noted below). A nice variety of methods are evaluated, both together and in combination, and expert sampling of the final results when applied to the full LMD was an essential step that was properly followed.</p>
+<p>One possible area of improvement is a more nuanced and musically relevant discussion of what makes two symbolic music files “the same” or “similar” to the extent that they can be considered duplicates for the purposes discussed here. Section 3 does present a useful distinction between “hard” and “soft” duplication, but more detail and justification is needed, as this issue is foundational to the entire task, and these are very short sub-sections. Ultimately, thresholds based on precision on Clean LMD were used, which to me is a very dataset and application-specific approach that sidesteps fundamentally important underlying musical questions. Also, certain assertions perhaps need more justification (e.g., why are ornamentations or chord tones under the purview of hard duplication, but not transpositions to different keys?). There are many related underlying issues that should ideally be discussed, and which are methodologically relevant; for example, one common issue that comes up in duplication detection of MIDI is the difference between the “same” music when encoded by a score editor vs. a different score editor vs. a MIDI instrument played by a human vs. a music generator vs. etc.</p>
+<p>Certain assertions should perhaps be reconsidered. For example, the abstract states that “dataset duplication has yet to be discussed seriously in the MIR community,” a statement that I would disagree strongly with, and the paper itself later cites an ISMIR paper that does in fact seriously discuss it ([30]), and there are certainly other examples as well in the MIR literature.</p>
+<p>Another issue that could be discussed a little more is how well models or algorithms trained or tuned on LMD Clean can generalize to LMD in general, or more importantly, to entirely different datasets. LMD clean isn’t that big, it is not stylistically representative and it is not in fact itself so clean (as noted by the authors in lines 403 to 408).</p>
+<p>It would also be useful to know what the processing times are of the various approaches (especially the combined approaches), in order to have a sense of how scalable they are.</p>
+<p>The results in Table 3 (and the thresholds adopted intentionally by the authors) result in decent precision but very low recall, meaning that many duplicates will be missed. The authors say that they “prioritize high precision to minimize unintended data loss during the final de-duplication process,” which is a fair point, but on the other hand the entire motivational premise of this paper is that duplicates can pose a huge problem, which seems at odds with this sentiment. Perhaps this seeming contradiction could be resolved in the text?</p>
+<p>Also, even the high precision may not in reality be that high in practice, as shown by the listening results described in Section 7. If only 72.9% of the sampled detected LMD duplicates are in fact true hard or soft duplicates, that means that the precision found on clean LMD did not in fact generalize. Furthermore, if many false negatives occurred even on clean LMD, this suggest the potential that perhaps an even greater fraction of duplicates were missed on LMD, and potentially even more would be if the approach were applied to an entirely different dataset.</p>
+<p>None of this is to say that this paper doesn’t offer a useful contribution; it is, as being able to remove even a subset of duplicates, hopefully at a small loss of non-duplicates, is certainly a useful contribution. But statements like “we found that the 38 134 files in the LMD-full (21.4%) are considered as duplication with very high confidence” are perhaps not appropriate; if the listening sampling found that only 72.9% of detected duplicates were actually duplicates, I’m not sure that I would express “very high confidence” in those 38 134 files actually being duplicates. It is OK if results are not perfect, and it is better to be direct about their limitations.</p>
+<p>The paper is generally well-written, but there are a number of grammatical errors that could be corrected by additional editing.</p>
+<p>Certain aspects should be expanded on in order to improve clarity. In particular, more details are needed on LMD Clean, particularly given the fundamental role it plays in this research. More information is also needed on Beat Position Entropy and Chroma-DTW than what is provided in Sections 4.2.1 and 4.2.3. For the latter in particular, are the authors saying that only basic pitch histograms (which presumably lost all sequence information) were used for all but 250 of the files, rather than actual Chroma-DTW?</p>
+<p>Several of the references in the bibliography are missing dates.</p>
+<p>The paper states that the code, metadata, training data, and evaluation results will all be distributed after publication. However, no anonymized supplementary material was submitted to make it possible to verify this.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All four reviewers unanimously agreed that this paper offers insights that will be of value to the MIR community, and we are delighted to recommend it for acceptance at ISMIR 2025.</p>
+<p>Dataset duplication is an important but understudied issue in MIR, and we believe that this paper will both bring important greater awareness of the issue and provide a directly usable methodology for at least reducing the number of duplicates in symbolic datasets. Useful quantitative insight is also offered with respect to this issue on the Lakh MIDI Dataset (LMD), something that is in itself a useful contribution, given the wide use of the LMD.</p>
+<p>There are, however, certain issues with respect to both methodology and clarity that have been highlighted in the individual reviews, particularly with respect to how some of the empirical results are interpreted in the text. If this paper is accepted at ISMIR, we strongly encourage the author(s) to take these suggestions into account when preparing their camera-ready version of the paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper addresses a crucial and often overlooked issue in the Music Information Retrieval (MIR) community: dataset duplication, specifically within the widely used Lakh MIDI Dataset (LMD). The authors provide a thorough investigation into the scale of this problem and evaluate various approaches for de-duplication, culminating in the proposal of a combined method.</p>
+<p>Strengths:
+The paper tackles a highly relevant problem that directly impacts the reliability of research using LMD for tasks like music generation. Highlighting this issue is a significant contribution to the field.
+The authors present and evaluate a performance pipeline for identifying duplicates, suggesting a methodology that could be applied to other datasets or related problems. This systematic approach has potential for future research.
+The authors quantify the extent of duplication in LMD, providing concrete numbers that underscore the importance of the problem.
+A small but reliable listening test is performed to help validate the detection process qualitatively.</p>
+<p>Weaknesses:
+A primary limitation, as acknowledged by the authors, is the difficulty in effectively detecting "soft duplicates" – different arrangements of the same song.
+Applying this methodology to new data would likely require significant tuning, as the algorithmic results may not be as directly transferable or durable as the specific de-duplicated list provided for LMD. The main, highly practical outcome of this work for the community is the released filtered list for LMD.</p>
+<p>Overall:
+This is a timely paper for the ISMIR community. The proposed methods and the released filtered lists offer practical tools for researchers. While the relatively low recall across all methods prevents it from being a definitive, perfectly complete solution to the duplication problem in LMD, I believe that identifying the scope and challenge of this significant duplication problem is a large and valuable contribution on its own.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths:</p>
+<p>The paper explores several different approaches to the problem of data deduplication in large MIDI datasets, including rule-based approaches, the use of deep learning models released in previous papers, and the use of a new model (CAugBERT) designed and trained by the authors. The paper finds that using CLaMP + CAugBERT to perform deduplication outperforms using either individually.</p>
+<p>The paper focuses on the Lakh MIDI dataset, a widely used dataset in the field of symbolic music processing. While other large datasets (including but not limited to MetaMIDI, GigaMIDI, SymphonyNet, and PDMX) are now available, the approach taken in the paper should generalize to those datasets. </p>
+<p>This is timely work that addresses a core issue in the symbolic music processing community.</p>
+<p>For these reasons, I recommend strong acceptance of this paper.</p>
+<p>Weaknesses/suggestions for improvement:</p>
+<p>Line 124: "the rule-based approach" -&gt; "rule-based approaches" (the paper evaluates more than one rule-based approach)</p>
+<p>Line 230: "and the hash values of all MIDI files" I'm not sure what this means. Please make this clear.</p>
+<p>Line 233: "that has exactly" -&gt; "that have exactly"</p>
+<p>Line 235: "applied simple method" -&gt; "applied a simple method"</p>
+<p>Line 236: Does the MIDI encoding scheme of [36] do something unusual with note position? (Why are you using this encoding scheme in particular?)</p>
+<p>Lines 232-239: Are you using note position within measure (that would be my guess) or note position within the whole piece?</p>
+<p>Line 264: "MIDI as MTF" -&gt; "MIDI to MTF"</p>
+<p>Line 280: What is the point of the 98:1:1 split of LMD-filtered? Please say exactly what the 1 and 1 portions of the split used for. (I am a little confused because I understand that LMD-clean, not LMD-filtered, is used for evaluation)</p>
+<p>Line 296: "The model implementation" -&gt; "The implementation of CAugBERT" </p>
+<p>Line 338: "following the provided code" -&gt; "following the code provided in [citations]". Also, did you have to train this projection layer, or were the weights for this projection layer provided in the CLaMP releases?</p>
+<p>Line 399: "We note" -&gt; "We also note"</p>
+<p>Line 417: "with the best-performing CAugBERT" -&gt; "with CAugBERT" </p>
+<p>Table 5 caption: When you refer to the threshold &gt;= 0.99, do you mean the threshold that results in precision on LMD-clean of 0.99, or do you mean the threshold on the model's output probability itself?</p>
+<p>Table 5 caption: I think "# Clusters refers to the number of clusters and # Duplicates refers to the number of samples to be filtered" can be removed if you need space elsewhere for revisions.</p>
+<p>Line 439: In the language of graph theory, the "clusters of duplication" are the connected components of the graph.</p>
+<p>Line 459: "underrepresented while training on LMD-clean" LMD-clean was not "trained on," right? (I understand it was used for thresholding.)</p>
+<p>Lines 448-458 and Figure 1: 
+Did the author compare every file in each cluster to every other file in the cluster, or did they only compare files connected by an edge? (I imagine that not every cluster you found is a complete graph.) </p>
+<p>The percentages here and the bars in Figure 1 are hard to understand as written, because without additional definition, labels like "hard duplicate" and "soft duplicate" apply to <em>pairs</em> of files, not individual files. To illustrate, there may be a file A, which is a soft duplicate of file B, which is a soft duplicate of file C, but A and C are not soft duplicates of one another. </p>
+<p>How is Figure 1 meant to be interpreted? My guess is that the bar heights represent counts of files (not counts of file pairs), a file falls into the "hard duplicate" category if it is a hard duplicate of some other file in its cluster, a file falls into the "soft duplicate" category if it is not a hard duplicate of any file in its cluster and is a soft duplicate of at least one other file in its cluster, a file is in the "similar" category if it is not a hard duplicate of any file in its cluster, it is not a soft duplicate of any file in its cluster, and it is similar to at least one other file in its cluster, and a file is "irrelevant" if it is none of the above. I'm confused why the unhatched bars don't add up to 506, and I am also confused on exactly what the prediction type breakdown in Figure 1 means. For instance, the grey area of the "Irrelevant" bar means what, exactly? Issues like this should be clarified.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper does a good job at assessing prior attempts at data duplicate and puts together a nice methodology for studying different data duplication detection mechanism.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

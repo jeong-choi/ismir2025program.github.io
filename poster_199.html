@@ -1,0 +1,538 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Tuning Matters: Analyzing Musical Tuning Bias in Neural Vocoders</title>
+    
+<meta name="citation_title" content="Tuning Matters: Analyzing Musical Tuning Bias in Neural Vocoders" />
+
+<meta name="citation_author" content="Hans-Ulrich Berendes" />
+
+<meta name="citation_author" content="Ben Maman" />
+
+<meta name="citation_author" content="Meinard Müller" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Vocoders, which reconstruct time-domain waveforms from spectral representations such as mel-spectrograms, are essential in modern music and speech synthesis. Traditional signal-processing techniques like the Griffin-Lim algorithm have largely been replaced by neural vocoders, which leverage generative models to achieve superior audio quality. However, these models can introduce artifacts and biases, potentially affecting their output in unforeseen ways.
+In this study, we examine how different musical tunings affect neural mel-to-audio vocoders within the context of Western music, where performances do not necessarily adhere to the modern 440 Hz standard tuning. As a key contribution, we evaluate several recent neural vocoders on datasets containing piano, violin, and singing voice recordings. Our results reveal that different vocoders exhibit distinct biases, causing deviation in tuning, and affecting waveform reconstruction quality in case of non-standard tuning. 
+Our work underscores the need for improved vocoder robustness in music synthesis and provides insights for refining future models.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Music synthesis and transformation" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Evaluation metrics" />
+
+<meta name="citation_keywords" content="Music and audio synthesis" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-06: Tuning Matters: Analyzing Musical Tuning Bias in Neural Vocoders
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Hans-Ulrich Berendes" class="text-muted"
+        >Hans-Ulrich Berendes</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Ben Maman" class="text-muted"
+        >Ben Maman</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Meinard Müller" class="text-muted"
+        >Meinard Müller</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Music synthesis and transformation"
+        class="text-secondary text-decoration-none"
+        >Music synthesis and transformation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation metrics"
+        class="text-secondary text-decoration-none"
+        >Evaluation metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music and audio synthesis"
+        class="text-secondary text-decoration-none"
+        >Music and audio synthesis</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Vocoders, which reconstruct time-domain waveforms from spectral representations such as mel-spectrograms, are essential in modern music and speech synthesis. Traditional signal-processing techniques like the Griffin-Lim algorithm have largely been replaced by neural vocoders, which leverage generative models to achieve superior audio quality. However, these models can introduce artifacts and biases, potentially affecting their output in unforeseen ways.
+In this study, we examine how different musical tunings affect neural mel-to-audio vocoders within the context of Western music, where performances do not necessarily adhere to the modern 440 Hz standard tuning. As a key contribution, we evaluate several recent neural vocoders on datasets containing piano, violin, and singing voice recordings. Our results reveal that different vocoders exhibit distinct biases, causing deviation in tuning, and affecting waveform reconstruction quality in case of non-standard tuning. 
+Our work underscores the need for improved vocoder robustness in music synthesis and provides insights for refining future models.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/18yvPjp36oCdYngVAQZ8yJw-vaKaRqCTD/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>The authors might or might not consider to see if this little study on tuning frequency artifacts in classification might be relevant:
+Y. Qin and A. Lerch, “Tuning Frequency Dependency in Music Classification,” in Proceedings of the International Conference on Acoustics Speech and Signal Processing (ICASSP), Brighton, UK: Institute of Electrical and Electronics Engineers (IEEE), 2019, pp. 401–405. doi: 10.1109/ICASSP.2019.8683340.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The results of this study are relevant for use of neural vocoders, which people tend to use without being aware of limitations and constraints. It is also important for future development of vocoders, where proper data augmentation might mitigate the problems when detuned.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Neural vocoders do not provide consistent output quality for non-standard tuning frequencies.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This is a interesting study systematically evaluating how the tuning impacts the quality of a pre-trained neural vocoder generated output. This well-planned and well-executed study that is also well-presented. It provides useful insights into the limitations of current neural vocoders and highlights a cause for quality impairments that is often overlooked. I congratulate the authors for a very interesting read.</p>
+<p>One result that I would have wished to see is the tuning frequency estimate deviations on the unaugmented data. I understand that these data would be imbalanced, but it would be good to verify that the error is indeed larger for tuning freqs far away from 440 as a sanity check.</p>
+<p>Just as a note:
+A suggestion for possible future studies: My personal suggestion would have been to run the subjective test on synthesized piano data that can be tuned without artifacts; that way the confounding pitch shifting artifacts could have been eliminated (also, simply using a decent quality pitch shifter might have helped).</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The authors present a methodological investigation of an overlooked potential problem - the tuning frequency dependency of neural vocoders. The study provides valuable insights for future research and applications, is well-written and well-structured and explores the research question systematically.</p>
+<p>The reviewers agree on the strong points of the paper and that this is a contribution that should be of interest in the research community. In addition to some short-comings that are not easily addressed, such as some shortcomings of the listening test design and associated limited insights, other points of critique are easily addressed, and I urge the authors to implement the following suggestions for the camera-ready paper in case of acceptance:
+1. Expanded literature review on tuning frequency detection and justification of the used tuning freq detection methods
+2. Inclusion of the BigVGAN scatter plot: as that model is trained on speech, it should not have any tuning frequency dependency
+3. Better description of the sample rates at different processing steps and sample rate conversion method: what is being resampled to what rate when.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper proposes that state of the art neural vocoders introduce a systematic bias towards standard tuning.</p>
+<p>The idea makes sense and proving this bias is an important contribution. However, the formulation of the problem seems a bit naive at some points, for example the author state
+"Despite their impressive audio quality, neural vocoders are sensitive to their training data" This should be beyond obvious, and the ability of vocoders to generalize will be related to the distribution of the training data. The authors should try to explain what data is used to train each vocoder.</p>
+<p>The authors propose that the problem is circular but tis only seems necessary because of the algorithms used for tuning estimation. I think more discussion of the state of the art in tuning estimation is needed. With respect to the methodology, it would have been better to evaluate with real data that uses non-standard tuning than use pitch shifting for all the experiments.</p>
+<p>Beyond these issues, the most important problem in my view is that the authors do not attempt to explain their findings, In particular, one of the vocoders (BV2-128) competes with the unbiased LSGL approach (Fig 4), and generally results improve with the number of bands. Yet, this vocoder is inexplicably missing from Fig 5. Moreover, the listening experiment seems to ask an orthogonal question. It almost seems like he authors changed their mind and decided that changing the tuning is OK as long as the vocoder sounds good.</p>
+<p>In all I think there is a missed opportunity in obtaining a better insight about the effect of neural vocoders on tuning based on these experiments.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper investigates the tuning bias of popular neural vocoders for music that uses mel-spectrograms as control parameters. The objective evaluation is well-designed and shows apparent biases among different vocoders, favouring a few common tunings. Subjective evaluations confirm that feeding less-common tunings does affect some vocoders' synthesis quality. These findings are valuable for future research in removing potential biases in music generation/synthesis with neural networks. Nevertheless, the paper does not touch much on possible directions to mitigate the biases.</p>
+<p>I personally feel the topic is novel and important. The evaluations and results are presented well, so I don't have much criticism, but some minor comments.</p>
+<p>Suggestions for improvements:</p>
+<p>In Section 3.2, the authors said that the artefacts caused by pitch shifting are negligible, but later in Section 5, they also mentioned that the artefacts can affect perceived quality, which contradicts this. I understand that for the objective evaluation, the minor artefacts do not affect the targeting variable, the tunings. However, it would still be good to clarify in the text why artefacts have different degrees of impact in other evaluations.</p>
+<p>In Fig. 7, I would still recommend including the "no preference" for a more intuitive analysis. The authors mentioned that all the items are vocoded in the second-to-last paragraph of Section 5.1. It would have been better if this had been mentioned at the beginning of the section, since the first time I read it, I was confused and wondered, "Are all the items being vocodered or just the pitch-shifted ones?"</p>
+<p>I have some issues understanding what sample rates were used in the experiments. Since the vocoders are not all operated at 16 kHz, did the authors 1) first downsample all the audio to 16 kHz then depends on which vocoder is using, upsampled the audio to its operating rates, or 2) downsampling the original audio (&gt;44.1 kHz) to the operating rates of the vocoders? Please clarify this in the text since it affects the resulting mel-spectrograms.</p>
+<p>There are short paragraphs consisting of no more than two sentences. I recommend merging them to improve the readability. Isolated subsections like Section 5.1 should be discouraged. A footnote linking to YouTube isn't necessary. The authors can simplify equation 1 as <code>(\tau_2 - \tau_1 + 50) \mod 100 - 50</code> to save some space, maybe connect this to the classic phase unwrapping problem, where the phases are wrapped inside [-\pi, \pi). In this way, the explanation in Section 3.3 can be even shorter. Keyword: Itoh's condition.</p>
+<p>Lastly, I really think the author can discuss what kind of sources contribute to those biases and how to mitigate this issue in the future. Even a brief paragraph on this is enough.</p>
+<p>Regarding reference entry format:
+Please cite the conference version of GANSynth [19] instead of its preprint version.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper provides a well-executed investigation into the issue of musical tuning preservation in neural vocoders. The study is relevant to the ISMIR community, as vocoders are integral components of modern music generation systems. The paper appears clear and well-written.
+The authors clearly articulate the problem and deliver results across different datasets and 3 vocoder models.</p>
+<p>The presentation of the listening test appears a bit limited: first of all, both pitch-shifting artifacts and vocoding artifacts can be present. Also, in line 425 the authors write: “When aggregating preferences into groups of “original” and “pitch-shifted”, listeners show a slight preference towards the original items for the neural vocoders, indicating that pitch-shifting also has a negative influence on quality (see supplementary website).”
+It would be preferable to have an accompanying website already available for the review period, or at least try to include this plot inside the page limit.</p>
+<p>Also, when comparing results from different models, it is not clear which sampling rate is used for each model. BigVGAN and BigVGAN2 are available with different sampling rates, and it would be helpful to disclose how the metric is calculated. You mention that the pitch-shifted dataset samples are downsampled to 16 kHz. Are all the samples (including reconstructions from the 2 BigVGAN models) downsampled to 16 kHz before calculating the metric (in order to be fair with HAWT and LSGL)? If not, will the comparison still be fair? Some clarifications on this matter would be greatly beneficial.</p>
+<p>Additionally, why was the BigVGAN model included in the comparison, since it was trained only on speech? I am not suggesting to remove this baseline, but rather to properly justify its inclusion. Also, I notice that the scatter plots are presented for all baselines except this model (BV). It would be of great interest to visualize the tuning bias on music samples of a model trained only on speech. I would personally not expect to have a “quantization” effect to 440 Hz, since it did not “see” music samples during training, which I assume is what biases these models to this effect. I would recommend including this plot in the final version.</p>
+<p>It would be also interesting to further discuss the potential root causes of these tuning biases within the vocoder architectures themselves. Is it primarily due to the training data distributions? </p>
+<p>Despite these points, the paper presents a solid contribution, highlighting an important aspect of vocoder performance and offering a possible evaluation framework. The work is well-written, the results are quite clear, and the implications are useful/practical for the community.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

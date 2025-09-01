@@ -1,0 +1,535 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Keyboard Temperament Estimation from Symbolic Data: A Case Study on Bach&#39;s Well-Tempered Clavier</title>
+    
+<meta name="citation_title" content="Keyboard Temperament Estimation from Symbolic Data: A Case Study on Bach&#39;s Well-Tempered Clavier" />
+
+<meta name="citation_author" content="Peter Van Kranenburg" />
+
+<meta name="citation_author" content="Gerben Bisschop" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="In this paper we address the task of keyboard temperament estimation from symbolic data. The aim is to find a keyboard temperament that minimizes the deviations from pure intervals, given a corpus of music. The problem of finding a suitable temperament has been studied for centuries. Many solutions have been proposed. By taking a data-driven approach, we contribute a method to this field. We define a loss function that measures the deviation from pure intervals, with a reward for exactly pure intervals. Three optimization methods are explored: Basin Hopping, Differential Evolution, and Dual Annealing. We validate our method with synthetic data, and by comparing with c. 1,500 existing temperaments, including equal temperament. Our method improves on any existing temperament. As a case study, we apply the method to Bach&#39;s Well-Tempered Clavier. Our findings show interesting correspondence to existing proposals in musicological literature.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Symbolic music processing" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Harmony, chords and tonality" />
+
+<meta name="citation_keywords" content="Music composition, performance, and production" />
+
+<meta name="citation_keywords" content="Computational musicology" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Computational music theory and musicology" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P5-01: Keyboard Temperament Estimation from Symbolic Data: A Case Study on Bach&#39;s Well-Tempered Clavier
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Peter Van Kranenburg" class="text-muted"
+        >Peter Van Kranenburg</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gerben Bisschop" class="text-muted"
+        >Gerben Bisschop</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Symbolic music processing"
+        class="text-secondary text-decoration-none"
+        >Symbolic music processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Harmony, chords and tonality"
+        class="text-secondary text-decoration-none"
+        >Harmony, chords and tonality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music composition, performance, and production"
+        class="text-secondary text-decoration-none"
+        >Music composition, performance, and production</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Computational musicology"
+        class="text-secondary text-decoration-none"
+        >Computational musicology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Computational music theory and musicology"
+        class="text-secondary text-decoration-none"
+        >Computational music theory and musicology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        10-minute long-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>In this paper we address the task of keyboard temperament estimation from symbolic data. The aim is to find a keyboard temperament that minimizes the deviations from pure intervals, given a corpus of music. The problem of finding a suitable temperament has been studied for centuries. Many solutions have been proposed. By taking a data-driven approach, we contribute a method to this field. We define a loss function that measures the deviation from pure intervals, with a reward for exactly pure intervals. Three optimization methods are explored: Basin Hopping, Differential Evolution, and Dual Annealing. We validate our method with synthetic data, and by comparing with c. 1,500 existing temperaments, including equal temperament. Our method improves on any existing temperament. As a case study, we apply the method to Bach's Well-Tempered Clavier. Our findings show interesting correspondence to existing proposals in musicological literature.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/14MFBaAro6abPbASQcG8FR5h7NyPJ2m4B/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<p>The study is robust, reproducible, and technically rigorous. The authors validate their method with synthetic data and systematically evaluate across multiple target sets, optimization strategies, and historical corpora (including the full WTC).</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Strongly Agree (Very novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The framework is generalizable beyond the WTC and could be applied to other corpora, styles, or even tuning systems outside Western music. The loss function design, optimization approach, and corpus weighting mechanisms are highly reusable.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>This paper introduces a method to estimate keyboard temperaments from symbolic corpora using weighted interval loss functions and optimization, revealing compelling links to historical temperaments.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper presents a novel and rigorously developed framework for estimating keyboard temperaments from symbolic musical corpora, using optimization over weighted interval inventories and comparing results with hundreds of historical temperaments. The use of Bach’s WTC as a case study is both musically and historically relevant. The authors strike a good balance between technical modelling, algorithmic rigor, and interpretive reflection.</p>
+<p>Strengths:
+- Innovative problem formulation that bridges MIR and musicology.
+- Well-designed and theoretically grounded loss and reward functions.
+- Thorough validation and comparative analysis with historical temperaments.
+- Rich engagement with secondary literature and music theory.</p>
+<p>Suggestions for improvement:
+- Clarify parameter settings (e.g., weightings of intervals, β in exponential decay) and their sensitivity.
+- Provide a higher-level summary of technical sections for non-specialist MIR readers.
+- Consider sharing code or a simplified demo to aid reproducibility and adoption.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper presents a novel and technically robust framework for estimating keyboard temperaments from symbolic musical corpora, using a corpus-weighted loss function defined over mistuned intervals. The approach is applied to Bach’s Well-Tempered Clavier and evaluated through a comparison with over 200 historical temperaments. The paper stands out for its synthesis of computational musicology, symbolic MIR, optimization techniques, and historical interpretation.</p>
+<p>The reviewers unanimously rated the paper “Strong Accept,” praising its methodological rigor, clarity, and musical significance. Several aspects of the work deserve special mention:
+• Originality: The paper proposes a compelling new task—temperament estimation from symbolic corpora—grounded in centuries of musicological inquiry, yet not previously explored computationally in this way.
+• Scientific quality: The loss functions, evaluation metrics, and optimization strategies are carefully chosen and well explained. The results are both reproducible and interpretable.
+• Impact: While this is not a mainstream MIR task, it bridges computational methods with questions of historical performance practice and musical structure, making it relevant to a wide range of ISMIR attendees.</p>
+<p>Suggestions for camera-ready improvements—echoed across several reviews—include:
+• Clarifying parameter choices (e.g., α, β, and snapping functions) and assessing sensitivity.
+• Reframing the novelty claims to avoid overstating the task as entirely new, and better emphasizing the contribution as a well-motivated formalization of an existing musicological problem.
+• Improving reproducibility by sharing code and, if possible, sound examples (e.g., synthesized outputs using inferred tunings).
+• Minor presentation issues, such as labeling, figure reordering, and typographic adjustments.
+These are all minor refinements that, once addressed, will further enhance the clarity and accessibility of this valuable work.</p>
+<p>This paper introduces an innovative and rigorous method for historical temperament estimation, grounded in music theory and symbolic MIR. It makes a unique and reusable contribution to the ISMIR community and merits inclusion in the conference.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors propose a family of criteria to determine how well a 12-tone temperament fits to a given corpus based on (a) a set of possible target sizes for each interval (corresponding to simple frequency ratios) and (b) the harmonic and melodic intervals encountered in the corpus, weighted by metric position. They apply a range of optimization methods to find good solutions and compare them to a large set of historic temperaments. They find that under the given criteria, usually better temperaments than the historically discussed ones can be found, but that the observed patterns nevertheless reflect the historic discourse.</p>
+<p>The paper is very straightforward and well-written. The proposed method is simple, sensible, produces interesting results, and can be applied to other historic collections, both for scholarly investigation and for performance. I would consider the novelty rather low since the problem of optimal temperaments has been widely discussed (as the paper shows), however there is clearly a contribution here. I therefore happily recommend to accept the paper.</p>
+<p>My main complaint about the paper would be that the framing of the contribution is a bit off. For example, I would advise against phrases such as "introducing a new task" here since the task here since the underlying problem (finding a good temperament for a certain style of music or a given set of pieces) has been discussed in some form for quite some time, as the authors demonstrate themselves. Similarly, the authors speak of their method "outperforming" existing temperaments. I would argue that the main contribution is the loss function, not the optimization methods which are applied out-of-the-box and could be substituted with other non-linear optimization methods. In that respect, arguing that the proposed method works best because the results score best wrt. the proposed loss turns the argument on its head (it would be easy to define an entirely unsuitable loss for which the best solutions would naturally score better than existing temperaments). The actual usefulness of the proposed criterion is (a) derived from sensible underlying assumptions and (b) demonstrated by obtaining interesting solutions that are similar to the historic ones.</p>
+<p>I suspect that this focus on "performance" results from perceived norms for evaluation at ISMIR, which I see as a bit of a structural problem. In this case, I think that the theoretical discussion of the model assumptions and the results make for the better argument, and I would advise the authors to adapt their framing in this direction.</p>
+<p>Minor remarks:
+- l. 167: using the chordify method to determine harmonic intervals is a bit problematic since the weight that a particular harmonic interval receives depends on what happens in a third voice. E.g., an interval between voices 1 and 2 of a quarter is counted once in case no other voice moves, but twice or more in case another voice moves during this interval. Counting each occurring harmonic interval exactly once or weighting it by its duration would both have been sensible choices, but this method is a bit odd.
+- l. 219: for clarity, mention that interval sizes here are given in cents, not as frequency ratios (for additivity)
+- l. 290: capitalize "validation"</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Novelty: Introducing a new problem of optimizing keyboard temperament based on input music (whether synthetic or real) is an interesting problem and is worth studying.</p>
+<p>Scientific rigor/merit: high. Methodologically strong paper, mathematically precise. Presents finding a temperament as an optimization problem, which seems computationally and mathematically practical. Presentation of the problem and proposed solution is clear. Loss function seems grounded in reality. Evaluation through three different optimization algorithms seems fine, especially since they all get similar results. All facets are adequately described. I thought the discussion and engagement with historical musicological debates was good, although might go over some people's heads. Minor problems: loss function tuning could be better (setting parameters for alpha, beta, etc). Right now these are set to magic numbers, which isn't great, but seems to work ok.</p>
+<p>Clarity/readability: High. Logical flow and organization, math is clear and precise. Some musical jargon that we don't see a lot of in ISMIR (wolf fifths, circular temperament, etc) but that can be chalked up to that ISMIR doesn't get a lot of work on temperament. Could use a picture or more explanation of the "snapping" effect of R_pure.</p>
+<p>Relevance: While this work is novel, scientifically rigorous, and clear, it may not be relevant to the majority of ISMIR attendees, but I do not think it should be penalized for that. It's data-driven work, which is important, as is combining computational musicology with performance practice.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Interesting work, aiming to infer the best temperament for a set of pieces, favoring so-called "pure" intervals. The experiments are solid and engaging. It's unfortunate that the code is not available for replication, as well as synthesized versions of some WTC pieces using the inferred optimal intervals—this would allow for a subjective evaluation of whether the resulting tunings are indeed more compelling. A brief note discussing the practical applicability of this approach in real-world settings would be valuable: how feasible would it be to tune instruments according to the obtained temperaments? Of course, this would be much easier on a synthesizer, but that contrasts with historically informed performance practices. It would be nearly impossible, for instance, to implement such tuning on a pipe organ.</p>
+<p>I was intrigued that the optimization appears to be performed—if I understood correctly—on the intervals listed in Table 1. I’m curious about what the results would be if the optimization were unconstrained, requiring only that the sequence of p's be increasing. Would we converge toward equal temperament when using a large corpus of pieces? Section 4 presents an interesting musicological discussion! I confess I considered recommending 'weak accept' due to the lack of code, but I believe this does not diminish the contribution of the work—so I decided on a 'strong accept'.</p>
+<p>Additional comments:</p>
+<p>Lines 164–165: "but we can decide to omit intervals" — Why would that be desirable?</p>
+<p>Table 1: Please provide a source for the “acceptable” intervals listed.</p>
+<p>Section 2.6 title should start with a capital letter.</p>
+<p>Figure 2: Consider reordering the pitch classes starting from C, as done in the keyboard diagram in Figure 1.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

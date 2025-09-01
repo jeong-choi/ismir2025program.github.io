@@ -1,0 +1,538 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Emergent musical properties of a transformer under contrastive self-supervised learning</title>
+    
+<meta name="citation_title" content="Emergent musical properties of a transformer under contrastive self-supervised learning" />
+
+<meta name="citation_author" content="Yuexuan KONG" />
+
+<meta name="citation_author" content="Gabriel Mesegues-Brocal" />
+
+<meta name="citation_author" content="Vincent Lostanlen" />
+
+<meta name="citation_author" content="Mathieu Lagrange" />
+
+<meta name="citation_author" content="Romain Hennequin" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="In music information retrieval (MIR), contrastive self-supervised learning for general-purpose representation models is effective for global tasks such as automatic tagging.
+However, for local tasks such as chord estimation, it is widely assumed that contrastively trained general-purpose self-supervised models are inadequate and that more sophisticated SSL is necessary; e.g., masked modeling.
+Our paper challenges this assumption by revealing the potential of contrastive SSL paired with a transformer in local MIR tasks.
+We consider a lightweight vision transformer with one-dimensional patches in the time--frequency domain (\melt) and train it with simple contrastive SSL through normalized temperature-scaled cross-entropy loss (NT-Xent).
+Although NT-Xent operates only over the class token, we observe that, potentially thanks to weight sharing, informative musical properties emerge in ViT-1D&#39;s sequence tokens.
+On global tasks, the temporal average of class and sequence tokens offers a performance increase compared to the class token alone, showing useful properties in the sequence tokens.
+On local tasks, sequence tokens perform unexpectedly well, despite not being specifically trained for.
+Furthermore, high-level musical features such as onsets emerge from layer-wise attention maps and self-similarity matrices show different layers capture different musical dimensions.
+Our paper does not focus on improving performance but advances the musical interpretation of transformers and sheds light on some overlooked abilities of contrastive SSL paired with transformers for sequence modeling in MIR.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Music signal processing" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P2-14: Emergent musical properties of a transformer under contrastive self-supervised learning
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Yuexuan KONG" class="text-muted"
+        >Yuexuan KONG</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gabriel Mesegues-Brocal" class="text-muted"
+        >Gabriel Mesegues-Brocal</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Vincent Lostanlen" class="text-muted"
+        >Vincent Lostanlen</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Mathieu Lagrange" class="text-muted"
+        >Mathieu Lagrange</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Romain Hennequin" class="text-muted"
+        >Romain Hennequin</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Music signal processing"
+        class="text-secondary text-decoration-none"
+        >Music signal processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>In music information retrieval (MIR), contrastive self-supervised learning for general-purpose representation models is effective for global tasks such as automatic tagging.
+However, for local tasks such as chord estimation, it is widely assumed that contrastively trained general-purpose self-supervised models are inadequate and that more sophisticated SSL is necessary; e.g., masked modeling.
+Our paper challenges this assumption by revealing the potential of contrastive SSL paired with a transformer in local MIR tasks.
+We consider a lightweight vision transformer with one-dimensional patches in the time--frequency domain (\melt) and train it with simple contrastive SSL through normalized temperature-scaled cross-entropy loss (NT-Xent).
+Although NT-Xent operates only over the class token, we observe that, potentially thanks to weight sharing, informative musical properties emerge in ViT-1D's sequence tokens.
+On global tasks, the temporal average of class and sequence tokens offers a performance increase compared to the class token alone, showing useful properties in the sequence tokens.
+On local tasks, sequence tokens perform unexpectedly well, despite not being specifically trained for.
+Furthermore, high-level musical features such as onsets emerge from layer-wise attention maps and self-similarity matrices show different layers capture different musical dimensions.
+Our paper does not focus on improving performance but advances the musical interpretation of transformers and sheds light on some overlooked abilities of contrastive SSL paired with transformers for sequence modeling in MIR.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1eTe5c5v1pzMLUWxlkxWiy0jCuGGgc5HB/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly disagree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<p>See below</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>See below</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>This submission poses that transformers models trained contrastively on clip-level class tokens, can learn frame-level temporal structures that can be used to solve sequential, MIR tasks.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong reject</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This submission explores an interesting premise, that transformers models trained contrastively on clip-level class tokens, can learn frame-level temporal structures that can be used to solve sequential, MIR tasks. While this is intuitive given how transformers work, this form of “weak” self-supervised learning is not common in MIR. At first glance, the results in section 4 are promising. However, upon closer inspection it is unclear that they support the claims made by the authors. I will elaborate in the following.</p>
+<p>For context: The key claim is that transformer models trained using clip-level contrastive self-supervision, are able to learn frame-level structures that non-transformer models cannot learn. To test this claim the authors train their own contrastive transformer model on 4 second clip, where positive pairs are sampled from the same 30s recording with no augmentation. The frame/token rate is ~30Hz. The model is evaluated on two sequential tasks, beat tracking and chord estimation, and two global tasks, music tagging and genre classification. It is compared against a contrastive model (CLMR), on global tasks, and a predictive model (M2D), on both global and sequential tasks. </p>
+<p>The global tasks’ comparison: for music tagging, the proposed approach performs the worst in MAP of all compared approaches, but competitively with CLMR when using token averages instead of the class token. This is an arbitrary choice that is not clearly justified and that, as is the case in sections 5 and 6, just so happens to maximize the results on the test set. Admittedly the approach performs well with nearly 20 times less parameters than M2D. By the same token, it performs worst than CLMR with double the number of parameters. In any case, it is unclear that the transformer-based approach explains these performance differences. For key estimation, the proposed approach, again in its average version, performs better than M2D and CLMR. However, it is worth noting that at least CLMR is trained using an augmentation-based framework that includes pitch shifting, therefore explicitly making the learned representation invariant to pitch variations. This invariance would explain the poor performance in key estimation for CLMR. At the same time, choosing positive pairs from segments of the same 30s music clip, where key changes are unlikely, and without pitch-based augmentation, is likely to result in a representation space that favors key similarity. I would argue that these differences in sampling and augmentation are more plausible explanations for the key estimation results than the emerging sequential properties of the transformer.</p>
+<p>For the sequential (local) tasks: the proposed approach performs worst than M2D, albeit it remains competitive with a lot less parameters. It is worth noting that the approach is designed to operate at the frame resolution needed for these tasks, while M2D needs an additional upsampling layer that the authors learn for the comparison. It is unclear what the effect of this upsampling is on the results, nor why a similar upsampling is not used for CLMR (which is trained on 2.6s-long segments) to achieve the desired resolution. This is the most important test of the paper, since it underpins the claim of emerging temporal structures. Yet, the authors only compare with one approach, thus limiting any potential insight that we might gain on this. Perhaps the authors could have trained a vanilla, non-transformer contrastive model at frame level resolution, just to disambiguate the contribution of the transformer. Also, to simply use multiple approaches with a longer temporal scope, like CLMR, as a moving filter to produce outputs at the right temporal resolution. Absent this, it is hard to argue that these results sustain the main claims in the paper. As before, results on chord estimation are at least partly explained by the pitch-preserving sampling and augmentation strategies used. Also it is worth noting that the chord ID datasets used are not the most common, and that the major/minor vocabulary is the simplest possible version of the task. </p>
+<p>For sections 5 and 6.1, the authors evaluate on a new set of tasks: onset detection and structural analysis. There are several issues with these sections. First, the representations used in the evaluations are chosen arbitrarily. For example, for onset detection the authors use the output of the second attention head from the 9th layer of the transformer with no clear justification. For structural analysis we look at the outputs of the 3rd and 12th layer. As with the token average before, the impression is that these outputs are chosen post-hoc to report the best possible results. Same with the baselines: spectral flux for onset detection (instead of another DNN approach) or a random projection of the input sequence for structural analysis. Further, the dataset chosen for onset detection is not in common use and simpler (single instrument, homogeneous in timbre) that others in the literature. There is no formal evaluation of the structural analysis, just a visual comparison for only one example, with many subjective and unsubstantiated claims in the relevant discussion. In summary, sections 5 and 6 are not sufficiently rigorous and therefore difficult to consider as providing valid evidence of the overall claims in the paper. </p>
+<p>Thus, while based on an interesting premise, I believe the experimental design needs to be developed further to explicitly and rigorously test the claims in this paper. IMO the experimental design needs to (a) adopt common data, metrics and task definitions for each of the tasks; (b) test the specific claim of emerging frame-level structure thanks to the combination of a transformer with clip-level contrastive learning; (c) use baselines that provide a fair comparison and that control for factors that might influence the results, such as learned invariances, temporal resolution, and other differences in learning objective and scope; and (d) avoid arbitrary choices of internal representation, and subjective comparisons.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>All reviewers agree that the central idea of this paper, that "a contrastive loss applied to a transformer’s class token is enough to induce emergent local musical representations in sequence tokens" (R1) is interesting and valuable. On the one hand, this idea has been extensively explored in other domains such as NLP and vision; on the other hand, the authors make it possible in MIR by using 1D patching in time-frequency instead of the common 2D patches used with ViTs. This is a valuable insight for the MIR community. Thus novelty is the strongest argument for acceptance.</p>
+<p>The main weaknesses of the paper are connected to the experimental validation of this idea:</p>
+<p>(a) The experiments in sections 3 and 4 fail to provide a fair comparison with alternative approaches including non-contrastive, frame-level approaches like MERT, and contrastive, frame-level, approaches trained with the same sampling and augmentation pipelines -- see (b) below.
+(b) When comparing contrastive approaches, the authors choose baselines that operate at different frame rates and use different sampling and augmentation baselines. For example, unlike the proposed approach, the baselines are trained to be pitch-invariant via augmentation. Thus, the "improvement" in chord and key estimation can be better explained by the choice of augmentation than by the emergent properties of the proposed approach. The failure to control for implementation differences that are tangential to the properties being testes render the comparisons in sections 3 and 4 invalid. 
+(c) The experiments in sections 5 and 6, while interesting, are arbitrary and lack rigor. In both sections the authors use manually selected internal representations to demonstrate their point. Section 5 only compares with a classical, not data-driven solution. Section 6 does not compare with other approaches, and makes informal visual assessments of performance that appear biased and unsupported by evidence. To be fair, the results show that some of these internal representations encode local, temporal structure. But it remains unclear whether these representations are as or more informative than local representations obtained using alternative methods.
+(d) There are many questionable methodological choices, e.g. chord and onset detection datasets, chord vocabularies and metrics, choice of baselines and hand-picked internal representations, etc that are not properly justified. </p>
+<p>These are important concerns that would require major changes to the paper. Thus the recommendation to reject.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<ul>
+<li>
+<p>Paper is clear and well structured overall. </p>
+</li>
+<li>
+<p>The general approach and analytical tools are borrowed directly from prior work in the image domain, so the conceptual and architectural novelty is limited. The work here is essentially applying what DINO and Caron et al. did for images, to the audio/music domain.</p>
+</li>
+<li>
+<p>The use of attention maps and self-similarity matrices to study emergent properties is also not new; again, this is common in CV (e.g. self supervised based image segmentation) and NLP.</p>
+</li>
+<li>
+<p>With that said, the application to music/audio is somewhat novel, and the findings challenge prevailing assumptions specific to MIR about the limitations of contrastive SSL for local tasks.</p>
+</li>
+<li>
+<p>The authors make a valuable enough empirical contribution by showing that emergent properties seen in vision also manifest in music in a semantically meaningful way, and can be practically exploited. </p>
+</li>
+<li>
+<p>I'm scoring this as a weak accept given a) the limited novelty in terms of the overall approach, with the novelty being primarily in the application to the audio/music domain and b) I would have liked to see a few real examples where we can visually correlate a given input with the generated internal representations in the context of different applications, like onset detection.</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths:
+1. See #Q16 and #Q18
+2. This paper pushes forward self-supervised contrastive learning in MIR by demonstrating a transformer's ability on local tasks such as beat tracking and chord recognition, which differs from existing approaches that only consider global tasks like music tagging and key estimation.
+3. This paper proposes a novel 1D patching method of spectrogram, which enables the model to learn frame-level representations.</p>
+<p>Weaknesses:
+The paper has no significant weaknesses.</p>
+<p>Minor comments:
+1. In the fourth paragraph of the Introduction section, one sentence is "... ranges from 89M (M2D) to 5B (Jukebox)." Note that Music2latent is 58M, smaller than M2D.
+2. The paper does not describe what kind of positional encoding is used. I recommend to state it explicitly in the paper.
+3. Regarding Figure 4, the paper suggests Layer 3 has clearer block pattern than Layer 12 in the first row. However, I cannot make this conclusion merely based on the figure - I think they are pretty similar.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper introduces a new contrastive target for foundation models. The main idea is to introduce both global and local tokens but only perform contrastive loss on global tokens. While similar methods is often seen in other modalities in image, I think it is quite novel in the music domain.</p>
+<p>The paper also provides an interesting inspection of the attention and SSM of features, which could be useful for future works toward the explainability of music foundation models.</p>
+<p>Though the performance of certain tasks (e.g., music tagging) is not as good compared to CLMR, it is reasonable since the hyperparameter of the model is smaller than a normal 12-layer transformer (with only 3 attention heads and embedding dim of 192), and a shorter window length.</p>
+<p>However, I do find that the chord estimation results are too low, even if it is fine-tuned on a relatively small dataset. It is even lower than rule-based methods like Chordino. A deeper look into the issue would be appreciated. (i.e., shortcut learning that ignored chords?)</p>
+<p>Other weakness:</p>
+<ol>
+<li>No comparison to other foundation models with frame-level representation (i.e., MERT). I assume that the model is not strong enough to compare against other baselines, since CLMR is already a weak baseline.</li>
+<li>Lack of other downstream tasks. See also [1].</li>
+<li>Section 6.2: Since manually selected layers yield better results, it would be meaningful to use a (1) hyperparameter search, or a (2) learned weighted sum module that automatically detects useful layers and aggregates them to acquire a better result.</li>
+</ol>
+<p>Questions:
+1. Line 180: what is the pretraining dataset?
+2. Line 212: "Probe on the average of the entire token sequence" - have you tried to probe on local tokens only? I.e., is the tagging information stored more on global tokens, or the average of local tokens?</p>
+<p>I still think this paper should be accepted by ISMIR even if it is not an SOTA model. That being said, I still recommend the authors to do more comparitive experiments.</p>
+<p>[1] Yuan, R., Ma, Y., Li, Y., Zhang, G., Chen, X., Yin, H., ... &amp; Fu, J. (2023). Marble: Music audio representation benchmark for universal evaluation. Advances in Neural Information Processing Systems, 36, 39626-39647.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

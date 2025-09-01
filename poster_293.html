@@ -1,0 +1,548 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Modeling the Difficulty of Saxophone Music</title>
+    
+<meta name="citation_title" content="Modeling the Difficulty of Saxophone Music" />
+
+<meta name="citation_author" content="Šimon Libřický" />
+
+<meta name="citation_author" content="Jan Hajič" />
+
+<meta name="citation_author" content="jr." />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="In learning music, difficulty is an important factor both in choice of repertoire, choice of tempo, and structure of practice. These choices are typically done with the guidance of a teacher; however, not all learners have access to one. While piano and strings have had some attention devoted to automated difficulty estimation, wind instruments have so far been under-served.
+In this paper, we propose a method for estimating the difficulty of pieces for winds  and implement it for the tenor saxophone. We take the cost-of-traversal approach, modelling the part as a sequence of transitions -- note pairs.  We estimate transition costs from newly collected recordings of trill speeds, comparing representations of saxophone fingerings at various levels of expert input. We then compute and visualise the cost of the optimal path through the part, at a given tempo. While we present this model for the tenor saxophone, the same pipeline can be applied to any wind instrument, and our experiments show that with appropriate feature design, only a small proportion of possible trills is needed to estimate the costs well. Thus, we present a practical way of diversifying the capabilities of MIR in music education to the wind family of instruments.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Creativity and learning" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Creativity" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Music training and education" />
+
+<meta name="citation_keywords" content="Tools for artists" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-02: Modeling the Difficulty of Saxophone Music
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Šimon Libřický" class="text-muted"
+        >Šimon Libřický</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Jan Hajič" class="text-muted"
+        >Jan Hajič</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=jr." class="text-muted"
+        >jr.</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Creativity and learning"
+        class="text-secondary text-decoration-none"
+        >Creativity and learning</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Creativity"
+        class="text-secondary text-decoration-none"
+        >Creativity</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music training and education"
+        class="text-secondary text-decoration-none"
+        >Music training and education</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Tools for artists"
+        class="text-secondary text-decoration-none"
+        >Tools for artists</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>In learning music, difficulty is an important factor both in choice of repertoire, choice of tempo, and structure of practice. These choices are typically done with the guidance of a teacher; however, not all learners have access to one. While piano and strings have had some attention devoted to automated difficulty estimation, wind instruments have so far been under-served.
+In this paper, we propose a method for estimating the difficulty of pieces for winds  and implement it for the tenor saxophone. We take the cost-of-traversal approach, modelling the part as a sequence of transitions -- note pairs.  We estimate transition costs from newly collected recordings of trill speeds, comparing representations of saxophone fingerings at various levels of expert input. We then compute and visualise the cost of the optimal path through the part, at a given tempo. While we present this model for the tenor saxophone, the same pipeline can be applied to any wind instrument, and our experiments show that with appropriate feature design, only a small proportion of possible trills is needed to estimate the costs well. Thus, we present a practical way of diversifying the capabilities of MIR in music education to the wind family of instruments.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1czK4XpQ8EiCo8AdH5MUsViYZ_Zz-qOVw/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>The authors cite relevant work</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<p>Please see the main review for this detail</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>I think that the authors did a first pass at coming up with a fingering difficulty model for saxophone but I am not clear what reusable insights could be applied to other woodwinds, for example, since I think that the paper does not give enough detail about the data collection or the experimental validation to make it clear which of their approaches to measuring difficulty shows the most promise.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>They propose a method for estimating the difficulty of pieces for
+for the tenor saxophone, using transition difficulty between pairs of notes to estimate difficulty. This is based on trill data.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>As a saxophone player, I am very sympathetic to the goals of the paper. I like that the authors explored several methods of determining difficulty of passages. I think that the description of their data collection was, however, underspecified and the experimental results did not convincingly establish which of their methods (based on trill data, based on expert input, based on finger features) was the most informative. </p>
+<p>Weakness: The data collection section did not specify trills were used in this study. Only a single 1/2 step trill from B to B flat is shown. They specify use of the bis key. This key would likely not be used to play a Bb (A#) in a B major scale or a B major 7 chord, since it would leave the 2nd finger in the wrong place to cover the appropriate key when playing the next note. A different fingering (using a side key) is much more likely. Basing the transition difficulty on limited trill data may be problematic because the saxophone has multiple trill fingerings that are specifically for trills but are not appropriate for use in scalar passages or arpeggios. If trill speed is used as a proxy for transition difficulty, then trill fingerings may make transitions seem easier than they typically are in most passages.</p>
+<p>The authors state "Each combination of covered keys has a sufficiently unique map to which fingers are active, so the “Finger” features can be derived automatically from the “Raw” features." Is this true? Using their example trill fingering of the bis B flat, one can compare that to the fingering for A and the set of fingers used is identical. </p>
+<p>The expert features section is a good attempt to capture issues that arise in saxophone fingerings.</p>
+<p>I wonder why the authors weight their model error calculation by frequency of intervals in the Weimar Jazz Database (WJD). Wouldn't it be more likely that rare intervals are, in fact, harder? One might instead use the frequency of interval as a kind of alternative ground truth that may be useful to predict difficulty: more rare intervals may be harder to play.</p>
+<p>In section 6 the results are somewhat difficult to interpret. What are the units? When they say the linear model has MSE of 0.97 is this measured in transitions per second? When they say something has MAPE of .37, does that mean 37% or does it mean 0.37%? Also, how is precision measured? Is there an en epsilon where, if the model's estimate is less than epsilon different from truth it counts as being correct? </p>
+<p>In section 8 the authors state " First, because some notes have multiple fingerings, the “fastest” (maximal) path through the part in terms of fingerings is found with Viterbi decoding over the estimated trill speeds." This sounds interesting but I'm unclear on what they mean. There are, for example 5 ways to finger the B flat in the example from Figure 1. How do they estimate trill speeds for all 5 when they only measured 1 fingering? Without that information, how can they build a Markov transition graph for all 5 fingerings so the fastest one can be selected with Viterbi?</p>
+<p>The authors mention that their method requires access to an expert to give them information and to realize some of the trills for their data collection. Is it possible that they should have collected data from people that are not experts, as it may be that novices may have difficulty in some transitions that experts have completely mastered? </p>
+<p>It would seem natural to take their estimation of difficulty, apply it to musical passages (as shown in figure 8) and then ask saxophone players to independently rate the difficulty of the passages. One could ask them to circle the hard parts and then the model could be evaluated on precision/recall on its ability to identify the passages the humans called difficult. The authors have done all the work needed to develop the model that could be evaluated this way. Now they just need to actually do it. That would be very interesting validation.</p>
+<p>There is a typo on line 103 "...representation design fort the inherently limited data.." Fort is not the right word.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>With three strong accepts and 1 weak accept from the meta reviewer, we should clearly accept this submission.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper provides a robust pedagogy-founded approach for difficulty estimation in saxophone music, a very under-investigated repertoire in computer-supported music education research in general, but also in difficulty estimation in particular. This paper can serve as a foundation for future research on wind-family instruments.</p>
+<p>MAJOR COMMENT
+It is not clear to me whether transition difficulties are just measured as a function of trill speeds (this seems to be implied in the lines 280-281). I think this might be a too narrow approach and because of this a clarification would be worthy here in order to highlight the interplay between other variables involved as well as their relationship to speed. 
+In addition, and related to the previous, I do not fully understand how player proficiency is controlled for. Although proficiency is directly related to the ability to play repertoire of a given difficulty level, individual skills concerning specific challenges play also a role in mastering an instrument completely. In this regard, it is not clear (even if fatigue is briefly mentioned in line 308) how individual strengths and weakness from the different players are considered in determining transitions' difficulty levels. Without controlling for proficiency, results might reflect player skill rather than the intrinsic transition challenge. 
+Finally, a hypothesis about why player 5 is amongst the faster and slower players would also be important in order to understand individual differences amongst the included musicians. Was player 5 a beginner or an advanced player? Was under determined conditions when performing slow? Player 5 is referred to twice in the paper, but an interpretation of the reasons behind their performance is missing.</p>
+<p>MINOR COMMENTS
+Figure 8 seems to imply that a tool to visually inspect difficulty transitions is available and could be used to explore other content beyond the paper. No website however can be found referred to in the article, so if such a Tool exist, this should be clearly pointed out. I interpret, however, Fig 8 is merely a plot designed to illustrate the described concept. I do not see anything wrong with this, but it should be clearly indicated as such, to avoid misleading interpretations.</p>
+<p>Although several limitations concerning other aspects such as voicing, articulation, etc. are pointed out, the accumulative difficulty derived by cognitive overload of playing a long passage, specially containing difficult transitions, seems not to be considered. Adding a note about this could be important.</p>
+<p>Typos, missing spaces, etc.:
+- Line 59: meaningless. so -&gt; meaningless. So
+- Line 143: and (3) and as -&gt; and (3) as
+- Line 413: ABRSM -&gt; ABRSM (Associated Board of the Royal Schools of Music)
+- Line 421: features.Also -&gt; features. Also
+- Footnotes 1 and 4 should end with a dot
+- Reference [16] is published in ISMIR 2023 (please refer to the final paper, not to the arXiv version)
+- References are generally well formatted, but adding pages, or last article page when missing would be improve coherence/completeness (see [4], [7], [23]). Double check capitalisation rules and included information, such as addresses, when referring to conference proceedings in order to ensure consistency.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I really enjoyed reading your work, thanks. Here below I are some comments for improving the quality of the paper:
+-) Line 2 Use the word "both" only with two items. You have listed three.
+-) Line 13 "trill speeds" - give more information about the trills, assuming that this is the first time the reader is seeing the information. For example, mention that the trills are between each possible pair of notes.
+-) Figure 5 - For the same finger transition, why 10 and not just 1?
+-) Figure 8: it is difficult to understand what you mean by "redder", because some of the notes appear more orange than red. Maybe use a scale of blue (easier) to red (more difficult) to make it clear. 
+-) Line 421: space needed between sentences
+-) Lines 525-529: Incomplete reference, should have volume and page numbers.
+-) Lines 584-605: Please check the title.
+Generally, please check the references to make sure they are in uniform format. For example, two papers from ISMIR are formatted differently.
+The abstract could be clearer. Please do not assume the reader is already familiar with the work described in the paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>In this paper the authors estimate the difficulty of saxophone parts based on a model created using player trill speed between pairs of notes as training data, then estimating total cost of transitions of the part. The models tested are simple regression and a multi-layer perceptron. Expert features with an MLP seemed to be the most accurate solution for this problem.</p>
+<p>The strengths include that it is based on genuine player abilities, and even has data from players of different skill levels.
+Interesting that there is much variation in relative ease of trilling between players. This would not have been known without this experiment.</p>
+<p>Minor matters:
+Line 257 has "embrochure" instead of "embouchure".
+Line 437: "a a "</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

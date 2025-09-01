@@ -1,0 +1,571 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Identification and Clustering of Unseen Ragas in Indian Art Music</title>
+    
+<meta name="citation_title" content="Identification and Clustering of Unseen Ragas in Indian Art Music" />
+
+<meta name="citation_author" content="Parampreet Singh" />
+
+<meta name="citation_author" content="Adwik Gupta" />
+
+<meta name="citation_author" content="Aakarsh Mishra" />
+
+<meta name="citation_author" content="Vipul Arora" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Raga classification in Indian Art Music is an open set problem where unseen classes may appear during testing. However, traditional approaches often treat it as a closed set problem, rejecting the possibility of encountering unseen classes. In this work, we first employ an Uncertainty-based Out-Of-Distribution (OOD) detection, given a set containing known and unknown classes. 
+Next, for the audio samples identified as OOD, we employ Novel Class Discovery (NCD) approach to cluster them into distinct unseen Raga classes. We achieve this by harnessing information from labelled data and further applying contrastive learning on unlabelled data.  
+With thorough analysis, we demonstrate how different components of the loss function influence clustering performance and how varying the openness affects the NCD problem in hand. &lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="Music signal processing" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Pattern matching and detection" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-08: Identification and Clustering of Unseen Ragas in Indian Art Music
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Parampreet Singh" class="text-muted"
+        >Parampreet Singh</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Adwik Gupta" class="text-muted"
+        >Adwik Gupta</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Aakarsh Mishra" class="text-muted"
+        >Aakarsh Mishra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Vipul Arora" class="text-muted"
+        >Vipul Arora</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music signal processing"
+        class="text-secondary text-decoration-none"
+        >Music signal processing</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Pattern matching and detection"
+        class="text-secondary text-decoration-none"
+        >Pattern matching and detection</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Raga classification in Indian Art Music is an open set problem where unseen classes may appear during testing. However, traditional approaches often treat it as a closed set problem, rejecting the possibility of encountering unseen classes. In this work, we first employ an Uncertainty-based Out-Of-Distribution (OOD) detection, given a set containing known and unknown classes. 
+Next, for the audio samples identified as OOD, we employ Novel Class Discovery (NCD) approach to cluster them into distinct unseen Raga classes. We achieve this by harnessing information from labelled data and further applying contrastive learning on unlabelled data.<br />
+With thorough analysis, we demonstrate how different components of the loss function influence clustering performance and how varying the openness affects the NCD problem in hand. <br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1u-PAxmpxKCu1xn3SCc38LkGhOgl6sQu7/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>I feel it misses the papers on Carnatic music: Sankalp Gulati et al, Shrey Dutta et al. on "Raga ID" for Carnatic Music. Hindustani music is not very different from Carnatic music.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q10 (Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chose, otherwise write "n/a"))</strong></p>
+<p>Dividing HM excerpts into 30 s chunks is totally incorrect. One should segment at the level of gat. Phrases purvanga and uttaranga can be distinctly different for the same raga -- by forcing a match is terribly wrong. In Misra ragas there could just a phrase that comes from a different raga. You need to segment this at the phrase level not arbitrarily at 30s intervals.</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>I think the insights are pretty wrong. Let me give examples: Ragas in CM Sriranjani- Abhogi, kirvani-simhendramadhyamam. Similarly bimpalasi-bageshri from Kafi thaat for HM. What about the thaats, and the putra ragas of the corresponding thaats? Some details MUST be given -- while they have stated that it does not work well for ragas belonging to the same thaat -- some explanation of why -- is required.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Identification of unseen ragas</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>I feel the authors do not have an idea of IAM at all. IAM like Indian languages are phrase structured. You can not pick up 30s sections and believe that they represent the raga. Also purvanga and uttaranga -- even if they belong to the same raga can have completely different movements.</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>While the idea is new, the work does not use any culture specific methodology. My recommendation: Reject. Such papers should not be given importance even if there is novelty in terms of technology. It has to relate the music and the science of the art form. This is completely missing.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<ul>
+<li>This paper discusses OOD and NCD methods for Indian Raga classification in the wild. The experiments are scientific, and the results are promising on the public saraga and PIM datasets. </li>
+<li>The paper is a little hard to follow considering multiple experiments and results. Consider restructuring and proof-reading for better readability.</li>
+<li>Please consider making the models, training and inference code opensource. This will help the community as you have leveraged opensource datasets.</li>
+<li>Typo in the first line of sub-subsection'4.3.2 Open-ness'</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Thanks for the great work. I agree that the type of methods presented in this paper are necessary for those wishing to study hindustani raga computatonally at scale - a task for which OOD samples are common and expected. I have selected a weak accept because I think the methodology is novel in this context, necessary, and yields decent results. However I would request the authors to make some quite significant additions/changes to help with the reproducibility and interpretability of the study...</p>
+<ul>
+<li>Most importantly, you present a very multi-facceted approach that requires many design decisions. However you provide little explanation of how you made those. A non-exhaustive list would be...</li>
+<li>selecting K for k means and for UMAP</li>
+<li>the cosine similarity clustering threshold</li>
+<li>model hyperparameters</li>
+<li>why chromogram features?</li>
+<li>
+<p>etc...</p>
+</li>
+<li>
+<p>You include no comparison to existing raga classification studies, even though you use a dataset from a raga classification paper. This combined with a poor description of design decisions makes it hard to evaluate the value of the trained model.</p>
+</li>
+<li>
+<p>looking at the results quickly in [6] I dont think you achieve a higher f1. You need to be explicit as to why even with that being the case, this paper constributes a valuable contribution (namely the ability to handle out of distribution samples).</p>
+</li>
+<li>
+<p>The structure of the paper could be improved.</p>
+</li>
+<li>Figure 1 could be bigger and more explicative. You present a process with many parts, think about making this diagram a lot clearer, bigger, and use labelling that corresponds with the text in the methodology section</li>
+<li>Algorithm 1 is included but not introduced or referenced in text</li>
+<li>does algorithm 1 cluster? it seems like it is the training process not the prediction process?</li>
+<li>some terms in algorithm 1 are not defined, e.g. x_i_u </li>
+<li>if you are to include it make it clear and a valuable addition</li>
+<li>be clearer about exactly what data is being used for training and testing and how big it is, how many ragas it includes etc..</li>
+<li>
+<p>consider separating experiments out into named experiments: introduce them briefly in some summary introduction to section, explain them in detail in their respeective subsections, reference them by name in results section</p>
+</li>
+<li>
+<p>Please consider including the code to reproduce this analysis or at the very least allow others to use your model. You may also want to consider including some more detailed results in that repository.</p>
+</li>
+</ul>
+<p>Some smaller comments....</p>
+<ul>
+<li>Line 209: finally</li>
+<li>line 384: openness</li>
+<li>line 380-383: sentence is hard to parse. perhaps an incorrect use of wherever.</li>
+<li>line 385: colon at start of sentence</li>
+<li>The hindustani dataset in saraga is quite noisy, how did you clean the data or exclude non melodic instruments?</li>
+<li>presumably the entire work is based only on hindustani ragas. You could be explicit about this since Saraga contains many carnatic performances.</li>
+<li>What about audio style. Would this model work on reordings with just a vocalist? What about with/without a harmonium etc... Maybe you can comment on the nature of the two datasets and its implication for using this model in the real world</li>
+<li>You make no comment on the scalability using pairwise distance metrics - how does this influence training time/prediction time. It doesn't take many samples for relying on pairwise distancing to become infeasible. </li>
+<li>If you have expertise on hindustani music perhaps you could use the extra space you have to talk a bit more about some of the results from a musicological perspective. Why does the model get confused in the cases where it predicts incorrectly? You mention thaats very briefly but at this point have given no introduction to what a thaat is (nor pancham, or aaroh). If you have a bit of space left think about refining this section, it may be useful for other researchers/musicologists.</li>
+<li>btw, you could probably free up some space by reducing the amount of subsections you have (see: sec. clustering and sec. evaluation)</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents a thorough and interesting method to classify/cluster future Ragas. The experiments appear thorough, and a lot of important information is scattered throughout the manuscript. It would be tremendously beneficial to have a flowchart or table with all experiments, listing which parts of f, g and g’ are used where, and which datasets were used for (pre-)training, testing and obtaining embeddings. It would also be nice if all symbols (i.e. x, y, z) appeared in the listing for Algorithm 1.
+For someone less versed with Raga, it would be good to know what kind of Raga classes a classifier would classify them into. Is there a hierarchy (i.e., general Ragas and subclasses of them)? The introduction states that a Raga is a distinct set of notes, so is the idea to classify unseen set of notes simply as Ragas or certain sub-types of Ragas? This becomes clearer much later around line 273, but could be mentioned earlier.
+There are quite a lot of errors in sentences and inconsistencies in labeling (e.g. f(.) vs f(·)), please do another round of proof-reading.</p>
+<p>48: Even though “target classes &lt;= training classes” is a common assumption in NCD, this directly contradicts “the number of Ragas is not fixed” (33). But I am assuming that the model will have a certain “target space” for unseen targets that theoretically enables it to recognize any unseen Raga class when it is run individually?
+143: feature extractor has an error in the “denotion”
+152: unclear; in 142 it was said that the softmax layer is removed
+185: what is an audio chunk?
+214: The criticality of the scaling hyperparameteres demands an explanation of how it is done.
+Section 3.4: This can all be written in a single paragraph without the need for sub-sections 3.4.x
+256: Write out ACC once.
+269: This could mention once more that S^l is sourced from the PIM dataset. An overview of all used datasets would be useful (number of files, length, train/val/test size, number of classes...)
+381-383: This is confusing. Did the dataset description get mixed up?
+419-421: It would be nice to see a confusion matrix for this statement?</p>
+<p>Table 2: According to 254-255, higher values indicate greater similarity between two clusterings. Is it then not a goal to reduce similarity between clusterings?</p>
+<p>Figure 1 could be more self-explanatory, particularly the two OOD blocks. The caption should explain crucial parts.</p>
+<p>Figure 2: Could be a normalized confusion matrix.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

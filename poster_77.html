@@ -1,0 +1,553 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Expanding the HAISP Dataset: AI&#39;s Impact on Songwriting Across Two Contests</title>
+    
+<meta name="citation_title" content="Expanding the HAISP Dataset: AI&#39;s Impact on Songwriting Across Two Contests" />
+
+<meta name="citation_author" content="Lidia Morris" />
+
+<meta name="citation_author" content="Michele Newman" />
+
+<meta name="citation_author" content="Xinya Tang" />
+
+<meta name="citation_author" content="Renee Singh" />
+
+<meta name="citation_author" content="Marcel Vélez Vásquez" />
+
+<meta name="citation_author" content="Rebecca Leger" />
+
+<meta name="citation_author" content="Jin Ha Lee" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="As artificial intelligence (AI) continues to shape creative practices, understanding its role in human-AI songwriting remains crucial. This paper expands the Human-AI Songwriting Processes (HAISP) dataset by incorporating data from the 2024 AI Song Contest, building upon the original 2023 dataset. By analyzing new submissions, we provide further insights into AI&#39;s evolving impact on songwriting workflows, creative decision-making, and control. A comparative study of AI tool usage and participant strategies between the 2023 and 2024 contests reveals shifts in collaboration patterns and tool effectiveness. Additionally, we assess the differences between general-purpose AI systems and personalized, fine-tuned tools, highlighting their impact on creative agency. Our findings offer key design implications for AI-assisted songwriting tools, providing actionable insights for AI developers and music practitioners seeking to enhance co-creative experiences.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Human-centered MIR" />
+
+<meta name="citation_keywords" content="Creativity" />
+
+<meta name="citation_keywords" content="Human-ai co-creativity" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Tools for artists" />
+
+<meta name="citation_keywords" content="Computational creativity" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Creative practice involving MIR or generative technology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P1-03: Expanding the HAISP Dataset: AI&#39;s Impact on Songwriting Across Two Contests
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Lidia Morris" class="text-muted"
+        >Lidia Morris</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Michele Newman" class="text-muted"
+        >Michele Newman</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xinya Tang" class="text-muted"
+        >Xinya Tang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Renee Singh" class="text-muted"
+        >Renee Singh</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Marcel Vélez Vásquez" class="text-muted"
+        >Marcel Vélez Vásquez</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Rebecca Leger" class="text-muted"
+        >Rebecca Leger</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Jin Ha Lee" class="text-muted"
+        >Jin Ha Lee</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-centered MIR"
+        class="text-secondary text-decoration-none"
+        >Human-centered MIR</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Creativity"
+        class="text-secondary text-decoration-none"
+        >Creativity</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-ai co-creativity"
+        class="text-secondary text-decoration-none"
+        >Human-ai co-creativity</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Tools for artists"
+        class="text-secondary text-decoration-none"
+        >Tools for artists</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Computational creativity"
+        class="text-secondary text-decoration-none"
+        >Computational creativity</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Creative practice involving MIR or generative technology"
+        class="text-secondary text-decoration-none"
+        >Creative practice involving MIR or generative technology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>As artificial intelligence (AI) continues to shape creative practices, understanding its role in human-AI songwriting remains crucial. This paper expands the Human-AI Songwriting Processes (HAISP) dataset by incorporating data from the 2024 AI Song Contest, building upon the original 2023 dataset. By analyzing new submissions, we provide further insights into AI's evolving impact on songwriting workflows, creative decision-making, and control. A comparative study of AI tool usage and participant strategies between the 2023 and 2024 contests reveals shifts in collaboration patterns and tool effectiveness. Additionally, we assess the differences between general-purpose AI systems and personalized, fine-tuned tools, highlighting their impact on creative agency. Our findings offer key design implications for AI-assisted songwriting tools, providing actionable insights for AI developers and music practitioners seeking to enhance co-creative experiences.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/12-pcaheXMfsPhR_I4DrhfeZzJdXd22zc/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>There are useful insights in the paper, but they would be more reusable if the connection between the results and design principles was more clear.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Process reports from selected 2024 AI Song Contest participants elucidates AI usage and informs how system design could further support these users.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This is the meta-reviewer's independent review for paper 77: Expanding the HAISP Dataset: AI’s Impact on Songwriting Across Two AI Song Contests</p>
+<p>This paper provides an update and extension of the Human-AI Songwriting Processes (HAISP) dataset with new data from 2024. The authors describe how the new data were collected and coded, discuss main themes emerging across the two years, and offer design principles. </p>
+<p>This paper was well-written and easy to read throughout. The authors do a great job of providing high-level context in the Introduction which is elaborated upon in Background; and the relevance to ISMIR is clear. Overall I find this to be a solid paper on a timely topic, but am unsure of some aspects of the paper. Below I provide four main points of feedback, followed by minor feedback.</p>
+<p>** Main feedback 1: Concerns around incremental contributions **
+It's exciting to see the HAISP dataset effort continue, and the reported comparisons between 2023 and 2024 make sense given the framing of the paper. However, I am not sure whether I agree with the authors' claims of interpretable changes over time given only a 1-year sampling interval. E.g., "an evolving discourse" (p.4 line 390) and demographic trends in submissions (such as the noted increase in non-academic teams) would be more strongly reported across a longer longitudinal timeframe. Incremental research is fine of course, but as the authors mention "more concrete frameworks for future entries" (line 507), I am left wondering whether the frameworks might be better concretized across less frequent, more impactful papers that span larger time frames.</p>
+<p>** Main feedback 2: Drawing stronger connections between design principles and results **
+The design principles provided in Section 5 are all reasonable and well articulated. However, they would be reasonable even if proposed separately from this study's results, and as the paper is written it is hard to see how they arose from the present results. The authors are advised to more clearly show how these principles arose from the specific findings -- in other words, to show how the results uniquely inform these principles. For example, this could be done by referencing the derived themes or even including additional participant responses from relevant themes for each. In addition to tying the principles more clearly to the results, it could also be helpful to begin Section 5 by stating this causal relationship outright. </p>
+<p>** Main feedback 3: Seeking more information on coding process **
+I was also curious to know more about the codes and coding process. Were these codes used in the original dataset paper (it seems not), or were new codes derived this year and then applied to both years of data in a new analysis? Can some examples of codes themselves be given? Can the authors offer more detail on how the coding turned out -- is there a reliability metric or statistic that can be reported to summarize the extent of agreement before/after discussion as well as number of tiebreaks needed? Finally, how were the codes translated to the themes reported in Section 4?</p>
+<p>** Main feedback 4: Provide more context on commonality of results **
+In Section 4, there were many qualitative mentions of how common a theme was (e.g., "Many users" line 255, "teams frequently encountered" line 278, "much more" line 298) but as a reader I found it hard to translate these extents to tangible quantities. Can the authors provide more grounding to readers by providing more quantitative backing to the main results? </p>
+<p>Minor
+- Line 48: Based on ref #10, is it more accurate to say HAISP was introduced in 2024?
+- Section 3: Suggest removing "Methodology" from the section title since Section 3.2 is more results than methodology
+- In the Background section, it could be useful to provide more context on the AI Song Contest, for readers who are learning about it for the first time. 
+- In Section 3.1 I was curious at this point why Udio/Suno submissions were disqualified. The authors go into this in detail in Section 4.3 but it could be helpful to provide more context upfront (and perhaps reference back to it).
+- Related to above two points: The content in lines 360-365 could also go in a Background subsection on AI Song Contest and also help the reader understand the omission of Udio/Suno entries.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak reject</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This is the meta-review for paper 77: Expanding the HAISP Dataset: AI’s Impact on Songwriting Across Two AI Song Contests. The meta-reviewer and 3 other reviewers independently reviewed the paper. While we did not achieve consensus in our individual reviews, we reached an understanding during the discussion phase regarding the direction of the overall recommendation. </p>
+<p>All reviewers praise the paper for its clear writing, relevance to MIR, useful information, and timeliness with regard to the topic. Across the reviews, several suggestions for improving the paper also arose. First, there was uncertainty around the paper's impact -- for example, whether the contribution provides enough depth or longitudinal value. On a related point, while the design principles made sense, their novelty and connection to results were unclear. Finally, more details on the coding process, the dataset, and the longitudinal aspect of the results could have been helpful. A longitudinal contribution spanning more years could provide heightened impact; or the authors could do a deeper dive into reporting on the present methods and data -- and connect results more strongly to the design principles -- which would serve as a faster (and hence timely) contribution to a fast-moving research topic.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<ul>
+<li>
+<p>This is a well written paper and I think the dataset and the findings will be useful for the community. I think the trends among the participants and the year-to-year differences are really interesting to see.</p>
+</li>
+<li>
+<p>The design principles emerging from analyzing this dataset don't seem to break new ground. I'm not sure whether there's more to uncover here, but one interpretation of this finding could be an updated understanding about what the AI Song Contest itself is providing to the community - this year, it offered valuable insights about the changing attitudes and backgrounds of participants, but revealed less about the usability of music AI tools themselves. Maybe this is something to consider for the contest organizers as they choose their directions for the future.</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I think this paper brings up interesting (and quantitatively derived) trends regarding use of AI in songwriting, including how it is shifting out of academia to industry (now that more tools are mature), that this proliferation is leading to more pressure regarding ease of use, ethical transparency, and flexibility, and backs all this up with quotes from real-world composers and song-writers, which I appreciated.</p>
+<p>I also find the methodology of this paper to be successful, specifically:</p>
+<ol>
+<li>Clearly presenting the dataset to be analyzed and quantitative statistics regarding it</li>
+<li>Analyzing general trends (and reinforcing them with qualitative quotes from the dataset, where useful, which I very much appreciated)</li>
+<li>Taking these trends and making them into actionable guidelines for AI tools producers: including interactivity and adaptivity, enhancing transparency and explainability, including the ability to include style and genre customization, and integrating tools into existing creative workflows.</li>
+</ol>
+<p>The paper is easy to read and the authors clearly convey their main takeaways, summarizing them into a set of conclusive "Design Principles for Music Generation AI" (see above) which could certainly be acted upon/used as design principles for GenAI software development teams and companies.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths: 
+The HAISP dataset is extended with submissions from 2024 AI song contest, providing opportunity for the community to study the changes in the creative practices and participant behaviours about AI in various aspects of the song production process. 
+Weaknesses: The paper could have presented in depth details about the dataset such as participant distribution in terms of skills, professional practices. They could have also listed the tools used by participants and a clear distinction of tools for different tasks. The most important results from the paper highlight increased participation from creative industry in 2024 and participants preferring assistive systems that are ethically trained. This is interesting but not interesting enough. The paper seems a bit underdeveloped. I would encourage the authors to describe the dataset in more details and present detailed and comprehensive longitudinal comparison across the years. The authors say that a journal paper is underway and I look forward to it. 
+Lastly, authors propose guidelines for developing AI tools which again is interesting but nothing novel. Similar content has been discussed in several papers and presentations before, some of which authors fail to mention.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

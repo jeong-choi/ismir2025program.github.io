@@ -1,0 +1,520 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Lose the Frames: Event-Based Metrics for Efficient Music Structure Analysis Evaluations</title>
+    
+<meta name="citation_title" content="Lose the Frames: Event-Based Metrics for Efficient Music Structure Analysis Evaluations" />
+
+<meta name="citation_author" content="Qingyang Xi" />
+
+<meta name="citation_author" content="biran mcfee" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Many evaluation metrics in Music Information Retrieval (MIR) rely on uniform time sampling of phenomena that unfold over time. While uniform sampling is suitable for continuously varying concepts such as pitch or dynamic envelope, it is suboptimal for inherently discrete or piecewise constant events, such as labeled segments. Current Music Structure Analysis (MSA) metrics for label evaluation are all implemented with time sampling, which can be inexact and inefficient. In this work, we propose event-based implementations of the three most widely used MSA metrics. Our approach yields evaluations that are more accurate, more computationally efficient, and more reproducible, streamlining MSA research workflows.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Evaluation metrics" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Reproducibility" />
+
+<meta name="citation_keywords" content="Structure, segmentation, and form" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-07: Lose the Frames: Event-Based Metrics for Efficient Music Structure Analysis Evaluations
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Qingyang Xi" class="text-muted"
+        >Qingyang Xi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=biran mcfee" class="text-muted"
+        >biran mcfee</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation metrics"
+        class="text-secondary text-decoration-none"
+        >Evaluation metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Reproducibility"
+        class="text-secondary text-decoration-none"
+        >Reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Structure, segmentation, and form"
+        class="text-secondary text-decoration-none"
+        >Structure, segmentation, and form</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Many evaluation metrics in Music Information Retrieval (MIR) rely on uniform time sampling of phenomena that unfold over time. While uniform sampling is suitable for continuously varying concepts such as pitch or dynamic envelope, it is suboptimal for inherently discrete or piecewise constant events, such as labeled segments. Current Music Structure Analysis (MSA) metrics for label evaluation are all implemented with time sampling, which can be inexact and inefficient. In this work, we propose event-based implementations of the three most widely used MSA metrics. Our approach yields evaluations that are more accurate, more computationally efficient, and more reproducible, streamlining MSA research workflows.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1C5yCZQkabuN4SQlqbyAWe51oTmxtvn2L/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>The related work discussion seems somewhat unbalanced - I was surprised to see the reference to Holzapfel et al. in there, while questions of sustainability and responsibility seem useful extra features, rather than the true experimental core of the work (for this same reason, I feel the claim of 'more responsible' evaluation in the title is a bit overblown, and the title would be more concise and on-point when not adding that). At the same time, the related work section very sparsely relates to work on music structure analysis, which is the actual task of focus in the work. As such, a more proper introduction of this task and common evaluation strategies or challenges would have been appropriate; instead, the section discusses another task (SED) that also would suffer from frame-based evaluation issues, but again generalizability to different tasks is not the core focus of the paper at this moment in time, and as such that part of the discussion seems to better fit in relation to a future work discussion. Also note some inconsistencies in wording: here, 'music segmentation' is referred to as a task, where elsewhere in the article this rather seems to be referred to as 'music structure analysis'.</p>
+<p>If the authors ever wish to make a broader argument on works in the MIR field that raise issues with audio (in)stability or ambiguity of signal handling, several broader relevant references include:
+- Urbano et al. 'What is the Effect of Audio Quality on the
+Robustness of MFCCs and Chroma Features?', ISMIR 2014
+- Sturm 'A Simple Method to Determine if a Music Information Retrieval System is a “Horse"', TMM 2014
+- McFee et al. 'Open-Source Practices for Music Signal Processing Research: Recommendations for Transparent, Sustainable, and Reproducible Audio Research', IEEE SPM 2019
+- Liem &amp; Mostert 'Can’t trust the feeling? How open data reveals unexpected behavior of high-level music descriptors', ISMIR 2020</p>
+<p>I do not insist these works are cited now, but they may be useful as part of a larger review on current evaluation issues and the importance of implementation transparency.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>the paper raises awareness to numerical errors/instabilities in sampled audio evaluation for musical structure analysis. I can imagine this is something that may inspire others working with and evaluating on audio data and the authors already give some first directions into this</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Exact implementations of music structure analysis evaluation measures are more efficient to compute, while giving more robust evaluation results.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper proposes to take a continuous perspective on several commonly used evaluation metrics in music structure analysis evaluation, and compares the proposed take and implementation to performance obtained by the corresponding implementations in mir_eval, which perform frame-based sampling.</p>
+<p>At points, the authors seem somewhat inconsistent in wording; apart from the earlier-mentioned 'music segmentation' vs. 'music structure analysis', there are mixed references to 'uniform sampling' and 'frame-based sampling' where these seem to connect to the same concept.</p>
+<p>Overall the authors do come up with an original idea and empirically show their method is more computationally efficient and more robust. I must say that the instability as achieved by frame-based methods seems to yield a reasonable consistent and correctable bias, that in terms of time offset seem quite manageable.</p>
+<p>Furthermore, I wonder whether the 'exact evaluation' claim may be a bit grand from a bigger-picture perspective. As is known on the SALAMI data, when multiple annotators annotated the same songs, they were not always fully in agreement on how they annotated. Furthermore, each annotator physically had to interact with Sonic Visualiser, which may additionally cause possible latency or inaccuracy in the annotations. The original SALAMI paper (reference [16]) proposes to consider that boundaries of annotations are a match if they are within a broader time window, and propose 0.5 and 3 seconds there. This is much coarser than the worst deviations found for the frame-based mir_eval implementation for a 2-second frame size. As such, I wonder whether it makes sense to extremely precisely try to match what a human used to annotate, as there will be some degree of instability in the ground-truthing process. Thus, the suggestion that frame-based implementations are problematically unstable may be less of a convincing argument given the nature of the parti (although the work still is convincing in its computational efficiency).</p>
+<p>As a final tip: when submitting implementation/code base anonymously, consider using the anonymous GitHub service that can host such repositories for peer review purposes.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>On this paper, reviewers are in consensus that a nice idea is presented in this paper. While some questions remain on how large the contribution and its benefits really will be, the insights are reusable and offer a new and refreshing perspective on evaluation. As such, while the average of the reviews would lean towards a weak accept, the work clearly seems above the acceptance bar, and as such I recommend to accept the paper.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Summary</p>
+<p>In this paper, the authors examine three evaluation metrics for semantic segmentation: Pairwise Frame Clustering, V-measure, and L-measure. These metrics are commonly implemented using discrete sampling methods in libraries such as mir_eval.</p>
+<p>The main contribution of the paper is to introduce continuous formulations of these metrics, leveraging the fact that each relies on piecewise linear functions, which are straightforward to integrate analytically. When the number of segments is smaller than the number of uniform samples used in the discrete approximation, the proposed continuous versions offer improved runtime performance.</p>
+<p>Overall, being drop-in replacements, the metrics are reusable.</p>
+<p>Strengths</p>
+<ul>
+<li>Very simple idea, drop in replacements of common scores</li>
+<li>Paper is easy to follow</li>
+<li>Three scores are considered</li>
+</ul>
+<p>Weaknesses</p>
+<ul>
+<li>The runtime is already 10^-1. Great, we are seeing a 3x improvement, but over someone that is already very small.</li>
+<li>No evaluation on how exact and sampled scores deviate is presented.</li>
+</ul>
+<p>Reasons for my score</p>
+<p>Overall, this paper is quite nice and an easy read. However, the gains are very small and not that well justified. From a statistical perspective, I would like to see two or three things:</p>
+<ol>
+<li>
+<p>How does this new implementation correlate with the original ones, this should be close to 1. Very correlated.</p>
+</li>
+<li>
+<p>This approach does appear to be more accurate, thus what were the errors of approximations from the original implementations? These errors may be derived based on the errors of trapezoidal integration, after all, this is what original scores do in a sense.</p>
+</li>
+<li>
+<p>Now that we have exact formulations of the scores, can we explore that fact that these are averages and derive confidence bands/statistical tests?</p>
+</li>
+</ol>
+<p>Overall, I'm leaning towards acceptance given that nothing is strictly wrong with the paper. However, I am of the opinion that, as was presented, the gains of the new approach are yet small.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper produces more precise implementations of popular structure analysis metrics that are used in contemporary literature. Primarily, the focus is on PFC, NCE, V-Measure and L-measure, all of which exist in the mir_eval toolkit. The results show an impressive improvement in speed over the toolkit implementations.</p>
+<p>Looking at the mathematical definitions, it raises a few interesting ideas that require some clarification. The mathematical explanation of PFC makes sense, and the notion that areas of rectangles can be computed easily is valid and tracks quite well. Here, for the benefit of the reader, I think you need to introduce what the role of $ u, v $ actually are more clearly.</p>
+<p>For NCE, V-measure and L-measure I referred to the definitions from the McFee journal article and the original V-Measure paper. It's especially interesting to look at these metrics as attempting to improve upon the framework of F-measures in the context of pairwise comparisons. Optimization using a table to speed up the process is clever!</p>
+<p>For the L-measure section, you specify the definition of a d-level label mapping, without ever referncing what the $d $ might indicate here (is it depth?).</p>
+<p>I think much of this paper is reasonably well written, if not a little terse because it places a decent amount of burden on the reader to be intimately familiar with these metrics to begin with (which I was not). I'd like to see two improvements: </p>
+<p>1) Figure descriptors could better explain what the plots represent might be. As it is right now, it just reads like a "here are the things in the plot" type of caption. It is difficult to understand what the plots might be indicating, especially to someone who might not be familiar with segmentation metrics.
+2) Derivation of the big O improvements or the complexity of some of these algorithms can be a little more explicit, if nothing, with some additional citations.</p>
+<p>I think the discussion on frame sizes is perhaps the most interesting bit of this paper. It is rather curious that the original metrics appear to be sensitive to frame size differences while the proposed ones aren't to the same degree. This might be interesting to evaluate further through more experiments.</p>
+<p>Beyond this, I think it would be see if it is possible to apply these metrics to more datasets beyond SALAMI. I understand that SALAMI is the de-facto standard for segmentation evaluation, so it's not something that necessarily harms this paper, but it's something I think would be worth exploring in future work. </p>
+<p>This sort of improvement on existing metrics is certainly important and exciting to read about. I think it's a good contribution that deserves to be accepted - if nothing else, because it prompts conversations about the metrics we use and how we might: a) improve their efficiency and b) critically evaluate their behaviors in context.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper discusses a set of novel algorithms that implement three evaluation metrics for music structure analysis efficiently, by replacing the traditional sample-based algorithms with continuous algorithms.</p>
+<p>The contribution of this paper is clear: a faster algorithm that aligns well with the original purpose of the three evaluation metrics. The efficiency of the proposed algorithms is also verified both theoretically (complexity analysis) and empirically (the actual runtime reported in Fig. 3).</p>
+<p>In my opinion, although the contribution of this work seems marginal (just some faster reimplementations of existing evaluation metrics), in practice, it could foster large-scale evaluation of music structure analysis. Therefore, I tend to accept this paper.</p>
+<p>Minor writing issues:
+- Would be great to explicitly mention which one is the ground-truth and which one is the prediction: S or \hat{S}?
+- What does the x-axis of Fig. 4 mean? I don't really get it.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

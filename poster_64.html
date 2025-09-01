@@ -1,0 +1,545 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Instruct-MusicGen: Unlocking Text-to-Music Editing for Music Language Models via Instruction Tuning</title>
+    
+<meta name="citation_title" content="Instruct-MusicGen: Unlocking Text-to-Music Editing for Music Language Models via Instruction Tuning" />
+
+<meta name="citation_author" content="Yixiao Zhang" />
+
+<meta name="citation_author" content="Yukara Ikemiya" />
+
+<meta name="citation_author" content="Woosung Choi" />
+
+<meta name="citation_author" content="Naoki Murata" />
+
+<meta name="citation_author" content="Marco Martínez-Ramírez" />
+
+<meta name="citation_author" content="Liwei Lin" />
+
+<meta name="citation_author" content="Gus Xia" />
+
+<meta name="citation_author" content="Wei-Hsiang Liao" />
+
+<meta name="citation_author" content="Yuki Mitsufuji" />
+
+<meta name="citation_author" content="Simon Dixon" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="The task of text-to-music editing, which employs text queries to modify music  (e.g. by changing its style or adjusting instrumental components), presents unique challenges and opportunities for AI-assisted music creation. Previous approaches in this domain have been constrained by the necessity to train specific editing models from scratch, which is both resource-intensive and inefficient; other research uses large language models to predict edited music, resulting in imprecise audio reconstruction. In this paper, we introduce Instruct-MusicGen, a novel approach that finetunes a pretrained MusicGen model to efficiently follow editing instructions such as adding, removing, or separating stems. Our approach involves a modification of the original MusicGen architecture by incorporating a text fusion module and an audio fusion module, which allow the model to process instruction texts and audio input concurrently and yield the desired edited music. Remarkably, although Instruct-MusicGen only introduces 8% new parameters to the original MusicGen model and only trains for 5K steps, it achieves superior performance across all tasks compared to existing baselines. This advancement not only enhances the efficiency of text-to-music editing but also broadens the applicability of music language models in dynamic music production environments.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Music generation" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Music composition, performance, and production" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P3-10: Instruct-MusicGen: Unlocking Text-to-Music Editing for Music Language Models via Instruction Tuning
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Yixiao Zhang" class="text-muted"
+        >Yixiao Zhang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yukara Ikemiya" class="text-muted"
+        >Yukara Ikemiya</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Woosung Choi" class="text-muted"
+        >Woosung Choi</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Naoki Murata" class="text-muted"
+        >Naoki Murata</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Marco Martínez-Ramírez" class="text-muted"
+        >Marco Martínez-Ramírez</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Liwei Lin" class="text-muted"
+        >Liwei Lin</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Gus Xia" class="text-muted"
+        >Gus Xia</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Wei-Hsiang Liao" class="text-muted"
+        >Wei-Hsiang Liao</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Yuki Mitsufuji" class="text-muted"
+        >Yuki Mitsufuji</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Simon Dixon" class="text-muted"
+        >Simon Dixon</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Music generation"
+        class="text-secondary text-decoration-none"
+        >Music generation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music composition, performance, and production"
+        class="text-secondary text-decoration-none"
+        >Music composition, performance, and production</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>The task of text-to-music editing, which employs text queries to modify music  (e.g. by changing its style or adjusting instrumental components), presents unique challenges and opportunities for AI-assisted music creation. Previous approaches in this domain have been constrained by the necessity to train specific editing models from scratch, which is both resource-intensive and inefficient; other research uses large language models to predict edited music, resulting in imprecise audio reconstruction. In this paper, we introduce Instruct-MusicGen, a novel approach that finetunes a pretrained MusicGen model to efficiently follow editing instructions such as adding, removing, or separating stems. Our approach involves a modification of the original MusicGen architecture by incorporating a text fusion module and an audio fusion module, which allow the model to process instruction texts and audio input concurrently and yield the desired edited music. Remarkably, although Instruct-MusicGen only introduces 8% new parameters to the original MusicGen model and only trains for 5K steps, it achieves superior performance across all tasks compared to existing baselines. This advancement not only enhances the efficiency of text-to-music editing but also broadens the applicability of music language models in dynamic music production environments.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/17OIvKDUinUQd1tin5MQ50h6w-Hx0T4BW/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Disagree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>see below</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Instruction fine tuning of a pre-trained music generation system can go a long way.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The authors present a system for extracting, removing or adding a stem from a given audio recording. The idea is to adapt a pretrained musicgen system to enable audio inputs following the llama-adapter approach and then fine-tuning on paired stem data.</p>
+<p>Overall, I am torn on this paper. On the one hand, this is novel and interesting, from both a technical but also conceptual perspective. In that sense, I think the paper is making considerable contributions and I liked reading it. On the other hand, I think the claims presented by the paper are not matching the actual contributions made by the paper. In particular, the title, abstract and introduction mention explicitely that the method enables 'text-to-music editing'. I think this is drastically overpromising what the system actually does. In particular, the system is fine tuned to understand three keywords: extract, remove, add. There is no additional text understanding enabled beyond these key words. Two of these instructions (extract, remove) are already supported by a regular stem separation system. Yet the authors do not compare to any such system - in fact, current systems for stem separation are around 2 orders of magnitude better at those two tasks. Hence the only interesting task that is actually being enabled is adding a stem. And while I like how the system is adapted and trained, it does rely on paired data. And there are not many natural dataset (i.e. beyond simplistic signal processing augmentations for which solutions already exist) that cover interesting editing operations. One could argue that this is just a matter of data collection - but if future, potential data collection is justifying the claims, almost any claim would become valid. For example, system A performs worse than system B with system A having more capacity, then one could argue that system A is useful because future data collections might improve the performance.</p>
+<p>So, ignoring what could be in the future, and just looking what the system actually does and proofs, the proposed training and system setup seem to be restricted to the task of adding a stem (plus extract/remove as discussed above) and thus it's not clear how there could be a reasonable path forward based on this system to enable text-to-music editing as claimed. </p>
+<p>If the paper gets accepted, I would strongly encourage the authors to rephrase what is being claimed in the paper throughout.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper presents Instruct-MusicGen, a system built upon the pre-trained MusicGen architecture that enables text-guided music editing via instruction tuning. Specifically, the authors propose a lightweight fine-tuning method that allows the system to respond to simple editing commands—“add,” “remove,” and “extract”—targeted at manipulating instrumental stems in music audio. The technical contributions lie in the integration of cross-modal adapters and a modest training budget, enabling the model to perform editing with a small subset of trainable parameters.</p>
+<p>The reviews converged on a positive yet tempered consensus, with three reviewers awarding a “weak accept” and one reviewer supporting a “strong accept.” The strengths of the paper are generally recognized across reviews: it tackles a relevant and increasingly impactful task in the MIR community; it proposes a technically efficient solution using adapter-based fine-tuning; and it demonstrates solid empirical performance across both synthetic (Slakh2100) and real-world (MoisesDB) datasets. The evaluation protocol is seen as fairly thorough, including a mixture of objective metrics (e.g., SI-SDR, CLAP, SSIM) and a user study.</p>
+<p>However, several substantive concerns were raised that limit the enthusiasm. Chief among them is a potential mismatch between the claims made in the title, abstract, and introduction—suggesting general-purpose text-to-music editing—and the actual capabilities demonstrated, which are limited to recognizing and executing three predefined operations. This raised concerns of overstatement, particularly given the lack of comparisons with existing stem separation systems, which can perform some of the same tasks more effectively. Reviewers also noted missed opportunities to cite closely related work (e.g., Audio Prompt Adapter, ControlNet-based approaches), and questioned whether the model meaningfully preserves the fidelity of the original audio during editing.</p>
+<p>Further technical feedback touched on clarity issues in the method section and underwhelming visualizations. For example, key architectural figures and evaluation details could benefit from refinement and better explanation. Moreover, there was an expressed desire for deeper insight into performance trade-offs—such as why “remove” operations underperform in some cases—and more granular reporting of subjective evaluation outcomes.</p>
+<p>In summary, Instruct-MusicGen introduces a creative and potentially impactful approach to music editing, with strong implementation and evaluation foundations. Yet, to truly meet the ambition implied by its framing, the paper must better align its claims with its current demonstrated capabilities, offer stronger comparisons with existing methods, and expand its analysis to deepen reader insight. Final recommendation: Weak Accept.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Summary:
+This paper presents Instruct-MusicGen, an instruction-tuned extension of the MusicGen architecture that enables text-based music editing operations such as adding, removing, or extracting instrumental stems. By incorporating lightweight audio and text fusion modules into the pretrained MusicGen model, the authors demonstrate an efficient and effective approach to music editing with minimal finetuning (~8% of parameters, 5k steps). The system is evaluated on both in-domain (Slakh2100) and out-of-domain (MoisesDB) datasets using a comprehensive suite of objective and subjective evaluations.</p>
+<p>Strengths:
+-Relevant and impactful task: Text-guided editing is an increasingly important problem, and the proposed approach provides a practical and well-scoped solution.
+- Efficiency and scalability: The method modifies only a small portion of the original MusicGen parameters, making it computationally lightweight while maintaining strong performance.
+- Generalization to real-world data: It is notable that the model, trained on synthetic Slakh2100 data, generalizes reasonably well to MoisesDB.
+- Comprehensive evaluation: The paper includes a broad set of objective metrics (FAD, CLAP, SI-SDR, etc.) and a user study, offering multiple perspectives on performance.</p>
+<p>Weaknesses:
+- Lack of clarity in method section: Section 3.2, which is central to the contribution, is dense and hard to follow. Figure 2 is visually cluttered and not well explained, and the notation (e.g., for audio/text embeddings and attention) could be clarified significantly.
+- Missing analysis of performance gaps: The model performs less well on "remove" tasks in the MoisesDB set, yet the authors do not discuss this drop or offer a possible explanation. Some reflection here would strengthen the evaluation.
+- Subjective evaluation could be more granular: While the listening test is appreciated, the results are aggregated across editing tasks. Breaking down instruction adherence and audio quality scores per task would offer more insight into where the model succeeds or struggles.
+- Visualizations are underwhelming: Figure 3 does not effectively show the editing impact. A spectrogram comparison of a single stem or multiple stems (e.g., before and after removal) would provide a clearer qualitative validation.</p>
+<p>Overall Assessment:
+This is a solid and timely paper that addresses a real need in controllable music generation. While there are some issues with clarity in the method section and a few missed opportunities in evaluation analysis and visualization, the overall contribution is clear, well-motivated, and empirically supported. I believe it meets the bar for ISMIR and recommend acceptance.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths:
+1. Low computational resources required.
+2. Reusable to other models.
+3. The objective evaluation includes comprehensive metrics.
+Weakness:
+1. Lack of demonstrating whether the CLAP model recognizes "Add", "Remove", "Extract". Should provide the results for "Ground truth" as in the subjective evaluation.
+2. Didn't compare with Audio Prompt adapter, while they also demonstrate "add instrument" ability in their demo.
+3. The paper emphasizes that other model often lacks the ability to precisely reconstruct the conditional audio, but after listening to the audio samples on the demo page, I consider this an unsolved problem. The fidelity of the audio input is not preserved.
+4. The samples on the demo page are in 4~5 seconds, which are relatively short, and may not fully demonstrate the model's capability.
+5. While the method seems to be inspiring in the field of music editing, the novelty is limited to "Instruct pix2pix". The difference is that Instruct-musicgen uses an adapter-based training method and uses simple text commands.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper introduces Instruct-MusicGen, a text-to-music editing model focused on adding, removing, or extracting stems from music.</p>
+<p>Main strengths: A clever idea of modifying a pre-trained MusicGen model allows for the model to be trained in relatively few steps (5k). Intro and related work is relevant. The method section is written clearly and all the variables are well defined. Experiment section is extensive and elaborate. Overall, the writing is very concise and readability is good.</p>
+<p>Main weaknesses: While the scope of the work was set on adding, removing, and extracting stems, it would be good to see a broader scope with more instructions possible. Minor concerns in the evaluation section, see the points below.</p>
+<p>Questions/clarifications/suggestions/typos:
+1. It is not clear to me why and how was CLAP used for evaluation of the Remove task. It makes sense for the Add and Extract tasks, but I am concerned it is not too valid for the Remove task, unless clarified. 
+2. Lines 222 and 223 - typo in "audio samples in Table 3" -&gt; you can consider rephrasing to something like "(example spectrograms) in Figure 3"?
+3. Figure 3 caption could be a bit longer than just "audio samples" - perhaps you could clarify these are spectrograms
+4. Lines 310 and 311 - "Table 6 in the Appendix". However, there is no Appendix and there is no Table 6. This looks like a leftover from a potential previous arxiv submission. Or are you referring to the InstructME paper's Table? It needs clarification/rewriting.
+5. Line 370 - why is it specified that on Slakh, Instruct-MusicGen achieved best CLAP and SSIM scores for the addition task, when results in Table 2 indicate that it actually achieved best scores in all tasks?
+6. Lines 378 and 379 - "...showed improvements in CLAP and SSIM metrics for both addition and removal tasks" - This is true as SSIM is better for both tasks, but CLAP is not better for both tasks, only for the addition task.
+7. Lines 379 to 382 - "While it did not always lead in SI-SDR, it consistently outperformed baseline models, highlighting its efficiency and effectiveness in text-to-music editing applications." - However, the proposed Instruct-MusicGen does lead in SI-SDR in all the results shown in Tables 2 and 3. Why is this sentence present in the text?</p>
+<p>With all that said, I am still inclining to strong accept because of very good readability, clear explanations, elaborate evaluation, and the elegance of the proposed idea itself.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "analytics": "UA-",
+  "auth0_client_id": "JIdr6wi0z27LyLgwkJF0fpk700aj7MNH",
+  "auth0_domain": "miniconf.auth0.com",
+  "background_image": "static/images/Milano_ISMIR_complete_logo.png",
+  "browse_paper_buttons": 0,
+  "calendar": {
+    "colors": {
+      "---": "#bed972",
+      "all": "#309764",
+      "awards": "#6200D7",
+      "industry": "#AF0704",
+      "lbd": "#FFC107",
+      "lunch": "#004D40",
+      "meet": "#8C095B",
+      "mus": "#6200D7",
+      "open": "#309764",
+      "pos": "#1E88E5",
+      "registration": "#004D40",
+      "sat": "#7986CB",
+      "social": "#C97603",
+      "tut": "#D81B60",
+      "vmeet": "#2380BD",
+      "wimir": "#309764"
+    },
+    "sunday_saturday": false
+  },
+  "citation_date": "21-25 September 2025",
+  "date": "21-25 September 2025",
+  "lbd_day_release": 4,
+  "lbd_embeds": true,
+  "logo": {
+    "height": "auto",
+    "image": "static/images/ismir_tabicon.png",
+    "width": "300px"
+  },
+  "music_links": true,
+  "music_program_channel": "#music-program",
+  "music_program_url": "",
+  "name": "ISMIR 2025",
+  "opening_ref_title_1": "Opening Session",
+  "opening_ref_title_2": "Opening Session",
+  "organization": "ISMIR Organization Committee",
+  "page_title": {
+    "prefix": "ISMIR 2025",
+    "separator": ": "
+  },
+  "paper_day_release": 3,
+  "paper_embeds": true,
+  "paper_videos": true,
+  "poster_embeds": true,
+  "proceedings_title": "Proceedings of the First MiniCon Conference",
+  "tagline": "ISMIR 2025 HYBRID CONFERENCE",
+  "use_auth0": null
+}

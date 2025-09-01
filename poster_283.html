@@ -1,0 +1,551 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Assessing the Alignment of Audio Representations With Timbre Similarity Ratings</title>
+    
+<meta name="citation_title" content="Assessing the Alignment of Audio Representations With Timbre Similarity Ratings" />
+
+<meta name="citation_author" content="Haokun Tian" />
+
+<meta name="citation_author" content="Stefan Lattner" />
+
+<meta name="citation_author" content="Charalampos Saitis" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Psychoacoustical so-called &#34;timbre spaces&#34; map perceptual similarity ratings of instrument sounds onto low-dimensional embeddings via multidimensional scaling, but suffer from scalability issues and are incapable of generalization. Recent results from audio (music and speech) quality assessment as well as image similarity have shown that deep learning is able to produce embeddings that align well with human perception while being largely free from these constraints. Although the existing human-rated timbre similarity data is not large enough to train deep neural networks (2,614 pairwise ratings on 334 audio samples), it can serve as test-only data for audio models. In this paper, we introduce metrics to assess the alignment of diverse audio representations with human judgments of timbre similarity by comparing both the absolute values and the rankings of embedding distances to human similarity ratings. Our evaluation involves three signal-processing-based representations, twelve representations extracted from pre-trained models, and three representations extracted from a novel sound matching model. Among them, the style embeddings inspired by image style transfer, extracted from the CLAP model and the sound matching model, remarkably outperform the others, showing their potential in modeling timbre similarity.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Timbre, instrumentation, and singing voice" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Similarity metrics" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P6-12: Assessing the Alignment of Audio Representations With Timbre Similarity Ratings
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Haokun Tian" class="text-muted"
+        >Haokun Tian</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Stefan Lattner" class="text-muted"
+        >Stefan Lattner</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Charalampos Saitis" class="text-muted"
+        >Charalampos Saitis</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Timbre, instrumentation, and singing voice"
+        class="text-secondary text-decoration-none"
+        >Timbre, instrumentation, and singing voice</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Similarity metrics"
+        class="text-secondary text-decoration-none"
+        >Similarity metrics</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Psychoacoustical so-called "timbre spaces" map perceptual similarity ratings of instrument sounds onto low-dimensional embeddings via multidimensional scaling, but suffer from scalability issues and are incapable of generalization. Recent results from audio (music and speech) quality assessment as well as image similarity have shown that deep learning is able to produce embeddings that align well with human perception while being largely free from these constraints. Although the existing human-rated timbre similarity data is not large enough to train deep neural networks (2,614 pairwise ratings on 334 audio samples), it can serve as test-only data for audio models. In this paper, we introduce metrics to assess the alignment of diverse audio representations with human judgments of timbre similarity by comparing both the absolute values and the rankings of embedding distances to human similarity ratings. Our evaluation involves three signal-processing-based representations, twelve representations extracted from pre-trained models, and three representations extracted from a novel sound matching model. Among them, the style embeddings inspired by image style transfer, extracted from the CLAP model and the sound matching model, remarkably outperform the others, showing their potential in modeling timbre similarity.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1_d9SJUraegRKEzjhNtnlPnLXey8qSI61/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>See below</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>This paper addresses the problem of evaluating how well audio representations, both handcrafted and learned, align with human perceptions of timbre similarity.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper addresses the problem of evaluating how well audio representations, both handcrafted and learned, align with human perceptions of timbre similarity. Building on the concept of timbre spaces known from psychoacoustic studies, the authors present a well-structured evaluation framework and metrics to benchmark a wide range of audio models and datasets.</p>
+<p>The study shows that handcrafted features like MFCCs remain competitive, and although recent models offer only modest improvements, the insights gained are relevant and timely. The analysis helps clarify the current landscape of timbre-aware audio embeddings.</p>
+<p>That said, the paper could benefit from clearer explanations of certain design choices, particularly in Section 4.2, where implementation details often take the focus away from the underlying motivation. The discussion section would also be stronger if it elaborated on why some models, such as CLAP or MFCC, perform well and what this implies for future model development. Finally, while the figures are informative, more guidance through their main takeaways would improve interpretability.</p>
+<p>Overall, this is a well-executed and thoughtful contribution. While the gains from recent models are modest, the work lays an important foundation for evaluating timbre-relevant audio representations and is likely to stimulate further research in perceptual model evaluation. </p>
+<p>Further comments:</p>
+<ul>
+<li>Line 10: "the existing ‘timbre space’ data" is unclear. Which data do you refer to?</li>
+<li>Line 23: specify to which group "CLAP-based models" belong to? (One of the pretrained models)</li>
+<li>Line 77: "past 21 timbre space datasets" remains unclear at this point. Are these all the datasets you could identify in previous work? -&gt; Ah, it is explained later (Line 130 ff.)</li>
+<li>Line 87 ff. (Related Work): You may also mention the article by Abesser et al. (How Robust are Audio Embeddings for Polyphonic Event Tagging? IEEE/ACM TASLP, 2023), which takes a similar approach by analyzing the embedding spaces of two non-trainable audio representations alongside several deep audio embeddings in the context of sound classification.
+Line 207: "an pair" should be "a pair"</li>
+<li>Section 4.1.1: Could be shortened as the strategy is straightforward. However, clipping may remove relevant (e.g. decay) information, and zero padding could introduce confounding factors (e.g., correlations between sample length and specific instruments). Maybe comment on this. </li>
+<li>Line 224-229: This appears straightforward and the text could be made more compact.</li>
+<li>Line 252-272: Even though standard, a brief explanation of the individual metrics would be helpful; especially in clarifying what each captures. In particular, it would be valuable to explain how the metrics complement each other and why examining them together provides a more complete assessment.</li>
+<li>Line 279-282: Introducing the three distance functions here may cause confusion, as the metrics mentioned do not align with those used in Section 4.1.2 (e.g., l^1 vs. l^2 norms).</li>
+<li>Line 287: Give reference to "Vital" synthesizer -&gt; Ah, comes later ... Not clear if last letter is an letter or number.</li>
+<li>Line 300: Write out number "7" into "seven" </li>
+<li>Line 312: Write out number ... </li>
+<li>Line 325-326: The purpose of the eight regression outputs and the two classification heads is unclear. Please clarify what each is intended to represent and how they are used during training and evaluation.</li>
+<li>Section 4.2: I find Section 4.2 a bit hard to follow as it emphasizes what is done rather than why. The motivation behind key choices, in particular the prediction targets, remains unclear. </li>
+<li>Line 365: There are various ways to define multi-scale spectral losses, which critically shape the behavior of the loss function. For further discussion, see Schwär et al., "Multi-Scale Spectral Loss Revisited", IEEE SPL, 2023.</li>
+<li>Figure 2: It would be helpful to include comments on which models achieved the best scores and why - specifically, what architectural or methodological factors contributed to their strong performance. </li>
+<li>Line 420: See comment to Line 365</li>
+<li>Section 5: The discussion of results feels quite compact and ends rather abruptly. It would be helpful to guide the reader more clearly through the key insights from Figures 2 and 3, explaining what each figure illustrates and how it supports the conclusions.</li>
+<li>Section 5: It would be particularly interesting to analyze how the results depend on the individual dataset and scenario. This could be effectively visualized using a heatmap that reports performance for selected models and a fixed metric (e.g. MAE).</li>
+<li>Line 479: "Ddsp" should be "DDSP" (encapsulate {DDSP} in bibtex) </li>
+<li>Line 564: "Rwc" should be "RWC" (encapsulate {RWC} in bibtex)</li>
+</ul>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The reviewers agree that this paper offers interesting contributions to the topic of timbre similarity ratings, which is both timely and relevant for the ISMIR community. However, there are also concerns regarding the novelty of the approach and the lack of discussion around certain design choices and experimental results.</p>
+<p>Strengths:
+* The paper is well written, clear, and easy to follow.
+* The overall message is communicated effectively.
+* The sound matching method demonstrates good performance.
+* The work lays a valuable foundation for evaluating timbre-relevant audio representations.
+* The work is a solid effort to build a unified evaluation framework.
+* Provided Python package is a plus for reproducibility</p>
+<p>Weaknesses:
+* The novelty of the proposed approach is limited.
+* A more detailed per-dataset analysis would help build stronger intuition around the framework. 
+* While the figures are informative, additional guidance on their key takeaways would improve interpretability.
+* The paper focuses on the "how" but provides limited insight into the "why"; clearer explanations of specific design choices would strengthen the work.
+* The phrase "alignment of audio" may mislead readers to think the paper focuses on the task of audio alignment.</p>
+<p>Despite some weaknesses, we recommend a "weak accept". The paper establishes an important foundation for evaluating timbre-relevant audio representations and is likely to encourage further research in perceptual model evaluation.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper is well written and clear, however at first, the terms "alignment of audio" leads me to think as if the paper was about the task of audio alignment. That convintion was pretty hard to remove from my head! Beside that, I think that the paper is well organized and generally well written. The proposed sound matching method shows good performances however, in my opinion the novelty of the approach is limited. The evaluation is well conducted and the metrics used seems to be well suited for the evaluation of such models (despite the fact that, as stated in the paper, three of them shows an high degrees of correlation suggesting that 2 out of 3 might be redundant). To me, the laking part is in the novelty but I would suggest a weak accept for mainly two reasons: 1) I'm not an expert on this task, so my judjment of the novelty might not be accurate, and 2) the evaluation compares several methods, included some classical signal processing alorithms, it uses different metrics and shows a good insight of the state of the art in this task.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper presents an evaluation framework for assessing audio representations and their alignments with subjective timbre similarity ratings. The proposed framework leverages 21 existing datasets and implements several metrics in a unified manner. Additionally, a new model (i.e., sound matching), trained via self-supervised learning with synthetic data, is proposed and evaluated in the same framework. The evaluation results suggest that the proposed model and CLAP are both strong contenders compared to other models, and the widely used MFCCs still remain competitive. For the most part, the paper is easy to follow. Occasionally, I found the brief explanations within the brackets to be a little excessive and counterproductive. Nevertheless, I think the overall message of the paper is clear. </p>
+<p>The paper consists of two main components, namely the evaluation framework and the sound matching model. Each of these components, in my opinion, could potentially be a strong contribution on its own, assuming sufficient explanations and insights are provided. When combined together, however, the authors inevitably have to leave out some details in order to make room for all the topics. Unfortunately, the current arrangement makes both components feel somewhat incomplete. For instance, in addition to the aggregated results across 21 datasets, I was hoping to see a more detailed per-dataset analysis, which could provide insights into the variance of these datasets and build a stronger intuition about this framework. Instead, I feel the discussion is shortened or limited in order to cover the sound matching model. Similarly, I feel the section on the sound matching model is too brief and many of the details are still missing (e.g., more information about the parameters in the data generation pipeline and the construction of style embeddings). As a result, neither of these two components is well-explained, in my humble opinion.</p>
+<p>Another potential concern is around the depth of the provided information. In the evaluation framework, the authors tried to cover a variety of audio length handling methods, distance functions, and alignment scores. As such, the paper focuses on explaining “how” to approach these steps and is relatively light on “why” these choices were made. For example, it is unclear why there are four rank-based scores and only one error-based score. How can they complement each other? Are there considerations specific to the assessment of timbre similarity? Without further insights and explanations, the choices made in this framework may seem a bit arbitrary and are no more than a collection of standard metrics. As commented by the authors, some of the scores are highly correlated, which implies redundancy in these choices. </p>
+<p>Despite the above mentioned concerns, I appreciate the effort of building a unified evaluation framework, and I find the idea of training the sound matching model in the context of timbre similarity intriguing. I believe this work could benefit from another round of revision and polishing, and my initial recommendation was borderline leaning towards a “weak reject”. However, after taking other reviewers' opinions into consideration during the discussion phase, I decided to adjust my recommendation to weak accept.</p>
+<p>=============
+Minor comments: 
+Line 175, “... there are cases when this is only one” → I suppose you meant to say “there are cases when there is only one viable option”? </p>
+<p>Line 227-229, “Pairs outside the diagonal blocks … are not considered” → if that is the case, why not compute metrics per dataset and aggregate the metrics? (as opposed to building a dissimilarity matrix and only consider the diagonal blocks)</p>
+<p>Line 251, “final rank-based alignment scores … averaging across all rows” → since some of these scores are correlation coefficients, I wonder if taking fisher’s z-transform before averaging would be more appropriate? (see [1] for example) </p>
+<p>Line 260, “... given margin condition …” → how do you decide the value of margin?</p>
+<p>Line 349, “... (B, C, H, W) …” → no introduction of these variables? </p>
+<p>Line 406, “... style embeddings converge quickly, retaining high alignment …” → it is hard to interpret the results here… IMHO, a correlation coefficient of 0.4 may not be considered high in other research fields. It would be helpful if the authors could help the readers set the right expectations. Also, it is a bit odd to present the test results per training epoch. In a way, it could be interpreted as maximizing the test results during training, which makes the comparison to other models somewhat unfair.</p>
+<p>Line 409, “... Kendall, Spearman, and triplet metrics are highly correlated …” → based on visual examination? </p>
+<p>Line 421, “... showing spectral distances can be problematic for pitch.” → I do not understand this statement, for I thought each dataset has been pitch-normalized according to Table 1? 
+Inconsistency in the reference section: I noticed some minor inconsistent citation formats that could be easily improved. For instance, some of the conference papers were cited as “in Proceedings of …” and some of them were not. Also, for the same journal (i.e., JASA), some of the entries have all upper cases and some of them are lower cases. I would recommend another pass through in the next iteration. </p>
+<p>[1] Alexander, Ralph A. "A note on averaging correlations." Bulletin of the Psychonomic Society 28.4 (1990): 335-336. (https://link.springer.com/article/10.3758/BF03334037)</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>In this paper, the authors evaluate how well some audio representations align with human perception on how similar timbre of tracks are. The audio representations include hand crafted features such as MFCC to latest deep audio understanding models such as Clap. 
+The motivation is well put as the current timbre space analysis is very limited and audio representations might be useful in mimicking human perception. Due to lack of sufficient data, authors use pre-trained models without fine-tuning or training from scratch, simply to evaluate the alignment. </p>
+<p>The evaluation is thorough using diverse set of representations and datasets. Well-defined and interpretable metrics are used. </p>
+<p>Provided Python package is definitely a plus for reproducibility.</p>
+<p>I have only minor comments,
+- Style embeddings show promising results but they are only provided for proposed similarity model. It would have been beneficial to provide results for other models such as Clap as well since Clap already provide good results itself.
+In Table 1, there are several “Same” in the Type of sounds. It is hard to track what it is same with.
+Although Clap and style embeddings have better results in general the improvement against MFCC’s is marginal. The manuscript can benefit a deeper analysis of this fact.
+Typo: line 163 - datsets -&gt; datasets</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

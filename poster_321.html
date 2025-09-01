@@ -1,0 +1,434 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: The jam_bot, a Real-Time System for Collaborative Free Improvisation with Music Language Models</title>
+    
+<meta name="citation_title" content="The jam_bot, a Real-Time System for Collaborative Free Improvisation with Music Language Models" />
+
+<meta name="citation_author" content="Lancelot Blanchard" />
+
+<meta name="citation_author" content="Perry Naseck" />
+
+<meta name="citation_author" content="Stephen Brade" />
+
+<meta name="citation_author" content="Kimaya Lecamwasam" />
+
+<meta name="citation_author" content="Jordan Rudess" />
+
+<meta name="citation_author" content="Cheng-Zhi Anna Huang" />
+
+<meta name="citation_author" content="Joseph Paradiso" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Tasked with the challenge of designing a Generative AI system that could improvise on stage with GRAMMY-winning keyboard virtuoso Anon Visiting Artist, we developed the &#34;jam_bot&#34;, a real-time performance system, that could match his eclectic improvisational aesthetics. We debuted the jam_bot at a high-stakes sold-out concert to critical acclaim, realizing a series of virtuosic tightly-coupled Human-AI free improvisations in varying musical styles. Reflecting on our year-long collaboration with the artist, we summarize learnings for AI researchers and musicians on the adaptations needed to turn state-of-the-art symbolic music Language Models (LMs) into jam_bots and the engineering required to make them performance-ready. 
+We focus on three aspects: First, to enable jam_bots to take on different musical roles, such as lead, accompany, or engage in call and response, we adapt music LMs to take on different interaction strategies by modifying the context and conditioning signals they take in. Second, for jam_bots to match the style needed for each piece, we describe how AnonArtist intentionally structures his improvisation in order to finetune music LMs to enable these strategies. Third, we show the optimizations needed to run music LMs in real-time and how to embed them in a low-latency multi-threaded system that listens, and prompts and schedules model generations seamlessly. We hope these insights enable more musician-AI symbiotic virtuosity.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_keywords" content="Applications" />
+
+<meta name="citation_keywords" content="Creativity" />
+
+<meta name="citation_keywords" content="Human-ai co-creativity" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_keywords" content="Music composition, performance, and production" />
+
+<meta name="citation_keywords" content="Tools for artists" />
+
+<meta name="citation_keywords" content="Music interfaces and services" />
+
+<meta name="citation_keywords" content="Real-time considerations" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Human-centered MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-03: The jam_bot, a Real-Time System for Collaborative Free Improvisation with Music Language Models
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Lancelot Blanchard" class="text-muted"
+        >Lancelot Blanchard</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Perry Naseck" class="text-muted"
+        >Perry Naseck</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Stephen Brade" class="text-muted"
+        >Stephen Brade</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Kimaya Lecamwasam" class="text-muted"
+        >Kimaya Lecamwasam</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Jordan Rudess" class="text-muted"
+        >Jordan Rudess</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Cheng-Zhi Anna Huang" class="text-muted"
+        >Cheng-Zhi Anna Huang</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Joseph Paradiso" class="text-muted"
+        >Joseph Paradiso</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Applications"
+        class="text-secondary text-decoration-none"
+        >Applications</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Creativity"
+        class="text-secondary text-decoration-none"
+        >Creativity</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-ai co-creativity"
+        class="text-secondary text-decoration-none"
+        >Human-ai co-creativity</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music composition, performance, and production"
+        class="text-secondary text-decoration-none"
+        >Music composition, performance, and production</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Tools for artists"
+        class="text-secondary text-decoration-none"
+        >Tools for artists</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music interfaces and services"
+        class="text-secondary text-decoration-none"
+        >Music interfaces and services</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Real-time considerations"
+        class="text-secondary text-decoration-none"
+        >Real-time considerations</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Human-centered MIR"
+        class="text-secondary text-decoration-none"
+        >Human-centered MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Tasked with the challenge of designing a Generative AI system that could improvise on stage with GRAMMY-winning keyboard virtuoso Anon Visiting Artist, we developed the "jam_bot", a real-time performance system, that could match his eclectic improvisational aesthetics. We debuted the jam_bot at a high-stakes sold-out concert to critical acclaim, realizing a series of virtuosic tightly-coupled Human-AI free improvisations in varying musical styles. Reflecting on our year-long collaboration with the artist, we summarize learnings for AI researchers and musicians on the adaptations needed to turn state-of-the-art symbolic music Language Models (LMs) into jam_bots and the engineering required to make them performance-ready. 
+We focus on three aspects: First, to enable jam_bots to take on different musical roles, such as lead, accompany, or engage in call and response, we adapt music LMs to take on different interaction strategies by modifying the context and conditioning signals they take in. Second, for jam_bots to match the style needed for each piece, we describe how AnonArtist intentionally structures his improvisation in order to finetune music LMs to enable these strategies. Third, we show the optimizations needed to run music LMs in real-time and how to embed them in a low-latency multi-threaded system that listens, and prompts and schedules model generations seamlessly. We hope these insights enable more musician-AI symbiotic virtuosity.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1VBezu0RDpcZMLjPDc5sqzgPv0eLxys2P/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

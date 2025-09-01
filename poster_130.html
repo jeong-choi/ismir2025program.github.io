@@ -1,0 +1,554 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Understanding Performance Limitations in Automatic Drum Transcription</title>
+    
+<meta name="citation_title" content="Understanding Performance Limitations in Automatic Drum Transcription" />
+
+<meta name="citation_author" content="Philipp Weyers" />
+
+<meta name="citation_author" content="Christian Uhle" />
+
+<meta name="citation_author" content="Meinard Müller" />
+
+<meta name="citation_author" content="Matthias Lang" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Recent advancements in Automatic Drum Transcription (ADT) have improved overall transcription performance. However, state-of-the-art (SOTA) models still struggle with certain drum classes, particularly toms and cymbals, and the specific factors limiting their performance remain unclear. This paper addresses this gap by leveraging the Separate-Tracks-Annotate-Resynthesize Drums (STAR Drums) dataset to create multiple dataset versions that systematically eliminate potential performance constraints. We conduct experiments using three common ADT deep neural network (DNN) architectures to identify and quantify these limitations. For drum transcription in the presence of melodic instruments (DTM), the primary limiting factor is interference from melodic instruments and singing. Aside from this, performance improves by approximately five percent when training and testing use the same single drum kit, only strong onsets are present, or notes are not played simultaneously. For drum transcription of drum-only recordings (DTD), nearly error-free transcription is achieved when simultaneous onsets are removed. This confirms that overlapping drum hits are the main performance constraint. By identifying key ADT challenges, we provide insights to enhance SOTA models and improve overall transcription accuracy.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Music transcription and annotation" />
+
+<meta name="citation_keywords" content="Novel datasets and use cases" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Rhythm, beat, tempo" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P5-10: Understanding Performance Limitations in Automatic Drum Transcription
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Philipp Weyers" class="text-muted"
+        >Philipp Weyers</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Christian Uhle" class="text-muted"
+        >Christian Uhle</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Meinard Müller" class="text-muted"
+        >Meinard Müller</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Matthias Lang" class="text-muted"
+        >Matthias Lang</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Music transcription and annotation"
+        class="text-secondary text-decoration-none"
+        >Music transcription and annotation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Novel datasets and use cases"
+        class="text-secondary text-decoration-none"
+        >Novel datasets and use cases</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Rhythm, beat, tempo"
+        class="text-secondary text-decoration-none"
+        >Rhythm, beat, tempo</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Recent advancements in Automatic Drum Transcription (ADT) have improved overall transcription performance. However, state-of-the-art (SOTA) models still struggle with certain drum classes, particularly toms and cymbals, and the specific factors limiting their performance remain unclear. This paper addresses this gap by leveraging the Separate-Tracks-Annotate-Resynthesize Drums (STAR Drums) dataset to create multiple dataset versions that systematically eliminate potential performance constraints. We conduct experiments using three common ADT deep neural network (DNN) architectures to identify and quantify these limitations. For drum transcription in the presence of melodic instruments (DTM), the primary limiting factor is interference from melodic instruments and singing. Aside from this, performance improves by approximately five percent when training and testing use the same single drum kit, only strong onsets are present, or notes are not played simultaneously. For drum transcription of drum-only recordings (DTD), nearly error-free transcription is achieved when simultaneous onsets are removed. This confirms that overlapping drum hits are the main performance constraint. By identifying key ADT challenges, we provide insights to enhance SOTA models and improve overall transcription accuracy.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1PtYX9wyP-0mzZuWiMcy_AM0BaNIOuL95/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The insights into training/test drum kit mismatch, simultaneous onset challenges, and weak onset impact are highly reusable for future ADT system design. The methodology could serve as a template for analyzing bottlenecks in other MIR tasks.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Performance limitations in ADT systems can be systematically analyzed and mitigated by controlling drum kit variation, onset overlap, and signal complexity using variants of the STAR Drums dataset.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper offers a detailed and well-structured investigation of the factors that limit the performance of current ADT systems. By systematically altering the STAR Drums dataset along key dimensions—number of kits, presence of weak/simultaneous onsets, and accompaniment context—it succeeds in quantifying the contribution of each constraint to the overall performance ceiling.</p>
+<p>Strengths:
+- Methodologically rigorous and clearly explained.
+- Explores three model architectures, increasing generality of results.
+- Performance metrics are consistent and grounded in prior work.</p>
+<p>Suggestions for improvement:
+- Some tables (especially Table 3) are dense and could benefit from clearer formatting or graphical summaries.
+- It would be useful to discuss the potential implications of these findings for realworld ADT applications (e.g., how these bottlenecks affect user-facing systems).
+- The discussion on model failure modes could be deepened with a few more qualitative examples.</p>
+<p>Overall, this is a valuable contribution that helps the MIR community better understand how and why ADT systems fail—and where gains can still be made.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This paper conducts a thorough investigation into the performance limitations of automatic drum transcription (ADT) systems by using a well-designed experimental setup based on variants of the STAR Drums dataset. Rather than introducing a novel model, the work takes a diagnostic approach, aiming to isolate and measure the contribution of various known challenges—such as drum kit variability, overlapping onsets, and melodic interference—on ADT performance.</p>
+<p>The core value of this paper lies in its methodological clarity and diagnostic utility. Its key contribution is not architectural or algorithmic, but rather analytical: a reusable blueprint for benchmarking ADT bottlenecks. Multiple reviewers praised the clarity of the research questions and the strength of the experimental controls. The paper offers a useful “performance budget” that can help guide future efforts toward the most impactful areas of improvement.</p>
+<p>That said, some limitations temper the impact:</p>
+<ul>
+<li>Heavy reliance on re-synthesized data raises questions of external validity and real-world applicability.</li>
+<li>The evaluation on real recordings is modest in scale and genre diversity.</li>
+<li>The paper stops short of proposing or testing solutions to the identified issues, which reduces its immediate applicability to system development.</li>
+</ul>
+<p>This paper offers a valuable and reusable diagnostic framework for understanding performance limits in ADT systems. While it lacks immediate practical solutions and broader validation, its analytical contributions may justify its inclusion in the ISMIR program.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper investigates the limiting factors of ADT through a systematic evaluation using synthetic data. Specifically, different variants of STAR Drums are synthesized by removing different limiting factors, which allows for the assessment of their individual impacts. Through the analysis of the evaluation results, this paper addresses the research questions with quantitative outcomes, shedding light on the future direction of ADT research. The paper is well-structured and nicely written. The literature survey is comprehensive, and the research questions are well-motivated. </p>
+<p>One aspect I really appreciate about this work is the simplicity of the idea. By controlling variables such as number of drum kits, strong/weak onsets, and the presence of simultaneous sounds, one can study their impacts in a consistent environment with clear results. The core idea is straightforward, and the execution appears to be thorough. Generally speaking, I find the answers to the research questions convincing and well-supported. </p>
+<p>The main frustration while reading this paper, however, lies in the presentation of the evaluation results (i.e., Table 3). With three CNN architectures and two scenarios (i.e., DTD and DTM), there are many numbers in the same table without labels. The discussion section attempts to guide readers through this table by referring to the changes in numbers, however, it is still very difficult to parse. It took me a while to memorize the order of things, and I still found myself going back and forth just to ensure I was reading the correct numbers. The occasional typo in the numbers (see minor comments below) also makes it harder to follow. In my opinion, this paper could really benefit from some simplification or aggregation in the evaluation section in order to increase clarity. </p>
+<p>To summarize, I think this paper provides interesting insights for both DTD and DTM based on a simple yet effective idea. The evaluation is thorough, and the discussion is generally satisfactory. Overall, I believe this paper is a good contribution to the ADT community, and my recommendation is a weak accept. For further improvements, I would definitely encourage the authors to reconsider the presentation of the results. </p>
+<p>=============
+Minor comments: 
+Line 61, “STAR Drums” → missing reference to [6]?</p>
+<p>Line 116-117, “... with global F-measures above 0.8 …” → on which evaluation set? Any reference?</p>
+<p>Line 125, “... especially cymbals are often played with alternating weak and strong onsets…” → HiHat and Ride cymbals, to be more specific</p>
+<p>Line 284, “... using a peak picking with” → a peak picking algorithm?</p>
+<p>Line 331 → should be 0.79 to 0.73?</p>
+<p>Line 334, “... 0.73 to 0.78 and 0.78 to 0.82…” → it is a bit confusing since the previous paragraph was talking about 10Kits. It took me a while to realize this is comparing 20Kits to 1Kits. </p>
+<p>Line 350-352, “... suggests that even a relatively low number of virtual drum kits is sufficient to develop well-generalizing models for DTM” → this is a very dangerous statement, especially given the size of MDB Drums. Maybe the drum sounds in MDB are not diverse enough? Maybe the 10Kits somehow match the drum sounds in the MDB samples? In any case, I am a bit skeptical about this statement. </p>
+<p>Line 407, “... and decreases for the other two architectures for DTM.” → why? Isn’t 20KitsNoSim an easier test set compared to 20Kits? Any insight/explanation?</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths
+ - The idea, the purpose, and the setup of this study are sound and clearly presented
+ - The work draws from and builds nicely on the previous efforts made by the MIR community
+ - The results are clearly interpreted</p>
+<p>Weaknesses
+ - It would have been great if the dataset used for testing had been kept entirely segregated, i.e., avoiding using it even for validation. 
+ - The testing is only performed on tracks that are re-synthesized. It will be interesting to see how results generalize to "actual" real music. </p>
+<ul>
+<li>[minor] One of the conclusions is formulated badly: "Ensuring that drum sounds between training and testing are identical ...". It is clearly impossible to "ensure" that. The conclusion should be formulated as "If the drum sounds in testing is identical to ..., then ...".</li>
+<li>[minor] Some more details about the Star datasets would be appreciated. For instance, genre coverage.</li>
+</ul>
+<p>Questions
+ - It is argued that drum source separation could help addressing the challenge of overlapping onsets. How? How is that task different (easier) than ADT? If source separation is effective, then the same techniques could be applied to ATD, couldn't they?
+ - Does it make sense to average the F-measure of experiments with different number of T/F positives and T/F negatives? Could/should the F-measure be weighted?</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>Strengths (1) Diagnostic clarity: Instead of yet another SOTA system, the paper isolates four hypothesized bottlenecks in ADT and quantifies their individual cost—e.g., melodic masking and simultaneous hits—providing a “performance budget” for future work. (2) Well-controlled dataset design: The five STAR-Drums variants (20 Kits, 10 Kits, 1 Kit, NoWeak, NoSim) form a clean, switch-off-one-factor benchmark that others can replicate or extend with minimal effort. </p>
+<p>Weaknesses (1) External validity: Results rely largely on re-synthesised audio; the single real-recording test set (MDB, ≈22 min) is stylistically narrow, leaving domain-gap questions unresolved. (2) While the paper presents an analysis of limiting factors affecting ADT performance, it does not offer concrete solutions to the identified bottlenecks, thereby reducing its immediate applicability and practical impact in real-world scenarios.</p>
+<p>Justification: The work offers a valuable analysis toolbox that will help the community allocate effort and funding more intelligently. However, the reliance on synthetic data, modest breadth of external evaluation, and absence of modelling advances limit immediate practical impact. Balancing methodological novelty against these drawbacks yields a review of Weak reject.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

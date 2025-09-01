@@ -1,0 +1,508 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: User-Guided Generative Source Separation</title>
+    
+<meta name="citation_title" content="User-Guided Generative Source Separation" />
+
+<meta name="citation_author" content="Yutong Wen" />
+
+<meta name="citation_author" content="Minje Kim" />
+
+<meta name="citation_author" content="Paris Smaragdis" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Music source separation (MSS) aims to extract individual instrument sources from their mixture. While most existing methods focus on the widely adopted four-stem separation setup (vocals, bass, drums, and other instruments), this approach lacks the flexibility needed for real-world applications. To address this, we propose GuideSep, a diffusion-based MSS model capable of instrument-agnostic separation beyond the four-stem setup. GuideSep is conditioned on multiple inputs: a waveform mimicry condition, which can be easily provided by humming or playing the target melody, and mel-spectrogram domain masks, which offer additional guidance for separation.  Unlike prior approaches that relied on fixed class labels or sound queries, our conditioning scheme, coupled with the generative approach, provides greater flexibility and applicability. Additionally, we design a mask-prediction baseline using the same model architecture to systematically compare predictive and generative approaches. Our objective and subjective evaluations demonstrate that GuideSep achieves high-quality separation while enabling more versatile instrument extraction, highlighting the potential of user participation in the diffusion-based generative process for MSS. Our code and demo page are available at https://yutongwen.github.io/GuideSep/.
+&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="" />
+
+<meta name="citation_keywords" content="Sound source separation" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-11: User-Guided Generative Source Separation
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Yutong Wen" class="text-muted"
+        >Yutong Wen</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Minje Kim" class="text-muted"
+        >Minje Kim</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Paris Smaragdis" class="text-muted"
+        >Paris Smaragdis</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search="
+        class="text-secondary text-decoration-none"
+        ></a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Sound source separation"
+        class="text-secondary text-decoration-none"
+        >Sound source separation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Music source separation (MSS) aims to extract individual instrument sources from their mixture. While most existing methods focus on the widely adopted four-stem separation setup (vocals, bass, drums, and other instruments), this approach lacks the flexibility needed for real-world applications. To address this, we propose GuideSep, a diffusion-based MSS model capable of instrument-agnostic separation beyond the four-stem setup. GuideSep is conditioned on multiple inputs: a waveform mimicry condition, which can be easily provided by humming or playing the target melody, and mel-spectrogram domain masks, which offer additional guidance for separation.  Unlike prior approaches that relied on fixed class labels or sound queries, our conditioning scheme, coupled with the generative approach, provides greater flexibility and applicability. Additionally, we design a mask-prediction baseline using the same model architecture to systematically compare predictive and generative approaches. Our objective and subjective evaluations demonstrate that GuideSep achieves high-quality separation while enabling more versatile instrument extraction, highlighting the potential of user participation in the diffusion-based generative process for MSS. Our code and demo page are available at https://yutongwen.github.io/GuideSep/.
+<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1RWAwOWQ1vhBxELkJoMQPqfjI-NLS5bjy/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Agree (Novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The analysis of differing behaviour between generative and discriminative/predictive source separation approaches can be used to guide future work</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Diffusion-based music source separation can perform well when controlled by a mimicry audio condition of the target instrument and/or from a spectrogram mask locating the target instrument</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>The paper successfully lays the groundwork for music source separation methods that can be controlled by users in a more intuitive way, with the mimicry condition being a novel conditioning method.</p>
+<p>The paper is overall very well written and scientifically rigorous. The ablation studies prove that both proposed conditioning methods contribute to separation performance and that the diffusion-based generative approach performs better than a mask-based one (although I am not convinced this finding is entirely novel, so I encourage some more literature review and to rephrase the paper's novelty claims in that regard if needed).</p>
+<p>There are a couple of limitations, which are not discussed enough in the paper:
+- The humming is assumed to be closely time-aligned to the target source, by way of how the system is trained. This means that users need to hum along to the music and humming without listening along to the mixture would likely fail. The paper introduces some data augmentation, but distorts timing only slightly, so more variation here would be needed
+- The audio input duration is quite short (4s), and it's unclear how the model performs with longer inputs. This also seems to be a limiting factor in case more time-warped humming inputs are to be supported
+- Authors find including a synthesis task (generate from mimicry condition) in training helps, which is surprising, but don't provide an ablation result for that
+- The paper does not train on the actual task (real humming inputs) due to unavailable data, and only evaluates in a very synthetic setting, making it difficult to assess how useful the model actually is. For future research, it would be crucial to collect some data for this novel task</p>
+<p>Small corrections:
+- L275 refers to the mimicry condition suddenly as melody - would be better to use one name consistently throughout the paper
+- L277 delete “in”
+- L431 - the diffusion-based approach in particular?
+- L433 - could you find a more precise word than “clean”? Do you mean free of artifacts?</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>Review summary</p>
+<p>This paper introduces a generative source separation approach that allows user guidance via two modalities: time-synchronized humming and mel-spectrogram masks. The method is implemented using a diffusion-based model and aims to make the separation process more interactive and intuitive. The reviewers generally found the work to be original, well-executed, and relevant to the ISMIR community.</p>
+<p>Two reviewers rated the paper as Strong Accept, citing clear exposition, a well-motivated problem, and a promising approach with reproducible implementation. A third reviewer gave a Weak Accept, while a fourth initially gave a Strong Reject due to concerns about the evaluation setup, lack of real user input or UI, and fairness of model comparisons. However, this reviewer later acknowledged the paper’s novelty and agreed to revise their stance to a "weak accept", provided the subjective listening test results are more rigorously evaluated.</p>
+<p>The core idea of guided source separation through user input is novel and an interesting foundation for further research. While the evaluation and experimental setup have weaknesses, some of these can be addressed as part of a camera-ready version by the authors. Additionally, the contribution of source separation by humming using a diffusion model is convincing.</p>
+<p>Recommendation: Weak accept</p>
+<p>Note to the Authors
+To improve the final version of the paper, please address the following key points:</p>
+<p>Clarify the Subjective Evaluation: Provide more details on MUSHRA test design, participant screening, and whether remixing affected perceptual quality judgments.</p>
+<p>Acknowledge Evaluation Limitations: Clearly state the limitations of your comparisons between generative and predictive models, including the lack of computational parity.</p>
+<p>Discuss Practicality of Inputs: Expand on how mel-mask inputs would be obtained in real-world scenarios, and briefly discuss UI considerations or potential deployment contexts.</p>
+<p>Improve Consistency and Clarity: Fix terminology inconsistencies (e.g., “mimicry” vs. “melody”) and minor typos identified by reviewers.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper "User-guided generative source separation" introduces GuiseSep, a source separation system conditioned on mel spectrograms and mimicry input. The work is very well structured and written and clearly puts into context and communicates its contributions.</p>
+<p>L. 252: Typo "noramlized" -&gt; "normlaized"
+Table 1: Typo: "psuedo" -&gt; "pseudo"</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<h2>General Comments</h2>
+<p>The proposed approach is novel in its user-guided controllability and its integration of diffusion models with guided priors. The work is both timely and relevant, addressing a growing interest in interactive music source separation. The accompanying audio examples are convincing and engaging. However, several conceptual, methodological, and evaluative aspects of the paper would benefit from further clarification and development.</p>
+<h2>Detailed Comments</h2>
+<p>L.177: The statement “Extraction using non-polyphonic instruments: We restrict the condition melody to be monophonic to reflect real-world limitations of many instruments” is a somewhat confisuing. The authors should clarify what is meant by “real-world limitations,” particularly since many real-world instruments (e.g., piano, guitar, harp) are inherently polyphonic.</p>
+<p>L.243–L.252 (Notation clarity): The mathematical notation could be improved for precision and readability. Specifically:
+* The variable c is overloaded—used both as a complex spectrogram and as an instrument label.
+* c_mix refers to the STFT domain, while c_mask is defined in the mel-spectrogram domain. As these are different time-frequency representations, the distinction should be made more explicit. 
+* In the subsequent section, the authors mention a projection of the mel-axis using a 1-hidden-layer neural network. It would help readers if the dimensions of each matrix were provided in this earlier section, along with a note that architectural details will follow.
+* Mel vs. STFT Masking: The decision to apply masking in the mel domain instead of the STFT domain is not discussed. This design choice could have significant implications (e.g., resolution trade-offs, perceptual smoothness), and the rationale should be clarified.</p>
+<p>L.288 (Terminology): The acronym ODE should be defined as Ordinary Differential Equation when first introduced, for readers unfamiliar with this terminology.</p>
+<p>L.297–L.299 (Evaluation metrics): The evaluation focuses on objective metrics like SDR, but perceptual quality is critical in music separation tasks. The authors are encouraged to include perceptual metrics or refer to established evaluation frameworks. For a comparative overview of metrics, see:
+M. Torcoli, T. Kastner and J. Herre, "Objective Measures of Perceptual Audio Quality Reviewed: An Evaluation of Their Application Domain Dependence," in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 29, pp. 1530-1541, 2021, doi: 10.1109/TASLP.2021.3069302. </p>
+<p>Section 3.1.1 (Dataset selection): If the model is designed to be source-agnostic, it would be valuable to test it on a wider range of musical contexts, especially multitrack classical music datasets. This would provide insights into how well the model generalizes across diverse instrumentation and structural complexity. For example, datasets like PHENICX-SMM or PCD could be considered:
+* M. Schedl, D. Hauger, M. Tkalčič, M. Melenhorst, and C. C. S. Liem, “A dataset of multimedia material about classical music: PHENICX-SMM,” in Proc. Int. Workshop on Content-Based Multimedia Indexing (CBMI), Bucharest, Romania, 2016, pp. 1–4, doi: 10.1109/CBMI.2016.7500240.
+* Y. Özer, S. Schwär, V. Arifi-Müller, J. Lawrence, E. Sen, and M. Müller, “Piano Concerto Dataset (PCD): A multitrack dataset of piano concertos,” Transactions of the International Society for Music Information Retrieval, vol. 6, no. 1, pp. 75–88, 2023.</p>
+<p>Section 3.1.2 (Dropout strategies): The dropout-based sampling strategy is conceptually interesting and appears effective. However, an ablation study comparing performance with and without dropout would strengthen the empirical justification for this approach.</p>
+<p>Section 4.1 (Subjective listening tests): 
+* MUSHRA methodology recommends a post-screening of the participants stating that participants should be excluded from the listening test if they
+assign the hidden reference to a score lower than 90 for more. In Figure 3a, the average score for the ground truth (GT) signal is exactly 90, raising questions about listener behavior and post-screening. It is unclear whether such screening was applied.
+* The paper does not report whether the subjective differences are statistically significant.
+* The experience level of the 13 participants is not discussed, and 13 listeners is a relatively small sample for subjective testing.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The proposed method employs mimicry (melodically similar audio) and mel-masks as query inputs for source separation. Using humming and mel-masks as user-generated queries is an interesting and differentiated approach compared to existing methods that rely on simpler queries, such as textual labels (e.g. instrument classes) or audio examples with similar timbres. Nevertheless, the paper is rejected due to the following concerns:</p>
+<p>Reasons for Rejection:
+1. Limited Practicality and Lack of UI Details The proposed approach appears less practical compared to existing methods because the required user inputs are relatively complex. Given such complexity, a carefully designed user interface (UI) would be essential; however, the paper does not provide any detailed description or demonstration of the proposed UI.
+2. Fundamental Limitations for Polyphonic and Transient Sources The mimicry condition assumes a monophonic melody to simulate humming, imposing inherent limitations. This assumption restricts the model’s applicability to polyphonic or harmonically complex sources (e.g., unison or polyphonic instruments). Moreover, it fundamentally lacks suitability for transient-rich sounds like drums.
+3. Limited Contribution Considering Computational Cost and Audio Quality Although the proposed method is not intended for real-time processing, it still operates at a relatively low sampling rate of 16 kHz. This limitation, combined with the comparatively low subjective audio quality demonstrated in the provided demos—particularly in comparison to existing commercial software—significantly restricts the overall contribution and potential impact of the paper.
+4. Unfair Computational Comparison A major contribution highlighted in the paper is the systematic comparison between predictive and generative models. However, this comparison is not fair from a computational standpoint. To fairly evaluate performance, the generative model should use single-step inference or at least be evaluated under equivalent computational costs compared to the predictive model.
+5. Low Reliability of Subjective Evaluation The MUSHRA test produced questionable results, with the ground truth (hidden reference) scoring approximately 90 points. Such a low score strongly suggests problems with experiment design, listener instruction, or overall experiment reliability, undermining confidence in all reported subjective evaluation outcomes.</p>
+<p>Minor Comment:
+* When performing data augmentation for mel-spectral masks, randomization of frequency and time offsets should also be considered for robustness.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

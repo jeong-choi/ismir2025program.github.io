@@ -1,0 +1,534 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: CMI-Bench: A Comprehensive Benchmark for Evaluating Music Instruction Following</title>
+    
+<meta name="citation_title" content="CMI-Bench: A Comprehensive Benchmark for Evaluating Music Instruction Following" />
+
+<meta name="citation_author" content="Yinghao MA" />
+
+<meta name="citation_author" content="Siyou Li" />
+
+<meta name="citation_author" content="Juntao Yu" />
+
+<meta name="citation_author" content="Emmanouil Benetos" />
+
+<meta name="citation_author" content="Akira Maezawa" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Recent advances in audio-text large language models (LLMs) have opened new possibilities for music understanding and generation. However, existing benchmarks are limited in scope, often relying on simplified tasks or multi-choice evaluations that fail to reflect the complexity of real-world music analysis. We reinterpret a broad range of traditional MIR annotations as instruction-following formats and introduce CMI-Bench, a comprehensive music instruction following benchmark designed to evaluate audio-text LLMs on a diverse set of music information retrieval (MIR) tasks. These include genre classification, emotion regression, emotion tagging, instrument classification, pitch estimation, key detection, lyrics transcription, melody extraction, vocal technique recognition, instrument performance technique detection, music tagging, music captioning, and (down)beat tracking — reflecting core challenges in MIR research. Unlike previous benchmarks, CMI-Bench adopts standardized evaluation metrics consistent with previous state-of-the-art MIR models, ensuring direct comparability with supervised approaches. We provide an evaluation toolkit supporting all open-source audio-textual LLMs, including LTU, Qwen-audio, SALMONN, MusiLingo, etc. Experiment results reveal significant performance gaps between LLMs and supervised models, along with their culture, chronological and gender bias, highlighting the potential and limitations of current models in addressing MIR tasks. CMI-Bench establishes a unified foundation for evaluating music instruction following, driving progress in music-aware LLMs.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Representations of music" />
+
+<meta name="citation_keywords" content="Multimodality" />
+
+<meta name="citation_keywords" content="Evaluation, datasets, and reproducibility" />
+
+<meta name="citation_keywords" content="Evaluation methodology" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P4-06: CMI-Bench: A Comprehensive Benchmark for Evaluating Music Instruction Following
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Yinghao MA" class="text-muted"
+        >Yinghao MA</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Siyou Li" class="text-muted"
+        >Siyou Li</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Juntao Yu" class="text-muted"
+        >Juntao Yu</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emmanouil Benetos" class="text-muted"
+        >Emmanouil Benetos</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Akira Maezawa" class="text-muted"
+        >Akira Maezawa</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Representations of music"
+        class="text-secondary text-decoration-none"
+        >Representations of music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Multimodality"
+        class="text-secondary text-decoration-none"
+        >Multimodality</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation, datasets, and reproducibility"
+        class="text-secondary text-decoration-none"
+        >Evaluation, datasets, and reproducibility</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Evaluation methodology"
+        class="text-secondary text-decoration-none"
+        >Evaluation methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Recent advances in audio-text large language models (LLMs) have opened new possibilities for music understanding and generation. However, existing benchmarks are limited in scope, often relying on simplified tasks or multi-choice evaluations that fail to reflect the complexity of real-world music analysis. We reinterpret a broad range of traditional MIR annotations as instruction-following formats and introduce CMI-Bench, a comprehensive music instruction following benchmark designed to evaluate audio-text LLMs on a diverse set of music information retrieval (MIR) tasks. These include genre classification, emotion regression, emotion tagging, instrument classification, pitch estimation, key detection, lyrics transcription, melody extraction, vocal technique recognition, instrument performance technique detection, music tagging, music captioning, and (down)beat tracking — reflecting core challenges in MIR research. Unlike previous benchmarks, CMI-Bench adopts standardized evaluation metrics consistent with previous state-of-the-art MIR models, ensuring direct comparability with supervised approaches. We provide an evaluation toolkit supporting all open-source audio-textual LLMs, including LTU, Qwen-audio, SALMONN, MusiLingo, etc. Experiment results reveal significant performance gaps between LLMs and supervised models, along with their culture, chronological and gender bias, highlighting the potential and limitations of current models in addressing MIR tasks. CMI-Bench establishes a unified foundation for evaluating music instruction following, driving progress in music-aware LLMs.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1QgMxIA-e4ADZ_dII4_l0FXURVckY3uZA/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The evaluation of multiple music-related LLMs in a broad set of tasks helps to understand the capabilities of such models, which are still far from optimal.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>A new dataset useful for finetuning and evaluating music-related LLMs, built as a reformulation of many MIR datasets in an instruction form.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Weak accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>This paper presents a new dataset created from several other MIR datasets by reformulating the tasks in an instruction form, suitable for finetuning and evaluating multimodal music-related LLMs. Then the authors evaluate a number of available models in the dataset. 
+The paper is well written and structured, and its main contribution—the unification of MIR tasks into a standardized instruction-tuning benchmark—is timely and highly relevant. The catalog of MIR tasks and LLMs surveyed is particularly useful to the community, and the benchmark aligns well with both NLP and MIR research interests. That said, there are areas that could be improved or clarified to strengthen the paper’s long-term utility.
+- The evaluation of zero shot learning with LLMs is heavily dependent on the prompt used, which in this case, is determined by the authors. Many of the models evaluated may have been trained with different set of instructions, which makes difficult to really trust the results provided in the paper. In addition, there is no ablation study or prompt variants that help the reader to trust the decided prompts used by the authors. This dataset may be more useful for finetuning of newer models that follows the defined instructions.
+- The paper refers to CMI-Bench as a benchmark, but lacks a clear leaderboard or scoring protocol that would encourage external adoption. A discussion about future integration with platforms like HuggingFace leaderboards would help clarify its long-term role.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>The topic is highly relevant to the ISMIR community, especially considering the growing interest in applying LLMs to musical domains. The paper is well written and presents a substantial and clearly motivated contribution. Reformulating MIR tasks for instruction-based evaluation is a timely and important idea that responds to the way LLMs are increasingly used in practice.</p>
+<p>Reviewers appreciated the breadth of the evaluation, the inclusion of multiple models and tasks, and the open release of the benchmark. The analysis of genre and cultural bias is also a welcome addition, but can be improved following the recommendations of reviewer #3.</p>
+<p>One central issue is the lack of prompt ablation or prompt robustness analysis. Since the zero-shot results depend heavily on prompt wording, it’s difficult to assess whether the poor performance observed in some tasks reflects model limitations or suboptimal prompt design. Including even a small prompt variation experiment would have helped to clarify this.</p>
+<p>Another limitation is the lack of a formal leaderboard structure or evaluation protocol. While the dataset is positioned as a benchmark, it would benefit from clearer guidance to encourage adoption—such as standard scoring procedures or integration with leaderboard platforms.</p>
+<p>Some reviewers also found that the results are under-analyzed, especially given the number of metrics and tasks. The discussion of failures (e.g., hallucinations, invalid outputs) is often brief or qualitative. More quantitative data—for instance, the rate of invalid responses—would make the analysis more useful. In addition, the comparison with previous studies that showed better LLM performance on music tasks needs to be better contextualized.</p>
+<p>Finally, a deeper reflection on the reliability of the underlying datasets, especially for subjective tasks like emotion annotation, would strengthen the benchmark's credibility. In several cases, it is unclear whether model “errors” are due to actual model failures or limitations in the data itself.</p>
+<p>Despite these limitations, this paper makes a valuable contribution by providing the community with a reusable and extensible framework to evaluate LLMs on music-related tasks. While the methodology is still in early stages, the benchmark can serve as a foundation for future work, and will likely stimulate further discussion and experimentation in this space.</p>
+<p>I recommend acceptance, with the hope that the authors can expand on some of the open questions and strengthen the benchmark for broader adoption.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper is relatively well written and understandable. The amount of work presented is commendable, with 11 models and 20 different metrics applied to 14 different MIR tasks. Despite this impressive breadth, the paper remains readable and well structured. Section 2, although dense, offers a comprehensive state of the art. However, there are a number of typos (listed at the end of this review), and most of the figures and tables are difficult to read (I assume due to space constraints that led to font size reduction).</p>
+<p>The authors propose using LLMs for a wide range of MIR tasks by reformulating task annotations into an instruction-following prompt paradigm to leverage the capacities of LLMs. Ultimately, "all models in our study fall significantly short of the performance achieved by task-specific supervised systems when evaluated using standard MIR metrics."</p>
+<p>To me, the paper exhibits two major flaws:</p>
+<p>1) The impact of the specific reformulations chosen in the paper on the results. If LLMs underperform so noticeably compared to task-specific SOTA models, is it solely due to the inherent limitations of LLMs and the explanations offered in the paper? Could different prompts have yielded better performance?
+A more systematic analysis of prompt engineering choices, or a prompt ablation study, would have been highly valuable to isolate the source of performance gaps.</p>
+<p>2) The comparison with previous attempts at music-related instruction-following tasks. Section 5.1.1 cites other papers in which LLMs achieved excellent results—why do these discrepancies arise here?</p>
+<p>The filtering of outputs produced by the selected LLMs (Section 4 Experiments) would have benefited from a more detailed analysis.
+For downbeat tracking, the authors note: "We filter non-numeric outputs". How frequently do such outputs occur? The model was expected to produce a list of tuples only.
+Similarly, for melody extraction: "We discard invalid tuples (e.g., missing pitches, or improperly formatted entries, etc.)."
+How often do models fail to produce valid outputs? How frequent are hallucinations? To what extent does post-processing affect the final results?</p>
+<p>Section 5 Results is unfortunately hindered by the number of tasks being addressed simultaneously. Table 3 is not sufficiently referenced in the text. Given the number of metrics reported, it would be helpful for Table 3 to include arrows or annotations indicating which metrics are better when lower or higher.
+Subsection 5.1.3, "All Models Perform Poorly on DSing Transcription", fails to provide insight into why performance is so low.</p>
+<p>Section 5.2, Culture and Gender Bias, raises interesting issues but suffers from several weaknesses.
+Accordion is not an orchestral instrument.
+"Performance drops significantly on bongo and harmonica -commonly associated with world, folk," Is this not simply because such instruments are underrepresented in the dataset? Is folk music really that rare in genre datasets?</p>
+<p>The distinctions drawn are also inconsistent:
+"Western genres (e.g., 80s, 90s)" vs. "music traditions (e.g., Medieval, 60s)" : why are the 80s and 90s considered genres but the 60s a “tradition”?
+Is chanson considered world music?
+ This section lacks both detail and quantitative results, although the topics discussed are undoubtedly of high relevance to the field.</p>
+<p>I would like to emphasize that my decision to recommend a weak reject is in no way due to the presence of negative results. On the contrary, negative or underwhelming results are important and valuable. The work presented is substantial and of genuine interest.</p>
+<p>However, the paper lacks fine-grained analysis of the results and shows little critical perspective on the design of the prompts—an issue that, in my view, is insufficiently addressed in the paper, except briefly in Section 5.1.4.</p>
+<p>Minor remarks
+Figure 1, Figure 2, Table 1, and Table 2 are nearly illegible.</p>
+<p>l.141: "sequential or sequential tasks" -&gt; repetition</p>
+<p>l.174/175: "seuqen-tiall" -&gt; typo</p>
+<p>l.232: "tupiles" -&gt; should be "tuples"</p>
+<p>Table 2: Checkmark and cross symbols are visually confusing</p>
+<p>l.326: "Trainingset" -&gt; spacing issue</p>
+<p>l.330: "generalization.Qwen2-Audio" -&gt;missing space</p>
+<p>l.365: "While, different" formulation is strange</p>
+<p>l.424+: "Audio-Flamingo’s performance on Bossanova and Chanson drops severely, respectively." → "respectively" is misused here</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>I think this paper will generated lots of discussion, and its topic is central to current conversations about music LLMs.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Strong accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The increase in popularity of LLMs, and their recent adaptation for various music-related tasks certainly makes this work one with a timely topic. As popular as LLMs are, a consistent challenge is figuring out how to measure their performance. Thus, contributing to the evaluation of LLMs for MIR tasks makes this topic even more relevant at ISMIR. </p>
+<p>I find the approach of instruction-following to be an interesting method for developing the benchmark, in particular when the output is a number within a range on a scale. I do miss an assessment of test-retest reliability of LLM responses, however. As they are stochastic by definition, I would be curious to also see how consitent they are. There are energy costs to this of course, but one might interpret the results of a top performing model differently if its output varies substantially when given the same input multiple times. As I also expect that this variance will vary based on LLM and task, I feel it would add substantial resolution to the results. Of course, I acknowledge the limited space and the necessity for the page-long table to show results. </p>
+<p>The work further allows for an initial view on the state of LLMs applied to MIR related tasks. There are some clear successes and failures, which I expect will be of interest to our community. </p>
+<p>I further appreciate the lack of overinterpretation of results that is so common in LLM work.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

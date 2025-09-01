@@ -1,0 +1,629 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Universal Music Representations? Evaluating Foundation Models on World Music Corpora</title>
+    
+<meta name="citation_title" content="Universal Music Representations? Evaluating Foundation Models on World Music Corpora" />
+
+<meta name="citation_author" content="Charilaos Papaioannou" />
+
+<meta name="citation_author" content="Emmanouil Benetos" />
+
+<meta name="citation_author" content="Alexandros Potamianos" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Foundation models have revolutionized music information retrieval, but questions remain about their ability to generalize across diverse musical traditions. This paper presents a comprehensive evaluation of five state-of-the-art audio foundation models across six musical corpora spanning Western popular, Greek, Turkish, and Indian classical traditions. We employ three complementary methodologies to investigate these models&#39; cross-cultural capabilities: probing to assess inherent representations, targeted supervised fine-tuning of 1-2 layers, and multi-label few-shot learning for low-resource scenarios.  Our analysis shows varying cross-cultural generalization, with larger models typically outperforming on non-Western music, though results decline for culturally distant traditions. Notably, our approaches achieve state-of-the-art performance on five out of six evaluated datasets, demonstrating the effectiveness of foundation models for world music understanding. We also find that our targeted fine-tuning approach does not consistently outperform probing across all settings, suggesting foundation models already encode substantial musical knowledge. Our evaluation framework and benchmarking results contribute to understanding how far current models are from achieving universal music representations while establishing metrics for future progress.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Computational ethnomusicology" />
+
+<meta name="citation_keywords" content="Machine learning/artificial intelligence for music" />
+
+<meta name="citation_keywords" content="Musical features and properties" />
+
+<meta name="citation_keywords" content="Musical style and genre" />
+
+<meta name="citation_keywords" content="Automatic classification" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Metadata, tags, linked data, and semantic web" />
+
+<meta name="citation_keywords" content="MIR fundamentals and methodology" />
+
+<meta name="citation_keywords" content="Knowledge-driven approaches to MIR" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P3-07: Universal Music Representations? Evaluating Foundation Models on World Music Corpora
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Charilaos Papaioannou" class="text-muted"
+        >Charilaos Papaioannou</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Emmanouil Benetos" class="text-muted"
+        >Emmanouil Benetos</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Alexandros Potamianos" class="text-muted"
+        >Alexandros Potamianos</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Computational ethnomusicology"
+        class="text-secondary text-decoration-none"
+        >Computational ethnomusicology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Machine learning/artificial intelligence for music"
+        class="text-secondary text-decoration-none"
+        >Machine learning/artificial intelligence for music</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical features and properties"
+        class="text-secondary text-decoration-none"
+        >Musical features and properties</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Musical style and genre"
+        class="text-secondary text-decoration-none"
+        >Musical style and genre</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Automatic classification"
+        class="text-secondary text-decoration-none"
+        >Automatic classification</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Metadata, tags, linked data, and semantic web"
+        class="text-secondary text-decoration-none"
+        >Metadata, tags, linked data, and semantic web</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR fundamentals and methodology"
+        class="text-secondary text-decoration-none"
+        >MIR fundamentals and methodology</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Knowledge-driven approaches to MIR"
+        class="text-secondary text-decoration-none"
+        >Knowledge-driven approaches to MIR</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Foundation models have revolutionized music information retrieval, but questions remain about their ability to generalize across diverse musical traditions. This paper presents a comprehensive evaluation of five state-of-the-art audio foundation models across six musical corpora spanning Western popular, Greek, Turkish, and Indian classical traditions. We employ three complementary methodologies to investigate these models' cross-cultural capabilities: probing to assess inherent representations, targeted supervised fine-tuning of 1-2 layers, and multi-label few-shot learning for low-resource scenarios.  Our analysis shows varying cross-cultural generalization, with larger models typically outperforming on non-Western music, though results decline for culturally distant traditions. Notably, our approaches achieve state-of-the-art performance on five out of six evaluated datasets, demonstrating the effectiveness of foundation models for world music understanding. We also find that our targeted fine-tuning approach does not consistently outperform probing across all settings, suggesting foundation models already encode substantial musical knowledge. Our evaluation framework and benchmarking results contribute to understanding how far current models are from achieving universal music representations while establishing metrics for future progress.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/19JXQwCfcQER_CtStKeSN1XcGg_Ow9Vc4/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Agree</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Disagree (Standard topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The work's conclusion provides reusable insight: The foundation models trained on Western-centered catalog can be biased towards it and may exhibit relatively inferior effectiveness on set of music from different cultural context (i.e., "world music").</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>The foundation models trained on Western-centered catalog can be biased towards it and may exhibit relatively inferior effectiveness on set of music from different cultural context (i.e., "world music").</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>No</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<h1>Summary</h1>
+<p>The work evaluates music representations from recent foundation models, especially comparing the performance between Western and non-Western music tagging datasets to investigate a potential cultural bias in those models whose training set typically includes a substantially high proportion of Western music. The experimental design involves three transfer strategies: probing, supervised fine-tuning, and multi-label few-shot learning (ML-FSL). A total of 6 music tagging datasets, including 2 Western (MTAT, FMA-medium), Greek (Lyra), Turkish (Turkish-makam), and two different styles of Indian (Hindustani, Carnatic) music. While achieving state-of-the-art performance in most datasets, the results indicate that the models' absolute performance measure degrades going from Western to non-Western music, implying there might be a bias towards Western music. The work also introduces a performance optimization method for ML-SFL by de-duplicating concept representations, achieving 100 times more efficiency in the best-case scenario.</p>
+<h1>Major Comments</h1>
+<h2>Strengths</h2>
+<p>The work presents a cross-cultural evaluation of music audio foundation models, a novel and relevant topic. Through it, we gain information on the strengths and weaknesses of current foundation models in a multi-cultural context, which can be further used to improve models, opening avenues for future research.
+- The conducted experiment has a good coverage on datasets (6 multi-cultural music tagging datasets), transfer strategies (probing, fine-tuning, few-shot learning).
+- The work generally reads well</p>
+<h2>Weaknesses</h2>
+<ul>
+<li>There are a few parts where the experimental design could have even better coverage:</li>
+<li>Other "world" music datasets can give an interesting data point to the study, such as ones from Western music tradition. It will help refine the hypothesis and result by checking whether the bias factor is on Western music tradition or other more nuanced factors such as contemporariness, pop-music-ness. One example could be the Slovenian folk music dataset[^1]</li>
+<li>The model selection could be expanded by employing foundation models that use different architectures (e.g., convolutional architectures such as MULE).</li>
+<li>There are a few potentially invalid statements, which will be presented in the following section.</li>
+</ul>
+<h1>Minor Comments</h1>
+<ul>
+<li>p2.l87 "Early efforts ... ": These works are the modern ones that explicitly call them "Foundation models", while numerous other even earlier works qualify, enabling them to capture rich musical features applicable across diverse tasks via unsupervised learning. To exemplify a few (Hoffman et al., 2008; Vaizman et al., 2014; Nam et al., 2012; Nam et al., 2015).</li>
+<li>p2.l140 "... only an MLP classifier ...": As linear probing was mentioned several times, I assumed it would have been a linear model on top of the features. Which one is correct?</li>
+<li>p2.l170 "... supervised learning on mel-spectrograms to predict tags.": Is this trained on each dataset, or only on the Western dataset, and transferred?</li>
+<li>p3.l199 "Specifically, we ... binary cross-entropy loss.": MLP is a non-linear model. To the best of my knowledge, linear-probing refers to the case where a linear model is trained taking representation output from foundation model as input. Thus I doubt the use of MLP falls into linear-probing category. Throughout the text, it might have to be rephrased as a probing experiment.</li>
+<li>p5.l266 "During inference, ... LCP representations."Applying a weighting scheme for each of them with some heuristics would provide additional benefits, which could be an interesting future research topic.</li>
+<li>p6.l373 ".. we observe a ... foundation models."The question that could be posed here is, "Would a foundation model trained on non-Western music perform better?"
+—p6. l397 "However, their consistent ... Western musical traditions." Combined with the previous comment, this statement is still not completely proven, as it could just be that the non-Western music datasets are just "harder." To check that, one could train a foundation model only using non-Western models and see if the appropriate result is drawn.</li>
+</ul>
+<p>[^1]: https://gitlab.com/algomus.fr/slovenian-folksongs / Vanessa Nina Borsan, Mathieu Giraud, Richard Groult, Thierry Lecroq: Adding Descriptors to Melodies Improves Pattern Matching: A Study on Slovenian Folk Songs. ISMIR 2023</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<h1>Summary of the reviews</h1>
+<h2>Strengths:</h2>
+<ul>
+<li>The main topic of the work is relevant, novel, and important</li>
+<li>The work, in general, is structured and written, except for a few parts</li>
+<li>The work provides code that significantly improves the reproducibility</li>
+<li>The experimental design is sound, with a good breadth in terms of datasets</li>
+</ul>
+<h2>For improvement:</h2>
+<ul>
+<li>Justification for several methodological choices is insufficient</li>
+<li>The few-shot learning methodology and evaluation could be more clearly communicated</li>
+<li>The few-shot inference optimization would be less stressed, as it may distract readers from focusing on the main contribution</li>
+</ul>
+<h1>Overall comment on the decision</h1>
+<p>The reviewers found that the work tackles a novel and relevant topic in the current MIR problem space by evaluating pre-trained foundation models on culturally diverse datasets, revealing the potential Western music bias in these models. The work presented the study well, also providing the source code, which improves the reproducibility. On the other hand, reviewers pointed out that the work could benefit from focusing more on the core topic of evaluation, where the focus was divided into the few-shot optimization, which itself is an interesting contribution while took up a considerable portion of the paper that could be used to shed light on a few other additional evaluation or further elaboration/justification of methodologies. Overall, the scientific quality is sound, and the conclusion is insightful, which the reviewers found to be a sufficient reason to consider the work a valuable contribution to the ISMIR proceedings.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The authors of this paper investigate the ability of various state-of-the-art music representation models to encode non-Western music and evaluate them in different scenarios, namely linear probing, fine-tuning and few-shot learning. They report that the examined models have a tendency to perform better on typical MIR datasets which exhibit Western bias, while datasets comprising non-Western music represent a more challenging basis.</p>
+<p>The paper is slightly challenging to follow at times and could be structured a bit better. Some choices of parameters are not justified and no information is given on the potential impact of dataset sizes on the results. While the "Multi-label few-shot learning optimization" may be an insightful improvement, it feels a little misplaced in the scope of this paper while it is given a major amount of attention. This could have been used better for the discussion and evaluation for the vast amount of numbers the authors present.</p>
+<p>Some general points:</p>
+<ul>
+<li>
+<p>The term "world music", as it is prominently used in the paper, is very generic. I think it would be a better choice to go with a term like "non-Western" music, as the authors also define MagnaTagATune and Fma-medium as "Western-centric". </p>
+</li>
+<li>
+<p>The last paragraph of "2. Related Work" discusses the authors' choice of employing LC-Protonets. However, this is not really a discussion of related work but would rather belong to "3. Methodological Framework".</p>
+</li>
+<li>
+<p>In 3.1., the authors discuss the examined models mostly in terms of their architectural characteristics. For the scope of this paper, I believe an outline of the used training data would have been a lot more meaningful, as this should be impacting the found results most. Also, in the discussion the authors only address the models' number of parameters and not their network designs.</p>
+</li>
+<li>
+<p>In 3.2., the authors only state that they use the datasets "Following [28]". It would be nice to get some more detail here than just a reference. While the authors of [28] at least recognize that the size of the respective datasets may impact the results, this fact is not mentioned here at all. In fact I believe that it might be a crucial factor and it is questionable if comparing datasets of such different nature can allow for direct comparison at all. It would at least be necessary to include this into the discussion.</p>
+</li>
+<li>
+<p>In section 3.3., the authors describe: "For MERT-
+ 95M, we unfreeze the last two transformer layers, while
+for MERT-330M only the last layer. For both CLAP models, we unfreeze the last group of swin-transformer blocks
+of the audio encoder along with the normalization and two projection layers. In Qwen2-Audio, we fine-tune the last layer of the audio tower along with the normalization layer before multi-modal projection." - how are these choices made? While it is likely that it is by RAM limitations, this would at least have to be stated. Again, it is questionable if such fortuitous choices allow for a fair comparison - simply agreeing on a single layer to be unfrozen would have been the more acceptable approach.</p>
+</li>
+<li>
+<p>If I understand correctly, for the ML-FSL approach, the authors first train the models on a specific dataset and then apply Few Shot Classification on the same data they trained the model on. Is this a common practice? I would assume that the representations should then already be overfit to this data. Also, while it is reasonable to apply LC-Protonets, it would have been more intuitive to at least also provide results from a common few shot learning case as to the best of my knowledge, LC-Protonets do not represent the most standard approach for few shot classification.</p>
+</li>
+<li>
+<p>Section 3.4. seems a bit off in the context of this paper. While it makes sense to apply a technique as such, I wonder if this is not rather an implementation detail and not really helpful for the actual research topic. </p>
+</li>
+<li>
+<p>Section 4: "We conducted 5 runs with different random seeds for both Probing and ML-FSL tasks, but a single run for SFT due to computational costs", "[...] and we used Qwen2-Audio in half-precision (FP16) in all our methodologies to fit in this card.". These are again examples of a non-standardized approach which weakens the reliability of the results. Please, make sure to align your parameterization wherever possible.
+"These representation extraction strategies, number of fine
+tuned layers, and other design choices of our method were optimized through preliminary experiments.": Again, it is not clear what these experiments were and what impacts they may have had on the results. It is preferable to stick with the most basic setup as possible. </p>
+</li>
+<li>
+<p>Section 5.1.: Please attempt to align the Figures / Tables with the text as good as possible. Figure 2 is very far from its text reference. Figure 2 shows rather unsurprising results and I think it could have benefited from instead displaying the performance of the models across datasets. 
+Line 372, Line 387: Please either leave out the headline (Probing. / Supervised Fine-Tuning.) here or use a sub-sub-section to align with the formatting requirements. </p>
+</li>
+</ul>
+<p>I believe that while the topic of the paper is of high importance, the two main flaws are that while</p>
+<p>1) the methodology seems a bit shaky as outlined in my comments above,</p>
+<p>2) I struggle to see a major novel insight from this paper. </p>
+<p>Given this, I recommend a weak reject for this paper. I would like to encourage the authors to proceed with their research and believe that with some refactoring, their work can be a valuable contribution to ISMIR.</p>
+<p>Edit: After Discussion, I changed my recommendation to weak accept.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper conducts an extensive evaluation of state-of-the-art music foundation models to assess their generalization across different cultures. The motivation is clearly articulated, relevant prior work is well summarized, and the experimental design is sound. The authors’ main contributions include the large-scale empirical study, revealing the vulnerability of foundation models on non-Western music, and proposing a more efficient assessment method through multi-label few-shot learning optimization. The open-sourced code is another notable strength. However, certain parts of the paper are somewhat distracting, and the analysis and discussion of the experimental results are insufficient to provide clear conclusions. I believe further analysis would yield more reusable insights for the community.</p>
+<p>Abstract
+The abstract is clearly written, effectively outlining the potential concerns regarding foundation models and the proposed evaluation methods. However, the statement in line 16 about achieving state-of-the-art performance is somewhat distracting, as outperforming previous methods on non-Western music is not the central goal or contribution of the paper.</p>
+<p>Introduction
+The introduction presents a clear motivation for the study. However, again, achieving state-of-the-art performance is not the main contribution of this work, and emphasizing it may detract from the paper’s core message.</p>
+<p>Related work
+The discussion of related work on foundation models is thorough, and key auto-tagging papers are appropriately cited. Additionally, the rationale for adopting few-shot learning evaluation is clearly explained and well justified.</p>
+<p>Methodological framework
+- Line 154: Strictly speaking, the model does not reconstruct Mel-spectrograms. Instead, it reconstructs EnCodec tokens or k-means-based audio features. I think the reference model used EnCodec reconstruction.
+- Line 172: The phrase “Our work” breaks anonymity. The paper should avoid self-referential language. I refrained from checking the reference to preserve the double-blind review process.
+- Line 215: It is unclear whether the authors used the same learning rate for both the foundation model and the MLP blocks. This detail is important, as it can help mitigate catastrophic forgetting.
+- Section 3.4 – Multi-label Few-Shot Learning Optimization: While this section presents a meaningful contribution, it occupies a large portion of the paper relative to its role. I recommend allocating more space to analyzing and discussing the experimental results, which are currently underdeveloped.</p>
+<p>Experimental setup
+- Line 304: Previous works often use intermediate layers for probing. Is there a specific reason or reference supporting the decision to average across layers in this study?
+- Line 304: It is known that different layers in self-supervised models encode different types of semantics. For CLAP-like models, it is reasonable to assume that tag-related information is concentrated in the final layer due to its alignment with text. However, in masked token modeling models such as MERT and MusicFM, intermediate layers often yield better performance than the final layer.
+- Line 310: Could the authors elaborate on the rationale for averaging the representations across layers?
+- Line 320: While not critical to the overall findings, I am curious about the motivation for using different optimizers (Adam vs. AdamW). 
+- Overall, the evaluation setup appears sound and appropriate.</p>
+<p>Result
+- Line 368: The authors attribute the performance drop largely to differences in training data. However, this point would benefit from a more detailed and concrete discussion. It is also crucial to identify where the performance degrades. A tag-wise analysis could reveal which tags perform particularly well or poorly. This could be followed by an exploration of the reasons behind such performance gaps—through distributional analysis at the signal level, feature level, and deep embedding level. Reducing the space allocated to the few-shot optimization section in favor of this kind of deeper analysis would significantly enhance the paper’s contribution.
+- Line 395: Rather than referring to the result as “state-of-the-art,” it would be more appropriate to simply state that the method outperforms the supervised baseline. Achieving SoTA is not the main focus of this study.
+- Table 2: The performance of CLAP-M appears very low. It would be helpful if the authors could investigate and discuss the potential reasons behind this result.
+- Line 416: This observation could be sensitive to the choice of aggregation method. Further clarification or ablation would be useful to confirm its robustness.</p>
+<p>Conclusion
+The paper presents a valuable and thorough evaluation, but the analysis remains insufficient. As a result, the core message to the reader is somewhat unclear. For instance, while Qwen2-Audio demonstrates strong overall performance, it still underperforms on world music. However, the root cause of this limitation is not well established—whether it stems from training data bias, the choice of optimization strategy (e.g., self-supervised vs. contrastive learning), or model capacity.</p>
+<p>To provide meaningful guidance for future foundation model development, the paper should discuss:
+- What considerations are critical when training the next generation of foundation models?
+- If using existing models on underrepresented data like world music, what adaptation strategies should practitioners consider?
+Arriving at such conclusions would require more detailed and systematic analysis. Strengthening this aspect would significantly improve the paper’s overall impact.</p>
+<p>References
+Please double-check the reference list. Some conference names are incorrect, several entries are listed as arXiv links without proper citation details, and the formatting is inconsistent throughout.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper evaluates audio/music foundation models on non-western corpora using linear probing, supervised fine-tuning (SFT), and multi-label few-shot learning. The key findings are:
+1. Models: Qwen2-Audio is the overall best performer across evaluation strategies and datasets (which is not very surprising as it is the largest model evaluated here). Training data bias may be important, as MERT-300M trained on additional Western music data does worse than MERT-95M. Including speech in training data may be useful, since CLAP-M&amp;S &gt; CLAP-M.
+2. Transfer learning: SFT is generally better than fine-tuning, however the degree of improvement is model dependent. CLAP-M may be the most improved in this regard.
+3. Few-shot learning: Foundation models don't significantly outperform VGG-ish in a multi-label few-shot learning setup.</p>
+<p>Strengths:
+1. The paper presents novel insights related to the generalizability of foundation models to non-western corpora using experiments on several music tagging datasets.
+2. The paper is well organized and structured.
+3. The experiments are well documented and reproducible.</p>
+<p>Weaknesses:
+1. The few-shot learning sections would benefit from better motivation and explanation. Few-shot learning typically involves episodic learning, as seen in prior few-shot audio tagging work [1, 2]. However in this work, the model is only evaluated on the predicted labels based on proximity in the embedding space. Maybe this section should be called few-shot evaluation, since there is no "learning" taking place. It may also be useful to additionally evaluate few-shot learning by fine-tuning with episodic training. 
+2. The evaluation setup in the few-shot experiment is unclear---what exactly are the unseen classes? Are they unseen only in fine-tuning, or in pre-training as well? The paper would also benefit from a more detailed analysis of these results, e.g. seen vs. unseen classes.
+3. While useful contributions, the few-shot inference optimizations in Section 5.2 don't fit well into the main story of the paper, which is more about model performance on non-western music corpora.
+4. Some methodological choices are not well justified and/or discussed. For instance, the fact that only last layer is updated in MERT-330M while the last two layers are updated in MERT-95M (lines 205-207) could explain some of the performance differences in Table 2. This should be discussed in Section 5.1 to contextualize the findings.</p>
+<p>References
+[1] Papaioannou, C., Benetos, E., &amp; Potamianos, A. (2025). LC-Protonets: Multi-label Few-shot learning for world music audio tagging. IEEE Open Journal of Signal Processing.
+[2] Wang, Y., Bryan, N. J., Salamon, J., Cartwright, M., &amp; Bello, J. P. (2021, October). Who calls the shots? Rethinking few-shot learning for audio. In 2021 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA) (pp. 36-40). IEEE.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,555 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2025: Leveraging Carnatic live recordings for singing voice separation using regression-guided latent diffusion</title>
+    
+<meta name="citation_title" content="Leveraging Carnatic live recordings for singing voice separation using regression-guided latent diffusion" />
+
+<meta name="citation_author" content="Genís Plaja-Roglans" />
+
+<meta name="citation_author" content="Xavier Serra" />
+
+<meta name="citation_author" content="Martín Rocamora" />
+
+<meta name="citation_publication_date" content="21-25 September 2025" />
+<meta name="citation_conference_title" content="Ismir 2025 Hybrid Conference" />
+<meta name="citation_inbook_title" content="Proceedings of the First MiniCon Conference" />
+<meta name="citation_abstract" content="Diffusion models have demonstrated potential to separate individual sources from music mixtures in a generative fashion, enabling a new solution for this challenging problem. However, existing works require clean multi-stem data, which is scarce for several repertoires, consequently compromising generalization. We explore the potential of generative modeling to perform weakly-supervised singing voice separation for Carnatic Music, a music repertoire for which large quantities of multi-stem recordings with bleeding between sources have been collected from live performances. We pre-train a latent diffusion model to perform preliminary vocal separation conditioning on the corresponding mixture. Then, using a regressive model which is separately trained on a clean, smaller, and out-of-domain dataset, we estimate the level of bleeding in the preliminary separations and use that information to guide the diffusion model toward generating cleaner samples. The objective and perceptual evaluations show the potential of the proposed generative system for Carnatic vocal separation. Code, weights, and further materials are available online.&lt;br&gt;&lt;br&gt; &lt;b&gt;&lt;p align=&#34;center&#34;&gt;[Direct link to video]()&lt;/b&gt;" />
+
+<meta name="citation_keywords" content="Transformations" />
+
+<meta name="citation_keywords" content="Sound source separation" />
+
+<meta name="citation_keywords" content="MIR tasks" />
+
+<meta name="citation_keywords" content="Generative Tasks" />
+
+<meta name="citation_pdf_url" content="" />
+<meta id="yt-id" data-name= />
+<meta id="bb-id" data-name= />
+
+
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+
+    ('tutorials.html', 'Tutorials'),
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2025.ismir.net">
+          <img
+             class="logo" src="static/images/ismir_tabicon.png"
+             height="auto"
+             width="300px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html?session=Platinum">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+     
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      P7-12: Leveraging Carnatic live recordings for singing voice separation using regression-guided latent diffusion
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      
+      <a href="papers.html?filter=authors&search=Genís Plaja-Roglans" class="text-muted"
+        >Genís Plaja-Roglans</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Xavier Serra" class="text-muted"
+        >Xavier Serra</a
+      >,
+      
+      <a href="papers.html?filter=authors&search=Martín Rocamora" class="text-muted"
+        >Martín Rocamora</a
+      >
+      
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Subjects:</span>
+      
+      <a
+        href="papers.html?filter=keywords&search=Transformations"
+        class="text-secondary text-decoration-none"
+        >Transformations</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Sound source separation"
+        class="text-secondary text-decoration-none"
+        >Sound source separation</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=MIR tasks"
+        class="text-secondary text-decoration-none"
+        >MIR tasks</a
+      > ; 
+      
+      <a
+        href="papers.html?filter=keywords&search=Generative Tasks"
+        class="text-secondary text-decoration-none"
+        >Generative Tasks</a
+      > 
+      
+    </p>
+    <h4 class="text-muted text-center">
+      Presented In-person, in Daejeon
+    </h4>
+    <h4 class="text-muted text-center">
+      
+        4-minute short-format presentation
+      
+    </h4>
+
+  </div>
+</div>
+<div style="display: flex; justify-content: center;" class="btn-toolbar mt-4" role="toolbar">
+  <div class="poster-buttons btn-group btn-group-toggle mb-3" data-toggle="buttons">
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#details">
+      Abstract
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#paper">
+      Paper
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#poster">
+      Poster
+    </button>
+    <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#video">
+      Video
+    </button>
+    
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#meta-review">
+        Meta
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review1">
+        R1
+      </button>
+      <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review2">
+        R2
+      </button>
+      
+        <button class="card-link btn btn-outline-primary" data-toggle="collapse" type="button" data-target="#review3">
+          R3
+        </button>
+      
+    
+    <!--  -->
+  </div>
+  
+</div>
+<div class="poster-content">
+  <div id="details" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="abstractExample">
+          <span class="font-weight-bold">Abstract:</span>
+          <p>Diffusion models have demonstrated potential to separate individual sources from music mixtures in a generative fashion, enabling a new solution for this challenging problem. However, existing works require clean multi-stem data, which is scarce for several repertoires, consequently compromising generalization. We explore the potential of generative modeling to perform weakly-supervised singing voice separation for Carnatic Music, a music repertoire for which large quantities of multi-stem recordings with bleeding between sources have been collected from live performances. We pre-train a latent diffusion model to perform preliminary vocal separation conditioning on the corresponding mixture. Then, using a regressive model which is separately trained on a clean, smaller, and out-of-domain dataset, we estimate the level of bleeding in the preliminary separations and use that information to guide the diffusion model toward generating cleaner samples. The objective and perceptual evaluations show the potential of the proposed generative system for Carnatic vocal separation. Code, weights, and further materials are available online.<br><br> <b><p align="center"><a href="">Direct link to video</a></b></p>
+        </div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+  <div id="paper" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "https://drive.google.com/file/d/1zETT39AYll1U6xdSgJFAMVuzWabmJYne/preview#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="poster" class="collapse">
+    
+    <button class="fullscreen-button btn btn-primary mb-3">Fullscreen</button>
+    <iframe class="fullscreen-iframe" src = "#embedded=true" width='100%' height='500px' allowfullscreen webkitallowfullscreen></iframe>
+    
+  </div>
+  <div id="video" class="collapse">
+    
+      <div  style="display: flex; justify-content: center;">
+      <iframe src="" width="960" height="540" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    
+  </div>
+  
+  <div id="meta-review" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="metaReviewExample">
+          <span class="font-weight-bold">Meta Review:</span>
+          <br>
+          <p><strong>Q2 ( I am an expert on the topic of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q3 ( The title and abstract reflect the content of the paper.)</strong></p>
+<p>Agree</p>
+<p><strong>Q4 (The paper discusses, cites and compares with all relevant related work.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q5 ( Please justify the previous choice (Required if “Strongly Disagree” or “Disagree” is chosen, otherwise write "n/a"))</strong></p>
+<p>Since the method proposed in the paper is not specific to Carnatic music, I would not insist on this on the title; but rather focus on the fact that the bleeding estimator has been trained with out-of-domain data.</p>
+<p><strong>Q6 (Readability and paper organization: The writing and language are clear and structured in a logical manner.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q7 (The paper adheres to ISMIR 2025 submission guidelines (uses the ISMIR 2025 template, has at most 6 pages of technical content followed by “n” pages of references or ethical considerations, references are well formatted). If you selected “No”, please explain the issue in your comments.)</strong></p>
+<p>Yes</p>
+<p><strong>Q8 (Relevance of the topic to ISMIR: The topic of the paper is relevant to the ISMIR community. Note that submissions of novel music-related topics, tasks, and applications are highly encouraged. If you think that the paper has merit but does not exactly match the topics of ISMIR, please do not simply reject the paper but instead communicate this to the Program Committee Chairs. Please do not penalize the paper when the proposed method can also be applied to non-music domains if it is shown to be useful in music domains.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q9 (Scholarly/scientific quality: The content is scientifically correct.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q11 (Novelty of the paper: The paper provides novel methods, applications, findings or results. Please do not narrowly view "novelty" as only new methods or theories. Papers proposing novel musical applications of existing methods from other research fields are considered novel at ISMIR conferences.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q12 (The paper provides all the necessary details or material to reproduce the results described in the paper. Keep in mind that ISMIR respects the diversity of academic disciplines, backgrounds, and approaches. Although ISMIR has a tradition of publishing open datasets and open-source projects to enhance the scientific reproducibility, ISMIR accepts submissions using proprietary datasets and implementations that are not sharable. Please do not simply reject the paper when proprietary datasets or implementations are used.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q13 (Pioneering proposals: This paper proposes a novel topic, task or application. Since this is intended to encourage brave new ideas and challenges, papers rated “Strongly Agree” and “Agree” can be highlighted, but please do not penalize papers rated “Disagree” or “Strongly Disagree”. Keep in mind that it is often difficult to provide baseline comparisons for novel topics, tasks, or applications. If you think that the novelty is high but the evaluation is weak, please do not simply reject the paper but carefully assess the value of the paper for the community.)</strong></p>
+<p>Strongly Agree (Very novel topic, task, or application)</p>
+<p><strong>Q14 (Reusable insights: The paper provides reusable insights (i.e. the capacity to gain an accurate and deep understanding). Such insights may go beyond the scope of the paper, domain or application, in order to build up consistent knowledge across the MIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q15 (Please explain your assessment of reusable insights in the paper.)</strong></p>
+<p>The proposed regression guidance (here applied to the bleeding factor trained with out-of-domain data) can have a strong impact outside the MIR community.</p>
+<p><strong>Q16 ( Write ONE line (in your own words) with the main take-home message from the paper.)</strong></p>
+<p>Vocal source separation using v-objective latent diffusion with a novel bleeding estimation (model trained using out-of-domain data) regression guidance can reduce interference.</p>
+<p><strong>Q17 (This paper is of award-winning quality.)</strong></p>
+<p>Yes</p>
+<p><strong>Q18 ( If yes, please explain why it should be awarded.)</strong></p>
+<p>The proposed method is highly innovative: it uses a generative model (v-objective latent diffusion applied to Music2Latent) guided by a bleeding factor trained using data from another domain. A novel regression-guidance (RG) method is proposed, which will likely have an impact beyond the MIR community.</p>
+<p><strong>Q19 (Potential to generate discourse: The paper will generate discourse at the ISMIR conference or have a large influence/impact on the future of the ISMIR community.)</strong></p>
+<p>Strongly agree</p>
+<p><strong>Q20 (Overall evaluation (to be completed before the discussion phase): Please first evaluate before the discussion phase. Keep in mind that minor flaws can be corrected, and should not be a reason to reject a paper. Please familiarize yourself with the reviewer guidelines at https://ismir.net/reviewer-guidelines.)</strong></p>
+<p>Strong accept</p>
+<p><strong>Q21 (Main review and comments for the authors (to be completed before the discussion phase). Please summarize strengths and weaknesses of the paper. It is essential that you justify the reason for the overall evaluation score in detail. Keep in mind that belittling or sarcastic comments are not appropriate.)</strong></p>
+<p>Pros:
+- the paper is very well written and clear
+- the subject is relevant (vocal source separation) and the authors considers here a new paradigms (weakly supervised learning, i.e. ground-truth vocal with bleeding)
+- the method proposed here is novel: using generative model (v-objective latent diffusion applied to Music2Latent) guided by a bleeding estimator (trained using data from another domain) through a novel regression-guidance (RG) method. This regression-guidance method will probably have impact outside the MIR community.
+- the models are clearly described
+- the evaluation is well-performed including a statistical test
+- additional materials are provided in terms of audio examples obtained with the proposed method and compared to results obtained with cold-diff, mixer and msdm</p>
+<p>Cons:
+- while the perceptual evaluation indicate an improvement in terms of reduction of the interference, the audio quality seems to be much lower than other approaches (cold-diff, mixer and MSDSM). This is of course disappointing.
+- Line 479-483 attempts to explain why (increasing guidance level reduce interference up to a point but then degrade the quality); however it is unclear which model has been used for this experiment ? From line 467 it seems to be FTRG^{10} with T=32 which is not the best model in terms of FAD/LSD and PESQ.</p>
+<p><strong>Q22 (Final recommendation (to be completed after the discussion phase) Please give a final recommendation after the discussion phase. In the final recommendation, please do not simply average the scores of the reviewers. Note that the number of recommendation options for reviewers is different from the number of options here. We encourage you to take a stand, and preferably avoid “weak accepts” or “weak rejects” if possible.)</strong></p>
+<p>Accept</p>
+<p><strong>Q23 (Meta-review and final comments for authors (to be completed after the discussion phase))</strong></p>
+<p>This is the meta-review summing up reviews for your paper "Singing voice separation from Carnatic Music mixtures using a regression-guided latent diffusion model".</p>
+<p>Most reviewers found that the paper provides a strong contribution to the domain by training the bleeding estimator with out-of-domain data and proposing the regression-guidance idea. Unfortunately, the results (especially in terms of audio quality) remains lower than other approaches.</p>
+<p>Among current issues raised, reviewers would like to have</p>
+<ul>
+<li>an improved evaluation, especially</li>
+<li>for a fair comparison between no-FT, FT, and FT-RG models, the no-FT model should also be trained with additional data (e.g., musdb18hq)</li>
+<li>to precisely evaluate the merit of the proposed method, a model that's using the "finetuning" part of the pipeline, but trained from the clean MUSDB dataset would help</li>
+<li>the performance of the bleeding estimator (the simulated bleeding data used to train this model will behave differently from the actual bleeding in the real world).</li>
+<li>add SDR as an evaluation metric</li>
+<li>
+<p>subjective performance comparisons between the "no FT" and "FT-RG" models to demonstrate the practical perceptual benefits of the proposed bleeding guidance were not provided</p>
+</li>
+<li>
+<p>better justifications</p>
+</li>
+<li>to convincingly justify the complex approach proposed, the authors should first experimentally demonstrate that models trained on sufficient Western music data (e.g., Demucs or the proposed LDM) exhibit significantly lower performance on Carnatic music.</li>
+<li>why using the M2L encoder-decoder model if it's performances are so low (PESQ of 2.739) ?</li>
+</ul>
+<p>We encourage the authors to strictly follow the recommendations made by the reviewers in submitting the final version of their work.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review1" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review1Example">
+          <span class="font-weight-bold">Review 1:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak accept</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>The paper presents an LDM-based source separation, which is guided by a regression model. Instead of the common classification guidance, it's estimating the level of bleeding, which is estimated by a separate model, to leverage both datasets, one that's with compromised stem signals (i.e., with bleeding sources) and a clean source dataset. </p>
+<p>Overall, the proposed method is making sense and the manuscript explains the process in an effective way. It is indeed interesting to see that the dataset with bleeding can pretrain a generative model and then finetuning can further improve the performance. </p>
+<p>However, I believe that the paper can benefit from more thorough ablation tests. </p>
+<ul>
+<li>
+<p>The model relies a lot on the proposed transfer learning structure, assuming that pretraining on Saraga Carnatic and finetuninig the model on MUSDB is beneficial. To precisely evaluate the merit of the proposed method, a model that's using the "fintuning" part of the pipeline, but trained from the clean MUSDB dataset is going to help. I understand that there is a domain mismatch in this combination, as MUSDB is largely western. </p>
+</li>
+<li>
+<p>The performance of bleeding estimator, since it's a separately trained network, needs to be evaluated. It's because the simulated bleeding data used to train this model will behave differently from the actual bleeding in the real world. </p>
+</li>
+<li>
+<p>It might have been more convincing if the system was also tested on different types of music as the model seems to be general enough.</p>
+</li>
+</ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div id="review2" class="pp-card m-3 collapse">
+    <div class="card-body">
+      <div class="card-text">
+        <div id="review2Example">
+          <span class="font-weight-bold">Review 2:</span>
+          <br>
+          <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>This paper proposes a method for music source separation using generative models in scenarios where clean multi-stem recordings are not available (e.g., in Carnatic music), and where recordings often contain bleeding. The paper is generally well-written, and it offers clear explanations of latent diffusion and classifier guidance, making it easy to follow. The motivation for using latent diffusion and the necessity of a bleeding level estimator specifically for Carnatic singing voice separation are well explained in the introduction. The proposed regression-guidance, inspired by forward diffusion fine-tuning and classifier guidance, is also a very smart idea.</p>
+<p>However, despite these strengths, it is difficult to recommend acceptance because the proposed methods do not demonstrate sufficiently strong performance. First, in Table 2, the proposed method underperforms in terms of perceptual quality when compared to other models, making it difficult to claim its superiority. In the quantitative evaluation in Table 1, the PESQ improvement between FT and no-FT for Proposed (T=32) is only 0.032, and even the best-performing regression-guidance model (FT-RG5) shows only a 0.022 PESQ improvement over the standard FT model—both of which are not clearly significant differences.</p>
+<p>Moreover, for a fair comparison between no-FT, FT, and FT-RG models, the no-FT model should also be trained with additional data (e.g., musdb18hq). From what I understand, the no-FT model was trained only on the Saraga Carnatic dataset. This would mean the FT and FT-RG models were trained on a larger dataset (Saraga Carnatic + musdb18hq), and their improved performance could simply result from having more training data rather than from the proposed methodology itself (and unfortunately, even then, the improvements are not particularly convincing based on the current results).</p>
+<p>Minor Comments:</p>
+<p>Line 91: The notation "cf" might be misinterpreted as “c times f.” I suggest using a different notation (e.g., $c_f$).
+Line 180: Please include citations for GroupNorm and SiLU.
+Line 385: Since Sanidha was used only for testing, I suggest changing the subtitle “Sanidha (A)” to just “Sanidha.” The “(A)” may imply it was used for training, which is not true.
+Line 434: The use of “propose” might be misleading unless the authors are introducing a novel method for preference-based experiments. Consider using “conduct” or “perform” instead.
+Line 466–467: It’s unclear why the listening test was conducted with a guidance parameter of 10, when the performance was actually better with a value of 5.</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+    <div id="review3" class="pp-card m-3 collapse">
+      <div class="card-body">
+        <div class="card-text">
+          <div id="review3Example">
+            <span class="font-weight-bold">Review 3:</span>
+            <br>
+            <ul>
+<li><strong>Overall Evaluation</strong>: Weak reject</li>
+</ul>
+<h4>Main Reviews</h4>
+<p>[Strength]
+1. The paper proposes a novel regression-based bleeding level guidance approach extending the conventional classifier guidance framework, demonstrating the potential to develop a high-quality source separation model even when only noisy databases are available.</p>
+<p>[Weaknesses]
+1. Limited justification for applying the proposed method specifically to Vocal Separation:
+- The justification for applying the proposed method specifically to the vocal separation task lacks strength. Many instruments used in Carnatic music have structural and acoustic similarities with Western instruments. (Example instruments: the Carnatic violin closely resembles the Western violin; the mridangam shares acoustic similarities with other percussive instruments used in Western ensembles.) Furthermore, acoustic characteristics between Western vocals and Carnatic vocals are relatively similar compared to differences between Western vocals and instrumental music. Thus, a vocal separation model trained on Western music is likely to perform adequately on Carnatic music as well.
+- To convincingly justify the complex approach proposed, the authors should first experimentally demonstrate that models trained on sufficient Western music data (e.g., Demucs or the proposed LDM) exhibit significantly lower performance on Carnatic music.</p>
+<ol>
+<li>Lack of comparison with transfer learning:</li>
+<li>
+<p>The scenario assumed by the paper (completely lacking clean in-domain data) is overly restrictive. A common and practical approach, transfer learning (pre-training on noisy Carnatic data followed by fine-tuning on small amounts of clean Carnatic data), was not tested. This omission reduces the practical relevance and applicability of the research.</p>
+</li>
+<li>
+<p>Bleeding estimator trained only on out-domain data:</p>
+</li>
+<li>The authors assume low domain-specificity for the task of bleeding estimation, training the bleeding estimator exclusively on out-of-domain data. However, this assumption was not experimentally validated. A comparative experiment demonstrating the performance difference between bleeding estimators trained on in-domain versus out-of-domain data would significantly strengthen the paper's claims.</li>
+<li>
+<p>Designing a robust bleeding estimator is critical for achieving high-quality separation performance. However, the artificial bleeding dataset constructed in this paper is likely to differ significantly from the bleeding characteristics produced by the actual latent diffusion model (LDM). Moreover, considering instrument-specific bleeding characteristics, as well as adaptive mechanisms that account for time-varying interference levels frequently encountered in practical source separation scenarios, would have provided deeper and more valuable insights for future research.</p>
+</li>
+<li>
+<p>Limited upper bound due to poor performance of the M2L encoder-decoder:</p>
+</li>
+<li>
+<p>The performance of the proposed system is fundamentally constrained by the low quality of the M2L encoder-decoder model. Encoding and decoding vocals through the M2L model yielded a PESQ score of only 2.739, indicating poor audio quality and limiting the potential for improvement </p>
+</li>
+<li>
+<p>Insufficient experimental validation: Objective experiments</p>
+</li>
+<li>Omission of SDR as an evaluation metric: Typically, mixture signals in music source separation tasks are linear summations of individual sources, implying identical phases between the target source and its mixture counterpart. Even generative models, which generally maintain phase coherence, should include SDR as an evaluation metric, as demonstrated in prior work such as Multi-Source Diffusion Models [5]. Furthermore, unless bleeding is severe, source phases generally remain similar to those in the original mixture, thus enabling the use of SDR or other signal-domain metrics for accurate performance evaluation. Additionally, the Fréchet Audio Distance (FAD) metric employed in the paper may also exhibit low correlation with perceptual quality in certain cases. Therefore, it is strongly recommended to provide as many objective metrics as possible to ensure a comprehensive and reliable evaluation.</li>
+<li>Absence of interference removal metric: Despite interference removal being the paper's key contribution, no relevant objective metrics such as Source-to-Interference Ratio (SIR) were provided.</li>
+<li>
+<p>Missing experimental results: The LSD performance was always degraded when regression guidance (RG) was applied at sampling steps = 32 and 64. However, at sampling steps = 128, LSD results for the FT and FT-RG⁵ models were omitted, with only FT-RG²⁰ performance presented as best without sufficient context.</p>
+</li>
+<li>
+<p>Insufficient experimental validation: Subjective experiments</p>
+</li>
+<li>Lack of subjective assessment regarding regression-based bleeding guidance effectiveness: Crucially, subjective performance comparisons between the "no FT" and "FT-RG" models to demonstrate the practical perceptual benefits of the proposed bleeding guidance were not provided, significantly weakening the validity of subjective claims.</li>
+</ol>
+<p>[Overall review]
+The architecture proposed by the authors is interesting and presents novel elements, specifically the extension of classifier guidance into a regression-based bleeding level guidance structure. However, the assumed scenario—using exclusively bleeding-contaminated in-domain data—is highly restrictive and limits real-world applicability.
+Additionally, despite employing a complex approach, the performance is inherently constrained by the poor audio quality delivered by the M2L encoder-decoder framework. Furthermore, insufficient experimental validation, as highlighted above, significantly reduces the reliability and credibility of the reported results.
+Due to these critical limitations and insufficient experimental validation, the recommendation for this paper is weak reject.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  
+</div>
+
+
+<script src="static/js/poster.js"></script>
+<script src="static/js/video_selection.js"></script>
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2023 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>
