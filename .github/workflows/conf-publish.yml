@@ -56,10 +56,10 @@ jobs:
         ./migrate.sh 
         export FLASK_DEBUG=True; export FLASK_DEVELOPMENT=True
         python main.py --path ./sitedata --build
-    - name: Update cname
-      run: |
-        touch build/CNAME
-        echo 'ismir2025program.ismir.net' > build/CNAME
+    # - name: Update cname
+    #   run: |
+    #     touch build/CNAME
+    #     echo 'ismir2025program.ismir.net' > build/CNAME
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
