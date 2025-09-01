@@ -59,7 +59,7 @@ jobs:
     - name: Update cname
       run: |
         touch build/CNAME
-        echo 'ismir2022program.ismir.net' > build/CNAME
+        echo 'ismir2025program.ismir.net' > build/CNAME
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
