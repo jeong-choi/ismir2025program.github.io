@@ -120,7 +120,7 @@ if __name__ == "__main__":
             raise Exception("--path for the root directory for data is missing")
         from utils import slack as slackUtils
 
-        # from utils import zoom as zoomUtils
+        from utils import zoom as zoomUtils
 
     if action == "setup-zoom":
         setupZoom(os.path.join(data_path, "events.csv"))
