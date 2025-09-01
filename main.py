@@ -89,6 +89,7 @@ def group_by_days(sdata):
         tutorials = filterbycategory("Tutorials")
 
         out = {
+            "uid": day,
             "speakers": speakers,
             "meetup": meetup,
             "special": special,

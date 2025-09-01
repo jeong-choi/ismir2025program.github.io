@@ -54,7 +54,8 @@ jobs:
     - name: Freeze with Flask-Frozen
       run: |
         ./migrate.sh 
-        gunicorn -b 0.0.0.0:10000 main:app
+        export FLASK_DEBUG=True; export FLASK_DEVELOPMENT=True
+        python main.py --path ./sitedata --build
     - name: Update cname
       run: |
         touch build/CNAME
