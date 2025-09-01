@@ -9,3 +9,4 @@ pytz
 python-dateutil
 gunicorn
 requests
+mccabe>=0.7.0
